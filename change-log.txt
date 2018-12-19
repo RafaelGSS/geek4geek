@@ -1,0 +1,10 @@
+Date:    23-09-2018
+Version: 3
+===================
+1. RTL version added.
+
+2. Underwear ,Housewares, Cosmetic, Toy, Organic, Petmarket, Furniture, Auto-parts, Shoe; Home pages added.
+
+3. Shop 2 column , Shop 3 column , Shop fullwide , shop new, shop no sidebar , shop onsale, shop right sidebar; pages added.
+
+4. product details 2, product details 3, product details gallery , product details gallery 2 , product details slider , product details slider fullwide , product details sticky , product details sticky right; pages added. 
