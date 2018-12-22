@@ -1,3 +1,5 @@
+const webpack = require('webpack')
+
 module.exports = {
   /*
   ** Headers of the page
@@ -9,13 +11,13 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'deion', name: 'deion', content: 'Nuxt.js project' }
     ],
-    : [
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' },
+    script  : [
       { src: 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js'},
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'},
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js'},
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.proto.min.js'},
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'},
+      '~plugins/bootstrap.js'
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -24,8 +26,7 @@ module.exports = {
   /**
    * Global CSS
    */
-  css: [
-  ],
+  css: ['bootstrap/dist/css/bootstrap.css'],
   
   /*
   ** Customize the progress bar color
@@ -35,9 +36,15 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    extractCSS: {
-      allChunks: true
-    },
+    vendor: ['jquery', 'bootstrap'],
+    plugins: [
+      // set shortcuts as global for bootstrap
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery'
+      })
+    ],
     /*
     ** Run ESLint on save
     */
