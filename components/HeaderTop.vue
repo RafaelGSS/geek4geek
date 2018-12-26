@@ -58,17 +58,6 @@
 </template>
 
 <style scoped>
-.border-bottom-2 {
-  border-bottom: 1px solid #ebebeb;
-}
-
-.pb-13 {
-  padding-bottom: 13px;
-}
-
-.pt-10 {
-  padding-top: 10px;
-}
 .header-top-left {
     display: flex;
 }
@@ -156,8 +145,47 @@
     padding-left: 5px;
 }
 
-ul {
-    margin: 0px;
-    padding: 0px;
+.header-top-color-2 .lang-curr-dropdown ul li a,
+.header-top-color-2 .language-currency span,
+.header-top-color-2 .header-top-right ul li a,
+.header-middle-color-2 .header-contact-content > p,
+.header-middle-color-2 .header-contact-icon i,
+.header-middle-color-2 button.icon-cart span.count-amount {
+    color: #242424;
+}
+.header-top-color-2 .header-top-right ul li a:hover {
+    color: #1d73d2;
+}
+.header-top-color-2 .language-currency::before {
+    background-color: #242424;
+}
+.header-top-color-2 .header-search form input {
+    border: 2px solid #ebebeb;
+    color: #a5a5a5;
+}
+
+.header-top-right {
+    float: right;
+}
+.header-top-right ul li {
+    display: inline-block;
+    float: left;
+    list-style: outside none none;
+    margin-left: 30px;
+}
+.header-top-right ul li a {
+    color: #ffffff;
+    font-size: 12px;
 }
 </style>
+
+<script>
+export default {
+  mounted() {
+     $(".language-click , .icon-cart , .icon-setting").on("click", function() {
+        $(this).parent().find('.language-dropdown , .shopping-cart-content , .setting-wrapper').slideToggle('medium');
+    })
+  }
+}
+   
+</script>
