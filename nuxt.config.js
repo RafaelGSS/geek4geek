@@ -12,21 +12,44 @@ module.exports = {
       { hid: 'deion', name: 'deion', content: 'Nuxt.js project' }
     ],
     script  : [
+      {
+        src: "https://code.jquery.com/jquery-3.3.1.min.js",
+        type: "text/javascript"
+      },
+      {
+        src:
+          "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js",
+        type: "text/javascript"
+      },
+      {
+        src:
+          "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js",
+        type: "text/javascript"
+      },
       { src: 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js'},
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'},
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js'},
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.proto.min.js'},
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'},
-      '~plugins/bootstrap.js'
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'}
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: "stylesheet",
+        href:
+          "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      },
+      {
+        rel: "stylesheet",
+        href:
+        "https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css"
+      }
     ]
   },
   /**
    * Global CSS
    */
-  css: ['bootstrap/dist/css/bootstrap.css'],
+  css: ['~assets/main.css', '~assets/responsive.css', '~assets/icons.css'],
   
   /*
   ** Customize the progress bar color
@@ -36,15 +59,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['jquery', 'bootstrap'],
-    plugins: [
-      // set shortcuts as global for bootstrap
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery'
-      })
-    ],
     /*
     ** Run ESLint on save
     */
