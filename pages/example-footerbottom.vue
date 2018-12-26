@@ -1,5 +1,5 @@
 <template>
-    <Footerbottom />
+    <FooterBottom />
 </template>
 
 <style>
@@ -7,11 +7,11 @@
 </style>
 
 <script>
-import Footerbottom from '~/components/Footerbottom.vue'
+import FooterBottom from '~/components/FooterBottom.vue'
 
 export default {
     components: {
-        Footerbottom
+        FooterBottom
     }
 }
 </script>
