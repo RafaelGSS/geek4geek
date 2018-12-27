@@ -44,6 +44,9 @@ module.exports = {
         href:
         "https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css"
       }
+    ],
+    plugins:[
+      '~plugins/meanmenu-import'
     ]
   },
   /**
