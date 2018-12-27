@@ -6,6 +6,20 @@ body {
     font-size: 14px;
     color: #454545;
 }
+p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 15px;
+    font-family: 'Rubik', sans-serif;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
 .img {
     max-width: 100%;
     transition: all 0.3s ease-out 0s;
