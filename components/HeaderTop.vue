@@ -182,9 +182,9 @@
 <script>
 export default {
   mounted() {
-     $(".language-click , .icon-cart , .icon-setting").on("click", function() {
-        $(this).parent().find('.language-dropdown , .shopping-cart-content , .setting-wrapper').slideToggle('medium');
-    })
+     $(".language-click").on("click", function() {
+        $(this).parent().find('.language-dropdown').slideToggle('medium');
+    });
   }
 }
    
