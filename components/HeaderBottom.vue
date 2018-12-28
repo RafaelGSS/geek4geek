@@ -189,7 +189,7 @@
 	</div>
 </template>
 
-<style>
+<style scoped>
 .menu-categories {
   padding: 19px 10px 18px;
   position: relative;
