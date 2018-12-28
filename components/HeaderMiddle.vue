@@ -1,0 +1,376 @@
+<template>
+  <div class="header-middle ptb-40 header-middle-color-5 border-bottom-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-12">
+          <div class="logo logo-mrg">
+            <a href="index.html">
+              <img src="/img/logo/logo-4.png" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-9 col-md-12 col-12">
+          <div class="header-contact-search-wrapper f-right">
+            <div class="header-contact middle-same">
+              <div class="header-contact-icon">
+                <i class="pe-7s-headphones"></i>
+              </div>
+              <div class="header-contact-content">
+                <p>Ligue para nosso <br>Suporte Grátis: (012) 98155-7110</p>
+              </div>
+            </div>
+            <div class="header-search middle-same">
+              <form class="header-search-form" action="#">
+                <input type="text" placeholder="Procure toda loja aqui ...">
+                <button>
+                  <i class="ion-ios-search-strong"></i>
+                </button>
+              </form>
+            </div>
+            <div class="header-cart middle-same">
+              <button class="icon-cart">
+                <i class="pe-7s-shopbag cart-bag"></i>
+                <span class="count-amount">$609.00</span>
+                <i class="ion-chevron-down cart-down"></i>
+                <span class="count-style">02</span>
+              </button>
+              <div class="shopping-cart-content">
+                <ul>
+                  <li class="single-shopping-cart">
+                    <div class="shopping-cart-img">
+                      <a href="#"><img alt="" src="/img/cart/cart-1.jpg"></a>
+                    </div>
+                    <div class="shopping-cart-title">
+                      <h4><a href="#">Phantom Remote <br>Control 2018 </a></h4>
+                      <h6>Qty: 02</h6>
+                      <span>$260.00</span>
+                    </div>
+                    <div class="shopping-cart-delete">
+                        <a href="#"><i class="ion-android-close"></i></a>
+                    </div>
+                  </li>
+                  <li class="single-shopping-cart">
+                    <div class="shopping-cart-img">
+                      <a href="#"><img alt="" src="/img/cart/cart-2.jpg"></a>
+                    </div>
+                    <div class="shopping-cart-title">
+                      <h4><a href="#">Phantom Remote <br>Control 2018 </a></h4>
+                      <h6>Qty: 02</h6>
+                      <span>$260.00</span>
+                    </div>
+                    <div class="shopping-cart-delete">
+                      <a href="#"><i class="ion-android-close"></i></a>
+                    </div>
+                  </li>
+                </ul>
+                <div class="shopping-cart-total">
+                  <h4>Shipping : <span>$20.00</span></h4>
+                  <h4>Total : <span class="shop-total">$260.00</span></h4>
+                </div>
+                <div class="shopping-cart-btn">
+                  <a class="btn-style btn-hover" href="cart-page.html">view cart</a>
+                  <a class="btn-style btn-hover" href="checkout.html">checkout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.header-middle-color-5 .header-contact-content > p,
+.header-middle-color-5 .header-contact-icon i,
+.header-middle-color-5 button.icon-cart span.count-amount {
+    color: #242424;
+}
+.header-middle-color-5 .header-search form input,
+.header-middle-color-6 .header-search form input,
+.middle-yellowgreen-color .header-search form input {
+    border: 2px solid #ebebeb;
+    color: #242424;
+}
+.header-middle-color-5 button.icon-cart span.count-style,
+.header-middle-color-5 .header-search form button {
+    background-color: #df2121;
+}
+.header-middle-color-5 .header-search form button:hover {
+    background-color: #242424;
+    color: #fff;
+}
+.header-middle-color-5 button.icon-cart,
+.header-middle-color-6 button.icon-cart,
+.middle-yellowgreen-color button.icon-cart {
+    border: 2px solid #ebebeb;
+}
+.header-middle-color-5 button.icon-cart i.cart-bag {
+    border-right: 1px solid #ebebeb;
+    color: #df2121;
+}
+.header-middle-color-5 button.icon-cart span.count-amount,
+.header-middle-color-6 button.icon-cart span.count-amount {
+    color: #242424;
+}
+.header-middle-color-5 button.icon-cart i.cart-down {
+    color: #a4a4a4;
+}
+.header-middle-color-5 .header-cart:hover button.icon-cart i.cart-bag,
+.header-middle-color-5 .header-cart:hover > button.icon-cart span.count-amount {
+    color: #df2121;
+}
+.logo.logo-mrg {
+    margin-top: 4px;
+}
+.header-contact {
+    margin-top: 8px;
+}
+.header-search {
+    margin-top: 3px;
+}
+.header-contact-icon {
+    display: inline-block;
+    float: left;
+    margin-right: 14px;
+}
+.header-contact-icon i {
+    font-size: 35px;
+}
+.header-contact-content {
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+}
+.header-contact-content > p {
+    line-height: 18px;
+    margin: 0;
+}
+.middle-same {
+    display: inline-block;
+    float: left;
+    margin-left: 45px;
+}
+.middle-same:first-child,
+.header-top-right ul li:first-child {
+    margin-left: 0px;
+}
+.header-cart {
+    position: relative;
+}
+button.icon-cart {
+    background-color: transparent;
+    border: 2px solid #df2121;
+    cursor: pointer;
+    padding: 9px 12px 6px;
+    position: relative;
+}
+button.icon-cart i.cart-bag {
+    color: #fff;
+    font-size: 27px;
+}
+button.icon-cart i.cart-down {
+    color: #76b4fa;
+    font-size: 12px;
+    margin-left: 5px;
+    position: relative;
+    top: -6px;
+}
+button.icon-cart i.cart-bag {
+    border-right: 1px solid #df2121;
+    color: #fff;
+    font-size: 27px;
+    margin-right: 7px;
+    transition: all .3s ease 0s;
+}
+button.icon-cart span.count-amount {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    top: -6px;
+    transition: all .3s ease 0s;
+}
+button.icon-cart span.count-style {
+    background-color: #df2121;
+    border-radius: 100%;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    height: 26px;
+    left: -13px;
+    line-height: 26px;
+    position: absolute;
+    top: -13px;
+    width: 26px;
+    color: #fff;
+}
+.header-cart:hover button.icon-cart i.cart-bag,
+.header-cart:hover > button.icon-cart span.count-amount {
+    color: #ddd;
+}
+.header-search form {
+    position: relative
+}
+.header-search form input {
+    background: transparent none repeat scroll 0 0;
+    border: 2px solid #df2121;
+    box-shadow: none;
+    color: #76b4fa;
+    font-size: 13px;
+    height: 45px;
+    padding: 0px 45px 0 16px;
+    width: 330px;
+    border-radius: 0 7px 7px 0;
+}
+.header-search form input[type="text"]::-moz-placeholder {
+    color: #fff !important;
+    outline: 0 !important;
+    border-width: 0 !important;
+    opacity: 1;
+}
+.header-search form input[type="text"]::-webkit-input-placeholder {
+    color: #fff !important;
+    outline: 0 !important;
+    border-width: 0 !important;
+    opacity: 1;
+}
+.header-search form input[type="text"]::-ms-input-placeholder {
+    color: #fff !important;
+    outline: 0 !important;
+    border-width: 0 !important;
+    opacity: 1;
+}
+.header-search form button {
+    background-color: #df2121;
+    border: medium none;
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    height: 100%;
+    padding: 0 14px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all .3s ease 0s;
+}
+.header-search form button:hover {
+    background-color: #fff;
+    color: #df2121;
+}
+.shopping-cart-content {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    display: none;
+    padding: 31px 35px 10px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 340px;
+    z-index: 9999;
+}
+.shopping-cart-content::after {
+    border-bottom: 8px solid #fff;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 35px;
+    top: -8px;
+    width: 0;
+}
+.shopping-cart-content ul li {
+    border-bottom: 1px solid #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+.shopping-cart-img {
+    flex: 0 0 82px;
+    margin-right: 15px;
+}
+.shopping-cart-title > h4 {
+    color: #242424;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+}
+.shopping-cart-title > h4 a {
+    color: #242424;
+    display: block;
+}
+.shopping-cart-title > h4 a:hover {
+    color: #df2121;
+}
+.shopping-cart-title > h6 {
+    color: #555;
+    font-size: 13px;
+    margin: 5px 0 10px;
+}
+.shopping-cart-title > span {
+    color: #555;
+    font-size: 14px;
+}
+.shopping-cart-delete {
+    display: flex;
+    flex-grow: 100;
+    justify-content: flex-end;
+}
+.shopping-cart-delete > a {
+    border: 2px solid #999;
+    border-radius: 50px;
+    color: #666;
+    display: inline-block;
+    font-size: 12px;
+    height: 20px;
+    line-height: 15px;
+    margin-top: 2px;
+    text-align: center;
+    width: 20px;
+}
+.shopping-cart-delete > a:hover {
+    border: 2px solid #df2121;
+    color: #df2121;
+}
+.shopping-cart-total {
+    margin: 25px 0 0;
+}
+.shopping-cart-total > h4 {
+    font-size: 14px;
+    margin-bottom: 17px;
+}
+.shopping-cart-total > h4:last-child {
+    margin-bottom: 0px;
+}
+.shopping-cart-total > h4 span {
+    float: right;
+    color: #242424;
+}
+.shopping-cart-total > h4 span.shop-total {
+    color: #df2121;
+    font-weight: 500;
+}
+.shopping-cart-btn {
+    margin-top: 23px;
+}
+.shopping-cart-btn a {
+    margin-bottom: 15px;
+}
+
+</style>
+
+<script>
+export default {
+    mounted() {
+        /* Cart */
+        $(".icon-cart").on("click", function() {
+            $(this).parent().find('.shopping-cart-content').slideToggle('medium');
+        });
+    }
+}
+</script>
+
