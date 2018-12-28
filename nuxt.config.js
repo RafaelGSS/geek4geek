@@ -27,10 +27,6 @@ module.exports = {
         type: "text/javascript"
       },
       { src: 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js'},
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'},
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js'},
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.proto.min.js'},
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -44,6 +40,8 @@ module.exports = {
         href:
         "https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css"
       }
+    ],
+    plugins:[
     ]
   },
   /**
@@ -59,6 +57,9 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    build: {
+      extractCSS: true
+    },
     /*
     ** Run ESLint on save
     */
