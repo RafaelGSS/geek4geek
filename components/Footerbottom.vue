@@ -30,7 +30,7 @@
                                     </div>
                                     <div class="payment-icon mt-20">
                                         <a href="#">
-                                            <img src="~/static/payment.png" alt="">
+                                            <img src="~/static/img/icon-img/payment.png" alt="">
                                         </a>
                                     </div>
                                 </div>
