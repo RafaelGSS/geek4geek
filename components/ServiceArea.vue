@@ -5,7 +5,7 @@
         <div class="col-lg-4 col-md-4">
           <div class="shop-service-content-4 mb-30">
             <div class="service-content-4-img">
-              <img src="~/static/img/icon-img/service-1.png" alt>
+              <img src="/img/icon-img/service-1.png" alt>
             </div>
             <div class="service-content-4-content">
               <h5>Entrega Grátis</h5>
@@ -16,7 +16,7 @@
         <div class="col-lg-4 col-md-4">
           <div class="shop-service-content-4 mb-30">
             <div class="service-content-4-img">
-              <img src="~/static/img/icon-img/service-2.png" alt>
+              <img src="/img/icon-img/service-2.png" alt>
             </div>
             <div class="service-content-4-content">
               <h5>Devolução do Dinheiro</h5>
@@ -27,7 +27,7 @@
         <div class="col-lg-4 col-md-4">
           <div class="shop-service-content-4 mb-30">
             <div class="service-content-4-img">
-              <img src="~/static/img/icon-img/service-3.png" alt>
+              <img src="/img/icon-img/service-3.png" alt>
             </div>
             <div class="service-content-4-content">
               <h5>Suporte Online</h5>
