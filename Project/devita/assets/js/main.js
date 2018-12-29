@@ -751,14 +751,6 @@
         }
     })
     
-    
-    
-    
-    
-    
-    
-    
-    
     /* Brand logo active */
     $('.brand-logo-active').owlCarousel({
         loop: true,
