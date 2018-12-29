@@ -41,9 +41,10 @@ module.exports = {
         "https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css"
       }
     ],
-    plugins:[
-    ]
   },
+  plugins:[
+    {src: 'plugins/vue-carousel.js', ssr: false}
+  ],
   /**
    * Global CSS
    */
@@ -57,9 +58,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    build: {
-      extractCSS: true
-    },
     /*
     ** Run ESLint on save
     */
