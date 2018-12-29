@@ -675,7 +675,6 @@
                       <img src="/img/product/pro-toy-8.jpg" alt>
                     </a>
                   </div>
-                  <span>-29%</span>
                 </div>
                 <div class="list-col">
                   <div class="gridview">
