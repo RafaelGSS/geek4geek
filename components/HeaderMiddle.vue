@@ -4,9 +4,9 @@
       <div class="row">
         <div class="col-lg-3 col-md-12">
           <div class="logo logo-mrg">
-            <a href="index.html">
-              <img src="/img/logo/logo-4.png" alt="">
-            </a>
+            <nuxt-link to="/">
+              <img src="/img/logo/nome.svg" alt="">
+            </nuxt-link>
           </div>
         </div>
         <div class="col-lg-9 col-md-12 col-12">
@@ -92,12 +92,21 @@
     border: 2px solid #ebebeb;
     color: #242424;
 }
-.header-middle-color-5 button.icon-cart span.count-style,
+.header-middle-color-5 button.icon-cart span.count-style{
+    background-color: #7aed0a;
+    color: #fff;
+    transition: all .3s ease 0s;
+}
+
+.header-middle-color-5 button.icon-cart span.count-style:hover{
+    background-color: #242424;
+}
+
 .header-middle-color-5 .header-search form button {
-    background-color: #df2121;
+    background-color: #242424;
 }
 .header-middle-color-5 .header-search form button:hover {
-    background-color: #242424;
+    background-color: #7aed0a;
     color: #fff;
 }
 .header-middle-color-5 button.icon-cart,
@@ -107,7 +116,7 @@
 }
 .header-middle-color-5 button.icon-cart i.cart-bag {
     border-right: 1px solid #ebebeb;
-    color: #df2121;
+    color: #7aed0a;
 }
 .header-middle-color-5 button.icon-cart span.count-amount,
 .header-middle-color-6 button.icon-cart span.count-amount {
@@ -118,7 +127,7 @@
 }
 .header-middle-color-5 .header-cart:hover button.icon-cart i.cart-bag,
 .header-middle-color-5 .header-cart:hover > button.icon-cart span.count-amount {
-    color: #df2121;
+    color: #7aed0a;
 }
 .logo.logo-mrg {
     margin-top: 4px;
@@ -160,7 +169,7 @@
 }
 button.icon-cart {
     background-color: transparent;
-    border: 2px solid #df2121;
+    border: 2px solid #7aed0a;
     cursor: pointer;
     padding: 9px 12px 6px;
     position: relative;
@@ -177,7 +186,7 @@ button.icon-cart i.cart-down {
     top: -6px;
 }
 button.icon-cart i.cart-bag {
-    border-right: 1px solid #df2121;
+    border-right: 1px solid #7aed0a;
     color: #fff;
     font-size: 27px;
     margin-right: 7px;
@@ -192,7 +201,7 @@ button.icon-cart span.count-amount {
     transition: all .3s ease 0s;
 }
 button.icon-cart span.count-style {
-    background-color: #df2121;
+    background-color: #7aed0a;
     border-radius: 100%;
     display: inline-block;
     font-size: 12px;
@@ -214,7 +223,7 @@ button.icon-cart span.count-style {
 }
 .header-search form input {
     background: transparent none repeat scroll 0 0;
-    border: 2px solid #df2121;
+    border: 2px solid #7aed0a;
     box-shadow: none;
     color: #76b4fa;
     font-size: 13px;
@@ -224,25 +233,25 @@ button.icon-cart span.count-style {
     border-radius: 0 7px 7px 0;
 }
 .header-search form input[type="text"]::-moz-placeholder {
-    color: #fff !important;
+    color: #242424 !important;
     outline: 0 !important;
     border-width: 0 !important;
     opacity: 1;
 }
 .header-search form input[type="text"]::-webkit-input-placeholder {
-    color: #fff !important;
+    color: #242424 !important;
     outline: 0 !important;
     border-width: 0 !important;
     opacity: 1;
 }
 .header-search form input[type="text"]::-ms-input-placeholder {
-    color: #fff !important;
+    color: #242424 !important;
     outline: 0 !important;
     border-width: 0 !important;
     opacity: 1;
 }
 .header-search form button {
-    background-color: #df2121;
+    background-color: #7aed0a;
     border: medium none;
     border-radius: 0 5px 5px 0;
     color: #fff;
@@ -257,7 +266,7 @@ button.icon-cart span.count-style {
 }
 .header-search form button:hover {
     background-color: #fff;
-    color: #df2121;
+    color: #7aed0a;
 }
 .shopping-cart-content {
     background: #fff none repeat scroll 0 0;
@@ -304,7 +313,7 @@ button.icon-cart span.count-style {
     display: block;
 }
 .shopping-cart-title > h4 a:hover {
-    color: #df2121;
+    color: #7aed0a;
 }
 .shopping-cart-title > h6 {
     color: #555;
@@ -333,8 +342,8 @@ button.icon-cart span.count-style {
     width: 20px;
 }
 .shopping-cart-delete > a:hover {
-    border: 2px solid #df2121;
-    color: #df2121;
+    border: 2px solid #7aed0a;
+    color: #7aed0a;
 }
 .shopping-cart-total {
     margin: 25px 0 0;
@@ -351,7 +360,7 @@ button.icon-cart span.count-style {
     color: #242424;
 }
 .shopping-cart-total > h4 span.shop-total {
-    color: #df2121;
+    color: #7aed0a;
     font-weight: 500;
 }
 .shopping-cart-btn {

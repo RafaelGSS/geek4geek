@@ -54,6 +54,15 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  /**
+   * Set position scrol after link
+   */
+  router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    }
+  },
+  
   /*
   ** Build configuration
   */

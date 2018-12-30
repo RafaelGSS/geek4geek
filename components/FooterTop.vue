@@ -157,7 +157,7 @@
   box-sizing: border-box;
 }
 .footer-widget-red .footer-map > a {
-  color: #df2121;
+  color: #7aed0a;
 }
 .footer-widget-red .footer-map > a:hover {
   color: #242424;
@@ -237,10 +237,12 @@
 }
 .footer-widget-red .footer-content ul li:hover a,
 .footer-widget-red .footer-contact li a:hover {
-  color: #df2121;
+  color: #7aed0a;
 }
 .footer-widget-red-2 .subscribe-form-2 form .clear-2 input:hover {
-  background-color: #242424;
+  background-color: #7aed0a;
+  border-color: #7aed0a;
+  color: #fff !important;
 }
 .footer-content ul li {
   list-style: outside none none;
@@ -287,8 +289,10 @@ input {
   line-height: inherit;
 }
 .footer-widget-red-2 .subscribe-form-2 form .clear-2 input {
-  background-color: #df2121;
-  color: #fff !important;
+  background-color: #fff;
+  font-weight: bold;
+  border: 1px solid;
+  color: #242424 !important;
 }
 .subscribe-form-2 form input {
   background: transparent none repeat scroll 0 0;

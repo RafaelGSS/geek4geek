@@ -2,7 +2,7 @@
   <div>
     <HeaderTop/>
     <HeaderMiddle/>
-    <HeaderBottom/>
+    <HeaderBottom :categories=categories :shoptypes=shoptypes />
     <Slider/>
     <BannerArea/>
     <ProductArea/>
@@ -40,6 +40,66 @@ export default {
     ProductArea,
     ServiceArea,
     BestSellingArea
+  },
+  data: () => ({
+    categories: {},
+    shoptypes: {}
+  }),
+  asyncData() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve({
+          categories: [
+            {
+              id: 1,
+              name: 'Canecas'
+            },
+            {
+              id: 2,
+              name: 'Camisetas'
+            },
+            {
+              id: 3,
+              name: 'Action Figures'
+            }
+          ],
+          shoptypes: [
+            {
+              id: 1,
+              name: 'Para sua casa',
+              subcategories: [
+                {
+                  id: 1,
+                  name: 'Almofadas',
+                  new: false
+                },
+                {
+                  id: 2,
+                  name: 'Action Figures',
+                  new: false
+                }
+              ]
+            },
+            {
+              id: 1,
+              name: 'Promocões',
+              subcategories: [
+                {
+                  id: 1,
+                  name: 'Camisetas Marvel',
+                  new: true
+                },
+                {
+                  id: 2,
+                  name: 'Camisetas DC',
+                  new: true
+                }
+              ]
+            },
+          ]
+        })
+      }, 1500)
+    });
   }
 };
 </script>

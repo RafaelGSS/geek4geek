@@ -27,29 +27,13 @@ export default {
 .slider-active.owl-carousel .owl-item .slider-img img {
     width: 100%;
 }
-.owl-dot-style .owl-dot {
-    background: #4b4f53 none repeat scroll 0 0;
-    border-radius: 50px;
-    display: inline-block;
-    height: 3px;
-    margin: 0 2px;
-    width: 3px;
-}
-.owl-dot-style .owl-dot.active {
-    background: #fff none repeat scroll 0 0;
-    height: 10px;
-    position: relative;
-    top: 2px;
-    width: 10px;
-}
-.owl-dot-style .owl-dots {
-    bottom: 40px;
-    left: 0px;
-    position: absolute;
-    right: 0;
-    text-align: center;
-}
 
+</style>
+<style>
+
+.owl-theme .owl-dots .active span{
+    background: #000 !important;
+}
 </style>
 
 

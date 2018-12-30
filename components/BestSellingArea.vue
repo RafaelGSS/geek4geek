@@ -254,7 +254,7 @@
     padding: 3px 18px 0;
 }
 .product-img > span {
-    background-color: #0363cd;
+    background-color: #7aed0a;
     border-radius: 3px;
     color: #fff;
     left: 15px;
@@ -274,7 +274,7 @@
     margin: 8px 0 13px;
 }
 .product-content > h4 a:hover {
-    color: #0363cd;
+    color: #7aed0a;
 }
 .product-price-wrapper > span {
     color: #242424;
@@ -318,7 +318,7 @@
 }
 .product-action > a.same-action:hover,
 .product-action > a.action-cart:hover {
-    background-color: #0363cd;
+    background-color: #7aed0a;
     color: #fff;
 }
 
@@ -470,7 +470,7 @@
     text-transform: uppercase;
 }
 .best-pro-action-2 a:hover {
-    background-color: #0363cd;
+    background-color: #7aed0a;
     color: #fff;
 }
 .best-pro-action-2 {
