@@ -7,6 +7,10 @@
     <BannerArea/>
     <ProductArea/>
     <ServiceArea />
+    <BestSellingArea />
+    <div class="banner-area">
+      <img src="/img/banner/banner-80.jpg" alt="">
+    </div>
     <FooterTop/>
     <FooterBottom/>
   </div>
@@ -21,6 +25,7 @@ import BannerArea from "~/components/BannerArea.vue";
 import ProductArea from "~/components/ProductArea.vue";
 import FooterTop from "~/components/FooterTop.vue";
 import ServiceArea from "~/components/ServiceArea.vue";
+import BestSellingArea from "~/components/BestSellingArea.vue";
 import FooterBottom from "~/components/FooterBottom.vue";
 
 export default {
@@ -33,11 +38,15 @@ export default {
     Slider,
     BannerArea,
     ProductArea,
-    ServiceArea
+    ServiceArea,
+    BestSellingArea
   }
 };
 </script>
 
-<style>
+<style scoped>
+.banner-area > img {
+    width: 100%;
+}
 </style>
 
