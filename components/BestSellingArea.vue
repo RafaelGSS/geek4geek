@@ -7,10 +7,10 @@
         </div>
         <div class="product-tab-list-2 nav section-bg-white">
           <a class="active" href="#home4" data-toggle="tab">
-            <h4>Rolamento de bloco</h4>
+            <h4>Canecas</h4>
           </a>
           <a href="#home5" data-toggle="tab">
-            <h4>Rolamento do bloco de descanso</h4>
+            <h4>Camisetas</h4>
           </a>
         </div>
       </div>
@@ -244,6 +244,12 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  props: ['canecas_hot', 'tshirt_hot']
+}
+</script>
+
 
 <style scoped>
 
