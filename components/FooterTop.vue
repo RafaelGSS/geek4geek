@@ -26,19 +26,9 @@
                     <i class="ion-social-facebook"></i>
                   </a>
                 </li>
-                <li>
-                  <a class="twitter" href="#">
-                    <i class="ion-social-twitter"></i>
-                  </a>
-                </li>
-                <li>
+               <li>
                   <a class="instagram" href="#">
                     <i class="ion-social-instagram-outline"></i>
-                  </a>
-                </li>
-                <li>
-                  <a class="googleplus" href="#">
-                    <i class="ion-social-googleplus-outline"></i>
                   </a>
                 </li>
               </ul>
@@ -63,9 +53,6 @@
                 </li>
                 <li>
                   <a href="#">Termos e Condições</a>
-                </li>
-                <li>
-                  <a href="#">Serviço ao Cliente</a>
                 </li>
                 <li>
                   <a href="#">Política de Devolução</a>
@@ -208,15 +195,7 @@
   border: 2px solid #fff;
   color: #3c5b9b;
 }
-.social-icon li a.twitter {
-  background-color: #40c1df;
-  border: 2px solid #40c1df;
-}
-.social-icon li a.twitter:hover {
-  background-color: #fff;
-  border: 2px solid #fff;
-  color: #40c1df;
-}
+
 .social-icon li a.instagram {
   background-color: #c619b8;
   border: 2px solid #c619b8;
@@ -226,15 +205,7 @@
   border: 2px solid #fff;
   color: #c619b8;
 }
-.social-icon li a.googleplus {
-  background-color: #ed3c32;
-  border: 2px solid #ed3c32;
-}
-.social-icon li a.googleplus:hover {
-  background-color: #fff;
-  border: 2px solid #fff;
-  color: #ed3c32;
-}
+
 .footer-widget-red .footer-content ul li:hover a,
 .footer-widget-red .footer-contact li a:hover {
   color: #7aed0a;

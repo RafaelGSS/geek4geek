@@ -5,7 +5,7 @@
     <HeaderBottom :categories=categories :shoptypes=shoptypes />
     <Slider/>
     <BannerArea/>
-    <ProductArea/>
+    <ProductArea :products_new=products_new :products_hot=products_hot />
     <ServiceArea />
     <BestSellingArea />
     <div class="banner-area">
@@ -95,6 +95,210 @@ export default {
                   new: true
                 }
               ]
+            },
+          ],
+          products_new: [
+            {
+              id: 1,
+              name: 'Produto Gee4Geek',
+              category_name: 'Canecas',
+              display_description: 'Descricao dos protudos em modo de display',
+              promo: true,
+              promotion: {
+                percentage: 10,
+                old_price: 100
+              },
+              price: 90,
+            },
+            {
+              id: 2,
+              name: 'Produto Gee4Geek',
+              category_name: 'Canecas',
+              display_description: 'Descricao dos protudos em modo de display',
+              promo: true,
+              promotion: {
+                percentage: 10,
+                old_price: 100
+              },
+              price: 90,
+            },
+            {
+              id: 3,
+              name: 'Produto Gee4Geek',
+              category_name: 'Canecas',
+              display_description: 'Descricao dos protudos em modo de display',
+              promo: true,
+              promotion: {
+                percentage: 10,
+                old_price: 100
+              },
+              price: 90,
+            },
+            {
+              id: 4,
+              name: 'Produto Gee4Geek',
+              category_name: 'Canecas',
+              display_description: 'Descricao dos protudos em modo de display',
+              promo: true,
+              promotion: {
+                percentage: 10,
+                old_price: 100
+              },
+              price: 90,
+            },
+            {
+              id: 5,
+              name: 'Produto Gee4Geek',
+              category_name: 'Canecas',
+              display_description: 'Descricao dos protudos em modo de display',
+              promo: true,
+              promotion: {
+                percentage: 10,
+                old_price: 100
+              },
+              price: 90,
+            },
+            {
+              id: 6,
+              name: 'Produto Gee4Geek',
+              category_name: 'Canecas',
+              display_description: 'Descricao dos protudos em modo de display',
+              promo: true,
+              promotion: {
+                percentage: 10,
+                old_price: 100
+              },
+              price: 90,
+            },
+            {
+              id: 7,
+              name: 'Produto Gee4Geek',
+              category_name: 'Canecas',
+              display_description: 'Descricao dos protudos em modo de display',
+              promo: true,
+              promotion: {
+                percentage: 10,
+                old_price: 100
+              },
+              price: 90,
+            },
+            {
+              id: 8,
+              name: 'Produto Gee4Geek',
+              category_name: 'Canecas',
+              display_description: 'Descricao dos protudos em modo de display',
+              promo: true,
+              promotion: {
+                percentage: 10,
+                old_price: 100
+              },
+              price: 90,
+            },
+            {
+              id: 9,
+              name: 'Produto Gee4Geek',
+              category_name: 'Canecas',
+              display_description: 'Descricao dos protudos em modo de display',
+              promo: true,
+              promotion: {
+                percentage: 10,
+                old_price: 100
+              },
+              price: 90,
+            },
+            {
+              id: 10,
+              name: 'Produto Gee4Geek',
+              category_name: 'Canecas',
+              display_description: 'Descricao dos protudos em modo de display',
+              promo: true,
+              promotion: {
+                percentage: 10,
+                old_price: 100
+              },
+              price: 90,
+            },
+          ],
+          products_hot: [
+            {
+              id: 1,
+              name: 'Produto Gee4Geek',
+              category_name: 'Canecas',
+              display_description: 'Descricao dos protudos em modo de display',
+              promo: false,
+              price: 90,
+            },
+            {
+              id: 2,
+              name: 'Produto Gee4Geek',
+              category_name: 'Canecas',
+              display_description: 'Descricao dos protudos em modo de display',
+              promo: false,
+              price: 90,
+            },
+            {
+              id: 3,
+              name: 'Produto Gee4Geek',
+              category_name: 'Canecas',
+              display_description: 'Descricao dos protudos em modo de display',
+              promo: false,
+              price: 90,
+            },
+            {
+              id: 4,
+              name: 'Produto Gee4Geek',
+              category_name: 'Canecas',
+              display_description: 'Descricao dos protudos em modo de display',
+              promo: false,
+              price: 90,
+            },
+            {
+              id: 5,
+              name: 'Produto Gee4Geek',
+              category_name: 'Canecas',
+              display_description: 'Descricao dos protudos em modo de display',
+              promo: false,
+              price: 90,
+            },
+            {
+              id: 6,
+              name: 'Produto Gee4Geek',
+              category_name: 'Canecas',
+              display_description: 'Descricao dos protudos em modo de display',
+              promo: false,
+              price: 90,
+            },
+            {
+              id: 7,
+              name: 'Produto Gee4Geek',
+              category_name: 'Canecas',
+              display_description: 'Descricao dos protudos em modo de display',
+              promo: false,
+              price: 90,
+            },
+            {
+              id: 8,
+              name: 'Produto Gee4Geek',
+              category_name: 'Canecas',
+              display_description: 'Descricao dos protudos em modo de display',
+              promo: false,
+              price: 90,
+            },
+            {
+              id: 9,
+              name: 'Produto Gee4Geek',
+              category_name: 'Canecas',
+              display_description: 'Descricao dos protudos em modo de display',
+              promo: false,
+              price: 90,
+            },
+            {
+              id: 10,
+              name: 'Produto Gee4Geek',
+              category_name: 'Canecas',
+              display_description: 'Descricao dos protudos em modo de display',
+              promo: false,
+              price: 90,
             },
           ]
         })
