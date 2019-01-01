@@ -20,7 +20,7 @@
                       <img src="/img/product/pro-toy-1.jpg" alt>
                     </a>
                   </div>
-                  <span v-if="product_new.promo">{{ product_new.promotion.percentage }}%</span>
+                  <span v-if="product_new.promo">-{{ product_new.promotion.percentage }}%</span>
                 </div>
                 <div class="list-col">
                   <div class="gridview">
@@ -51,16 +51,7 @@
                           class="action-cart"
                           title="ADICIONAR AO CARRINHO"
                           href="#"
-                        >ADICIONAR AO CARRINHO</a>
-                        <a
-                          class="same-action compare-mrg"
-                          data-target="#exampleCompare"
-                          data-toggle="modal"
-                          title="Compare"
-                          href="#"
-                        >
-                          <i class="fa fa-sliders fa-rotate-90"></i>
-                        </a>
+                        >+ CARRINHO</a>
                       </div>
                     </div>
                   </div>
@@ -110,16 +101,7 @@
                           class="action-cart"
                           title="ADICIONAR AO CARRINHO"
                           href="#"
-                        >ADICIONAR AO CARRINHO</a>
-                        <a
-                          class="same-action compare-mrg"
-                          data-target="#exampleCompare"
-                          data-toggle="modal"
-                          title="Compare"
-                          href="#"
-                        >
-                          <i class="fa fa-sliders fa-rotate-90"></i>
-                        </a>
+                        >+ CARRINHO</a>
                       </div>
                     </div>
                   </div>
@@ -452,9 +434,7 @@
 <script>
 export default {
   props: ['products_new', 'products_hot'],
-
   mounted() {
-    
   }
 
 };

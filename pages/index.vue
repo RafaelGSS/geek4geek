@@ -304,6 +304,9 @@ export default {
         })
       }, 1500)
     });
+  },
+  head: {
+    title: 'Homepage dos Geeks!'
   }
 };
 </script>

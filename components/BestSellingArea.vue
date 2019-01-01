@@ -246,7 +246,7 @@
 </template>
 <script>
 export default {
-  props: ['canecas_hot', 'tshirt_hot']
+  //props: ['canecas_hot', 'tshirt_hot']
 }
 </script>
 
