@@ -309,6 +309,7 @@ export default {
     title: 'Homepage dos Geeks!'
   }
 };
+
 </script>
 
 <style scoped>
