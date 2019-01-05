@@ -1,6 +1,10 @@
-const webpack = require('webpack')
-
 module.exports = {
+  /**
+   * Router config
+   */
+  // router: {
+  //   middleware: 'cart-shopping',
+  // },
   /*
   ** Headers of the page
   */

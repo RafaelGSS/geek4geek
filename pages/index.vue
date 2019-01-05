@@ -29,6 +29,10 @@ import BestSellingArea from "~/components/BestSellingArea.vue";
 import FooterBottom from "~/components/FooterBottom.vue";
 
 export default {
+  head: {
+    title: 'Homepage dos Geeks!'
+  },
+  middleware: 'cart-shopping',
   components: {
     HeaderTop,
     FooterBottom,
@@ -305,12 +309,6 @@ export default {
       }, 1500)
     });
   },
-  head: {
-    title: 'Homepage dos Geeks!'
-  },
-  mounted() {
-    this.$store.commit('cart/initializeStore')
-  }
 };
 </script>
 

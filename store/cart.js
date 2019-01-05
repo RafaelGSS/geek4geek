@@ -3,6 +3,7 @@ import nuxtStorage from 'nuxt-storage'
 export const state = () => ({
     itemsCart: [],
     sumCart: 0,
+    initialized: false
 })
   
 export const mutations = {
@@ -11,6 +12,7 @@ export const mutations = {
            state = 
                 Object.assign(state, JSON.parse(nuxtStorage.localStorage.getData('iki-cart')))
         }
+        state.initialized = true
     },
     add (state, obj) {
         state.sumCart += obj.value
@@ -32,5 +34,8 @@ export const getters = {
     },
     sum: state => {
         return state.sumCart
+    },
+    initialized: state => {
+        return state.initialized
     }
 }
