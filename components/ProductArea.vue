@@ -49,8 +49,13 @@
                         </a>
                         <a
                           class="action-cart"
-                          title="ADICIONAR AO CARRINHO"
                           href="#"
+                          title="ADICIONAR AO CARRINHO"
+                         @click="addCart({
+                              id: product_new.id,
+                              display_name: product_new.name,
+                              quantity: 1,
+                              value: product_new.price})"
                         >+ CARRINHO</a>
                       </div>
                     </div>
@@ -101,6 +106,11 @@
                           class="action-cart"
                           title="ADICIONAR AO CARRINHO"
                           href="#"
+                          @click="addCart({
+                              id: product_hot.id,
+                              display_name: product_hot.name,
+                              quantity: 1,
+                              value: product_hot.price})"
                         >+ CARRINHO</a>
                       </div>
                     </div>
@@ -404,6 +414,7 @@
 .product-action > a.action-cart:hover {
     background-color: #7aed0a;
     color: #fff;
+    cursor: pointer; 
 }
 .product-rating {
     position: relative;
@@ -435,6 +446,18 @@
 export default {
   props: ['products_new', 'products_hot'],
   mounted() {
+
+  },
+  methods: {
+    addCart(obj){
+        this.$notify({
+            group: 'general',
+            type: 'success',
+            title: 'Item adicionado',
+            text: 'O Item foi adicionado com sucesso do seu carrinho de compras!'
+        });
+        this.$store.commit('cart/add', obj)
+    }
   }
 
 };

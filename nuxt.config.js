@@ -43,7 +43,8 @@ module.exports = {
     ],
   },
   plugins:[
-    {src: 'plugins/vue-carousel.js', ssr: false}
+    {src: 'plugins/vue-carousel.js', ssr: false},
+    {src: 'plugins/vue-notifications.js', ssr: false}
   ],
   /**
    * Global CSS
