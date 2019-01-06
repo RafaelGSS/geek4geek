@@ -18,13 +18,13 @@ export const mutations = {
         state.sumCart += obj.value
         state.itemsCart.push(obj)
 
-        nuxtStorage.localStorage.setData('iki-cart', JSON.stringify(state))
+        nuxtStorage.localStorage.setData('iki-cart', JSON.stringify(state), 60)
     },
     remove (state, idx){
         state.sumCart -= state.itemsCart[idx].value
         state.itemsCart.splice(idx, 1)
         
-        nuxtStorage.localStorage.setData('iki-cart', JSON.stringify(state))
+        nuxtStorage.localStorage.setData('iki-cart', JSON.stringify(state), 60)
     }
 }
 

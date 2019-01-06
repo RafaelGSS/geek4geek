@@ -1,10 +1,4 @@
 module.exports = {
-  /**
-   * Router config
-   */
-  // router: {
-  //   middleware: 'cart-shopping',
-  // },
   /*
   ** Headers of the page
   */
@@ -21,13 +15,11 @@ module.exports = {
         type: "text/javascript"
       },
       {
-        src:
-          "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js",
+        src: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js",
         type: "text/javascript"
       },
       {
-        src:
-          "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js",
+        src: "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js",
         type: "text/javascript"
       },
       { src: 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js'},
@@ -36,19 +28,23 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: "stylesheet",
-        href:
-          "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        href: "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       },
       {
         rel: "stylesheet",
-        href:
-        "https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css"
+        href: "https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css"
       }
     ],
   },
   plugins:[
     {src: 'plugins/vue-carousel.js', ssr: false},
     {src: 'plugins/vue-notifications.js', ssr: false}
+  ],
+  /**
+   * Add modules extern
+   */
+  modules: [
+    'nuxt-client-init-module'
   ],
   /**
    * Global CSS
@@ -61,6 +57,7 @@ module.exports = {
   loading: { color: '#3B8070' },
   /**
    * Set position scrol after link
+   * Router Config
    */
   router: {
     scrollBehavior: function (to, from, savedPosition) {

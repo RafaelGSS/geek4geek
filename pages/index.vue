@@ -32,7 +32,6 @@ export default {
   head: {
     title: 'Homepage dos Geeks!'
   },
-  middleware: 'cart-shopping',
   components: {
     HeaderTop,
     FooterBottom,
