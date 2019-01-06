@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div>    
     <HeaderTop/>
     <HeaderMiddle/>
     <HeaderBottom :categories=categories :shoptypes=shoptypes />
@@ -29,6 +29,9 @@ import BestSellingArea from "~/components/BestSellingArea.vue";
 import FooterBottom from "~/components/FooterBottom.vue";
 
 export default {
+  head: {
+    title: 'Homepage dos Geeks!'
+  },
   components: {
     HeaderTop,
     FooterBottom,
@@ -65,32 +68,32 @@ export default {
           ],
           shoptypes: [
             {
-              id: 1,
+              id: 98,
               name: 'Para sua casa',
               subcategories: [
                 {
-                  id: 1,
+                  id: 10,
                   name: 'Almofadas',
                   new: false
                 },
                 {
-                  id: 2,
+                  id: 11,
                   name: 'Action Figures',
                   new: false
                 }
               ]
             },
             {
-              id: 1,
+              id: 99,
               name: 'Promocões',
               subcategories: [
                 {
-                  id: 1,
+                  id: 5,
                   name: 'Camisetas Marvel',
                   new: true
                 },
                 {
-                  id: 2,
+                  id: 7,
                   name: 'Camisetas DC',
                   new: true
                 }
@@ -99,7 +102,7 @@ export default {
           ],
           products_new: [
             {
-              id: 1,
+              id: 95,
               name: 'Produto Gee4Geek',
               category_name: 'Canecas',
               display_description: 'Descricao dos protudos em modo de display',
@@ -111,7 +114,7 @@ export default {
               price: 90,
             },
             {
-              id: 2,
+              id: 92,
               name: 'Produto Gee4Geek',
               category_name: 'Canecas',
               display_description: 'Descricao dos protudos em modo de display',
@@ -123,7 +126,7 @@ export default {
               price: 90,
             },
             {
-              id: 3,
+              id: 91,
               name: 'Produto Gee4Geek',
               category_name: 'Canecas',
               display_description: 'Descricao dos protudos em modo de display',
@@ -135,7 +138,7 @@ export default {
               price: 90,
             },
             {
-              id: 4,
+              id: 44,
               name: 'Produto Gee4Geek',
               category_name: 'Canecas',
               display_description: 'Descricao dos protudos em modo de display',
@@ -147,7 +150,7 @@ export default {
               price: 90,
             },
             {
-              id: 5,
+              id: 45,
               name: 'Produto Gee4Geek',
               category_name: 'Canecas',
               display_description: 'Descricao dos protudos em modo de display',
@@ -159,7 +162,7 @@ export default {
               price: 90,
             },
             {
-              id: 6,
+              id: 46,
               name: 'Produto Gee4Geek',
               category_name: 'Canecas',
               display_description: 'Descricao dos protudos em modo de display',
@@ -171,7 +174,7 @@ export default {
               price: 90,
             },
             {
-              id: 7,
+              id: 47,
               name: 'Produto Gee4Geek',
               category_name: 'Canecas',
               display_description: 'Descricao dos protudos em modo de display',
@@ -183,7 +186,7 @@ export default {
               price: 90,
             },
             {
-              id: 8,
+              id: 48,
               name: 'Produto Gee4Geek',
               category_name: 'Canecas',
               display_description: 'Descricao dos protudos em modo de display',
@@ -195,7 +198,7 @@ export default {
               price: 90,
             },
             {
-              id: 9,
+              id: 49,
               name: 'Produto Gee4Geek',
               category_name: 'Canecas',
               display_description: 'Descricao dos protudos em modo de display',
@@ -207,7 +210,7 @@ export default {
               price: 90,
             },
             {
-              id: 10,
+              id: 410,
               name: 'Produto Gee4Geek',
               category_name: 'Canecas',
               display_description: 'Descricao dos protudos em modo de display',
@@ -221,7 +224,7 @@ export default {
           ],
           products_hot: [
             {
-              id: 1,
+              id: 41,
               name: 'Produto Gee4Geek',
               category_name: 'Canecas',
               display_description: 'Descricao dos protudos em modo de display',
@@ -229,7 +232,7 @@ export default {
               price: 90,
             },
             {
-              id: 2,
+              id: 62,
               name: 'Produto Gee4Geek',
               category_name: 'Canecas',
               display_description: 'Descricao dos protudos em modo de display',
@@ -237,7 +240,7 @@ export default {
               price: 90,
             },
             {
-              id: 3,
+              id: 63,
               name: 'Produto Gee4Geek',
               category_name: 'Canecas',
               display_description: 'Descricao dos protudos em modo de display',
@@ -253,7 +256,7 @@ export default {
               price: 90,
             },
             {
-              id: 5,
+              id: 65,
               name: 'Produto Gee4Geek',
               category_name: 'Canecas',
               display_description: 'Descricao dos protudos em modo de display',
@@ -261,7 +264,7 @@ export default {
               price: 90,
             },
             {
-              id: 6,
+              id: 66,
               name: 'Produto Gee4Geek',
               category_name: 'Canecas',
               display_description: 'Descricao dos protudos em modo de display',
@@ -269,7 +272,7 @@ export default {
               price: 90,
             },
             {
-              id: 7,
+              id: 67,
               name: 'Produto Gee4Geek',
               category_name: 'Canecas',
               display_description: 'Descricao dos protudos em modo de display',
@@ -277,7 +280,7 @@ export default {
               price: 90,
             },
             {
-              id: 8,
+              id: 68,
               name: 'Produto Gee4Geek',
               category_name: 'Canecas',
               display_description: 'Descricao dos protudos em modo de display',
@@ -285,7 +288,7 @@ export default {
               price: 90,
             },
             {
-              id: 9,
+              id: 69,
               name: 'Produto Gee4Geek',
               category_name: 'Canecas',
               display_description: 'Descricao dos protudos em modo de display',
@@ -293,7 +296,7 @@ export default {
               price: 90,
             },
             {
-              id: 10,
+              id: 710,
               name: 'Produto Gee4Geek',
               category_name: 'Canecas',
               display_description: 'Descricao dos protudos em modo de display',
@@ -305,9 +308,6 @@ export default {
       }, 1500)
     });
   },
-  head: {
-    title: 'Homepage dos Geeks!'
-  }
 };
 </script>
 

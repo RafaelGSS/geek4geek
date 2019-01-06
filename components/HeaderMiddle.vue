@@ -30,46 +30,32 @@
             <div class="header-cart middle-same">
               <button class="icon-cart">
                 <i class="pe-7s-shopbag cart-bag"></i>
-                <span class="count-amount">$609.00</span>
+                <span class="count-amount" id="count-amount">R$ {{ sumCart.toLocaleString("pt",{useGrouping: false,minimumFractionDigits: 2}) }}</span>
                 <i class="ion-chevron-down cart-down"></i>
-                <span class="count-style">02</span>
+                <span class="count-style">{{ itemsCart.length }}</span>
               </button>
               <div class="shopping-cart-content">
                 <ul>
-                  <li class="single-shopping-cart">
+                  <li class="single-shopping-cart" v-for="(item, idx) in itemsCart" :key="idx">
                     <div class="shopping-cart-img">
                       <a href="#"><img alt="" src="/img/cart/cart-1.jpg"></a>
                     </div>
                     <div class="shopping-cart-title">
-                      <h4><a href="#">Phantom Remote <br>Control 2018 </a></h4>
-                      <h6>Qty: 02</h6>
-                      <span>$260.00</span>
+                      <h4><a href="#">{{ item.display_name }}</a></h4>
+                      <h6>Quantidade: <span>{{ item.quantity }}</span></h6>
+                      <span>Preço: R$ {{ item.value }}</span>
                     </div>
                     <div class="shopping-cart-delete">
-                        <a href="#"><i class="ion-android-close"></i></a>
-                    </div>
-                  </li>
-                  <li class="single-shopping-cart">
-                    <div class="shopping-cart-img">
-                      <a href="#"><img alt="" src="/img/cart/cart-2.jpg"></a>
-                    </div>
-                    <div class="shopping-cart-title">
-                      <h4><a href="#">Phantom Remote <br>Control 2018 </a></h4>
-                      <h6>Qty: 02</h6>
-                      <span>$260.00</span>
-                    </div>
-                    <div class="shopping-cart-delete">
-                      <a href="#"><i class="ion-android-close"></i></a>
+                        <a href="#" @click="removeItem(idx)"><i class="ion-android-close"></i></a>
                     </div>
                   </li>
                 </ul>
                 <div class="shopping-cart-total">
-                  <h4>Shipping : <span>$20.00</span></h4>
-                  <h4>Total : <span class="shop-total">$260.00</span></h4>
+                  <h4>Total : <span class="shop-total" id="shop-total">R$ {{ sumCart.toLocaleString("pt",{useGrouping: false,minimumFractionDigits: 2}) }}</span></h4>
                 </div>
                 <div class="shopping-cart-btn">
-                  <a class="btn-style btn-hover" href="cart-page.html">view cart</a>
-                  <a class="btn-style btn-hover" href="checkout.html">checkout</a>
+                  <a class="btn-style btn-hover" href="#">VER CARRINHO</a>
+                  <a class="btn-style btn-hover" href="#" v-if="itemsCart.length > 0">FINALIZAR COMPRA</a>
                 </div>
               </div>
             </div>
@@ -158,7 +144,7 @@
 .middle-same {
     display: inline-block;
     float: left;
-    margin-left: 45px;
+    margin-left: 30px;
 }
 .middle-same:first-child,
 .header-top-right ul li:first-child {
@@ -369,16 +355,40 @@ button.icon-cart span.count-style {
 .shopping-cart-btn a {
     margin-bottom: 15px;
 }
+.disabled {
+  background: #dddddd;
+  opacity: 0.65; 
+  cursor: not-allowed;
+}
 
 </style>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
     mounted() {
         /* Cart */
         $(".icon-cart").on("click", function() {
             $(this).parent().find('.shopping-cart-content').slideToggle('medium');
         });
+    },
+    computed: {
+        ...mapGetters({
+            itemsCart: 'cart/items',
+            sumCart: 'cart/sum'
+        }),
+    },
+    methods: {
+        removeItem(idx){
+            this.$notify({
+                group: 'general',
+                type: 'info',
+                title: 'Item removido',
+                text: 'O Item foi removido com sucesso do seu carrinho de compras!'
+            });
+            this.$store.commit('cart/remove', idx)
+        }
     }
 }
 </script>
