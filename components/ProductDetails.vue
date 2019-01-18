@@ -7,28 +7,22 @@
             <div class="zoompro-border zoompro-span">
               <img
                 class="zoompro"
-                src="/img/product-details/product-detalis-l1.jpg"
-                data-zoom-image="/img/product-details/product-detalis-bl1.jpg"
-                alt
+                :src="pProduct.images[0].display_image"
+                :data-zoom-image="pProduct.images[0].big_display_image"
+                :alt="pProduct.images[0].alternate_text"
               >
-              <span>-29%</span>
+              <span v-if="pProduct.promotion.enabled">-{{ pProduct.promotion.percentage }}%</span>
             </div>
             <div id="gallery" class="product-dec-slider">
-              <a data-image="/img/product-details/product-detalis-l1.jpg" data-zoom-image="/img/product-details/product-detalis-bl1.jpg">
-                <img src="/img/product-details/product-detalis-s1.jpg" alt>
-              </a>
-              <a data-image="/img/product-details/product-detalis-l2.jpg" data-zoom-image="/img/product-details/product-detalis-bl2.jpg">
-                <img src="/img/product-details/product-detalis-s2.jpg" alt>
-              </a>
-              <a data-image="/img/product-details/product-detalis-l5.jpg" data-zoom-image="/img/product-details/product-detalis-bl5.jpg">
-                <img src="/img/product-details/product-detalis-s5.jpg" alt>
+              <a v-for="image in pProduct.images" :key="image.id" :data-image="image.display_image" :data-zoom-image="image.big_display_image">
+                <img :src="image.low_display_image" :alt="image.alternate_text">
               </a>
             </div>
           </div>
         </div>
         <div class="col-lg-6 col-md-12">
           <div class="product-details-content">
-            <h4>Phantom Remote Control Ver 2018</h4>
+            <h4>{{ pProduct.display_name }}</h4>
             <div class="rating-review">
               <div class="pro-dec-rating">
                 <i class="ion-android-star-outline theme-star"></i>
@@ -39,97 +33,43 @@
               </div>
               <div class="pro-dec-review">
                 <ul>
-                  <li>32 Reviews</li>
-                  <li>Add Your Reviews</li>
+                  <a href="#"><li>Adicionar Review</li></a>
                 </ul>
               </div>
             </div>
-            <span>R$ 260,00</span>
+            <span>R$ {{ pProduct.price }}</span>
             <div class="in-stock">
               <p>
-                Available:
-                <span>In stock</span>
+                Estoque:
+                <span v-if="pProduct.stock > 0">Disponível em estoque</span>
               </p>
             </div>
-            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
-            <div class="pro-dec-feature">
-              <ul>
-                <li>
-                  <input type="checkbox"> Protection Plan:
-                  <span>2 year $4.99</span>
-                </li>
-                <li>
-                  <input type="checkbox"> Remote Holder:
-                  <span>$9.99</span>
-                </li>
-                <li>
-                  <input type="checkbox"> Koral Alexa Voice Remote Case:
-                  <span>Red $16.99</span>
-                </li>
-                <li>
-                  <input type="checkbox"> Amazon Basics HD Antenna:
-                  <span>25 Mile $14.99</span>
-                </li>
-              </ul>
-            </div>
+            <p style="min-height: 100px;">{{ pProduct.display_description }}</p>
             <div class="quality-add-to-cart">
               <div class="quality">
-                <label>Qty:</label>
-                <input class="cart-plus-minus-box" type="text" name="qtybutton" value="02">
+                <label>Quantidade:</label>
+                <input class="cart-plus-minus-box" type="number" name="quantity" v-model="quantity">
               </div>
               <div class="product-action">
-                <a class="action-cart" title="Add To Cart" href="#">Add to Cart</a>
+                <a class="action-cart" title="Add To Cart" href="#" @click="addCart">Add to Cart</a>
                 <a class="same-action" title="Wishlist" href="#">
                   <i class="fa fa-heart-o"></i>
-                </a>
-                <a
-                  class="same-action compare-mrg"
-                  data-target="#exampleCompare"
-                  data-toggle="modal"
-                  title="Compare"
-                  href="#"
-                >
-                  <i class="fa fa-sliders fa-rotate-90"></i>
                 </a>
               </div>
             </div>
             <div class="pro-dec-categories">
               <ul>
-                <li class="categories-title">Categories:</li>
-                <li>
-                  <a href="#">Computer,</a>
-                </li>
-                <li>
-                  <a href="#">Accessories,</a>
-                </li>
-                <li>
-                  <a href="#">Laptop,</a>
-                </li>
-                <li>
-                  <a href="#">Digital,</a>
-                </li>
-                <li>
-                  <a href="#">Electronic,</a>
-                </li>
-                <li>
-                  <a href="#">Free Shipping.</a>
+                <li class="categories-title">Categorias:</li>
+                <li v-for="category in categories" :key=category.id>
+                  <a href="#">{{ category.name }}</a>
                 </li>
               </ul>
             </div>
             <div class="pro-dec-categories">
               <ul>
                 <li class="categories-title">Tags:</li>
-                <li>
-                  <a href="#">Plazatheme,</a>
-                </li>
-                <li>
-                  <a href="#">Table,</a>
-                </li>
-                <li>
-                  <a href="#">Woo,</a>
-                </li>
-                <li>
-                  <a href="#">e-Commerce,</a>
+                <li v-for="tag in tags" :key="tag.id">
+                  <a href="#">{{ tag.name }}</a>
                 </li>
               </ul>
             </div>
@@ -148,11 +88,6 @@
                 <li>
                   <a class="google" href="#">
                     <i class="ion-social-googleplus-outline"></i> Google+
-                  </a>
-                </li>
-                <li>
-                  <a class="pinterest" href="#">
-                    <i class="ion-social-pinterest"></i> Pinterest
                   </a>
                 </li>
               </ul>
@@ -203,7 +138,7 @@
   z-index: 99;
   opacity: 0.3;
 }
-.product-dec-slider a.active.slick-active:before {
+.product-dec-slider a.active.slick-active:before   {
   opacity: 0;
 }
 .product-details-img {
@@ -213,7 +148,7 @@
   position: relative;
 }
 .zoompro-span > span {
-  background-color: #0363cd;
+  background-color: #7aed0a;
   border-radius: 3px;
   color: #fff;
   left: 30px;
@@ -236,10 +171,9 @@
   font-size: 17px;
 }
 .pro-dec-rating i.theme-star {
-  color: #0363cd;
+  color: #7aed0a;
 }
 .pro-dec-review ul li {
-  color: #047afe;
   display: inline-block;
   list-style: outside none none;
   margin-right: 38px;
@@ -274,7 +208,8 @@
   margin: 20px 0 27px;
 }
 .in-stock > p span {
-  color: #047afe;
+  color: #e54d4d;
+  font-weight: bold;
 }
 .product-details-content > p {
   color: #242424;
@@ -285,34 +220,6 @@
 }
 .in-stock {
   margin: 27px 0 3px;
-}
-.pro-dec-feature li {
-  display: block;
-  list-style: outside none none;
-  margin: 0 0 4px;
-  color: #242424;
-}
-.pro-dec-feature li:last-child {
-  margin: 0 0 0px;
-}
-.pro-dec-feature li input[type="checkbox"] {
-  background: #ebebeb none repeat scroll 0 0;
-  border: 1px solid #d7d7d7;
-  box-shadow: none;
-  color: #626262;
-  font-size: 14px;
-  height: 13px;
-  margin: 0 13px 0 0;
-  padding-left: 0;
-  position: relative;
-  top: 2px;
-  width: 13px;
-}
-.pro-dec-feature li span {
-  color: #047afe;
-}
-.pro-dec-feature {
-  padding: 24px 0 37px;
 }
 .quality input {
   background: transparent none repeat scroll 0 0;
@@ -373,7 +280,7 @@
   color: #242424;
 }
 .pro-dec-categories li a:hover {
-  color: #047afe;
+  color: #7aed0a;
 }
 .pro-dec-categories {
   margin: 0 0 12px;
@@ -399,8 +306,8 @@
 }
 .pro-dec-social li a.tweet:hover {
   background-color: transparent;
-  border: 1px solid #00aaf0;
-  color: #00aaf0;
+  border: 1px solid #7aed0a;
+  color: #7aed0a;
 }
 .pro-dec-social li a.share {
   background-color: #435f9f;
@@ -408,8 +315,8 @@
 }
 .pro-dec-social li a.share:hover {
   background-color: transparent;
-  border: 1px solid #435f9f;
-  color: #435f9f;
+  border: 1px solid #7aed0a;
+  color: #7aed0a;
 }
 .pro-dec-social li a.google {
   background-color: #e04b34;
@@ -417,17 +324,8 @@
 }
 .pro-dec-social li a.google:hover {
   background-color: transparent;
-  border: 1px solid #e04b34;
-  color: #e04b34;
-}
-.pro-dec-social li a.pinterest {
-  background-color: #ce1f21;
-  border: 1px solid transparent;
-}
-.pro-dec-social li a.pinterest:hover {
-  background-color: transparent;
-  border: 1px solid #ce1f21;
-  color: #ce1f21;
+  border: 1px solid #7aed0a;
+  color: #7aed0a;
 }
 .pro-dec-social {
   margin: 27px 0 0;
@@ -479,15 +377,18 @@
   padding: 9px 20px 8px;
   text-transform: uppercase;
 }
-.product-action > a.same-action:hover,
-.product-action > a.action-cart:hover {
-  background-color: #0363cd;
+
+.product-action > a.action-cart:hover,
+.product-action > a.same-action:hover {
+  background-color: #7aed0a;
   color: #fff;
 }
+
 </style>
 
 <script>
 export default {
+  props: ['pProduct', 'tags', 'categories'],
   head () {
     return {
       script: [
@@ -495,9 +396,15 @@ export default {
       ],
     }
   },
+  data() {
+    return {
+      quantity: "1"
+    }
+  },
   mounted() {
     $(".zoompro").elevateZoom({
       gallery: "gallery",
+      responsive: true,
       galleryActiveClass: "active",
       zoomWindowWidth: 300,
       zoomWindowHeight: 100,
@@ -505,6 +412,23 @@ export default {
       zoomType: "inner",
       cursor: "crosshair"
     });
+  },
+  methods: {
+    addCart(){
+        var obj = {
+          id: pProduct.id,
+          quantity: this.quantity,
+          display_name: pProduct.display_name,
+          value: pProduct.price
+        }
+        this.$notify({
+            group: 'general',
+            type: 'success',
+            title: 'Item adicionado',
+            text: 'O Item foi adicionado com sucesso do seu carrinho de compras!'
+        });
+        this.$store.commit('cart/add', obj)
+    }
   }
 };
 </script>

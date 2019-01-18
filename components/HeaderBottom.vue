@@ -26,7 +26,7 @@
               <nav>
                 <ul>
                   <li class="mega-menu-position">
-                    <a href="#">Home
+                    <a href="#">LOJA
                       <i class="ion-chevron-down"></i>
                     </a>
                     <ul class="mega-menu">
@@ -73,27 +73,6 @@
                                 <a href="index-shoe.html">Home - Shoe
                                   <span class="red">New</span>
                                 </a>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="mega-menu-position">
-                    <a href="#">Loja
-                      <i class="ion-chevron-down"></i>
-                    </a>
-                    <ul class="mega-menu">
-                      <li>
-                        <ul>
-                          <li v-for="type in shoptypes" :key="type.id">
-                            <ul>
-                              <li class="mega-menu-title">{{ type.name }}</li>
-                              <li v-for="subcategory in type.subcategories" :key="subcategory.id">
-                                <nuxt-link to="#">{{ subcategory.name }}
-                                  <span class="red" v-if="subcategory.new">New</span>
-                                </nuxt-link>
                               </li>
                             </ul>
                           </li>
@@ -485,7 +464,7 @@
 
 <script>
 export default {
-  props: ['categories', 'shoptypes'],
+  props: ['categories'],
   mounted() {
     /*-------------------------
         Showlogin toggle function
