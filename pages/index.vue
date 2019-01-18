@@ -66,40 +66,6 @@ export default {
               name: 'Action Figures'
             }
           ],
-          shoptypes: [
-            {
-              id: 98,
-              name: 'Para sua casa',
-              subcategories: [
-                {
-                  id: 10,
-                  name: 'Almofadas',
-                  new: false
-                },
-                {
-                  id: 11,
-                  name: 'Action Figures',
-                  new: false
-                }
-              ]
-            },
-            {
-              id: 99,
-              name: 'Promocões',
-              subcategories: [
-                {
-                  id: 5,
-                  name: 'Camisetas Marvel',
-                  new: true
-                },
-                {
-                  id: 7,
-                  name: 'Camisetas DC',
-                  new: true
-                }
-              ]
-            },
-          ],
           products_new: [
             {
               id: 95,
