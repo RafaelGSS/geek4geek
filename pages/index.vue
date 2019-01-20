@@ -11,8 +11,11 @@
     <div class="banner-area">
       <img src="/img/banner/banner-80.jpg" alt="">
     </div>
-    <FooterTop/>
-    <FooterBottom/>
+    <footer>
+      <FooterTop/>
+      <FooterBottom/>
+    </footer>
+    
   </div>
 </template>
 
@@ -279,6 +282,9 @@ export default {
 </script>
 
 <style scoped>
+footer {
+  background: #282829;
+}
 .banner-area > img {
     width: 100%;
 }

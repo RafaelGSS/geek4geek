@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer-area pt-60">
+  <div class="footer-area pt-60">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-6">
@@ -12,12 +12,6 @@
                 We are a team of designers and developers that create
                 high quality Magento, Prestashop, Opencart [...].
               </p>
-              <div class="footer-map">
-                <a href="contact.html">
-                  <i class="ion-ios-location-outline"></i>
-                  Ver no mapa
-                </a>
-              </div>
             </div>
             <div class="social-icon mr-40">
               <ul>
@@ -107,7 +101,6 @@
                   <div id="mc_embed_signup_scroll" class="mc-form">
                     <input
                       type="email"
-                      value
                       name="EMAIL"
                       class="email"
                       placeholder="Seu endereço de email..."
@@ -132,25 +125,23 @@
         </div>
       </div>
     </div>
-  </footer>
+  </div>
 </template>
 
 <style scoped>
+a {
+  color: #ddd;
+}
+a:hover {
+  color: #fff;
+}
+
 .footer-area .pt-60 {
   padding-top: 40px;
 }
-::after,
-::before {
-  box-sizing: border-box;
-}
-.footer-widget-red .footer-map > a {
-  color: #7aed0a;
-}
-.footer-widget-red .footer-map > a:hover {
-  color: #242424;
-}
+
 .footer-title > h4 {
-  color: #242424;
+  color: #ddd;
 }
 .footer-title > h4,
 .opening-time > h4 {
@@ -160,7 +151,7 @@
 }
 
 .footer-about > p {
-  color: #242424;
+  color: #ddd;
 }
 .footer-about > p {
   margin: 0px;
@@ -197,24 +188,15 @@
 }
 
 .social-icon li a.instagram {
-  background-color: #c619b8;
-  border: 2px solid #c619b8;
+  background-color: #d82b7e;
+  border: 2px solid #d82b7e;
 }
 .social-icon li a.instagram:hover {
   background-color: #fff;
   border: 2px solid #fff;
-  color: #c619b8;
+  color: #d82b7e;
 }
 
-.footer-widget-red .footer-content ul li:hover a,
-.footer-widget-red .footer-contact li a:hover {
-  color: #7aed0a;
-}
-.footer-widget-red-2 .subscribe-form-2 form .clear-2 input:hover {
-  background-color: #7aed0a;
-  border-color: #7aed0a;
-  color: #fff !important;
-}
 .footer-content ul li {
   list-style: outside none none;
   padding-bottom: 15px;
@@ -224,7 +206,7 @@ li {
   text-align: -webkit-match-parent;
 }
 .footer-newsletter > p {
-  color: #242424;
+  color: #ddd;
 }
 .subscribe-form-2 {
   margin: 16px 0 0;
@@ -233,10 +215,7 @@ form {
   display: block;
   margin-top: 0em;
 }
-.footer-widget-red-2.footer-black-color .subscribe-form-2 form input {
-  border-color: #e1e1e1;
-  color: #242424;
-}
+
 .subscribe-form-2 form input {
   background: transparent none repeat scroll 0 0;
   border-image: none;
@@ -258,12 +237,14 @@ input {
   margin: 0;
   font-family: inherit;
   line-height: inherit;
+  color: #fff;
 }
+
 .footer-widget-red-2 .subscribe-form-2 form .clear-2 input {
   background-color: #fff;
   font-weight: bold;
   border: 1px solid;
-  color: #242424 !important;
+  color: #282829;
 }
 .subscribe-form-2 form input {
   background: transparent none repeat scroll 0 0;
@@ -314,6 +295,10 @@ button {
 }
 .clear-2 {
     margin: 39px 0 0;
+}
+
+.clear-2 input:hover {
+  background: #282829;
 }
 </style>
 

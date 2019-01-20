@@ -1,90 +1,122 @@
 <template>
-    <div class="container">
-                    <div class="pt-60 pb-65 border-top-2">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="footer-middle text-center red-color footer-black-color">
-                                    <div class="footer-tag">
-                                        <ul>
-                                            <li><a href="#">Compras online  </a></li>
-                                            <li><a href="#">Promoções  </a></li>
-                                            <li><a href="#">Minhas ordens   </a></li>
-                                            <li><a href="#">Socorro  </a></li>
-                                            <li><a href="#">Serviço ao cliente  </a></li>
-                                            <li><a href="#">Mais populares   </a></li>
-                                            <li><a href="#">Nossas chegadas </a></li>
-                                            <li><a href="#">Produtos especiais  </a></li>
-                                            <li><a href="#">Fabricantes </a></li>
-                                            <li><a href="#">Nossas lojas  </a></li>
-                                            <li><a href="#">Remessa  </a></li>
-                                            <li><a href="#">Pagamentos </a></li>
-                                            <li><a href="#">Garantia  </a></li>
-                                            <li><a href="#">Reembolsos  </a></li>
-                                        
-                                            <li><a href="#">Confira </a></li>
-                                            <li><a href="#">Desconto  </a></li>
-                                            <li><a href="#">Termos e condições  </a></li>
-                                            <li><a href="#">Envio político  </a></li>
-                                            
-                                        </ul>
-                                    </div>
-                                    <div class="payment-icon mt-20">
-                                        <a href="#">
-                                            <img src="~/static/img/icon-img/payment.png" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <div class="container">
+    <div class="pt-60 pb-65 border-top-2">
+      <div class="row">
+        <div class="col-12">
+          <div class="footer-middle text-center red-color footer-black-color">
+            <div class="footer-tag">
+              <ul>
+                <li>
+                  <a href="#">Compras online</a>
+                </li>
+                <li>
+                  <a href="#">Promoções</a>
+                </li>
+                <li>
+                  <a href="#">Minhas ordens</a>
+                </li>
+                <li>
+                  <a href="#">Socorro</a>
+                </li>
+                <li>
+                  <a href="#">Serviço ao cliente</a>
+                </li>
+                <li>
+                  <a href="#">Mais populares</a>
+                </li>
+                <li>
+                  <a href="#">Nossas chegadas</a>
+                </li>
+                <li>
+                  <a href="#">Produtos especiais</a>
+                </li>
+                <li>
+                  <a href="#">Fabricantes</a>
+                </li>
+                <li>
+                  <a href="#">Nossas lojas</a>
+                </li>
+                <li>
+                  <a href="#">Remessa</a>
+                </li>
+                <li>
+                  <a href="#">Pagamentos</a>
+                </li>
+                <li>
+                  <a href="#">Garantia</a>
+                </li>
+                <li>
+                  <a href="#">Reembolsos</a>
+                </li>
 
+                <li>
+                  <a href="#">Confira</a>
+                </li>
+                <li>
+                  <a href="#">Desconto</a>
+                </li>
+                <li>
+                  <a href="#">Termos e condições</a>
+                </li>
+                <li>
+                  <a href="#">Envio político</a>
+                </li>
+              </ul>
+            </div>
+            <div class="payment-icon mt-20">
+              <a href="#">
+                <img src="~/static/img/icon-img/payment.png" alt>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style>
 .pt-60 {
-    padding-top: 60px
+  padding-top: 60px;
 }
 .pb-65 {
-    padding-bottom: 65px
+  padding-bottom: 65px;
 }
 .footer-middle {
-    padding: 0 12px;
+  padding: 0 12px;
 }
 .footer-tag ul li a {
-    color: #302E33;
+  color: #ddd;
 }
 
 .footer-tag ul li a:hover {
-    color: #fff;
+  color: #fff;
 }
 .footer-black-color .footer-tag ul li a:hover {
-    color: #666;
+  color: #fff;
 }
 .footer-tag ul li {
-    display: inline-block;
-    margin: 0 10px 5px;
-    position: relative;
+  display: inline-block;
+  margin: 0 10px 5px;
+  position: relative;
 }
 .footer-tag ul li::before {
-    background-color: #666;
-    content: "";
-    height: 2px;
-    position: absolute;
-    right: -19px;
-    top: 11px;
-    transform: rotate(-67deg);
-    transition: all 0.4s ease 0s;
-    width: 15px;
+  background-color: #666;
+  content: "";
+  height: 2px;
+  position: absolute;
+  right: -19px;
+  top: 11px;
+  transform: rotate(-67deg);
+  transition: all 0.4s ease 0s;
+  width: 15px;
 }
 .footer-tag ul li:last-child::before {
-    display: none;
+  display: none;
 }
-
 </style>
 
 <script>
-
 </script>
 
 
