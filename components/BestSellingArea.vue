@@ -24,7 +24,7 @@
                     class="best-selling-pro-wrapper mb-20 best-selling-big-img devita-product-red"
                   >
                     <div class="product-img best-selling-img">
-                      <a href="product-details.html">
+                      <a href="#">
                         <img alt src="/img/product/best-selling-59.jpg">
                       </a>
                       <span>-10%</span>
@@ -33,7 +33,7 @@
                       <span>Acessórios</span>
                       <h4>
                         <a
-                          href="product-details.html"
+                          href="#"
                         >Urso de pelucia, Guarda de Urso (25cm). 1 ... Cor Vermelha ... Adoravelmente inteligente.</a>
                       </h4>
                       <div class="product-price-wrapper">
@@ -66,7 +66,7 @@
                     <div class="col-xl-12 col-lg-6 col-md-6">
                       <div class="best-selling-pro-wrapper mb-20 devita-product-red">
                         <div class="product-img">
-                          <a href="product-details.html">
+                          <a href="#">
                             <img alt src="/img/product/best-selling-60.jpg">
                           </a>
                           <span>-10%</span>
@@ -74,7 +74,7 @@
                         <div class="product-content best-pro-content">
                           <span>Watch, Accessories</span>
                           <h4>
-                            <a href="product-details.html">Pikachu Skull Plush</a>
+                            <a href="#">Pikachu Skull Plush</a>
                           </h4>
                           <div class="product-price-wrapper">
                             <span>$180.00</span>
@@ -96,14 +96,14 @@
                     <div class="col-xl-12 col-lg-6 col-md-6">
                       <div class="best-selling-pro-wrapper mb-20 devita-product-red">
                         <div class="product-img">
-                          <a href="product-details.html">
+                          <a href="#">
                             <img alt src="/img/product/best-selling-61.jpg">
                           </a>
                         </div>
                         <div class="product-content best-pro-content">
                           <span>Phone, Accessories</span>
                           <h4>
-                            <a href="product-details.html">Disney Baby Mickey</a>
+                            <a href="#">Disney Baby Mickey</a>
                           </h4>
                           <div class="product-price-wrapper">
                             <span>$260.00</span>
@@ -136,7 +136,7 @@
                     class="best-selling-pro-wrapper mb-20 best-selling-big-img devita-product-red"
                   >
                     <div class="product-img best-selling-img">
-                      <a href="product-details.html">
+                      <a href="#">
                         <img alt src="/img/product/best-selling-62.jpg">
                       </a>
                       <span>-10%</span>
@@ -145,7 +145,7 @@
                       <span>Tab, Accessories</span>
                       <h4>
                         <a
-                          href="product-details.html"
+                          href="#"
                         >Buzz lightyear costume inspiration: white long sleeve with green tank top.</a>
                       </h4>
                       <div class="product-price-wrapper">
@@ -178,7 +178,7 @@
                     <div class="col-xl-12 col-lg-6 col-md-6">
                       <div class="best-selling-pro-wrapper mb-20 devita-product-red">
                         <div class="product-img">
-                          <a href="product-details.html">
+                          <a href="#">
                             <img alt src="/img/product/best-selling-64.jpg">
                           </a>
                           <span>-10%</span>
@@ -186,7 +186,7 @@
                         <div class="product-content best-pro-content">
                           <span>Phone, Accessories</span>
                           <h4>
-                            <a href="product-details.html">Home Wall Sticker</a>
+                            <a href="#">Home Wall Sticker</a>
                           </h4>
                           <div class="product-price-wrapper">
                             <span>$260.00</span>
@@ -208,14 +208,14 @@
                     <div class="col-xl-12 col-lg-6 col-md-6">
                       <div class="best-selling-pro-wrapper mb-20 devita-product-red">
                         <div class="product-img">
-                          <a href="product-details.html">
+                          <a href="#">
                             <img alt src="/img/product/best-selling-65.jpg">
                           </a>
                         </div>
                         <div class="product-content best-pro-content">
                           <span>Remote, Accessories</span>
                           <h4>
-                            <a href="product-details.html">Babies Bumpkin Dog</a>
+                            <a href="#">Babies Bumpkin Dog</a>
                           </h4>
                           <div class="product-price-wrapper">
                             <span>$260.00</span>

@@ -223,19 +223,19 @@ button.icon-cart span.count-style {
     border-radius: 0 7px 7px 0;
 }
 .header-search form input[type="text"]::-moz-placeholder {
-    color: #242424 !important;
+    color: #fff !important;
     outline: 0 !important;
     border-width: 0 !important;
     opacity: 1;
 }
 .header-search form input[type="text"]::-webkit-input-placeholder {
-    color: #242424 !important;
+    color: #fff !important;
     outline: 0 !important;
     border-width: 0 !important;
     opacity: 1;
 }
 .header-search form input[type="text"]::-ms-input-placeholder {
-    color: #242424 !important;
+    color: #fff !important;
     outline: 0 !important;
     border-width: 0 !important;
     opacity: 1;

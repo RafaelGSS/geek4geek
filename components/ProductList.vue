@@ -1,18 +1,8 @@
 <template>
-  <div class="product-area pt-35 pb-30">
-    <div class="container">
-      <div class="product-tab-list product-tab-list-red mb-30 nav" role="tablist">
-        <a class="active" href="#home1" data-toggle="tab">
-          <h4>Novas Chegadas</h4>
-        </a>
-        <a href="#home2" data-toggle="tab">
-          <h4>Destaques</h4>
-        </a>
-      </div>
-      <div class="tab-content jump">
+    <div class="tab-content jump">
         <div class="tab-pane active" id="home1">
           <div class="custom-row">
-            <div class="custom-col-5 mb-30" v-for="product_new in products_new" :key="product_new.id">
+            <div :class="['custom-col-' + itemsPerRow, 'mb-30']" v-for="prod in products" :key="prod.id">
               <div class="geek4-product-2 mrg-inherit geek4-product-red">
                 <div class="product-img">
                   <div class="product-img-slider">
@@ -20,18 +10,18 @@
                       <img src="/img/product/pro-toy-1.jpg" alt>
                     </a>
                   </div>
-                  <span v-if="product_new.promo">-{{ product_new.promotion.percentage }}%</span>
+                  <span v-if="prod.promo">-{{ prod.promotion.percentage }}%</span>
                 </div>
                 <div class="list-col">
                   <div class="gridview">
                     <div class="product-content text-center">
-                      <span>{{ product_new.category_name }}</span>
+                      <span>{{ prod.category_name }}</span>
                       <h4>
-                        <a href="#">{{ product_new.name }}</a>
+                        <a href="#">{{ prod.name }}</a>
                       </h4>
                       <div class="product-price-wrapper">
-                        <span>R$ {{ product_new.price }}</span>
-                        <span class="product-price-old" v-if="product_new.promo">R$ {{ product_new.promotion.old_price }}</span>
+                        <span>R$ {{ prod.price }}</span>
+                        <span class="product-price-old" v-if="prod.promo">R$ {{ prod.promotion.old_price }}</span>
                       </div>
                     </div>
                     <div class="product-action-wrapper-2 text-center">
@@ -42,7 +32,7 @@
                         <i class="ion-android-star-outline theme-star"></i>
                         <i class="ion-android-star-outline"></i>
                       </div>
-                      <p> {{ product_new.display_description }}</p>
+                      <p> {{ prod.display_description }}</p>
                       <div class="product-action">
                         <a class="same-action" title="Wishlist" href="#">
                           <i class="fa fa-heart-o"></i>
@@ -52,65 +42,10 @@
                           href="#"
                           title="ADICIONAR AO CARRINHO"
                          @click="addCart({
-                              id: product_new.id,
-                              display_name: product_new.name,
+                              id: prod.id,
+                              display_name: prod.name,
                               quantity: 1,
-                              value: product_new.price})"
-                        >+ CARRINHO</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tab-pane" id="home2">
-          <div class="custom-row">
-            <div class="custom-col-5 mb-30" v-for="product_hot in products_hot" :key="product_hot.id">
-              <div class="geek4-product-2 mrg-inherit geek4-product-red">
-                <div class="product-img">
-                  <div class="product-img-slider">
-                    <a href="#">
-                      <img src="/img/product/pro-toy-1.jpg" alt>
-                    </a>
-                  </div>
-                  <span v-if="product_hot.promo">{{ product_hot.promotion.percentage }}</span>
-                </div>
-                <div class="list-col">
-                  <div class="gridview">
-                    <div class="product-content text-center">
-                      <span>{{ product_hot.category_name }}</span>
-                      <h4>
-                        <a href="#">{{ product_hot.name }}</a>
-                      </h4>
-                      <div class="product-price-wrapper">
-                        <span>R$ {{ product_hot.price }}</span>
-                        <span class="product-price-old" v-if="product_hot.promo">R$ {{ product_hot.promotion.old_price }}</span>
-                      </div>
-                    </div>
-                    <div class="product-action-wrapper-2 text-center">
-                      <div class="product-rating">
-                        <i class="ion-android-star-outline theme-star"></i>
-                        <i class="ion-android-star-outline theme-star"></i>
-                        <i class="ion-android-star-outline theme-star"></i>
-                        <i class="ion-android-star-outline theme-star"></i>
-                        <i class="ion-android-star-outline"></i>
-                      </div>
-                      <p> {{ product_hot.display_description }}</p>
-                      <div class="product-action">
-                        <a class="same-action" title="Wishlist" href="#">
-                          <i class="fa fa-heart-o"></i>
-                        </a>
-                        <a
-                          class="action-cart"
-                          title="ADICIONAR AO CARRINHO"
-                          href="#"
-                          @click="addCart({
-                              id: product_hot.id,
-                              display_name: product_hot.name,
-                              quantity: 1,
-                              value: product_hot.price})"
+                              value: prod.price})"
                         >+ CARRINHO</a>
                       </div>
                     </div>
@@ -121,11 +56,9 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
 </template>
 
-<style scoped>
+<style>
 .custom-row {
     display: flex;
     flex-wrap: wrap;
@@ -444,10 +377,14 @@
 
 <script>
 export default {
-  props: ['products_new', 'products_hot'],
-  mounted() {
-
-  },
+// receive 'Items' or default 4
+  props: {
+      products: Array,
+      itemsPerRow: {
+          type: Number,
+          default: 4
+      }
+    },
   methods: {
     addCart(obj){
         this.$notify({
