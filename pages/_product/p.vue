@@ -3,7 +3,7 @@
     <header>
         <HeaderTop/>
         <HeaderMiddle/>
-        <HeaderBottom/>
+        <HeaderBottom :categories="categories"/>
     </header>
     <ProductDetails :categories="categories" :pProduct="product" :tags="tags"/>
     <DescriptionReview :reviews="reviews" :full_description="product.full_description"/>

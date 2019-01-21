@@ -175,9 +175,10 @@
 }
 .pro-dec-review ul li {
   display: inline-block;
-  list-style: outside none none;
   margin-right: 38px;
   position: relative;
+  color: #047afe; 
+  text-decoration: underline;
 }
 .pro-dec-review ul li:last-child {
   margin-right: 0px;

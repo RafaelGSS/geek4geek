@@ -4,6 +4,11 @@
       <div class="row">
         <div class="col-lg-6 col-md-6 col-12">
           <div class="header-top-left">
+            <ul>
+              <li>
+                <img src="/img/logo/icon-geek4geek-white.png" width="27" alt="">
+              </li>
+            </ul>
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-12">

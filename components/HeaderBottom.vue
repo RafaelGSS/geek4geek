@@ -413,7 +413,7 @@ a{
 
 .main-menu nav > ul > li > ul.mega-menu > li > ul > li ul li a span {
   border-radius: 3px;
-  color: #282829;
+  color: #fff;
   font-size: 13px;
   line-height: 1;
   padding: 2px 5px 3px;
