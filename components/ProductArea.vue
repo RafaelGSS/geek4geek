@@ -196,7 +196,7 @@
 }
 .product-tab-list > a.active h4 {
     border: 2px solid #7aed0a;
-    color: #7aed0a;
+    color: #3cb371;
 }
 .product-action-wrapper-2 > p {
     color: #242424;
@@ -287,7 +287,7 @@
 }
 .product-slider-nav.nav-style div:hover , 
 .product-slider-nav-2.nav-style div:hover {
-    background-color: #7aed0a;
+    background-color: #3cb371;
     color: #fff;
 }
 .product-slider-nav-2.nav-style.nav-style-game div {
@@ -336,7 +336,7 @@
     padding: 3px 28px 0;
 }
 .product-img > span {
-    background-color: #7aed0a;
+    background-color: #3cb371;
     border-radius: 3px;
     color: #fff;
     left: 15px;
@@ -356,7 +356,7 @@
     margin: 8px 0 13px;
 }
 .product-content > h4 a:hover {
-    color: #7aed0a;
+    color: #3cb371;
 }
 .product-price-wrapper > span {
     color: #242424;
@@ -370,7 +370,7 @@
     font-size: 17px;
 }
 .product-rating i.theme-star {
-    color: #7aed0a;
+    color: #3cb371;
 }
 .product-action-wrapper > p {
     color: #242424;
@@ -412,7 +412,7 @@
 }
 .product-action > a.same-action:hover,
 .product-action > a.action-cart:hover {
-    background-color: #7aed0a;
+    background-color: #3cb371;
     color: #fff;
     cursor: pointer; 
 }

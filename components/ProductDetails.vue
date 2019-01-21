@@ -148,7 +148,7 @@
   position: relative;
 }
 .zoompro-span > span {
-  background-color: #7aed0a;
+  background-color: #3cb371;
   border-radius: 3px;
   color: #fff;
   left: 30px;
@@ -171,7 +171,7 @@
   font-size: 17px;
 }
 .pro-dec-rating i.theme-star {
-  color: #7aed0a;
+  color: #3cb371;
 }
 .pro-dec-review ul li {
   display: inline-block;
@@ -280,7 +280,7 @@
   color: #242424;
 }
 .pro-dec-categories li a:hover {
-  color: #7aed0a;
+  color: #3cb371;
 }
 .pro-dec-categories {
   margin: 0 0 12px;
@@ -307,7 +307,7 @@
 .pro-dec-social li a.tweet:hover {
   background-color: transparent;
   border: 1px solid #7aed0a;
-  color: #7aed0a;
+  color: #3cb371;
 }
 .pro-dec-social li a.share {
   background-color: #435f9f;
@@ -316,7 +316,7 @@
 .pro-dec-social li a.share:hover {
   background-color: transparent;
   border: 1px solid #7aed0a;
-  color: #7aed0a;
+  color: #3cb371;
 }
 .pro-dec-social li a.google {
   background-color: #e04b34;
@@ -325,7 +325,7 @@
 .pro-dec-social li a.google:hover {
   background-color: transparent;
   border: 1px solid #7aed0a;
-  color: #7aed0a;
+  color: #3cb371;
 }
 .pro-dec-social {
   margin: 27px 0 0;
@@ -380,7 +380,7 @@
 
 .product-action > a.action-cart:hover,
 .product-action > a.same-action:hover {
-  background-color: #7aed0a;
+  background-color: #3cb371;
   color: #fff;
 }
 

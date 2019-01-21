@@ -1574,7 +1574,7 @@ textarea:focus {
     transition: all 0.3s ease 0s;
 }
 .btn-style:hover {
-    background-color: #7aed0a;
+    background-color: #3cb371;
     border: 2px solid #7aed0a;
     color: #fff;
 }

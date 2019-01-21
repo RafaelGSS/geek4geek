@@ -260,7 +260,7 @@ export default {
     padding: 3px 18px 0;
 }
 .product-img > span {
-    background-color: #7aed0a;
+    background-color: #3cb371;
     border-radius: 3px;
     color: #fff;
     left: 15px;
@@ -280,7 +280,7 @@ export default {
     margin: 8px 0 13px;
 }
 .product-content > h4 a:hover {
-    color: #7aed0a;
+    color: #3cb371;
 }
 .product-price-wrapper > span {
     color: #242424;
@@ -324,7 +324,7 @@ export default {
 }
 .product-action > a.same-action:hover,
 .product-action > a.action-cart:hover {
-    background-color: #7aed0a;
+    background-color: #3cb371;
     color: #fff;
 }
 
@@ -476,7 +476,7 @@ export default {
     text-transform: uppercase;
 }
 .best-pro-action-2 a:hover {
-    background-color: #7aed0a;
+    background-color: #3cb371;
     color: #fff;
 }
 .best-pro-action-2 {

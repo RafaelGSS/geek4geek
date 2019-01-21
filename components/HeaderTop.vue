@@ -1,5 +1,5 @@
 <template>
-  <div class="header-top header-top-color-2 header-top-red border-bottom-2 pt-10 pb-13">
+  <div class="header-top header-top-color-2 header-top-red pt-10 pb-13">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-md-6 col-12">
@@ -27,28 +27,20 @@
 </template>
 
 <style scoped>
-.header-top-left {
-    display: flex;
+.header-top {
+  background: #282829;
+  border-bottom: 10px;
 }
 
-.header-top-color-2 .lang-curr-dropdown ul li a,
-.header-top-color-2 .language-currency span,
-.header-top-color-2 .header-top-right ul li a,
-.header-middle-color-2 .header-contact-content > p,
-.header-middle-color-2 .header-contact-icon i,
-.header-middle-color-2 button.icon-cart span.count-amount {
-    color: #242424;
+a{
+  color: #ddd;
 }
-.header-top-color-2 .header-top-right ul li a:hover {
-    color: #7aed0a;
-    text-decoration: underline;
+a:hover {
+  color: #fff;
 }
-.header-top-color-2 .language-currency::before {
-    background-color: #242424;
-}
-.header-top-color-2 .header-search form input {
-    border: 2px solid #ebebeb;
-    color: #a5a5a5;
+
+.header-top-left {
+    display: flex;
 }
 
 .header-top-right {
@@ -59,10 +51,6 @@
     float: left;
     list-style: outside none none;
     margin-left: 30px;
-}
-.header-top-right ul li a {
-    color: #ffffff;
-    font-size: 12px;
 }
 </style>
 

@@ -1,11 +1,11 @@
 <template>
-  <div class="header-middle ptb-40 header-middle-color-5 border-bottom-2">
+  <div class="header-middle ptb-40 header-middle-color">
     <div class="container">
       <div class="row">
         <div class="col-lg-3 col-md-12">
           <div class="logo logo-mrg">
             <nuxt-link to="/">
-              <img src="/img/logo/nome.svg" alt="">
+              <img src="/img/logo/name-white.png" width="250" height="60" alt="">
             </nuxt-link>
           </div>
         </div>
@@ -67,53 +67,56 @@
 </template>
 
 <style scoped>
-.header-middle-color-5 .header-contact-content > p,
-.header-middle-color-5 .header-contact-icon i,
-.header-middle-color-5 button.icon-cart span.count-amount {
-    color: #242424;
+.header-middle {
+    background: #282829;
 }
-.header-middle-color-5 .header-search form input,
+
+p{
+    color: #ddd;
+}
+.header-middle-color .header-search form input,
 .header-middle-color-6 .header-search form input,
 .middle-yellowgreen-color .header-search form input {
-    border: 2px solid #ebebeb;
-    color: #242424;
+    border: 2px solid #ddd;
+    color: #fff;
 }
-.header-middle-color-5 button.icon-cart span.count-style{
-    background-color: #7aed0a;
+.header-middle-color button.icon-cart span.count-style{
+    background-color: #3cb371;
     color: #fff;
     transition: all .3s ease 0s;
 }
 
-.header-middle-color-5 button.icon-cart span.count-style:hover{
+.header-middle-color button.icon-cart span.count-style:hover{
     background-color: #242424;
 }
 
-.header-middle-color-5 .header-search form button {
-    background-color: #242424;
+.header-middle-color .header-search form button {
+    color: #242424;
+    background-color: #ddd;
 }
-.header-middle-color-5 .header-search form button:hover {
-    background-color: #7aed0a;
+.header-middle-color .header-search form button:hover {
+    background-color: #3cb371;
     color: #fff;
 }
-.header-middle-color-5 button.icon-cart,
+.header-middle-color button.icon-cart,
 .header-middle-color-6 button.icon-cart,
 .middle-yellowgreen-color button.icon-cart {
-    border: 2px solid #ebebeb;
+    border: 2px solid #3cb371;
 }
-.header-middle-color-5 button.icon-cart i.cart-bag {
-    border-right: 1px solid #ebebeb;
-    color: #7aed0a;
+.header-middle-color button.icon-cart i.cart-bag {
+    border-right: 1px solid #ddd;
+    color: #ddd;
 }
-.header-middle-color-5 button.icon-cart span.count-amount,
+.header-middle-color button.icon-cart span.count-amount,
 .header-middle-color-6 button.icon-cart span.count-amount {
-    color: #242424;
+    color: #ddd;
 }
-.header-middle-color-5 button.icon-cart i.cart-down {
-    color: #a4a4a4;
+.header-middle-color button.icon-cart i.cart-down {
+    color: #fff;
 }
-.header-middle-color-5 .header-cart:hover button.icon-cart i.cart-bag,
-.header-middle-color-5 .header-cart:hover > button.icon-cart span.count-amount {
-    color: #7aed0a;
+.header-middle-color .header-cart:hover button.icon-cart i.cart-bag,
+.header-middle-color .header-cart:hover > button.icon-cart span.count-amount {
+    color: #3cb371;
 }
 .logo.logo-mrg {
     margin-top: 4px;
@@ -126,6 +129,7 @@
 }
 .header-contact-icon {
     display: inline-block;
+    color: #ddd;
     float: left;
     margin-right: 14px;
 }
@@ -155,7 +159,7 @@
 }
 button.icon-cart {
     background-color: transparent;
-    border: 2px solid #7aed0a;
+    border: 2px solid #3cb371;
     cursor: pointer;
     padding: 9px 12px 6px;
     position: relative;
@@ -172,7 +176,7 @@ button.icon-cart i.cart-down {
     top: -6px;
 }
 button.icon-cart i.cart-bag {
-    border-right: 1px solid #7aed0a;
+    border-right: 1px solid #3cb371;
     color: #fff;
     font-size: 27px;
     margin-right: 7px;
@@ -187,7 +191,7 @@ button.icon-cart span.count-amount {
     transition: all .3s ease 0s;
 }
 button.icon-cart span.count-style {
-    background-color: #7aed0a;
+    background-color: #3cb371;
     border-radius: 100%;
     display: inline-block;
     font-size: 12px;
@@ -209,7 +213,7 @@ button.icon-cart span.count-style {
 }
 .header-search form input {
     background: transparent none repeat scroll 0 0;
-    border: 2px solid #7aed0a;
+    border: 2px solid #3cb371;
     box-shadow: none;
     color: #76b4fa;
     font-size: 13px;
@@ -237,7 +241,7 @@ button.icon-cart span.count-style {
     opacity: 1;
 }
 .header-search form button {
-    background-color: #7aed0a;
+    background-color: #3cb371;
     border: medium none;
     border-radius: 0 5px 5px 0;
     color: #fff;
@@ -252,7 +256,7 @@ button.icon-cart span.count-style {
 }
 .header-search form button:hover {
     background-color: #fff;
-    color: #7aed0a;
+    color: #3cb371;
 }
 .shopping-cart-content {
     background: #fff none repeat scroll 0 0;
@@ -299,7 +303,7 @@ button.icon-cart span.count-style {
     display: block;
 }
 .shopping-cart-title > h4 a:hover {
-    color: #7aed0a;
+    color: #3cb371;
 }
 .shopping-cart-title > h6 {
     color: #555;
@@ -328,8 +332,8 @@ button.icon-cart span.count-style {
     width: 20px;
 }
 .shopping-cart-delete > a:hover {
-    border: 2px solid #7aed0a;
-    color: #7aed0a;
+    border: 2px solid #3cb371;
+    color: #3cb371;
 }
 .shopping-cart-total {
     margin: 25px 0 0;
@@ -346,7 +350,7 @@ button.icon-cart span.count-style {
     color: #242424;
 }
 .shopping-cart-total > h4 span.shop-total {
-    color: #7aed0a;
+    color: #3cb371;
     font-weight: 500;
 }
 .shopping-cart-btn {

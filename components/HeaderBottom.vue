@@ -1,7 +1,7 @@
 <template>
   <div class="header-bottom header-btm-coffee-res">
     <div class="container">
-      <div class="white-bg menu-coffee-color toy-menu">
+      <div class="menu-coffee-color toy-menu">
         <div class="row">
           <div class="col-lg-3">
             <div class="menu-categories">
@@ -110,17 +110,23 @@
 </template>
 
 <style scoped>
+a{
+  color: #fff;
+}
+.header-bottom {
+  background: #282829;
+}
+
 .menu-categories {
   padding: 19px 10px 18px;
   position: relative;
-  border-left: 1px solid #ebebeb;
-  border-right: 1px solid #ebebeb;
 }
 .menu-categories > h3 {
   font-size: 14px;
   font-weight: 500;
   margin: 0;
   text-align: center;
+  color: #fff;
 }
 .menu-categories > h3 a i {
   padding-right: 15px;
@@ -159,7 +165,7 @@
   padding-bottom: 0;
 }
 .category-menu ul li:hover > a {
-  color: #7aed0a;
+  color: #3cb371;
 }
 .category-menu nav > ul > li > a > i {
   color: #383838;
@@ -169,7 +175,7 @@
   top: 1px;
 }
 .category-menu nav > ul > li:hover > a > i {
-  color: #7aed0a;
+  color: #3cb371;
 }
 .category-menu nav > ul > li > a > i.none-lg {
   display: none;
@@ -226,7 +232,7 @@
   color: #242424;
 }
 .category-menu nav > ul li ul.category-small-device li:hover > a {
-  color: #7aed0a;
+  color: #3cb371;
 }
 .category-menu nav > ul li ul.category-small-device li a i {
   float: right;
@@ -236,10 +242,10 @@
 }
 .menu-coffee-color.toy-menu .main-menu ul li:hover > a,
 .menu-coffee-color.toy-menu .main-menu ul li ul li a:hover {
-  color: #7aed0a;
+  color: #3cb371;
 }
 .menu-categories:hover h3 a {
-  color: #7aed0a;
+  color: #3cb371;
 }
 .main-menu.shoe-menu nav > ul > li > ul.mega-menu {
   top: 69%;
@@ -252,7 +258,7 @@
   position: relative;
 }
 .main-menu ul li a {
-  color: #242424;
+  color: #fff;
   display: inline-block;
   font-weight: 500;
   line-height: 55px;
@@ -262,7 +268,7 @@
   color: #ddd;
 }
 .main-menu ul li a i {
-  color: #7aed0a;
+  color: #3cb371;
   font-size: 12px;
   margin-left: 6px;
 }
@@ -320,7 +326,7 @@
   text-align: left;
 }
 .main-menu ul li ul li a:hover {
-  color: #7aed0a;
+  color: #3cb371;
   padding-left: 10px;
 }
 
@@ -350,7 +356,7 @@
   top: 0;
   height: 100%;
   width: 1px;
-  background-color: #7aed0a;
+  background-color: #3cb371;
 }
 .main-menu.main-border nav > ul > li > a.menu-border:after {
   position: absolute;
@@ -359,7 +365,7 @@
   top: 0;
   height: 100%;
   width: 1px;
-  background-color: #7aed0a;
+  background-color: #3cb371;
 }
 
 .menu-jewelry .main-menu ul li ul > li.mega-menu-title {
@@ -407,7 +413,7 @@
 
 .main-menu nav > ul > li > ul.mega-menu > li > ul > li ul li a span {
   border-radius: 3px;
-  color: #fff;
+  color: #282829;
   font-size: 13px;
   line-height: 1;
   padding: 2px 5px 3px;
