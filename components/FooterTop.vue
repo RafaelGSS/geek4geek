@@ -90,7 +90,7 @@
               <p>Redeba atualizações por-Email sobre nossa última loja e ofertas especiais.</p>
               <div id="mc_embed_signup" class="subscribe-form-2">
                 <form
-                  action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef"
+                  action="#"
                   method="post"
                   id="mc-embedded-subscribe-form"
                   name="mc-embedded-subscribe-form"
