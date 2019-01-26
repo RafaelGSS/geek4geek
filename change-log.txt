@@ -1,10 +1,23 @@
-Date:    23-09-2018
-Version: 3
-===================
-1. RTL version added.
+- Focar em deixar as 3 paginas a mais estruturada possivel em componentes logicos
 
-2. Underwear ,Housewares, Cosmetic, Toy, Organic, Petmarket, Furniture, Auto-parts, Shoe; Home pages added.
+- SidarbarFilter Mobile Lateral
 
-3. Shop 2 column , Shop 3 column , Shop fullwide , shop new, shop no sidebar , shop onsale, shop right sidebar; pages added.
+- Slider Mobile imagem
 
-4. product details 2, product details 3, product details gallery , product details gallery 2 , product details slider , product details slider fullwide , product details sticky , product details sticky right; pages added. 
+- Fazer funcionalidade Filter
+
+- Fazer funcionalidade Sort
+
+- Banner recebe image como props
+
+- BestSellingArea recebe produtos como props
+
+- Alterar cor Description Review
+
+- Fazer shop menu Mobile
+
+- Recriar Error.vue
+
+- Entender todo projeto do 0 para ver se esta seguindo padroes de projeto.
+
+- Criar nova pagina - Checkout
