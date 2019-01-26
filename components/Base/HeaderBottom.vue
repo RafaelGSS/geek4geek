@@ -14,7 +14,7 @@
                 <nav class="cate-menu-nav">
                   <ul>
                     <li v-for="category in categories" :key="category.id">
-                      <nuxt-link to="/about">{{ category.name }}</nuxt-link>
+                      <a href="#">{{ category.name }}</a>
                     </li>
                   </ul>
                 </nav>
