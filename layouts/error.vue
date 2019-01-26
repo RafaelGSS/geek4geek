@@ -1,7 +1,5 @@
 <template>
-<div> <HeaderTop/> 
-      <HeaderMiddle/>
-      <HeaderBottom/>
+<Page> 
 <div class="container-fluid pt-5  p-0">
   <div class="row">
     <div class="col-12">
@@ -19,7 +17,7 @@
      </div>   
   </div>    
 </div>
-</div>        
+</Page>        
 
 </template>
 
@@ -45,14 +43,10 @@
 
 
 <script>
-import HeaderTop from "~/components/HeaderTop.vue";
-import HeaderMiddle from "~/components/HeaderMiddle.vue";
-import HeaderBottom from "~/components/HeaderBottom.vue";
+import Page from "~/components/Page.vue";
 export default {
   components: {
-    HeaderTop,
-      HeaderMiddle,
-       HeaderBottom
+    Page,
   }
 }
 </script>

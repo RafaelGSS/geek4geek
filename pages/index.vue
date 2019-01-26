@@ -1,8 +1,5 @@
 <template>
-  <div>    
-    <HeaderTop/>
-    <HeaderMiddle/>
-    <HeaderBottom :categories=categories :shoptypes=shoptypes />
+  <Page>    
     <Slider/>
     <BannerArea/>
     <ProductArea :products_new=products_new :products_hot=products_hot />
@@ -11,36 +8,25 @@
     <div class="banner-area">
       <img src="/img/banner/banner-80.jpg" alt="">
     </div>
-    <footer>
-      <FooterTop/>
-      <FooterBottom/>
-    </footer>
-    
-  </div>
+  </Page>
 </template>
 
 <script>
-import HeaderTop from "~/components/HeaderTop.vue";
-import HeaderMiddle from "~/components/HeaderMiddle.vue";
-import HeaderBottom from "~/components/HeaderBottom.vue";
-import Slider from "~/components/Slider.vue";
-import BannerArea from "~/components/BannerArea.vue";
-import ProductArea from "~/components/ProductArea.vue";
-import FooterTop from "~/components/FooterTop.vue";
-import ServiceArea from "~/components/ServiceArea.vue";
-import BestSellingArea from "~/components/BestSellingArea.vue";
-import FooterBottom from "~/components/FooterBottom.vue";
+import Page from "~/components/Page";
+
+import Slider from "~/components/Banner/Slider.vue";
+import BannerArea from "~/components/Banner/BannerArea.vue";
+import ServiceArea from "~/components/Banner/ServiceArea.vue";
+
+import ProductArea from "~/components/ShopArea/ProductArea.vue";
+import BestSellingArea from "~/components/ShopArea/BestSellingArea.vue";
 
 export default {
   head: {
     title: 'Homepage dos Geeks!'
   },
   components: {
-    HeaderTop,
-    FooterBottom,
-    FooterTop,
-    HeaderMiddle,
-    HeaderBottom,
+    Page,
     Slider,
     BannerArea,
     ProductArea,
@@ -282,9 +268,6 @@ export default {
 </script>
 
 <style scoped>
-footer {
-  background: #282829;
-}
 .banner-area > img {
     width: 100%;
 }

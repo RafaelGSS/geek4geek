@@ -166,7 +166,7 @@ p{
 </style>
 
 <script>
-import ShoppingCart from '~/components/ShoppingCart.vue'
+import ShoppingCart from '~/components/Base/ShoppingCart.vue'
 
 export default {
     components: {

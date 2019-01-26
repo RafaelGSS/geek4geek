@@ -1,42 +1,26 @@
 <template>
-  <div>
-    <header>
-        <HeaderTop/>
-        <HeaderMiddle/>
-        <HeaderBottom :categories="categories"/>
-    </header>
+  <Page>
     <ProductDetails :categories="categories" :pProduct="product" :tags="tags"/>
     <DescriptionReview :reviews="reviews" :full_description="product.full_description"/>
     <BannerArea />
     <div class="banner-area">
       <img src="/img/banner/banner-80.jpg" alt="">
     </div>
-    <footer>
-        <FooterTop/>
-        <FooterBottom/>
-    </footer>
-  </div>
+  </Page>
 </template>
 
 <script>
-import ProductDetails from "~/components/ProductDetails";
-import BannerArea from "~/components/BannerArea";
-import DescriptionReview from "~/components/DescriptionReview";
-import HeaderTop from "~/components/HeaderTop";
-import HeaderMiddle from "~/components/HeaderMiddle";
-import HeaderBottom from "~/components/HeaderBottom";
-import FooterTop from "~/components/FooterTop";
-import FooterBottom from "~/components/FooterBottom";
+import Page from "~/components/Page";
+
+import ProductDetails from "~/components/ProductDetails/ProductDetails";
+import BannerArea from "~/components/Banner/BannerArea";
+import DescriptionReview from "~/components/ProductDetails/DescriptionReview";
 
 export default {
     components: {
+        Page,
         ProductDetails,
-        HeaderTop,
-        HeaderMiddle,
-        HeaderBottom,
         DescriptionReview,
-        FooterTop,
-        FooterBottom,
         BannerArea
   },
   head() {

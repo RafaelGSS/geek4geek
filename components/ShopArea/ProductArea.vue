@@ -35,19 +35,6 @@
   position: relative;
 }
 
-/* .tab-pane {
-  display: block;
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-}
-.tab-pane.active {
-  display: block;
-  height: auto;
-  opacity: 1;
-  overflow: visible;
-} */
-
 .product-tab-list,
 .product-tab-list-3 {
   display: flex;
@@ -91,7 +78,7 @@
 </style>
 
 <script>
-import ProductList from "~/components/ProductList.vue";
+import ProductList from "~/components/ShopArea/ProductList.vue";
 
 export default {
   components: {

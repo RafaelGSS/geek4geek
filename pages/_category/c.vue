@@ -1,36 +1,20 @@
 <template>
-  <div>
-    <header>
-        <HeaderTop/>
-        <HeaderMiddle/>
-        <HeaderBottom :categories="categories"/>
-    </header>
+  <Page>
     <div class="banner-area">
       <img src="/img/banner/banner-80.jpg" alt="">
     </div>
     <ShopPageArea :products=products />
-    <footer>
-        <FooterTop/>
-        <FooterBottom/>
-    </footer>
-  </div>
+  </Page>
 </template>
 
 <script>
-import HeaderTop from "~/components/HeaderTop";
-import HeaderMiddle from "~/components/HeaderMiddle";
-import HeaderBottom from "~/components/HeaderBottom";
-import ShopPageArea from "~/components/ShopPageArea";
-import FooterTop from "~/components/FooterTop";
-import FooterBottom from "~/components/FooterBottom";
+import Page from "~/components/Page";
+
+import ShopPageArea from "~/components/ShopArea/ShopPageArea";
 
 export default {
     components: {
-        HeaderTop,
-        HeaderMiddle,
-        HeaderBottom,
-        FooterTop,
-        FooterBottom,
+        Page,
         ShopPageArea,
   },
   head() {
