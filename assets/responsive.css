@@ -1623,9 +1623,6 @@
     .notification-content.ml-285 {
         margin: 0 !important;
     }
-    .header-top-right ul li {
-        margin-left: 5px !important;
-    }
     .header-top-right {
         display: flex !important;
         float: inherit !important;
@@ -1671,11 +1668,11 @@
         margin: 8px 0 10px !important;
     }
     .custom-col-5 {
-        flex: 0 0 100% !important;
+        flex: 0 0 50% !important;
         max-width: 100% !important;
     }
     .custom-col-4 {
-        flex: 0 0 100% !important;
+        flex: 0 0 50% !important;
         max-width: 100% !important;
     }
     .connect-content > h2 {

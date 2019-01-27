@@ -1,7 +1,10 @@
 <template>
   <div class="shop-page-area pt-30 pb-65">
     <div class="container">
-      <div class="row flex-row-reverse">
+      <div class="row flex-row">
+        <div class="col-lg-3">
+          <SidebarFilter />
+        </div>
         <div class="col-lg-9">
           <div class="banner-area pb-30">
             <a href="#">
@@ -16,15 +19,18 @@
           </div>
           <ProductList :products=products :itemsPerRow=4 />
         </div>
-        <div class="col-lg-3">
-          <SidebarFilter />
-        </div>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+
+@media (max-width: 991px){
+  .banner-area {
+    display: none;
+  }
+}
 
 .banner-area.pb-30 img {
     width: 100%;

@@ -63,11 +63,6 @@
                 </li>
               </ul>
             </div>
-            <div class="payment-icon mt-20">
-              <a href="#">
-                <img src="~/static/img/icon-img/payment.png" alt>
-              </a>
-            </div>
           </div>
         </div>
       </div>
