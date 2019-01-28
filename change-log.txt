@@ -1,6 +1,6 @@
 - Focar em deixar as 3 paginas a mais estruturada possivel em componentes logicos
 
-- SidarbarFilter Mobile Lateral
+- [OK] SidarbarFilter Mobile Lateral
 
 - Slider Mobile imagem
 
