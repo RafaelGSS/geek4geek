@@ -21,7 +21,7 @@
         </div>
       </div>
       <div class="shop-widget shop-sidebar-border pt-35">
-        <h4 class="shop-sidebar-title">Categorias Semelhantes</h4>
+        <h4 class="shop-sidebar-title">Marcas</h4>
         <div class="sidebar-list-style mt-20">
           <ul>
             <li>
@@ -41,13 +41,13 @@
         <div class="shop-tags mt-25">
           <ul>
             <li>
-              <a href="#" @click="addToFilter('tags', 'Tag1')">Tag1</a>
+              <a href="#" id="Tag_Tag1" @click="addToFilter('Tag', 'Tag1')">Tag1</a>
             </li>
             <li>
-              <a href="#" @click="addToFilter('tags', 'Tag2')">Tag2</a>
+              <a href="#" id="Tag_Tag2" @click="addToFilter('Tag', 'Tag2')">Tag2</a>
             </li>
             <li>
-              <a href="#" @click="addToFilter('tags', 'Tag3')">Tag3</a>
+              <a href="#" id="Tag_Tag3" @click="addToFilter('Tag', 'Tag3')">Tag3</a>
             </li>
           </ul>
         </div>
@@ -85,8 +85,8 @@
   padding: 8px 12px;
 }
 .shop-tags a:hover {
-  border: 1px solid #047afe;
-  background-color: #047afe;
+  border: 1px solid #3cb371;
+  background-color: #3cb371;
   color: #fff;
 }
 
@@ -123,6 +123,12 @@ h4.shop-sidebar-title {
   width: 17px;
   cursor: pointer;
 }
+
+.active {
+  border: 1px solid #3cb371;
+  background-color: #3cb371;
+  color: #fff !important;
+}
 </style>
 
 <script>
@@ -139,12 +145,15 @@ export default {
       }
     },
     addToFilter(pType, pValue) {
-      busFilter.$emit('ADD_TO_FILTER', {
-          type: pType,
-          value: pValue
-      })
+      // Set active toggle
+      this.setActive(pType + '_' + pValue)
+
+      busFilter.$emit('ADD_TO_FILTER', { type: pType, value: pValue })
+    },
+    setActive(id){
+      document.getElementById(id).classList.toggle("active");
     } 
-  }
+  } 
 };
 </script>
 

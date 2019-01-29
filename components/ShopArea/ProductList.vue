@@ -4,7 +4,7 @@
       <div class="custom-row">
         <div
           :class="['custom-col-' + itemsPerRow, 'mb-30']"
-          v-for="prod in products"
+          v-for="prod in filteredProducts"
           :key="prod.id"
         >
           <div class="geek4-product-2 mrg-inherit geek4-product-red">
@@ -66,10 +66,7 @@
 </template>
 
 <style scoped>
-.custom-row {
-  display: flex;
-  flex-wrap: wrap;
-}
+/* Items per row */
 .custom-col-5 {
   flex: 0 0 20%;
   max-width: 20%;
@@ -86,7 +83,10 @@
   flex: 0 0 50%;
   max-width: 50%;
 }
-/* .tab-content.jump >  */
+.custom-row {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .product-action-wrapper-2 > p {
   color: #242424;
@@ -135,79 +135,7 @@
 .geek4-product-2.mb-30 {
   margin-bottom: 28px;
 }
-.product-slider-nav.nav-style,
-.product-slider-nav-2.nav-style {
-  float: right;
-  margin-top: -42px;
-  position: relative;
-  z-index: 99;
-  margin-bottom: 0;
-}
-.product-slider-nav.nav-style div,
-.product-slider-nav-2.nav-style div {
-  background-color: #efefef;
-  border-radius: 3px;
-  color: #242424;
-  display: inline-block;
-  font-size: 16px;
-  height: 35px;
-  line-height: 35px;
-  opacity: 1;
-  text-align: center;
-  transition: all 0.3s ease 0s;
-  width: 35px;
-  cursor: pointer;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.nav-style.nav-center.nav-style-sunglass.owl-carousel .owl-nav div,
-.nav-style.nav-center.nav-style-watch.owl-carousel .owl-nav div {
-  right: 0;
-  bottom: 150px;
-  transform: translateY(0);
-  top: auto;
-}
-.nav-style.nav-center.nav-style-sunglass-2.owl-carousel .owl-nav div {
-  right: 0;
-  bottom: 338px;
-  transform: translateY(0);
-  top: auto;
-}
-.product-slider-nav.nav-style div:hover,
-.product-slider-nav-2.nav-style div:hover {
-  background-color: #3cb371;
-  color: #fff;
-}
-.product-slider-nav-2.nav-style.nav-style-game div {
-  background-color: #1c1c1c;
-  color: #ccc;
-}
-.product-slider-nav-2.nav-style.nav-style-game div:hover {
-  background-color: #df2121;
-  color: #fff;
-}
-.product-slider-nav.nav-style div.owl-prev,
-.product-slider-nav-2.nav-style div.owl-prev {
-  margin-right: 40px;
-}
-.height-empty {
-  height: 1px;
-}
-.product-slider {
-  width: auto;
-  z-index: 0;
-  overflow: hidden;
-}
-.product-slider:hover {
-  z-index: 2;
-  overflow: visible;
-}
-.product-slider .owl-stage-outer {
-  margin-top: -160px;
-  padding: 0px 0 160px;
-  transform: translateY(160px);
-}
+
 .geek4-product-2.mb-45 {
   margin-bottom: 45px;
 }
@@ -331,11 +259,11 @@
 </style>
 
 <script>
-import busFilter from '@/assets/js/eventBus_filter.js'
+import busFilter from "@/assets/js/eventBus_filter.js";
 
 export default {
   props: {
-    products: Array,
+    products: Array /* Type: interfaces/product.ts */,
     itemsPerRow: {
       type: Number,
       default: 4
@@ -351,7 +279,7 @@ export default {
   },
   data: () => ({
     isAct: true,
-    filtersAppied: []
+    filtersAppied: [] /* Type: interfaces/filterProducts.ts */
   }),
   methods: {
     addCart(obj) {
@@ -359,7 +287,7 @@ export default {
         group: "general",
         type: "success",
         title: "Item adicionado",
-        text: "O Item foi adiciona  do com sucesso do seu carrinho de compras!"
+        text: "O Item foi adicionado com sucesso do seu carrinho de compras!"
       });
       this.$store.commit("cart/add", obj);
     }
@@ -367,24 +295,37 @@ export default {
   created() {
     this.isAct = this.isActive;
 
-    busFilter.$on('ADD_TO_FILTER', (filter) => {
-      var exist = this.filtersAppied.findIndex(item => item.type == filter.type)
-      if(exist != -1){
-        this.filtersAppied.splice(exist, 1)
+    busFilter.$on("ADD_TO_FILTER", filter => {
+      var exist = this.filtersAppied.findIndex(
+        item => JSON.stringify(item.type) == JSON.stringify(filter.type)
+      );
+
+      if (exist == -1) {
+        this.filtersAppied.push({ type: filter.type, data: [filter.value] });
+        return;
       }
-      this.filtersAppied.push(filter)
-    })
+
+      var existData = this.filtersAppied[exist].data.findIndex(
+        item => item == filter.value
+      );
+
+      if (existData == -1) {
+        this.filtersAppied[exist].data.push(filter.value);
+      } else {
+        this.filtersAppied[exist].data.splice(existData, 1);
+      }
+    });
   },
   computed: {
-    filteredProducts: function(){
-      return this.products.filter( product => {
-        return this.filtersAppied.every( filterAppied => {
-          if (product.color.includes(filterAppied)) {
-            return product.color.includes(filterAppied);
+    filteredProducts: function() {
+      return this.products.filter(product => {
+        return this.filtersAppied.every(filterAppied => {
+          switch (filterAppied.type) {
+            case "Tag":
+              return product.tags.arrayContains(filterAppied.data);
+            default:
+              return false;
           }
-          if (product.tags.includes(filterAppied)) {
-            return product.size.includes(filterAppied);
-          }     
         });
       });
     }

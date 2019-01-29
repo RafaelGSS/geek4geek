@@ -11,3 +11,12 @@
 
 </style>
 
+<script>
+import '@/assets/js/common.js'
+
+export default {
+  
+}
+</script>
+
+
