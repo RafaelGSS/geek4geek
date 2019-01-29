@@ -127,6 +127,8 @@ h4.shop-sidebar-title {
 
 <script>
 
+import busFilter from '@/assets/js/eventBus_filter.js'
+
 export default {
   methods: {
     showUnSidebar() {
@@ -137,7 +139,7 @@ export default {
       }
     },
     addToFilter(pType, pValue) {
-      this.$busFilter.$emit('ADD_TO_FILTER', {
+      busFilter.$emit('ADD_TO_FILTER', {
           type: pType,
           value: pValue
       })

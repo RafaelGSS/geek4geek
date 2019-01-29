@@ -331,6 +331,8 @@
 </style>
 
 <script>
+import busFilter from '@/assets/js/eventBus_filter.js'
+
 export default {
   props: {
     products: Array,
@@ -365,7 +367,7 @@ export default {
   created() {
     this.isAct = this.isActive;
 
-    this.$busFilter.$on('ADD_TO_FILTER', (filter) => {
+    busFilter.$on('ADD_TO_FILTER', (filter) => {
       var exist = this.filtersAppied.findIndex(item => item.type == filter.type)
       if(exist != -1){
         this.filtersAppied.splice(exist, 1)

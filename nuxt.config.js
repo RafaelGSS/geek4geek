@@ -39,7 +39,6 @@ module.exports = {
   plugins:[
     {src: 'plugins/vue-carousel.js', ssr: false},
     {src: 'plugins/vue-notifications.js', ssr: false},
-    {src: 'plugins/event-bus-filter.js' },
   ],
   /**
    * Add modules extern
