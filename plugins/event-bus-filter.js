@@ -1,5 +1,9 @@
 import Vue from 'vue'
 
-export default function({app}){
-    app.$busFilter = new Vue()
+const eventBus = {}
+
+eventBus.install = function (Vue) {
+  Vue.prototype.$busFilter = new Vue()
 }
+
+Vue.use(eventBus)

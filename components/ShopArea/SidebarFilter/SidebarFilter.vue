@@ -9,7 +9,7 @@
         <div class="sidebar-list-style mt-20">
           <ul>
             <li>
-              <a href="#" @click="addToFilter">List1</a>
+              <a href="#">List1</a>
             </li>
             <li>
               <a href="#">List2</a>
@@ -41,13 +41,13 @@
         <div class="shop-tags mt-25">
           <ul>
             <li>
-              <a href="#">Tag1</a>
+              <a href="#" @click="addToFilter('tags', 'Tag1')">Tag1</a>
             </li>
             <li>
-              <a href="#">Tag2</a>
+              <a href="#" @click="addToFilter('tags', 'Tag2')">Tag2</a>
             </li>
             <li>
-              <a href="#">Tag3</a>
+              <a href="#" @click="addToFilter('tags', 'Tag3')">Tag3</a>
             </li>
           </ul>
         </div>
@@ -136,8 +136,12 @@ export default {
         $("#items-sidebar").hide(500);
       }
     },
-    addToFilter() {
-    }
+    addToFilter(pType, pValue) {
+      this.$busFilter.$emit('ADD_TO_FILTER', {
+          type: pType,
+          value: pValue
+      })
+    } 
   }
 };
 </script>

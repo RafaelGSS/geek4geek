@@ -348,7 +348,8 @@ export default {
     }
   },
   data: () => ({
-    isAct: true
+    isAct: true,
+    filtersAppied: []
   }),
   methods: {
     addCart(obj) {
@@ -356,14 +357,36 @@ export default {
         group: "general",
         type: "success",
         title: "Item adicionado",
-        text: "O Item foi adicionado com sucesso do seu carrinho de compras!"
+        text: "O Item foi adiciona  do com sucesso do seu carrinho de compras!"
       });
       this.$store.commit("cart/add", obj);
     }
   },
   created() {
     this.isAct = this.isActive;
+
+    this.$busFilter.$on('ADD_TO_FILTER', (filter) => {
+      var exist = this.filtersAppied.findIndex(item => item.type == filter.type)
+      if(exist != -1){
+        this.filtersAppied.splice(exist, 1)
+      }
+      this.filtersAppied.push(filter)
+    })
   },
+  computed: {
+    filteredProducts: function(){
+      return this.products.filter( product => {
+        return this.filtersAppied.every( filterAppied => {
+          if (product.color.includes(filterAppied)) {
+            return product.color.includes(filterAppied);
+          }
+          if (product.tags.includes(filterAppied)) {
+            return product.size.includes(filterAppied);
+          }     
+        });
+      });
+    }
+  }
 };
 </script>
 
