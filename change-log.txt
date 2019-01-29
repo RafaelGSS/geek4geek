@@ -4,7 +4,7 @@
 
 - Slider Mobile imagem
 
-- Fazer funcionalidade Filter
+- [DOING] Fazer funcionalidade Filter
 
 - Fazer funcionalidade Sort
 

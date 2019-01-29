@@ -108,14 +108,12 @@ export default {
       this.$store.commit("cart/add", obj);
     },
     showNews() {
-      this.$nuxt.$emit("SET_ACTIVE", this.idNews);
-      this.$nuxt.$emit("UNSET_ACTIVE", this.idHots);
-
+      document.getElementById(this.idNews).classList.add("active");
+      document.getElementById(this.idHots).classList.remove("active");
     },
     showHots() {
-      this.$nuxt.$emit("SET_ACTIVE", this.idHots);
-      this.$nuxt.$emit("UNSET_ACTIVE", this.idNews);
-
+      document.getElementById(this.idHots).classList.add("active");
+      document.getElementById(this.idNews).classList.remove("active");
     }
   }
 };

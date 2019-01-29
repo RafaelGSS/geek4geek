@@ -362,24 +362,8 @@ export default {
     }
   },
   created() {
-    this.$nuxt.$on("SET_ACTIVE", data => {
-      if (this.idContainer == data) {
-        this.isAct = true;
-      }
-    });
-
-    this.$nuxt.$on("UNSET_ACTIVE", data => {
-      if (this.idContainer == data) {
-        this.isAct = false;
-      }
-    });
-
     this.isAct = this.isActive;
   },
-  beforeDestroy() {
-    // $off method will turned off the event listner
-    this.$nuxt.$off("SET_UNSET_ACTIVE");
-  }
 };
 </script>
 
