@@ -20,4 +20,6 @@
 
 - Entender todo projeto do 0 para ver se esta seguindo padroes de projeto.
 
+- Fazer semantica, ALT, TITLE
+
 - Criar nova pagina - Checkout

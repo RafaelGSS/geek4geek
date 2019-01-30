@@ -13,6 +13,7 @@ import Page from "~/components/Page";
 import ShopPageArea from "~/components/ShopArea/ShopPageArea";
 
 export default {
+  scrollToTop: false,
   components: {
     Page,
     ShopPageArea
@@ -39,6 +40,7 @@ export default {
               name: "Produto Gee4Geek",
               category_name: "Canecas",
               display_description: "Descricao dos protudos em modo de display",
+              material: 'PVC',
               promo: true,
               promotion: {
                 percentage: 10,
@@ -52,6 +54,7 @@ export default {
               name: "Produto Gee4Geek",
               category_name: "Canecas",
               display_description: "Descricao dos protudos em modo de display",
+              material: 'PVC',
               promo: true,
               promotion: {
                 percentage: 10,
@@ -65,6 +68,7 @@ export default {
               name: "Produto Gee4Geek",
               category_name: "Canecas",
               display_description: "Descricao dos protudos em modo de display",
+              material: 'PVC',
               promo: true,
               promotion: {
                 percentage: 10,
@@ -78,6 +82,7 @@ export default {
               name: "Produto Gee4Geek",
               category_name: "Canecas",
               display_description: "Descricao dos protudos em modo de display",
+              material: 'PVC',
               promo: true,
               promotion: {
                 percentage: 10,
@@ -91,6 +96,7 @@ export default {
               name: "Produto Gee4Geek",
               category_name: "Canecas",
               display_description: "Descricao dos protudos em modo de display",
+              material: 'PVC',
               promo: true,
               promotion: {
                 percentage: 10,
@@ -104,6 +110,7 @@ export default {
               name: "Produto Gee4Geek",
               category_name: "Canecas",
               display_description: "Descricao dos protudos em modo de display",
+              material: 'PVC',
               promo: true,
               promotion: {
                 percentage: 10,
@@ -117,6 +124,7 @@ export default {
               name: "Produto Gee4Geek",
               category_name: "Canecas",
               display_description: "Descricao dos protudos em modo de display",
+              material: 'PVC',
               promo: true,
               promotion: {
                 percentage: 10,
@@ -130,6 +138,7 @@ export default {
               name: "Produto Gee4Geek",
               category_name: "Canecas",
               display_description: "Descricao dos protudos em modo de display",
+              material: 'PVC',
               promo: true,
               promotion: {
                 percentage: 10,
@@ -143,6 +152,7 @@ export default {
               name: "Produto Gee4Geek",
               category_name: "Canecas",
               display_description: "Descricao dos protudos em modo de display",
+              material: 'PVC',
               promo: true,
               promotion: {
                 percentage: 10,
@@ -156,6 +166,7 @@ export default {
               name: "Produto Gee4Geek",
               category_name: "Canecas",
               display_description: "Descricao dos protudos em modo de display",
+              material: 'PVC',
               promo: true,
               promotion: {
                 percentage: 10,
@@ -173,9 +184,6 @@ export default {
 </script>
 
 <style scoped>
-footer {
-  background: #282829;
-}
 .banner-area > img {
   width: 100%;
 }

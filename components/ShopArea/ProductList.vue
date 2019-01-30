@@ -290,13 +290,9 @@ export default {
         text: "O Item foi adicionado com sucesso do seu carrinho de compras!"
       });
       this.$store.commit("cart/add", obj);
-    }
-  },
-  created() {
-    this.isAct = this.isActive;
-
-    busFilter.$on("ADD_TO_FILTER", filter => {
-      var exist = this.filtersAppied.findIndex(
+    },
+    addFilter(filter){
+       var exist = this.filtersAppied.findIndex(
         item => JSON.stringify(item.type) == JSON.stringify(filter.type)
       );
 
@@ -313,8 +309,17 @@ export default {
         this.filtersAppied[exist].data.push(filter.value);
       } else {
         this.filtersAppied[exist].data.splice(existData, 1);
+        // Remove obj if is empty
+        if(this.filtersAppied[exist].data.length == 0){
+          this.filtersAppied.splice(exist, 1)
+        }
       }
-    });
+    }
+  },
+  created() {
+    this.isAct = this.isActive;
+
+    busFilter.$on("ADD_TO_FILTER", this.addFilter);
   },
   computed: {
     filteredProducts: function() {
@@ -323,8 +328,10 @@ export default {
           switch (filterAppied.type) {
             case "Tag":
               return product.tags.arrayContains(filterAppied.data);
+            case "Material":
+              return filterAppied.data.includes(product.material);
             default:
-              return false;
+              return true;
           }
         });
       });

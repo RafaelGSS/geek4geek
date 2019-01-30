@@ -11,5 +11,6 @@ interface Product {
     promo: boolean,
     promotion: Promotion,
     price: number,
-    tags: Array<string>
+    tags: Array<string>,
+    material: string
 }

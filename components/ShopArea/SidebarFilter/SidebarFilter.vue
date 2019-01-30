@@ -1,8 +1,10 @@
 <template>
-  <div class="shop-sidebar-wrapper gray-bg-7 mrg-top-md mrg-top-sm">
-    <a href="javascript:void(0);" class="filter-b" @click="showUnSidebar">
-      <i class="fa fa-bars"></i> Refinar
-    </a>
+  <div class="shop-sidebar-wrapper mrg-top-md mrg-top-sm">
+    <div class="refinar">
+      <a href="javascript:void(0);" class="filter-b" @click="showUnSidebar">
+        <i class="fa fa-bars"></i> Refinar
+      </a>
+    </div>
     <div class="items-sidebar" id="items-sidebar">
       <div class="shop-widget shop-sidebar-border pt-35">
         <h4 class="shop-sidebar-title">Categorias Semelhantes</h4>
@@ -21,17 +23,17 @@
         </div>
       </div>
       <div class="shop-widget shop-sidebar-border pt-35">
-        <h4 class="shop-sidebar-title">Marcas</h4>
+        <h4 class="shop-sidebar-title">Material</h4>
         <div class="sidebar-list-style mt-20">
           <ul>
             <li>
-              <input type="checkbox">List1
+              <input type="checkbox" @click="addToFilter('Material', 'PVC')">PVC
             </li>
             <li>
-              <input type="checkbox">List2
+              <input type="checkbox" @click="addToFilter('Material', 'RESINA')">RESINA
             </li>
             <li>
-              <input type="checkbox">List3
+              <input type="checkbox" @click="addToFilter('Material', 'MERDA')">MERDA
             </li>
           </ul>
         </div>
@@ -41,13 +43,13 @@
         <div class="shop-tags mt-25">
           <ul>
             <li>
-              <a href="#" id="Tag_Tag1" @click="addToFilter('Tag', 'Tag1')">Tag1</a>
+              <a id="Tag_Tag1" @click="addToFilter('Tag', 'Tag1'); setActive($event);">Tag1</a>
             </li>
             <li>
-              <a href="#" id="Tag_Tag2" @click="addToFilter('Tag', 'Tag2')">Tag2</a>
+              <a id="Tag_Tag2" @click="addToFilter('Tag', 'Tag2'); setActive($event);">Tag2</a>
             </li>
             <li>
-              <a href="#" id="Tag_Tag3" @click="addToFilter('Tag', 'Tag3')">Tag3</a>
+              <a id="Tag_Tag3" @click="addToFilter('Tag', 'Tag3'); setActive($event);">Tag3</a>
             </li>
           </ul>
         </div>
@@ -62,14 +64,13 @@
     display: none;
   }
 }
-
 .filter-b {
   font-size: 1.2em;
 }
-
 .shop-sidebar-wrapper {
   border: 1px solid #efefef;
-  padding: 17px 18px 29px;
+  padding: 10px;
+  background-color: #fdfdfd;
 }
 
 .shop-tags li {
@@ -83,6 +84,7 @@
   display: inline-block;
   line-height: 1;
   padding: 8px 12px;
+  cursor: pointer;
 }
 .shop-tags a:hover {
   border: 1px solid #3cb371;
@@ -108,7 +110,8 @@ h4.shop-sidebar-title {
   color: #242424;
 }
 .sidebar-list-style ul li a:hover {
-  color: #0363cd;
+  color: #3cb371;
+  text-decoration: underline;
 }
 .sidebar-list-style ul li:last-child {
   padding: 0 0 0px;
@@ -145,12 +148,10 @@ export default {
       }
     },
     addToFilter(pType, pValue) {
-      // Set active toggle
-      this.setActive(pType + '_' + pValue)
-
       busFilter.$emit('ADD_TO_FILTER', { type: pType, value: pValue })
     },
-    setActive(id){
+    setActive(event){
+      var id = event.currentTarget.id;
       document.getElementById(id).classList.toggle("active");
     } 
   } 

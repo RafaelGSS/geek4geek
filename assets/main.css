@@ -45,7 +45,7 @@ a:focus,
     outline: none;
 }
 a:hover {
-    color: #333;
+    color: #3cb371;
     text-decoration: none;
 }
 a:focus {
@@ -1575,24 +1575,10 @@ textarea:focus {
 }
 .btn-style:hover {
     background-color: #3cb371;
-    border: 2px solid #7aed0a;
+    border: 2px solid #3cb371;
     color: #fff;
 }
-.btn-style-2 {
-    background-color: #0363cd;
-    border-radius: 3px;
-    color: #fff;
-    display: inline-block;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 1;
-    padding: 17px 37px 18px;
-    text-transform: uppercase;
-}
-.btn-style-2:hover {
-    background-color: #242424;
-    color: #fff;
-}
+
 .height-100vh {
     height: 100vh;
 }
