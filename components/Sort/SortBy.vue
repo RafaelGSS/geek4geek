@@ -1,11 +1,11 @@
 <template>
   <div class="product-sorting-wrapper">
     <div class="product-show shorting-style">
-      <label>Sort by:</label>
-      <select>
-        <option value>Default</option>
-        <option value>Name</option>
-        <option value>price</option>
+      <label>Ordenar:</label>
+      <select id="sort-by" v-model="sortBy" @change="sort()">
+        <option value="DEFAULT" disabled>Escolha uma opção</option>
+        <option value="PRICE_DESC">Preço decrescente</option>
+        <option value="PRICE_ASC">Preço crescente</option>
       </select>
     </div>
   </div>
@@ -44,7 +44,16 @@
 </style>
 
 <script>
+import busFilter from "@/assets/js/eventBus_filter.js";
+
 export default {
-    
+    data: () => ({
+        sortBy: "DEFAULT"
+    }),
+    methods: {
+        sort(){
+            busFilter.$emit('SORT_BY', this.sortBy);
+        }
+    }
 }
 </script>

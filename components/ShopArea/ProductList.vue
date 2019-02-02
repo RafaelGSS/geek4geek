@@ -279,7 +279,8 @@ export default {
   },
   data: () => ({
     isAct: true,
-    filtersAppied: [] /* Type: interfaces/filterProducts.ts */
+    filtersAppied: [], /* Type: interfaces/filterProducts.ts */
+    sortName: 'default',
   }),
   methods: {
     addCart(obj) {
@@ -314,12 +315,16 @@ export default {
           this.filtersAppied.splice(exist, 1)
         }
       }
+    },
+    sortBy(by){
+      this.sortName = by
     }
   },
   created() {
     this.isAct = this.isActive;
 
     busFilter.$on("ADD_TO_FILTER", this.addFilter);
+    busFilter.$on("SORT_BY", this.sortBy);
   },
   computed: {
     filteredProducts: function() {
@@ -334,8 +339,15 @@ export default {
               return true;
           }
         });
+      }).sort((a, b) => {
+        switch(this.sortName)
+        {
+          case 'PRICE_DESC': return b.price - a.price;
+          case 'PRICE_ASC': return a.price - b.price;
+          default: return 0;
+        }
       });
-    }
+    },
   }
 };
 </script>

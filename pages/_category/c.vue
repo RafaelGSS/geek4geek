@@ -46,7 +46,7 @@ export default {
                 percentage: 10,
                 old_price: 100
               },
-              price: 90,
+              price: 966,
               tags: ["Tag1", "Tag2"]
             },
             {
@@ -60,7 +60,7 @@ export default {
                 percentage: 10,
                 old_price: 100
               },
-              price: 90,
+              price: 92,
               tags: ["Tag1", "Tag2"]
             },
             {
@@ -74,7 +74,7 @@ export default {
                 percentage: 10,
                 old_price: 100
               },
-              price: 90,
+              price: 93,
               tags: ["Tag1", "Tag2"]
             },
             {
@@ -88,7 +88,7 @@ export default {
                 percentage: 10,
                 old_price: 100
               },
-              price: 90,
+              price: 94,
               tags: ["Tag1", "Tag2"]
             },
             {
@@ -102,7 +102,7 @@ export default {
                 percentage: 10,
                 old_price: 100
               },
-              price: 90,
+              price: 95,
               tags: ["Tag1", "Tag2"]
             },
             {
@@ -116,7 +116,7 @@ export default {
                 percentage: 10,
                 old_price: 100
               },
-              price: 90,
+              price: 96,
               tags: ["Tag1", "Tag2"]
             },
             {
@@ -130,7 +130,7 @@ export default {
                 percentage: 10,
                 old_price: 100
               },
-              price: 90,
+              price: 97,
               tags: ["Tag1", "Tag2"]
             },
             {
@@ -144,7 +144,7 @@ export default {
                 percentage: 10,
                 old_price: 100
               },
-              price: 90,
+              price: 98,
               tags: ["Tag1", "Tag2", "Tag3"]
             },
             {
@@ -172,7 +172,7 @@ export default {
                 percentage: 10,
                 old_price: 100
               },
-              price: 90,
+              price: 99,
               tags: ["Tag1", "Tag2", "Tag3"]
             }
           ]

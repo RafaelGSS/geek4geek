@@ -4,9 +4,9 @@
 
 - Slider Mobile imagem
 
-- [DOING] Fazer funcionalidade Filter
+- [OK] Fazer funcionalidade Filter
 
-- Fazer funcionalidade Sort
+- [OK] Fazer funcionalidade Sort
 
 - Banner recebe image como props
 
@@ -19,6 +19,8 @@
 - Recriar Error.vue
 
 - Entender todo projeto do 0 para ver se esta seguindo padroes de projeto.
+
+- Implementar loading em ProductList
 
 - Fazer semantica, ALT, TITLE
 
