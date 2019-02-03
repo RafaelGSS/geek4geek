@@ -2,11 +2,8 @@
   <div class="slider-area">
     <no-ssr>
       <carousel :items=1 :loop=1 :center=1 :autoplay=1 :autoplayHoverPause=1 :nav=0>
-        <a href="#" class="slider-active bg-img">
-            <img src="/img/slider/slider-51.jpg" class="single-slider bg-img slider-height-22">
-        </a>
-        <a href="#" class="slider-active bg-img">
-            <img src="/img/slider/slider-51.jpg" class="single-slider bg-img slider-height-22">
+        <a :href="img.href" class="slider-active bg-img" v-for="img in imgs" :key="img.href">
+            <img :src="img.src" :alt="img.alt" class="single-slider bg-img slider-height-22">
         </a>
       </carousel>
     </no-ssr>
@@ -15,6 +12,15 @@
 
 <script>
 export default {
+    props: {
+        imgs: {
+            type: Array,
+            default: function(){ return [
+                {src: '/img/slider/slider-51.jpg', alt: 'slider', href: '#1'},
+                {src: '/img/slider/slider-51.jpg', alt: 'slider', href: '#2'}
+            ]}
+        }
+    }
 }
 </script>
 

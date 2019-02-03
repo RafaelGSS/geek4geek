@@ -3,6 +3,11 @@ interface Promotion {
     old_price: number
 }
 
+interface images {
+    src: String,
+    alt: String
+}
+
 interface Product {
     id: number,
     name: string,
@@ -11,6 +16,7 @@ interface Product {
     promo: boolean,
     promotion: Promotion,
     price: number,
+    images: Array<images>,
     tags: Array<string>,
     material: string
 }
