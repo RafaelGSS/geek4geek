@@ -8,8 +8,10 @@ var productsHot = [
     "tags": [],
     "images": [
       {
-        "src": "",
-        "alt": ""
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "alt": "",
       }
     ],
     "material": "PVC"
@@ -23,7 +25,9 @@ var productsHot = [
     "tags": [],
     "images": [
       {
-        "src": "",
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
       }
     ],
@@ -38,7 +42,9 @@ var productsHot = [
     "tags": [],
     "images": [
       {
-        "src": "",
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
       }
     ],
@@ -53,7 +59,9 @@ var productsHot = [
     "tags": [],
     "images": [
       {
-        "src": "",
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
       }
     ],
@@ -68,7 +76,9 @@ var productsHot = [
     "tags": [],
     "images": [
       {
-        "src": "",
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
       }
     ],
@@ -76,14 +86,16 @@ var productsHot = [
   },
   {
     "id": 95,
-    "name": "Produto Gee4Geek",
+    "name": "Produto Gee4G  eek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
     "price": 90,
     "tags": [],
     "images": [
       {
-        "src": "",
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
       }
     ],
@@ -98,7 +110,9 @@ var productsHot = [
     "tags": [],
     "images": [
       {
-        "src": "",
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
       }
     ],
@@ -113,7 +127,9 @@ var productsHot = [
     "tags": [],
     "images": [
       {
-        "src": "",
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
       }
     ],
@@ -128,7 +144,9 @@ var productsHot = [
     "tags": [],
     "images": [
       {
-        "src": "",
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
       }
     ],
@@ -143,7 +161,9 @@ var productsHot = [
     "tags": [],
     "images": [
       {
-        "src": "",
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
       }
     ],
@@ -158,7 +178,9 @@ var productsHot = [
     "tags": [],
     "images": [
       {
-        "src": "",
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
       }
     ],

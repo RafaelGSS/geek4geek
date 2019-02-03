@@ -16,6 +16,8 @@
 
 - Vue-placeholder enquanto não for passado uma imagem
 
+- Mudar props after AsyncData
+
 - Fazer shop menu Mobile
 
 - Recriar Error.vue

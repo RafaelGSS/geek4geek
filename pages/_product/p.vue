@@ -87,10 +87,3 @@ export default {
 };
 </script>
 
-<style scoped>
-footer {
-    background: #282829;
-}
-</style>
-
-

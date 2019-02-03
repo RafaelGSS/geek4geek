@@ -13,7 +13,9 @@ var productsNew = [
     "tags": [],
     "images": [
       {
-        "src": "",
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
       }
     ],
@@ -33,7 +35,9 @@ var productsNew = [
     "tags": [],
     "images": [
       {
-        "src": "",
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
       }
     ],
@@ -53,7 +57,9 @@ var productsNew = [
     "tags": [],
     "images": [
       {
-        "src": "",
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
       }
     ],
@@ -73,7 +79,9 @@ var productsNew = [
     "tags": [],
     "images": [
       {
-        "src": "",
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
       }
     ],
@@ -93,7 +101,9 @@ var productsNew = [
     "tags": [],
     "images": [
       {
-        "src": "",
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
       }
     ],
@@ -113,7 +123,9 @@ var productsNew = [
     "tags": [],
     "images": [
       {
-        "src": "",
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
       }
     ],
@@ -133,7 +145,9 @@ var productsNew = [
     "tags": [],
     "images": [
       {
-        "src": "",
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
       }
     ],
@@ -153,7 +167,9 @@ var productsNew = [
     "tags": [],
     "images": [
       {
-        "src": "",
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
       }
     ],
@@ -173,7 +189,9 @@ var productsNew = [
     "tags": [],
     "images": [
       {
-        "src": "",
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
       }
     ],
@@ -193,7 +211,9 @@ var productsNew = [
     "tags": [],
     "images": [
       {
-        "src": "",
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
       }
     ],
@@ -213,7 +233,9 @@ var productsNew = [
     "tags": [],
     "images": [
       {
-        "src": "",
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
       }
     ],
