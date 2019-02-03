@@ -8,7 +8,7 @@
 
 - [OK] Fazer funcionalidade Sort
 
-- [DOING] Banner recebe image como props
+- [OK] Banner recebe image como props
 
 - BestSellingArea recebe produtos como props
 
