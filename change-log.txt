@@ -8,11 +8,13 @@
 
 - [OK] Fazer funcionalidade Sort
 
-- Banner recebe image como props
+- [DOING] Banner recebe image como props
 
 - BestSellingArea recebe produtos como props
 
 - Alterar cor Description Review
+
+- Vue-placeholder enquanto não for passado uma imagem
 
 - Fazer shop menu Mobile
 

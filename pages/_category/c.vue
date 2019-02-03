@@ -1,8 +1,6 @@
 <template>
   <Page>
-    <div class="banner-area">
-      <img src="/img/banner/banner-80.jpg" alt>
-    </div>
+    <FullBanner />
     <ShopPageArea :products="products"/>
   </Page>
 </template>
@@ -10,13 +8,15 @@
 <script>
 import Page from "~/components/Page";
 
+import FullBanner from '~/components/Banner/FullBanner';
 import ShopPageArea from "~/components/ShopArea/ShopPageArea";
 
 export default {
   scrollToTop: false,
   components: {
     Page,
-    ShopPageArea
+    ShopPageArea,
+    FullBanner
   },
   head() {
     return {
@@ -182,11 +182,5 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.banner-area > img {
-  width: 100%;
-}
-</style>
 
 

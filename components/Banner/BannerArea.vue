@@ -5,21 +5,21 @@
         <div class="col-lg-3 col-md-3">
           <div class="banner-img banner-hover mb-30">
             <a href="#">
-              <img src="/img/banner/banner-76.jpg" alt>
+              <img :src="img1.src" :alt="img1.alt">
             </a>
           </div>
         </div>
         <div class="col-lg-6 col-md-6">
           <div class="banner-img banner-hover mb-30">
             <a href="#">
-              <img src="/img/banner/banner-77.jpg" alt>
+              <img :src="img2.src" :alt="img2.alt">
             </a>
           </div>
         </div>
         <div class="col-lg-3 col-md-3">
           <div class="banner-img banner-hover mb-30">
             <a href="#">
-              <img src="/img/banner/banner-78.jpg" alt>
+              <img :src="img3.src" :alt="img3.alt">
             </a>
           </div>
         </div>
@@ -62,7 +62,22 @@
 </style>
 
 <script>
-export default {};
+export default {
+  props: {
+    img1: {
+      type: Object,
+      default: function(){ return {src: '/img/banner/banner-76.jpg', alt: 'banner76'}}
+    },
+    img2: {
+      type: Object,
+      default: function(){ return {src: '/img/banner/banner-77.jpg', alt: 'banner77'}}
+    },
+    img3: {
+      type: Object,
+      default: function(){ return {src: '/img/banner/banner-78.jpg', alt: 'banner78'}}
+    }
+  }
+};
 </script>
 
 

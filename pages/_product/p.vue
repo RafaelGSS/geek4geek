@@ -3,9 +3,7 @@
     <ProductDetails :categories="categories" :pProduct="product" :tags="tags"/>
     <DescriptionReview :reviews="reviews" :full_description="product.full_description"/>
     <BannerArea />
-    <div class="banner-area">
-      <img src="/img/banner/banner-80.jpg" alt="">
-    </div>
+    <FullBanner />
   </Page>
 </template>
 
@@ -13,7 +11,10 @@
 import Page from "~/components/Page";
 
 import ProductDetails from "~/components/ProductDetails/ProductDetails";
+
 import BannerArea from "~/components/Banner/BannerArea";
+import FullBanner from "~/components/Banner/FullBanner";
+
 import DescriptionReview from "~/components/ProductDetails/DescriptionReview";
 
 export default {
@@ -21,7 +22,8 @@ export default {
         Page,
         ProductDetails,
         DescriptionReview,
-        BannerArea
+        BannerArea,
+        FullBanner
   },
   head() {
     return {
@@ -88,9 +90,6 @@ export default {
 <style scoped>
 footer {
     background: #282829;
-}
-.banner-area > img {
-    width: 100%;
 }
 </style>
 
