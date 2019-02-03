@@ -12,13 +12,17 @@
 
 - BestSellingArea recebe produtos como props
 
-- Alterar cor Description Review
+- [OK] Alterar cor Description Review
 
 - Vue-placeholder enquanto não for passado uma imagem
 
 - Mudar props after AsyncData
 
+- Verificar dados da API
+
 - Fazer shop menu Mobile
+
+- Description Review com botão star
 
 - Recriar Error.vue
 

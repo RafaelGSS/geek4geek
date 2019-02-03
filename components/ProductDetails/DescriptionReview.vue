@@ -85,7 +85,7 @@
     padding-bottom: 10px;
 }
 .description-review-topbar a.active {
-    border-bottom: 2px solid #047afe;
+    border-bottom: 2px solid #3cb371;
     color: #242424;
 }
 .tab-content.description-review-bottom {
@@ -121,7 +121,7 @@
     overflow: hidden;
 }
 .ratting-star i {
-    color: #047afe;
+    color: #3cb371;
     font-size: 18px;
 }
 .ratting-author h3 {
@@ -173,7 +173,7 @@
     color: #333;
 }
 .rating-form-style.form-submit input {
-    background: #047afe none repeat scroll 0 0;
+    background: #3cb371 none repeat scroll 0 0;
     color: #fff;
     cursor: pointer;
     font-weight: 500;
@@ -189,35 +189,12 @@
 .ratting-star>span {
     margin-left: 5px;
 }
-.product-anotherinfo-wrapper li span {
-    color: #242424;
-    display: inline-block;
-    font-size: 15px;
-    font-weight: 500;
-    margin-right: 15px;
-    width: 40px;
-}
-.product-anotherinfo-wrapper li {
-    display: inline-block;
-    font-size: 14px;
-    list-style: outside none none;
-    margin-bottom: 6px;
-    text-transform: capitalize;
-    margin: 0 5px 0 0;
-}
-.product-anotherinfo-wrapper li a {
-    color: #242424;
-}
-.product-anotherinfo-wrapper li:last-child {
-    margin-bottom: 0px;
-}
 
 </style>
 
 <script>
 export default {
     props: ['full_description', 'reviews']
-
 };
 </script>
 

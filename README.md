@@ -1,4 +1,4 @@
-# geeklandia
+# GEEK4GEEK
 
 > Nuxt.js project
 
