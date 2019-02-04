@@ -9,12 +9,17 @@
                 class="zoompro"
                 :src="pProduct.images[0].display_image"
                 :data-zoom-image="pProduct.images[0].big_display_image"
-                :alt="pProduct.images[0].alternate_text"
+                :alt="pProduct.images[0].alt"
               >
-              <span v-if="pProduct.promotion.enabled">-{{ pProduct.promotion.percentage }}%</span>
+              <span v-if="pProduct.promo">-{{ pProduct.promotion.percentage }}%</span>
             </div>
             <div id="gallery" class="product-dec-slider">
-              <a v-for="image in pProduct.images" :key="image.id" :data-image="image.display_image" :data-zoom-image="image.big_display_image">
+              <a
+                v-for="image in pProduct.images"
+                :key="image.id"
+                :data-image="image.display_image"
+                :data-zoom-image="image.big_display_image"
+              >
                 <img :src="image.low_display_image" :alt="image.alternate_text">
               </a>
             </div>
@@ -33,7 +38,9 @@
               </div>
               <div class="pro-dec-review">
                 <ul>
-                  <a href="#"><li>Adicionar Review</li></a>
+                  <a href="#">
+                    <li>Adicionar Review</li>
+                  </a>
                 </ul>
               </div>
             </div>
@@ -57,18 +64,18 @@
                 </a>
               </div>
             </div>
-            <div class="pro-dec-categories">
+            <!-- <div class="pro-dec-categories">
               <ul>
                 <li class="categories-title">Categorias:</li>
                 <li v-for="category in categories" :key=category.id>
                   <a href="#">{{ category.name }}</a>
                 </li>
               </ul>
-            </div>
+            </div>-->
             <div class="pro-dec-categories">
               <ul>
                 <li class="categories-title">Tags:</li>
-                <li v-for="tag in tags" :key="tag.id">
+                <li v-for="tag in pProduct.tags" :key="tag.id">
                   <a href="#">{{ tag.name }}</a>
                 </li>
               </ul>
@@ -76,18 +83,8 @@
             <div class="pro-dec-social">
               <ul>
                 <li>
-                  <a class="tweet" href="#">
-                    <i class="ion-social-twitter"></i> Tweet
-                  </a>
-                </li>
-                <li>
                   <a class="share" href="#">
                     <i class="ion-social-facebook"></i> Share
-                  </a>
-                </li>
-                <li>
-                  <a class="google" href="#">
-                    <i class="ion-social-googleplus-outline"></i> Google+
                   </a>
                 </li>
               </ul>
@@ -138,7 +135,7 @@
   z-index: 99;
   opacity: 0.3;
 }
-.product-dec-slider a.active.slick-active:before   {
+.product-dec-slider a.active.slick-active:before {
   opacity: 0;
 }
 .product-details-img {
@@ -177,7 +174,7 @@
   display: inline-block;
   margin-right: 38px;
   position: relative;
-  color: #047afe; 
+  color: #047afe;
   text-decoration: underline;
 }
 .pro-dec-review ul li:last-child {
@@ -301,33 +298,17 @@
   line-height: 1;
   padding: 8px 12px;
 }
-.pro-dec-social li a.tweet {
-  background-color: #00aaf0;
-  border: 1px solid transparent;
-}
-.pro-dec-social li a.tweet:hover {
-  background-color: transparent;
-  border: 1px solid #7aed0a;
-  color: #3cb371;
-}
+
 .pro-dec-social li a.share {
   background-color: #435f9f;
   border: 1px solid transparent;
 }
 .pro-dec-social li a.share:hover {
-  background-color: transparent;
-  border: 1px solid #7aed0a;
-  color: #3cb371;
+  background-color: #242424;
+  border: 1px solid #242424;
+  color: #fff;
 }
-.pro-dec-social li a.google {
-  background-color: #e04b34;
-  border: 1px solid transparent;
-}
-.pro-dec-social li a.google:hover {
-  background-color: transparent;
-  border: 1px solid #7aed0a;
-  color: #3cb371;
-}
+
 .pro-dec-social {
   margin: 27px 0 0;
 }
@@ -384,23 +365,25 @@
   background-color: #3cb371;
   color: #fff;
 }
-
 </style>
 
 <script>
 export default {
-  props: ['pProduct', 'tags', 'categories'],
-  head () {
+  props: ["pProduct"],
+  head() {
     return {
       script: [
-        { src: 'https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js' }
-      ],
-    }
+        {
+          src:
+            "https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"
+        }
+      ]
+    };
   },
   data() {
     return {
       quantity: "1"
-    }
+    };
   },
   mounted() {
     $(".zoompro").elevateZoom({
@@ -415,20 +398,20 @@ export default {
     });
   },
   methods: {
-    addCart(){
-        var obj = {
-          id: pProduct.id,
-          quantity: this.quantity,
-          display_name: pProduct.display_name,
-          value: pProduct.price
-        }
-        this.$notify({
-            group: 'general',
-            type: 'success',
-            title: 'Item adicionado',
-            text: 'O Item foi adicionado com sucesso do seu carrinho de compras!'
-        });
-        this.$store.commit('cart/add', obj)
+    addCart() {
+      var obj = {
+        id: pProduct.id,
+        quantity: this.quantity,
+        display_name: pProduct.display_name,
+        value: pProduct.price
+      };
+      this.$notify({
+        group: "general",
+        type: "success",
+        title: "Item adicionado",
+        text: "O Item foi adicionado com sucesso do seu carrinho de compras!"
+      });
+      this.$store.commit("cart/add", obj);
     }
   }
 };

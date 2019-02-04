@@ -1,30 +1,21 @@
 var productsHot = [
   {
-    "id": 90,
+    "id": 190,
     "name": "Produto Gee4Geek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total dos produtos",
+    "promo": true,
+    "stock": 10,
+    "promotion": {
+      "percentage": 10,
+      "old_price": 100
+    },
     "price": 90,
     "tags": [],
     "images": [
       {
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
-        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
-        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
-        "alt": "",
-      }
-    ],
-    "material": "PVC"
-  },
-  {
-    "id": 91,
-    "name": "Produto Gee4Geek",
-    "category_name": "Canecas",
-    "display_description": "Descricao dos protudos em modo de display",
-    "price": 90,
-    "tags": [],
-    "images": [
-      {
+        "id": 1,
         "display_image": "/img/product-details/product-detalis-l1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
@@ -34,14 +25,22 @@ var productsHot = [
     "material": "PVC"
   },
   {
-    "id": 92,
+    "id": 191,
     "name": "Produto Gee4Geek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total dos produtos",
+    "promo": true,
+    "stock": 10,
+    "promotion": {
+      "percentage": 10,
+      "old_price": 100
+    },
     "price": 90,
     "tags": [],
     "images": [
       {
+        "id": 1,
         "display_image": "/img/product-details/product-detalis-l1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
@@ -51,14 +50,22 @@ var productsHot = [
     "material": "PVC"
   },
   {
-    "id": 93,
+    "id": 192,
     "name": "Produto Gee4Geek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total dos produtos",
+    "promo": true,
+    "stock": 10,
+    "promotion": {
+      "percentage": 10,
+      "old_price": 100
+    },
     "price": 90,
     "tags": [],
     "images": [
       {
+        "id": 1,
         "display_image": "/img/product-details/product-detalis-l1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
@@ -68,14 +75,22 @@ var productsHot = [
     "material": "PVC"
   },
   {
-    "id": 94,
+    "id": 193,
     "name": "Produto Gee4Geek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total dos produtos",
+    "promo": true,
+    "stock": 10,
+    "promotion": {
+      "percentage": 10,
+      "old_price": 100
+    },
     "price": 90,
     "tags": [],
     "images": [
       {
+        "id": 1,
         "display_image": "/img/product-details/product-detalis-l1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
@@ -85,14 +100,22 @@ var productsHot = [
     "material": "PVC"
   },
   {
-    "id": 95,
-    "name": "Produto Gee4G  eek",
+    "id": 194,
+    "name": "Produto Gee4Geek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total dos produtos",
+    "promo": true,
+    "stock": 10,
+    "promotion": {
+      "percentage": 10,
+      "old_price": 100
+    },
     "price": 90,
     "tags": [],
     "images": [
       {
+        "id": 1,
         "display_image": "/img/product-details/product-detalis-l1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
@@ -102,14 +125,22 @@ var productsHot = [
     "material": "PVC"
   },
   {
-    "id": 96,
+    "id": 195,
     "name": "Produto Gee4Geek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total dos produtos",
+    "promo": true,
+    "stock": 10,
+    "promotion": {
+      "percentage": 10,
+      "old_price": 100
+    },
     "price": 90,
     "tags": [],
     "images": [
       {
+        "id": 1,
         "display_image": "/img/product-details/product-detalis-l1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
@@ -119,14 +150,22 @@ var productsHot = [
     "material": "PVC"
   },
   {
-    "id": 97,
+    "id": 196,
     "name": "Produto Gee4Geek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total dos produtos",
+    "promo": true,
+    "stock": 10,
+    "promotion": {
+      "percentage": 10,
+      "old_price": 100
+    },
     "price": 90,
     "tags": [],
     "images": [
       {
+        "id": 1,
         "display_image": "/img/product-details/product-detalis-l1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
@@ -136,14 +175,22 @@ var productsHot = [
     "material": "PVC"
   },
   {
-    "id": 98,
+    "id": 197,
     "name": "Produto Gee4Geek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total dos produtos",
+    "promo": true,
+    "stock": 10,
+    "promotion": {
+      "percentage": 10,
+      "old_price": 100
+    },
     "price": 90,
     "tags": [],
     "images": [
       {
+        "id": 1,
         "display_image": "/img/product-details/product-detalis-l1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
@@ -153,14 +200,22 @@ var productsHot = [
     "material": "PVC"
   },
   {
-    "id": 99,
+    "id": 198,
     "name": "Produto Gee4Geek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total dos produtos",
+    "promo": true,
+    "stock": 10,
+    "promotion": {
+      "percentage": 10,
+      "old_price": 100
+    },
     "price": 90,
     "tags": [],
     "images": [
       {
+        "id": 1,
         "display_image": "/img/product-details/product-detalis-l1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
@@ -170,14 +225,22 @@ var productsHot = [
     "material": "PVC"
   },
   {
-    "id": 100,
+    "id": 199,
     "name": "Produto Gee4Geek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total dos produtos",
+    "promo": true,
+    "stock": 10,
+    "promotion": {
+      "percentage": 10,
+      "old_price": 100
+    },
     "price": 90,
     "tags": [],
     "images": [
       {
+        "id": 1,
         "display_image": "/img/product-details/product-detalis-l1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
@@ -185,7 +248,32 @@ var productsHot = [
       }
     ],
     "material": "PVC"
-  }
+  },
+  {
+    "id": 200,
+    "name": "Produto Gee4Geek",
+    "category_name": "Canecas",
+    "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total dos produtos",
+    "promo": true,
+    "stock": 10,
+    "promotion": {
+      "percentage": 10,
+      "old_price": 100
+    },
+    "price": 90,
+    "tags": [],
+    "images": [
+      {
+        "id": 1,
+        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "low_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "big_display_image": "/img/product-details/product-detalis-l1.jpg",
+        "alt": ""
+      }
+    ],
+    "material": "PVC"
+  },
 ]
 
 export default productsHot
