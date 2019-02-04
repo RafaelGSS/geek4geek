@@ -18,7 +18,7 @@
 
 - Mudar props after AsyncData
 
-- Verificar dados da API
+- [DOING] Verificar dados da API
 
 - Fazer shop menu Mobile
 
