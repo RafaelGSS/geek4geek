@@ -4,7 +4,9 @@ var productsNew = [
     "name": "Produto Gee4Geek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total do produto",
     "promo": true,
+    "stock": 10,
     "promotion": {
       "percentage": 10,
       "old_price": 100
@@ -13,6 +15,7 @@ var productsNew = [
     "tags": [],
     "images": [
       {
+        "id": 1,
         "display_image": "/img/product-details/product-detalis-l1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
@@ -26,7 +29,9 @@ var productsNew = [
     "name": "Produto Gee4Geek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total do produto",
     "promo": true,
+    "stock": 10,
     "promotion": {
       "percentage": 10,
       "old_price": 100
@@ -35,6 +40,7 @@ var productsNew = [
     "tags": [],
     "images": [
       {
+        "id": 1,
         "display_image": "/img/product-details/product-detalis-l1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
@@ -48,7 +54,9 @@ var productsNew = [
     "name": "Produto Gee4Geek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total do produto",
     "promo": true,
+    "stock": 10,
     "promotion": {
       "percentage": 10,
       "old_price": 100
@@ -57,6 +65,7 @@ var productsNew = [
     "tags": [],
     "images": [
       {
+        "id": 1,
         "display_image": "/img/product-details/product-detalis-l1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
@@ -70,7 +79,9 @@ var productsNew = [
     "name": "Produto Gee4Geek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total do produto",
     "promo": true,
+    "stock": 10,
     "promotion": {
       "percentage": 10,
       "old_price": 100
@@ -79,6 +90,7 @@ var productsNew = [
     "tags": [],
     "images": [
       {
+        "id": 1,
         "display_image": "/img/product-details/product-detalis-l1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
@@ -92,7 +104,9 @@ var productsNew = [
     "name": "Produto Gee4Geek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total do produto",
     "promo": true,
+    "stock": 10,
     "promotion": {
       "percentage": 10,
       "old_price": 100
@@ -101,6 +115,7 @@ var productsNew = [
     "tags": [],
     "images": [
       {
+        "id": 1,
         "display_image": "/img/product-details/product-detalis-l1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
@@ -114,7 +129,9 @@ var productsNew = [
     "name": "Produto Gee4Geek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total do produto",
     "promo": true,
+    "stock": 10,
     "promotion": {
       "percentage": 10,
       "old_price": 100
@@ -123,6 +140,7 @@ var productsNew = [
     "tags": [],
     "images": [
       {
+        "id": 1,
         "display_image": "/img/product-details/product-detalis-l1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
@@ -136,7 +154,9 @@ var productsNew = [
     "name": "Produto Gee4Geek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total do produto",
     "promo": true,
+    "stock": 10,
     "promotion": {
       "percentage": 10,
       "old_price": 100
@@ -145,6 +165,7 @@ var productsNew = [
     "tags": [],
     "images": [
       {
+        "id": 1,
         "display_image": "/img/product-details/product-detalis-l1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
@@ -158,7 +179,9 @@ var productsNew = [
     "name": "Produto Gee4Geek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total do produto",
     "promo": true,
+    "stock": 10,
     "promotion": {
       "percentage": 10,
       "old_price": 100
@@ -167,6 +190,7 @@ var productsNew = [
     "tags": [],
     "images": [
       {
+        "id": 1,
         "display_image": "/img/product-details/product-detalis-l1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
@@ -180,7 +204,9 @@ var productsNew = [
     "name": "Produto Gee4Geek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total do produto",
     "promo": true,
+    "stock": 10,
     "promotion": {
       "percentage": 10,
       "old_price": 100
@@ -189,6 +215,7 @@ var productsNew = [
     "tags": [],
     "images": [
       {
+        "id": 1,
         "display_image": "/img/product-details/product-detalis-l1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
@@ -202,7 +229,9 @@ var productsNew = [
     "name": "Produto Gee4Geek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total do produto",
     "promo": true,
+    "stock": 10,
     "promotion": {
       "percentage": 10,
       "old_price": 100
@@ -211,6 +240,7 @@ var productsNew = [
     "tags": [],
     "images": [
       {
+        "id": 1,
         "display_image": "/img/product-details/product-detalis-l1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
@@ -224,7 +254,9 @@ var productsNew = [
     "name": "Produto Gee4Geek",
     "category_name": "Canecas",
     "display_description": "Descricao dos protudos em modo de display",
+    "full_description": "Descricao total do produto",
     "promo": true,
+    "stock": 10,
     "promotion": {
       "percentage": 10,
       "old_price": 100
@@ -233,6 +265,7 @@ var productsNew = [
     "tags": [],
     "images": [
       {
+        "id": 1,
         "display_image": "/img/product-details/product-detalis-l1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
