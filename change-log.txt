@@ -10,7 +10,7 @@
 
 - [OK] Banner recebe image como props
 
-- BestSellingArea recebe produtos como props
+- [DOING] BestSellingArea recebe produtos como props
 
 - [OK] Alterar cor Description Review
 
