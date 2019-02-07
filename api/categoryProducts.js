@@ -2,7 +2,6 @@ var products = [
     {
       "id": 190,
       "name": "Produto Gee4Geek",
-      "category_name": "Canecas",
       "display_description": "Descricao dos protudos em modo de display",
       "full_description": "Descricao total dos produtos",
       "promo": true,
@@ -13,6 +12,7 @@ var products = [
       },
       "price": 90,
       "tags": [],
+      "categories": ["Canecas"],
       "images": [
         {
           "id": 1,
@@ -27,7 +27,6 @@ var products = [
     {
       "id": 191,
       "name": "Produto Gee4Geek",
-      "category_name": "Canecas",
       "display_description": "Descricao dos protudos em modo de display",
       "full_description": "Descricao total dos produtos",
       "promo": true,
@@ -38,6 +37,7 @@ var products = [
       },
       "price": 90,
       "tags": [],
+      "categories": ["Canecas"],
       "images": [
         {
           "id": 1,
@@ -52,7 +52,6 @@ var products = [
     {
       "id": 192,
       "name": "Produto Gee4Geek",
-      "category_name": "Canecas",
       "display_description": "Descricao dos protudos em modo de display",
       "full_description": "Descricao total dos produtos",
       "promo": true,
@@ -63,6 +62,7 @@ var products = [
       },
       "price": 90,
       "tags": [],
+      "categories": ["Canecas"],
       "images": [
         {
           "id": 1,
@@ -77,7 +77,6 @@ var products = [
     {
       "id": 193,
       "name": "Produto Gee4Geek",
-      "category_name": "Canecas",
       "display_description": "Descricao dos protudos em modo de display",
       "full_description": "Descricao total dos produtos",
       "promo": true,
@@ -88,6 +87,7 @@ var products = [
       },
       "price": 90,
       "tags": [],
+      "categories": ["Canecas"],
       "images": [
         {
           "id": 1,
@@ -102,7 +102,6 @@ var products = [
     {
       "id": 194,
       "name": "Produto Gee4Geek",
-      "category_name": "Canecas",
       "display_description": "Descricao dos protudos em modo de display",
       "full_description": "Descricao total dos produtos",
       "promo": true,
@@ -113,6 +112,7 @@ var products = [
       },
       "price": 90,
       "tags": [],
+      "categories": ["Canecas"],
       "images": [
         {
           "id": 1,
@@ -127,7 +127,6 @@ var products = [
     {
       "id": 195,
       "name": "Produto Gee4Geek",
-      "category_name": "Canecas",
       "display_description": "Descricao dos protudos em modo de display",
       "full_description": "Descricao total dos produtos",
       "promo": true,
@@ -138,6 +137,7 @@ var products = [
       },
       "price": 90,
       "tags": [],
+      "categories": ["Canecas"],
       "images": [
         {
           "id": 1,
@@ -152,7 +152,6 @@ var products = [
     {
       "id": 196,
       "name": "Produto Gee4Geek",
-      "category_name": "Canecas",
       "display_description": "Descricao dos protudos em modo de display",
       "full_description": "Descricao total dos produtos",
       "promo": true,
@@ -163,6 +162,7 @@ var products = [
       },
       "price": 90,
       "tags": [],
+      "categories": ["Canecas"],
       "images": [
         {
           "id": 1,
@@ -177,7 +177,6 @@ var products = [
     {
       "id": 197,
       "name": "Produto Gee4Geek",
-      "category_name": "Canecas",
       "display_description": "Descricao dos protudos em modo de display",
       "full_description": "Descricao total dos produtos",
       "promo": true,
@@ -188,6 +187,7 @@ var products = [
       },
       "price": 90,
       "tags": [],
+      "categories": ["Canecas"],
       "images": [
         {
           "id": 1,
@@ -202,7 +202,6 @@ var products = [
     {
       "id": 198,
       "name": "Produto Gee4Geek",
-      "category_name": "Canecas",
       "display_description": "Descricao dos protudos em modo de display",
       "full_description": "Descricao total dos produtos",
       "promo": true,
@@ -213,6 +212,7 @@ var products = [
       },
       "price": 90,
       "tags": [],
+      "categories": ["Canecas"],
       "images": [
         {
           "id": 1,
@@ -227,7 +227,6 @@ var products = [
     {
       "id": 199,
       "name": "Produto Gee4Geek",
-      "category_name": "Canecas",
       "display_description": "Descricao dos protudos em modo de display",
       "full_description": "Descricao total dos produtos",
       "promo": true,
@@ -238,6 +237,7 @@ var products = [
       },
       "price": 90,
       "tags": [],
+      "categories": ["Canecas"],
       "images": [
         {
           "id": 1,
@@ -252,7 +252,6 @@ var products = [
     {
       "id": 200,
       "name": "Produto Gee4Geek",
-      "category_name": "Canecas",
       "display_description": "Descricao dos protudos em modo de display",
       "full_description": "Descricao total dos produtos",
       "promo": true,
@@ -263,6 +262,7 @@ var products = [
       },
       "price": 90,
       "tags": [],
+      "categories": ["Canecas"],
       "images": [
         {
           "id": 1,

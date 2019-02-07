@@ -1,7 +1,6 @@
 var product = {
   "id": 190,
   "name": "Produto Gee4Geek",
-  "category_name": "Canecas",
   "display_description": "Descricao dos protudos em modo de display",
   "full_description": "Descricao total dos produtos",
   "promo": true,
@@ -12,6 +11,7 @@ var product = {
   },
   "price": 90,
   "tags": [],
+  "categories": ["Canecas"],
   "images": [
     {
       "id": 1,

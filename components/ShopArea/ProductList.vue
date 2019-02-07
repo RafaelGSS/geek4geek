@@ -19,7 +19,7 @@
             <div class="list-col">
               <div class="gridview">
                 <div class="product-content text-center">
-                  <span>{{ prod.category_name }}</span>
+                  <span v-for="category in prod.categories" :key="category">{{ category }}</span>
                   <h4>
                     <a href="#">{{ prod.name }}</a>
                   </h4>
