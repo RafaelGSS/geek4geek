@@ -10,11 +10,15 @@
 
 - [OK] Banner recebe image como props
 
-- BestSellingArea recebe produtos como props
+- [OK] BestSellingArea recebe produtos como props
+
+- Deixar botão em baixo nos items 0 de BestSellingArea
 
 - [OK] Alterar cor Description Review
 
 - Vue-placeholder enquanto não for passado uma imagem
+
+- Tentar enxugar componentes com 300+ rows
 
 - Mudar props after AsyncData
 

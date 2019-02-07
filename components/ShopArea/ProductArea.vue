@@ -72,7 +72,7 @@
   transition: all 0.3s ease 0s;
 }
 .product-tab-list > a.active h4 {
-  border: 2px solid #7aed0a;
+  border: 2px solid #3cb371;
   color: #3cb371;
 }
 </style>

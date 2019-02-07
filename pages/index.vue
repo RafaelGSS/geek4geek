@@ -4,7 +4,7 @@
     <BannerArea/>
     <ProductArea :products_new="products_new" :products_hot="products_hot"/>
     <ServiceArea/>
-    <BestSellingArea/>
+    <BestSellingArea :cups="sellingCups" :tshirts="sellingShirts" />
     <FullBanner/>
   </Page>
 </template>
@@ -29,6 +29,9 @@ import productsHot from "~/api/productsHot";
 import { categories as _categories } from "~/api/categories";
 import images from "~/api/imagesSlider";
 
+import bestSellingShirts from "~/api/bestSellingShirts";
+import bestSellingCups from "~/api/bestSellingCups";
+
 export default {
   head: {
     title: "Homepage dos Geeks!"
@@ -49,7 +52,9 @@ export default {
           categories: _categories,
           products_new: productsNew,
           products_hot: productsHot,
-          images_slider: images
+          images_slider: images,
+          sellingShirts: bestSellingShirts,
+          sellingCups: bestSellingCups
         });
       }, 1500);
     });

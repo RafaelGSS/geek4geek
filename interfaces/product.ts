@@ -11,7 +11,7 @@ interface images {
 interface Product {
     id: number,
     name: string,
-    category_name: string,
+    categories: Array<string>,
     display_description: string,
     promo: boolean,
     promotion: Promotion,
