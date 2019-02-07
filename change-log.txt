@@ -30,7 +30,7 @@
 
 - Entender todo projeto do 0 para ver se esta seguindo padroes de projeto.
 
-- Implementar loading em ProductList
+- [DOING] Implementar loading em ProductList
 
 - Fazer semantica, ALT, TITLE
 
