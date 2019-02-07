@@ -12,8 +12,6 @@
 
 - [OK] BestSellingArea recebe produtos como props
 
-- Deixar botão em baixo nos items 0 de BestSellingArea
-
 - [OK] Alterar cor Description Review
 
 - Vue-placeholder enquanto não for passado uma imagem
