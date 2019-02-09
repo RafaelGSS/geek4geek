@@ -64,14 +64,14 @@
                 </a>
               </div>
             </div>
-            <!-- <div class="pro-dec-categories">
+            <div class="pro-dec-categories">
               <ul>
                 <li class="categories-title">Categorias:</li>
-                <li v-for="category in categories" :key=category.id>
+                <li v-for="(category, index) in pProduct.categories" :key="`det-cat-${index}`">
                   <a href="#">{{ category.name }}</a>
                 </li>
               </ul>
-            </div>-->
+            </div>
             <div class="pro-dec-categories">
               <ul>
                 <li class="categories-title">Tags:</li>
