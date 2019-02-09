@@ -28,6 +28,8 @@
 
 - [DOING] Recriar Error.vue
 
+- remover responsive.css para componentes
+
 - Entender todo projeto do 0 para ver se esta seguindo padroes de projeto.
 
 - [OK] Implementar loading em ProductList

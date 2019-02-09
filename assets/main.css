@@ -1579,6 +1579,16 @@ textarea:focus {
     color: #fff;
 }
 
+.btn-success {
+    background: #3cb371;
+    border-color: #3cb371;
+}
+
+.btn-success:hover {
+    background: #47d586;
+    border-color: #47d586;
+}
+
 .height-100vh {
     height: 100vh;
 }

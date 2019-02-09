@@ -1,52 +1,59 @@
 <template>
-<Page> 
-<div class="container-fluid pt-5  p-0">
-  <div class="row">
-    <div class="col-12">
-      <div class="texto-erro text-center">
-        <h1>ERRO 404</h1>
-        <h2>A PÁGINA NÃO FOI ENCONTRADA</h2>
-      </div>
-    </div>
-    </div>
-    <div class="row">
-    <div class="col-12">
-      <div class="erro text-center pt-3">
-        <img src="/img/error/404-erro3.png" alt>
-      </div>
-     </div>   
-  </div>    
-</div>
-</Page>        
+  <Page>
+    <div style="background-color: #282829">
+      <div class="container">
+        <div v-if="error.statusCode === 404">
+          <E404/>
+        </div>
+        <div v-if="error.statusCode === 500">
+          <E500/>
+        </div>
 
+        <div class="go-home">
+          <button class="btn btn-success">Quero ir para Homepage</button>
+        </div>
+      </div>
+    </div>
+    <div style="background-color: #4a4a4a; height: 5px;">
+
+    </div>
+  </Page>
 </template>
 
-<style>
+<style scoped>
 
-.erro img {
-  height: 500px;
-  max-width: 100%;
-
+.go-home {
+  text-align: center;
 }
 
-.texto-erro h1  {
-   font-size: 70px;
-  font-weight: bold; 
-  color: #CC0100;
+.go-home button {
+  font-size: 25px;
+  padding: 10px;
+  width: 500px;
+  height: auto;
+  color: #fff;
 }
-.texto-erro h2 {
-   font-size: 30px;
-  font-weight: bold; 
-  color:rgb(82, 78, 78);
+
+.container {
+  padding-bottom: 100px;
 }
 </style>
 
 
 <script>
 import Page from "~/components/Page.vue";
+import E404 from "~/components/Error/E404";
+import E500 from "~/components/Error/E500";
+
 export default {
+  props: ["error"],
+  head: {
+    title: "Página não encontrada"
+  },
   components: {
     Page,
+    E404,
+    E500
   }
-}
+};
 </script>
