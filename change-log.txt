@@ -14,7 +14,7 @@
 
 - [OK] Alterar cor Description Review
 
-- Vue-placeholder enquanto não for passado uma imagem
+- [DOING] Vue-placeholder enquanto não for passado uma imagem
 
 - Tentar enxugar componentes com 300+ rows
 
@@ -30,7 +30,7 @@
 
 - Entender todo projeto do 0 para ver se esta seguindo padroes de projeto.
 
-- [DOING] Implementar loading em ProductList
+- [OK] Implementar loading em ProductList
 
 - Fazer semantica, ALT, TITLE
 
