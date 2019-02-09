@@ -3,7 +3,7 @@
     <div :class="{'tab-pane': true, active: isAct}" :id="idContainer">
       <div class="custom-row" v-if="isLoading" style="justify-content: center;">
         <no-ssr>
-            <vue-simple-spinner size="large" message="Carregando dados..."></vue-simple-spinner>
+          <vue-simple-spinner size="large" message="Carregando dados..."></vue-simple-spinner>
         </no-ssr>
       </div>
       <div class="custom-row" v-else>
@@ -284,9 +284,9 @@ export default {
   },
   data: () => ({
     isAct: true,
-    filtersAppied: [], /* Type: interfaces/filterProducts.ts */
-    sortName: 'default',
-    isLoading: false,
+    filtersAppied: [] /* Type: interfaces/filterProducts.ts */,
+    sortName: "default",
+    isLoading: false
   }),
   methods: {
     addCart(obj) {
@@ -298,8 +298,8 @@ export default {
       });
       this.$store.commit("cart/add", obj);
     },
-    addFilter(filter){
-       var exist = this.filtersAppied.findIndex(
+    addFilter(filter) {
+      var exist = this.filtersAppied.findIndex(
         item => JSON.stringify(item.type) == JSON.stringify(filter.type)
       );
 
@@ -317,13 +317,19 @@ export default {
       } else {
         this.filtersAppied[exist].data.splice(existData, 1);
         // Remove obj if is empty
-        if(this.filtersAppied[exist].data.length == 0){
-          this.filtersAppied.splice(exist, 1)
+        if (this.filtersAppied[exist].data.length == 0) {
+          this.filtersAppied.splice(exist, 1);
         }
       }
     },
-    sortBy(by){
-      this.sortName = by
+    sortBy(by) {
+      this.sortName = by;
+    },
+    setLoading() {
+      setTimeout(() => {
+        this.isLoading = !this.isLoading;
+        console.log("Chamou", this.isLoading);
+      }, 1);
     }
   },
   created() {
@@ -334,26 +340,30 @@ export default {
   },
   computed: {
     filteredProducts: function() {
-      return this.products.filter(product => {
-        return this.filtersAppied.every(filterAppied => {
-          switch (filterAppied.type) {
-            case "Tag":
-              return product.tags.arrayContains(filterAppied.data);
-            case "Material":
-              return filterAppied.data.includes(product.material);
+      return this.products
+        .filter(product => {
+          return this.filtersAppied.every(filterAppied => {
+            switch (filterAppied.type) {
+              case "Tag":
+                return product.tags.arrayContains(filterAppied.data);
+              case "Material":
+                return filterAppied.data.includes(product.material);
+              default:
+                return true;
+            }
+          });
+        })
+        .sort((a, b) => {
+          switch (this.sortName) {
+            case "PRICE_DESC":
+              return b.price - a.price;
+            case "PRICE_ASC":
+              return a.price - b.price;
             default:
-              return true;
+              return 0;
           }
         });
-      }).sort((a, b) => {
-        switch(this.sortName)
-        {
-          case 'PRICE_DESC': return b.price - a.price;
-          case 'PRICE_ASC': return a.price - b.price;
-          default: return 0;
-        }
-      });
-    },
+    }
   }
 };
 </script>
