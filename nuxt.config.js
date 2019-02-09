@@ -39,6 +39,7 @@ module.exports = {
   plugins:[
     {src: 'plugins/vue-carousel.js', ssr: false},
     {src: 'plugins/vue-notifications.js', ssr: false},
+    {src: 'plugins/vue-loading-spinner.js', ssr: false},
   ],
   /**
    * Add modules extern
