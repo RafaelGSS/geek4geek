@@ -1,7 +1,12 @@
 <template>
   <div class="tab-content jump">
     <div :class="{'tab-pane': true, active: isAct}" :id="idContainer">
-      <div class="custom-row">
+      <div class="custom-row" v-if="isLoading" style="justify-content: center;">
+        <no-ssr>
+            <vue-simple-spinner size="large" message="Carregando dados..."></vue-simple-spinner>
+        </no-ssr>
+      </div>
+      <div class="custom-row" v-else>
         <div
           :class="['custom-col-' + itemsPerRow, 'mb-30']"
           v-for="prod in filteredProducts"
@@ -281,6 +286,7 @@ export default {
     isAct: true,
     filtersAppied: [], /* Type: interfaces/filterProducts.ts */
     sortName: 'default',
+    isLoading: false,
   }),
   methods: {
     addCart(obj) {
