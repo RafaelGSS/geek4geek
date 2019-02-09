@@ -35,19 +35,27 @@ export default {
   },
   head() {
     return {
-      title: "Produto " + this.$route.params.product
+      title: "Produto " + this.$route.params.product,
     };
   },
+  data: () => ({
+    reviews: []
+  }),
   asyncData() {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve({
           product: product,
-          reviews: productReview
         });
       }, 1500);
     });
   },
+  mounted(){
+    setTimeout(() => {
+      this.reviews = productReview
+      console.log('entrou', this.reviews)
+    }, 10000)
+  }
 };
 </script>
 
