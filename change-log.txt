@@ -14,11 +14,11 @@
 
 - [OK] Alterar cor Description Review
 
-- [DOING] Vue-placeholder enquanto não for passado uma imagem
+- [OK] Vue-placeholder enquanto não for passado uma imagem
 
 - Tentar enxugar componentes com 300+ rows
 
-- Mudar props after AsyncData
+- [OK] Mudar props after AsyncData
 
 - [OK] Verificar dados da API
 
@@ -26,7 +26,7 @@
 
 - Description Review com botão star
 
-- Recriar Error.vue
+- [DOING] Recriar Error.vue
 
 - Entender todo projeto do 0 para ver se esta seguindo padroes de projeto.
 
