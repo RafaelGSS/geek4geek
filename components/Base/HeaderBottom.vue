@@ -114,7 +114,7 @@ a{
   color: #fff;
 }
 .header-bottom {
-  background: #282829;
+  background: #4a4a4a;
 }
 
 .menu-categories {
