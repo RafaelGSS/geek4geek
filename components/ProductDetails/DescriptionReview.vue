@@ -42,24 +42,10 @@
                   <div class="star-box">
                     <h2>Rating:</h2>
                     <div class="ratting-star">
-                      <i class="ion-star theme-color"></i>
-                      <i class="ion-star theme-color"></i>
-                      <i class="ion-star theme-color"></i>
-                      <i class="ion-star theme-color"></i>
-                      <i class="ion-star"></i>
+                      <i class="ion-star button-ion-star" v-for="star in [0,1,2,3,4]" :id="`star-review-${star}`" :key="`str-${star}`" @click="setStar(star+1)"></i>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-md-6">
-                      <div class="rating-form-style mb-20">
-                        <input placeholder="Name" type="text">
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="rating-form-style mb-20">
-                        <input placeholder="Email" type="text">
-                      </div>
-                    </div>
                     <div class="col-md-12">
                       <div class="rating-form-style form-submit">
                         <textarea name="message" placeholder="Message"></textarea>
@@ -128,8 +114,11 @@
   overflow: hidden;
 }
 .ratting-star i {
-  color: #3cb371;
+  color: #ddd;
   font-size: 18px;
+}
+.theme-color {
+  color: #3cb371 !important;
 }
 .ratting-author h3 {
   color: #242424;
@@ -196,6 +185,10 @@
 .ratting-star > span {
   margin-left: 5px;
 }
+
+.button-ion-star {
+  cursor: pointer;
+}
 </style>
 
 <script>
@@ -207,6 +200,20 @@ export default {
     reviews: {
       type: Array,
       default: () => []
+    }
+  },
+  methods: {
+    unsetStar(){
+      let els = document.getElementsByClassName('button-ion-star')
+      Array.from(els).forEach((el) => {
+        el.classList.remove('theme-color');
+      }); 
+    },
+    setStar(value){
+      this.unsetStar()
+      Array.from({length: value}, (x,i) => {
+        document.getElementById("star-review-" + i).classList.add('theme-color')
+      });
     }
   }
 };
