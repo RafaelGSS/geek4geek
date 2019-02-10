@@ -2,29 +2,46 @@ import nuxtStorage from 'nuxt-storage'
 
 export const state = () => ({
     itemsCart: [],
-    sumCart: 0,
     initialized: false
 })
   
 export const mutations = {
     initializeStore(state) {
-        if(nuxtStorage.localStorage.getData('iki-cart')){
-           state = 
-                Object.assign(state, JSON.parse(nuxtStorage.localStorage.getData('iki-cart')))
-        }
         state.initialized = true
     },
     add (state, obj) {
-        state.sumCart += obj.value
-        state.itemsCart.push(obj)
+        const itens = [...state.itemsCart]
+        itens.push(obj)
+        state.itemsCart = [...itens]
 
-        nuxtStorage.localStorage.setData('iki-cart', JSON.stringify(state), 60)
+        nuxtStorage.localStorage.setData('iki-cart', JSON.stringify(state.itemsCart), 60)
     },
     remove (state, idx){
-        state.sumCart -= state.itemsCart[idx].value
-        state.itemsCart.splice(idx, 1)
+        const itens = [...state.itemsCart]
+        itens.splice(idx, 1)
+
+        state.itemsCart = [...itens]
         
-        nuxtStorage.localStorage.setData('iki-cart', JSON.stringify(state), 60)
+        nuxtStorage.localStorage.setData('iki-cart', JSON.stringify(state.itemsCart), 60)
+    },
+    setItems(state, items){
+        state.itemsCart = [...items]
+    }
+}
+
+export const actions = {
+    addToCart(context, obj) {
+        context.commit('add', obj)
+    },
+    removeToCart(context, idx){
+        context.commit('remove', idx)
+    },
+    initializeStore(context){
+        if(nuxtStorage.localStorage.getData('iki-cart')){
+            let cartStorage = JSON.parse(nuxtStorage.localStorage.getData('iki-cart'))
+            context.commit('setItems', cartStorage)
+        }
+        context.commit('initializeStore')
     }
 }
 
@@ -33,7 +50,11 @@ export const getters = {
         return state.itemsCart
     },
     sum: state => {
-        return state.sumCart
+        let sum = 0;
+        state.itemsCart.forEach(item => {
+            sum += item.value
+        });
+        return sum
     },
     initialized: state => {
         return state.initialized

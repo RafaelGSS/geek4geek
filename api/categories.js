@@ -1,4 +1,4 @@
-var categories = [
+var _categories = [
     {
         id: 1,
         name: 'Canecas'
@@ -12,3 +12,5 @@ var categories = [
         name: 'Action Figures'
     }
 ]
+
+export default _categories

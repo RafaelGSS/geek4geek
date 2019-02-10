@@ -4,7 +4,7 @@ var productsHot = [
     "name": "Produto Gee4Geek",
     "display_description": "Descricao dos protudos em modo de display",
     "full_description": "Descricao total dos produtos",
-    "promo": true,
+    "promo": false,
     "stock": 10,
     "promotion": {
       "percentage": 10,
@@ -29,7 +29,7 @@ var productsHot = [
     "name": "Produto Gee4Geek",
     "display_description": "Descricao dos protudos em modo de display",
     "full_description": "Descricao total dos produtos",
-    "promo": true,
+    "promo": false,
     "stock": 10,
     "promotion": {
       "percentage": 10,
@@ -54,7 +54,7 @@ var productsHot = [
     "name": "Produto Gee4Geek",
     "display_description": "Descricao dos protudos em modo de display",
     "full_description": "Descricao total dos produtos",
-    "promo": true,
+    "promo": false,
     "stock": 10,
     "promotion": {
       "percentage": 10,
@@ -79,7 +79,7 @@ var productsHot = [
     "name": "Produto Gee4Geek",
     "display_description": "Descricao dos protudos em modo de display",
     "full_description": "Descricao total dos produtos",
-    "promo": true,
+    "promo": false,
     "stock": 10,
     "promotion": {
       "percentage": 10,
@@ -104,7 +104,7 @@ var productsHot = [
     "name": "Produto Gee4Geek",
     "display_description": "Descricao dos protudos em modo de display",
     "full_description": "Descricao total dos produtos",
-    "promo": true,
+    "promo": false,
     "stock": 10,
     "promotion": {
       "percentage": 10,
@@ -129,7 +129,7 @@ var productsHot = [
     "name": "Produto Gee4Geek",
     "display_description": "Descricao dos protudos em modo de display",
     "full_description": "Descricao total dos produtos",
-    "promo": true,
+    "promo": false,
     "stock": 10,
     "promotion": {
       "percentage": 10,
@@ -154,7 +154,7 @@ var productsHot = [
     "name": "Produto Gee4Geek",
     "display_description": "Descricao dos protudos em modo de display",
     "full_description": "Descricao total dos produtos",
-    "promo": true,
+    "promo": false,
     "stock": 10,
     "promotion": {
       "percentage": 10,
@@ -179,7 +179,7 @@ var productsHot = [
     "name": "Produto Gee4Geek",
     "display_description": "Descricao dos protudos em modo de display",
     "full_description": "Descricao total dos produtos",
-    "promo": true,
+    "promo": false,
     "stock": 10,
     "promotion": {
       "percentage": 10,
@@ -204,7 +204,7 @@ var productsHot = [
     "name": "Produto Gee4Geek",
     "display_description": "Descricao dos protudos em modo de display",
     "full_description": "Descricao total dos produtos",
-    "promo": true,
+    "promo": false,
     "stock": 10,
     "promotion": {
       "percentage": 10,
@@ -229,7 +229,7 @@ var productsHot = [
     "name": "Produto Gee4Geek",
     "display_description": "Descricao dos protudos em modo de display",
     "full_description": "Descricao total dos produtos",
-    "promo": true,
+    "promo": false,
     "stock": 10,
     "promotion": {
       "percentage": 10,
@@ -254,7 +254,7 @@ var productsHot = [
     "name": "Produto Gee4Geek",
     "display_description": "Descricao dos protudos em modo de display",
     "full_description": "Descricao total dos produtos",
-    "promo": true,
+    "promo": false,
     "stock": 10,
     "promotion": {
       "percentage": 10,

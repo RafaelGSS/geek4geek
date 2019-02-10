@@ -254,6 +254,8 @@
   </div>
 </template>
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   props: {
     tshirts: {
@@ -264,6 +266,9 @@ export default {
     }
   },
   methods: {
+    ...mapActions({
+      add: 'cart/addToCart'
+    }),
     addCart(obj) {
       this.$notify({
         group: "general",
@@ -271,7 +276,7 @@ export default {
         title: "Item adicionado",
         text: "O Item foi adicionado com sucesso do seu carrinho de compras!"
       });
-      this.$store.commit("cart/add", obj);
+      this.add(obj);
     }
   }
 };

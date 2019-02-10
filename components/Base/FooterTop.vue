@@ -156,9 +156,6 @@ a:hover {
 .footer-about > p {
   margin: 0px;
 }
-.footer-map {
-  margin: 8px 0 21px;
-}
 .social-icon {
   margin-top: 22px;
 }

@@ -7,14 +7,6 @@
     </div>
 </template>
 
-<script>
-export default {
-    mounted() {
-        throw 500;
-    }
-}
-</script>
-
 <style scoped>
 .warn {
     text-align: center;

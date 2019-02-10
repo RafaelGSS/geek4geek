@@ -26,7 +26,7 @@ import BestSellingArea from "~/components/ShopArea/BestSellingArea";
 
 import productsNew from "~/api/productsNew";
 import productsHot from "~/api/productsHot";
-import { categories as _categories } from "~/api/categories";
+import _categories from "~/api/categories";
 import images from "~/api/imagesSlider";
 
 import bestSellingShirts from "~/api/bestSellingShirts";

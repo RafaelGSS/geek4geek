@@ -312,21 +312,7 @@
 .pro-dec-social {
   margin: 27px 0 0;
 }
-.product-content {
-  padding: 3px 18px 0;
-}
-.product-content > span {
-  color: #555;
-  font-size: 13px;
-}
-.product-content > h4 {
-  font-size: 14px;
-  line-height: 18px;
-  margin: 8px 0 13px;
-}
-.product-content > h4 a:hover {
-  color: #0363cd;
-}
+
 .product-action {
   display: flex;
   flex-wrap: wrap;

@@ -40,7 +40,7 @@ export default {
   props: {
     categories: {
       type: Array,
-      default: () => Array()
+      default: () => []
     }
   }
 };

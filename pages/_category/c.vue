@@ -13,7 +13,7 @@ import ShopPageArea from "~/components/ShopArea/ShopPageArea";
 
 import products from '~/api/categoryProducts';
 import tags from '~/api/categoryTags';
-import { categories as _categories } from "~/api/categories";
+import _categories from "~/api/categories";
 
 export default {
   scrollToTop: false,
