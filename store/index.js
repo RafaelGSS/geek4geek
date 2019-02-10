@@ -4,7 +4,7 @@ export const actions = {
             return
     
         if(!context.store.getters['cart/initialized']){
-            context.store.commit('cart/initializeStore')
-    }
+            context.store.dispatch('cart/initializeStore')
+        }
     }
   }

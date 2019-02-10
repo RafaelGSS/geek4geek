@@ -14,7 +14,7 @@
                 <nav class="cate-menu-nav">
                   <ul>
                     <li v-for="category in categories" :key="category.id">
-                      <a href="#">{{ category.name }}</a>
+                      <a href="#">{{ category.name | toUpper }}</a>
                     </li>
                   </ul>
                 </nav>
@@ -167,88 +167,12 @@ a{
 .category-menu ul li:hover > a {
   color: #3cb371;
 }
-.category-menu nav > ul > li > a > i {
-  color: #383838;
-  float: right;
-  font-size: 12px;
-  position: relative;
-  top: 1px;
-}
-.category-menu nav > ul > li:hover > a > i {
-  color: #3cb371;
-}
-.category-menu nav > ul > li > a > i.none-lg {
-  display: none;
-}
-.category-menu nav > ul > li > ul.category-mega-menu {
-  background-color: rgba(255, 255, 255, 0.97);
-  display: block;
-  left: 100%;
-  padding: 33px 30px 37px 30px;
-  position: absolute;
-  text-align: left;
-  top: 0;
-  transform: rotateX(90deg);
-  transform-origin: center top 0;
-  transition: all 0.5s ease 0s;
-  visibility: hidden;
-  z-index: 999;
-}
-.category-menu nav > ul > li > ul.category-mega-menu.category-3-col {
-  width: 700px;
-}
-.category-menu nav > ul > li > ul.category-mega-menu.category-2-col {
-  width: 500px;
-}
-.category-menu nav > ul > li:hover > ul.category-mega-menu {
-  transform: rotateX(0deg);
-  visibility: visible;
-}
-.category-menu nav > ul > li > ul.category-mega-menu > li {
-  border-right: 1px solid #ebebeb;
-  display: inline-block;
-  float: left;
-  margin-right: 16px;
-  padding-left: 30px;
-}
-.category-menu nav > ul > li > ul.category-mega-menu > li:last-child {
-  border-right: none;
-}
-.category-menu nav > ul > li > ul.category-mega-menu.category-3-col > li {
-  width: 30.333%;
-}
-.category-menu nav > ul > li > ul.category-mega-menu.category-2-col > li {
-  width: 45%;
-}
-.category-menu nav > ul li ul.category-small-device {
-  display: none;
-  padding-left: 45px;
-  padding-right: 20px;
-}
-.category-menu nav > ul li ul.category-small-device li {
-  padding-bottom: 5px;
-}
-.category-menu nav > ul li ul.category-small-device li a {
-  color: #242424;
-}
-.category-menu nav > ul li ul.category-small-device li:hover > a {
-  color: #3cb371;
-}
-.category-menu nav > ul li ul.category-small-device li a i {
-  float: right;
-}
-.category-menu nav > ul li ul.category-small-device li ul {
-  padding-left: 25px;
-}
 .menu-coffee-color.toy-menu .main-menu ul li:hover > a,
 .menu-coffee-color.toy-menu .main-menu ul li ul li a:hover {
   color: #3cb371;
 }
 .menu-categories:hover h3 a {
   color: #3cb371;
-}
-.main-menu.shoe-menu nav > ul > li > ul.mega-menu {
-  top: 69%;
 }
 
 .main-menu ul li {
@@ -263,9 +187,6 @@ a{
   font-weight: 500;
   line-height: 55px;
   text-transform: uppercase;
-}
-.main-menu.elec-menu nav > ul > li:hover > a {
-  color: #ddd;
 }
 .main-menu ul li a i {
   color: #3cb371;
@@ -316,8 +237,7 @@ a{
   margin-right: 0;
   display: block;
 }
-.main-menu ul li ul li a,
-.category-menu ul li ul li a {
+.main-menu ul li ul li a {
   color: #555;
   font-weight: 400;
   line-height: 28px;
@@ -333,49 +253,11 @@ a{
 .main-menu ul li.mega-menu-position {
   position: static;
 }
-.main-menu.main-border nav > ul > li {
-  margin-right: 0px;
-  padding-left: 25px;
-}
-.main-menu.main-border nav > ul > li.mega-menu-position {
-  margin-right: 0px;
-  padding-left: 0px;
-}
-.main-menu.main-border nav > ul > li > a {
-  padding-right: 21px;
-}
-.main-menu.main-border nav > ul > li.mega-menu-position > a {
-  padding-left: 25px;
-  padding-right: 21px;
-  position: relative;
-}
-.main-menu.main-border nav > ul > li > a:before {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 1px;
-  background-color: #3cb371;
-}
-.main-menu.main-border nav > ul > li > a.menu-border:after {
-  position: absolute;
-  content: "";
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 1px;
-  background-color: #3cb371;
-}
 
-.menu-jewelry .main-menu ul li ul > li.mega-menu-title {
-  margin: 0 0 17px;
-}
 .main-menu nav > ul > li > ul.mega-menu > li {
   width: 1170px;
   margin: 0 auto;
 }
-
 .main-menu ul li ul > li.mega-menu-title,
 .category-menu ul li ul > li.category-mega-menu-title {
   color: #242424;
@@ -397,19 +279,6 @@ a{
   display: inline-block;
   position: relative;
 }
-.main-menu.elec-menu
-  nav
-  > ul
-  > li
-  > ul.mega-menu
-  > li
-  > ul
-  > li
-  > ul
-  > li:hover
-  > a {
-  color: #0363cd;
-}
 
 .main-menu nav > ul > li > ul.mega-menu > li > ul > li ul li a span {
   border-radius: 3px;
@@ -421,49 +290,12 @@ a{
   right: -40px;
   top: 7px;
 }
-.header-bottom-autoparts
-  .main-menu
-  nav
-  > ul
-  > li
-  > ul.mega-menu
-  > li
-  > ul
-  > li
-  ul
-  li
-  a
-  span {
-  padding: 3px 5px 2px;
-  font-size: 14px;
-}
-.main-menu nav > ul > li > ul.mega-menu > li > ul > li ul li a span.blue {
-  background-color: #0363cd;
-}
+
 .main-menu nav > ul > li > ul.mega-menu > li > ul > li ul li a span.red {
   background-color: #df2121;
 }
-.main-menu nav > ul > li > ul.mega-menu > li > ul > li ul li a span.red-2 {
-  background-color: #cc2121;
-}
-.main-menu nav > ul > li > ul.mega-menu > li > ul > li ul li a span.red-3 {
-  background-color: #dd1c1c;
-}
 
-.logo.mobile-logo {
-  display: none;
-}
-#mobile-menu-active {
-  display: none;
-}
-.mobile-menu-area {
-  display: none;
-}
-
-.menu-coffee-color .row div[class^="col-"],
-.menu-byzantine-color .row div[class^="col-"],
-.header-middle-color-15 .row div[class^="col-"],
-.main-menu-position .row div[class^="col-"] {
+.menu-coffee-color .row div[class^="col-"]{
   position: static;
 }
 </style>
@@ -514,6 +346,13 @@ export default {
           });
       }
       sidemenuDropdown();
+    }
+  },
+  filters: {
+    toUpper: (value) => {
+      if(!value) return ''
+      value = value.toString()
+      return value.toUpperCase()
     }
   }
 };

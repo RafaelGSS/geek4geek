@@ -28,21 +28,16 @@
 </template>
 
 <style scoped>
-.product-tab-list,
-.product-tab-list-3 {
+.product-tab-list {
   display: flex;
   justify-content: center;
   position: relative;
 }
 
-.product-tab-list,
-.product-tab-list-3 {
+.product-tab-list {
   display: flex;
   justify-content: center;
   position: relative;
-}
-.product-tab-list-3 {
-  z-index: 99;
 }
 .product-tab-list::before,
 .product-tab-list::after {

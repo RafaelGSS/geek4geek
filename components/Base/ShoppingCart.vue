@@ -5,7 +5,7 @@
       <span
         class="count-amount"
         id="count-amount"
-      >R$ {{ sumCart.toLocaleString("pt",{useGrouping: false,minimumFractionDigits: 2}) }}</span>
+      >{{ sumCart | toReal }}</span>
       <i class="ion-chevron-down cart-down"></i>
       <span class="count-style">{{ itemsCart.length }}</span>
     </button>
@@ -38,7 +38,7 @@
           <span
             class="shop-total"
             id="shop-total"
-          >R$ {{ sumCart.toLocaleString("pt",{useGrouping: false,minimumFractionDigits: 2}) }}</span>
+          >{{ sumCart | toReal }}</span>
         </h4>
       </div>
       <div class="shopping-cart-btn">
@@ -55,17 +55,14 @@
     color: #3cb371;
 }
 
-.header-middle-color button.icon-cart,
-.header-middle-color-6 button.icon-cart,
-.middle-yellowgreen-color button.icon-cart {
+.header-middle-color button.icon-cart {
     border: 2px solid #3cb371;
 }
 .header-middle-color button.icon-cart i.cart-bag {
     border-right: 1px solid #ddd;
     color: #ddd;
 }
-.header-middle-color button.icon-cart span.count-amount,
-.header-middle-color-6 button.icon-cart span.count-amount {
+.header-middle-color button.icon-cart span.count-amount{
     color: #ddd;
 }
 .header-middle-color button.icon-cart i.cart-down {
@@ -236,7 +233,7 @@ button.icon-cart span.count-style {
 </style>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
     mounted() {
@@ -252,6 +249,9 @@ export default {
         }),
     },
     methods: {
+        ...mapActions({
+            remove: 'cart/removeToCart'
+        }),
         removeItem(idx){
             this.$notify({
                 group: 'general',
@@ -259,7 +259,13 @@ export default {
                 title: 'Item removido',
                 text: 'O Item foi removido com sucesso do seu carrinho de compras!'
             });
-            this.$store.commit('cart/remove', idx)
+            this.remove(idx)
+        }
+    },
+    filters: {
+        toReal: (value) => {
+            value = value.toLocaleString("pt",{useGrouping: false,minimumFractionDigits: 2})
+            return 'R$ ' + value
         }
     }
 }

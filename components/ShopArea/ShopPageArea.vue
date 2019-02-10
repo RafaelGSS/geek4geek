@@ -52,10 +52,15 @@
 <script>
 import ProductList from "~/components/ShopArea/ProductList";
 import SidebarFilter from "~/components/ShopArea/SidebarFilter/SidebarFilter";
-import SortBy from "~/components/Sort/SortBy";
+import SortBy from "~/components/ShopArea/SidebarFilter/SortBy";
 
 export default {
-    props: ['products'],
+    props: {
+      products: {
+        type: Array,
+        required: true
+      }
+    },
     components: {
         ProductList, SidebarFilter, SortBy
     }

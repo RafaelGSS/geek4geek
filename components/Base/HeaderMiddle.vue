@@ -43,9 +43,7 @@
 p{
     color: #ddd;
 }
-.header-middle-color .header-search form input,
-.header-middle-color-6 .header-search form input,
-.middle-yellowgreen-color .header-search form input {
+.header-middle-color .header-search form input {
     border: 2px solid #ddd;
     color: #fff;
 }

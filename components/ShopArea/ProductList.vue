@@ -10,7 +10,7 @@
         <div
           :class="['custom-col-' + itemsPerRow, 'mb-30']"
           v-for="prod in filteredProducts"
-          :key="prod.id"
+          :key="`prod-${idContainer}-${prod.id}`"
         >
           <div class="geek4-product-2 mrg-inherit geek4-product-red">
             <div class="product-img">
@@ -265,6 +265,7 @@
 
 <script>
 import busFilter from "@/assets/js/eventBus_filter.js";
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
   props: {
@@ -289,6 +290,9 @@ export default {
     isLoading: false
   }),
   methods: {
+    ...mapActions({
+      add: 'cart/addToCart'
+    }),
     addCart(obj) {
       this.$notify({
         group: "general",
@@ -296,7 +300,7 @@ export default {
         title: "Item adicionado",
         text: "O Item foi adicionado com sucesso do seu carrinho de compras!"
       });
-      this.$store.commit("cart/add", obj);
+      this.add(obj);
     },
     addFilter(filter) {
       var exist = this.filtersAppied.findIndex(
@@ -326,10 +330,7 @@ export default {
       this.sortName = by;
     },
     setLoading() {
-      setTimeout(() => {
-        this.isLoading = !this.isLoading;
-        console.log("Chamou", this.isLoading);
-      }, 1);
+      this.isLoading = !this.isLoading;
     }
   },
   created() {
