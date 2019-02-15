@@ -13,12 +13,6 @@
                   <a href="#">Promoções</a>
                 </li>
                 <li>
-                  <a href="#">Minhas ordens</a>
-                </li>
-                <li>
-                  <a href="#">Socorro</a>
-                </li>
-                <li>
                   <a href="#">Serviço ao cliente</a>
                 </li>
                 <li>
@@ -34,12 +28,6 @@
                   <a href="#">Fabricantes</a>
                 </li>
                 <li>
-                  <a href="#">Nossas lojas</a>
-                </li>
-                <li>
-                  <a href="#">Remessa</a>
-                </li>
-                <li>
                   <a href="#">Pagamentos</a>
                 </li>
                 <li>
@@ -48,18 +36,11 @@
                 <li>
                   <a href="#">Reembolsos</a>
                 </li>
-
-                <li>
-                  <a href="#">Confira</a>
-                </li>
                 <li>
                   <a href="#">Desconto</a>
                 </li>
                 <li>
                   <a href="#">Termos e condições</a>
-                </li>
-                <li>
-                  <a href="#">Envio político</a>
                 </li>
               </ul>
             </div>

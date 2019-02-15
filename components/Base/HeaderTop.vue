@@ -15,9 +15,6 @@
           <div class="header-top-right">
             <ul>
               <li>
-                <a href="my-account.html">Regras</a>
-              </li>
-              <li>
                 <a href="wishlist.html">Lista de desejos </a>
               </li>
               <li>
