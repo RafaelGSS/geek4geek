@@ -9,19 +9,19 @@
             </div>
             <div class="footer-about">
               <p>
-                We are a team of designers and developers that create
-                high quality Magento, Prestashop, Opencart [...].
+                Somos a melhor loja Geek do Brasil, 
+                oferecendo diversos produtos de alta qualidade com o menor preço.
               </p>
             </div>
             <div class="social-icon mr-40">
               <ul>
                 <li>
-                  <a class="facebook" href="#">
+                  <a class="facebook" href="https://www.facebook.com/Geek4Geeks" target="_blank">
                     <i class="ion-social-facebook"></i>
                   </a>
                 </li>
                <li>
-                  <a class="instagram" href="#">
+                  <a class="instagram" href="https://www.instagram.com/geek4geekoficial" target="_blank">
                     <i class="ion-social-instagram-outline"></i>
                   </a>
                 </li>
@@ -41,12 +41,6 @@
                 </li>
                 <li>
                   <a href="#">Informação de Entrega</a>
-                </li>
-                <li>
-                  <a href="#">Política de Privacidade</a>
-                </li>
-                <li>
-                  <a href="#">Termos e Condições</a>
                 </li>
                 <li>
                   <a href="#">Política de Devolução</a>
@@ -70,12 +64,6 @@
                 </li>
                 <li>
                   <a href="wishlist.html">Lista de Desejos</a>
-                </li>
-                <li>
-                  <a href="#">Noticias</a>
-                </li>
-                <li>
-                  <a href="#">Oderns Internacionais</a>
                 </li>
               </ul>
             </div>

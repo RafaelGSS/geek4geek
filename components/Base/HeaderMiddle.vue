@@ -13,10 +13,10 @@
           <div class="header-contact-search-wrapper f-right">
             <div class="header-contact middle-same">
               <div class="header-contact-icon">
-                <i class="pe-7s-headphones"></i>
+                <img src="/img/icon-img/whatsapp.png" width="40" height="40" alt="">
               </div>
               <div class="header-contact-content">
-                <p>Ligue para nosso <br>Suporte Grátis: (012) 98155-7110</p>
+                <p>Fale Conosco <br>Whatsapp: (012) 98155-7110</p>
               </div>
             </div>
             <div class="header-search middle-same">
