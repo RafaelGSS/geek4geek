@@ -1,54 +1,56 @@
 <template>
-  <div class="container">
-    <div class="pt-60 pb-65 border-top-2">
-      <div class="row">
-        <div class="col-12">
-          <div class="footer-middle text-center red-color footer-black-color">
-            <div class="footer-tag">
-              <ul>
-                <li>
-                  <a href="#">Compras online</a>
-                </li>
-                <li>
-                  <a href="#">Promoções</a>
-                </li>
-                <li>
-                  <a href="#">Serviço ao cliente</a>
-                </li>
-                <li>
-                  <a href="#">Mais populares</a>
-                </li>
-                <li>
-                  <a href="#">Nossas chegadas</a>
-                </li>
-                <li>
-                  <a href="#">Produtos especiais</a>
-                </li>
-                <li>
-                  <a href="#">Fabricantes</a>
-                </li>
-                <li>
-                  <a href="#">Pagamentos</a>
-                </li>
-                <li>
-                  <a href="#">Garantia</a>
-                </li>
-                <li>
-                  <a href="#">Reembolsos</a>
-                </li>
-                <li>
-                  <a href="#">Desconto</a>
-                </li>
-                <li>
-                  <a href="#">Termos e condições</a>
-                </li>
-              </ul>
+  <section>
+    <div class="container">
+      <div class="pt-60 pb-65 border-top-2">
+        <div class="row">
+          <div class="col-12">
+            <div class="footer-middle text-center red-color footer-black-color">
+              <nav class="footer-tag">
+                <ul>
+                  <li>
+                    <a href="#" >Compras online</a>
+                  </li>
+                  <li>
+                    <a href="#">Promoções</a>
+                  </li>
+                  <li>
+                    <a href="#">Serviço ao cliente</a>
+                  </li>
+                  <li>
+                    <a href="#">Mais populares</a>
+                  </li>
+                  <li>
+                    <a href="#">Nossas chegadas</a>
+                  </li>
+                  <li>
+                    <a href="#">Produtos especiais</a>
+                  </li>
+                  <li>
+                    <a href="#">Fabricantes</a>
+                  </li>
+                  <li>
+                    <a href="#">Pagamentos</a>
+                  </li>
+                  <li>
+                    <a href="#">Garantia</a>
+                  </li>
+                  <li>
+                    <a href="#">Reembolsos</a>
+                  </li>
+                  <li>
+                    <a href="#">Desconto</a>
+                  </li>
+                  <li>
+                    <a href="#">Termos e condições</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style>

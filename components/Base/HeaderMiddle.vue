@@ -1,38 +1,40 @@
 <template>
-  <div class="header-middle ptb-40 header-middle-color">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-12">
-          <div class="logo logo-mrg">
-            <nuxt-link to="/">
-              <img src="/img/logo/name-white.png" width="250" height="60" alt="">
-            </nuxt-link>
+  <section>
+    <div class="header-middle ptb-40 header-middle-color">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-12">
+            <div class="logo logo-mrg">
+              <nuxt-link to="/" title="Geek4Geek">
+                <img src="/img/logo/name-white.png" width="250" height="60" alt="Logo do Geek4Geek">
+              </nuxt-link>
+            </div>
           </div>
-        </div>
-        <div class="col-lg-9 col-md-12 col-12">
-          <div class="header-contact-search-wrapper f-right">
-            <div class="header-contact middle-same">
-              <div class="header-contact-icon">
-                <img src="/img/icon-img/whatsapp.png" width="40" height="40" alt="">
+          <div class="col-lg-9 col-md-12 col-12">
+            <div class="header-contact-search-wrapper f-right">
+              <div class="header-contact middle-same">
+                <div class="header-contact-icon">
+                  <img src="/img/icon-img/whatsapp.png" width="40" height="40" title="Whatsapp" alt="Whatsapp">
+                </div>
+                <div class="header-contact-content">
+                  <p>Fale Conosco <br>Whatsapp: (012) 98155-7110</p>
+                </div>
               </div>
-              <div class="header-contact-content">
-                <p>Fale Conosco <br>Whatsapp: (012) 98155-7110</p>
+              <div class="header-search middle-same">
+                <form class="header-search-form" action="#">
+                  <input type="text" placeholder="Procure toda loja aqui ...">
+                  <button>
+                    <i class="ion-ios-search-strong" title="Procurar" alt="Procure na loja"></i>
+                  </button>
+                </form>
               </div>
+              <ShoppingCart />
             </div>
-            <div class="header-search middle-same">
-              <form class="header-search-form" action="#">
-                <input type="text" placeholder="Procure toda loja aqui ...">
-                <button>
-                  <i class="ion-ios-search-strong"></i>
-                </button>
-              </form>
-            </div>
-            <ShoppingCart />
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>

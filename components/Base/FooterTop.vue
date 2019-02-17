@@ -2,7 +2,7 @@
   <div class="footer-area pt-60">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 col-md-6">
+        <section class="col-lg-4 col-md-6">
           <div class="footer-widget footer-widget-red footer-black-color mb-40">
             <div class="footer-title mb-30">
               <h4>Sobre nós</h4>
@@ -13,28 +13,28 @@
                 oferecendo diversos produtos de alta qualidade com o menor preço.
               </p>
             </div>
-            <div class="social-icon mr-40">
+            <nav class="social-icon mr-40">
               <ul>
                 <li>
-                  <a class="facebook" href="https://www.facebook.com/Geek4Geeks" target="_blank">
+                  <a class="facebook" href="https://www.facebook.com/Geek4Geeks" target="_blank" title="Facebook">
                     <i class="ion-social-facebook"></i>
                   </a>
                 </li>
                <li>
-                  <a class="instagram" href="https://www.instagram.com/geek4geekoficial" target="_blank">
+                  <a class="instagram" href="https://www.instagram.com/geek4geekoficial" target="_blank" title="Instagram">
                     <i class="ion-social-instagram-outline"></i>
                   </a>
                 </li>
               </ul>
-            </div>
+            </nav>
           </div>
-        </div>
-        <div class="col-lg-2 col-md-6">
+        </section>
+        <section class="col-lg-2 col-md-6">
           <div class="footer-widget footer-widget-red footer-black-color mb-40">
             <div class="footer-title mb-30">
               <h4>Em formação</h4>
             </div>
-            <div class="footer-content">
+            <nav class="footer-content">
               <ul>
                 <li>
                   <a href="about-us.html">Sobre Nós</a>
@@ -46,15 +46,15 @@
                   <a href="#">Política de Devolução</a>
                 </li>
               </ul>
-            </div>
+            </nav>
           </div>
-        </div>
-        <div class="col-lg-2 col-md-6">
+        </section>
+        <section class="col-lg-2 col-md-6">
           <div class="footer-widget footer-widget-red mb-40 footer-black-color">
             <div class="footer-title mb-30">
               <h4>Minha conta</h4>
             </div>
-            <div class="footer-content">
+            <nav class="footer-content">
               <ul>
                 <li>
                   <a href="my-account.html">Minha Conta</a>
@@ -66,10 +66,10 @@
                   <a href="wishlist.html">Lista de Desejos</a>
                 </li>
               </ul>
-            </div>
+            </nav>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
+        </section>
+        <section class="col-lg-4 col-md-6">
           <div class="footer-widget footer-widget-red-2 mb-40 footer-black-color">
             <div class="footer-title mb-30">
               <h4>Junte-se a nós agora</h4>
@@ -110,7 +110,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   </div>

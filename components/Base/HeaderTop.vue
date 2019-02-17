@@ -6,13 +6,15 @@
           <div class="header-top-left">
             <ul>
               <li style="list-style: none;">
-                <img src="/img/logo/icon-geek4geek-white.png" width="27" alt="">
+                <a href="#" title="Geek4Geek">
+                  <img src="/img/logo/icon-geek4geek-white.png" width="27" alt="Logo do Geek4Geek">
+                </a>
               </li>
             </ul>
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-12">
-          <div class="header-top-right">
+          <nav class="header-top-right">
             <ul>
               <li>
                 <a href="wishlist.html">Lista de desejos </a>
@@ -21,7 +23,7 @@
                 <a href="checkout.html"> Fale Conosco</a>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
       </div>
     </div>
