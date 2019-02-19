@@ -1,112 +1,114 @@
 <template>
-  <div class="header-bottom header-btm-coffee-res">
-    <div class="container">
-      <div class="menu-coffee-color toy-menu">
-        <div class="row">
-          <div class="col-lg-3">
-            <div class="menu-categories">
-              <h3>
-                <a id="showcat" href="#">
-                  <i class="fa fa-bars"></i>TODAS AS CATEGORIAS
-                </a>
-              </h3>
-              <div class="category-menu category-menu-1" id="hidecat">
-                <nav class="cate-menu-nav">
+  <section>
+    <div class="header-bottom header-btm-coffee-res">
+      <div class="container">
+        <div class="menu-coffee-color toy-menu">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="menu-categories">
+                <h3>
+                  <a id="showcat" href="#">
+                    <i class="fa fa-bars"></i>TODAS AS CATEGORIAS
+                  </a>
+                </h3>
+                <div class="category-menu category-menu-1" id="hidecat">
+                  <nav class="cate-menu-nav">
+                    <ul>
+                      <li v-for="category in categories" :key="category.id">
+                        <a href="#">{{ category.name | toUpper }}</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-9">
+              <div class="main-menu main-none">
+                <nav>
                   <ul>
-                    <li v-for="category in categories" :key="category.id">
-                      <a href="#">{{ category.name | toUpper }}</a>
+                    <li class="mega-menu-position">
+                      <a href="#">LOJA
+                        <i class="ion-chevron-down"></i>
+                      </a>
+                      <ul class="mega-menu">
+                        <li>
+                          <ul>
+                            <li>
+                              <ul>
+                                <li class="mega-menu-title">Grupo Demonstração 01</li>
+                                <li>
+                                  <a href="index.html">Home - electronics</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <ul>
+                                <li class="mega-menu-title">Grupo Demonstração 02</li>
+                                <li>
+                                  <a href="index-game.html">Home - game</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <ul>
+                                <li class="mega-menu-title">Grupo Demonstração 03</li>
+                                <li>
+                                  <a href="index-watch.html">Home - watch</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <ul>
+                                <li class="mega-menu-title">Grupo Demonstração 04</li>
+                                <li>
+                                  <a href="index-organic.html">Home - Organic
+                                    <span class="red">New</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <ul>
+                                <li class="mega-menu-title">Grupo Demonstração 05</li>
+                                <li>
+                                  <a href="index-shoe.html">Home - Shoe
+                                    <span class="red">New</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Página
+                        <i class="ion-chevron-down"></i>
+                      </a>
+                      <ul class="submenu">
+                        <li>
+                          <a href="about-us.html">Sobre nós</a>
+                        </li>
+                        <li>
+                          <a href="login-register.html">Login / Registro</a>
+                        </li>
+                        <li>
+                          <a href="contact.html">Contate-nos</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a class="menu-border" href="#">CONTATO</a>
                     </li>
                   </ul>
                 </nav>
               </div>
             </div>
           </div>
-          <div class="col-lg-9">
-            <div class="main-menu main-none">
-              <nav>
-                <ul>
-                  <li class="mega-menu-position">
-                    <a href="#">LOJA
-                      <i class="ion-chevron-down"></i>
-                    </a>
-                    <ul class="mega-menu">
-                      <li>
-                        <ul>
-                          <li>
-                            <ul>
-                              <li class="mega-menu-title">Grupo Demonstração 01</li>
-                              <li>
-                                <a href="index.html">Home - electronics</a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <ul>
-                              <li class="mega-menu-title">Grupo Demonstração 02</li>
-                              <li>
-                                <a href="index-game.html">Home - game</a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <ul>
-                              <li class="mega-menu-title">Grupo Demonstração 03</li>
-                              <li>
-                                <a href="index-watch.html">Home - watch</a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <ul>
-                              <li class="mega-menu-title">Grupo Demonstração 04</li>
-                              <li>
-                                <a href="index-organic.html">Home - Organic
-                                  <span class="red">New</span>
-                                </a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <ul>
-                              <li class="mega-menu-title">Grupo Demonstração 05</li>
-                              <li>
-                                <a href="index-shoe.html">Home - Shoe
-                                  <span class="red">New</span>
-                                </a>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">Página
-                      <i class="ion-chevron-down"></i>
-                    </a>
-                    <ul class="submenu">
-                      <li>
-                        <a href="about-us.html">Sobre nós</a>
-                      </li>
-                      <li>
-                        <a href="login-register.html">Login / Registro</a>
-                      </li>
-                      <li>
-                        <a href="contact.html">Contate-nos</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a class="menu-border" href="#">CONTATO</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>  
 </template>
 
 <style scoped>

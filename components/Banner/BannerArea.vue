@@ -1,31 +1,33 @@
 <template>
-  <div class="banner-area pt-30">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-3">
-          <div class="banner-img banner-hover mb-30">
-            <a :href="img1.href">
-              <img :src="img1.src" :alt="img1.alt">
-            </a>
+  <section>
+    <div class="banner-area pt-30">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-3">
+            <div class="banner-img banner-hover mb-30">
+              <a :href="img1.href">
+                <img :src="img1.src" :alt="img1.alt">
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="col-lg-6 col-md-6">
-          <div class="banner-img banner-hover mb-30">
-            <a :href="img2.href">
-              <img :src="img2.src" :alt="img2.alt">
-            </a>
+          <div class="col-lg-6 col-md-6">
+            <div class="banner-img banner-hover mb-30">
+              <a :href="img2.href">
+                <img :src="img2.src" :alt="img2.alt">
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="col-lg-3 col-md-3">
-          <div class="banner-img banner-hover mb-30">
-            <a :href="img3.href">
-              <img :src="img3.src" :alt="img3.alt">
-            </a>
+          <div class="col-lg-3 col-md-3">
+            <div class="banner-img banner-hover mb-30">
+              <a :href="img3.href">
+                <img :src="img3.src" :alt="img3.alt">
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>  
 </template>
 
 <style scoped>
