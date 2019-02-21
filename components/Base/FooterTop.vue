@@ -75,7 +75,7 @@
               <h4>Junte-se a nós agora</h4>
             </div>
             <div class="footer-newsletter">
-              <p>Redeba atualizações por-Email sobre nossa última loja e ofertas especiais.</p>
+              <p>Receba atualizações por-Email sobre nossa última loja e ofertas especiais.</p>
               <div id="mc_embed_signup" class="subscribe-form-2">
                 <form
                   action="#"
@@ -137,7 +137,9 @@ a:hover {
   font-weight: 500;
   margin: 0;
 }
-
+.footer-title.mb-30 {
+   margin-bottom: 15px !important;
+}   
 .footer-about > p {
   color: #ddd;
 }
