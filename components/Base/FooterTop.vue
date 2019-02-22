@@ -298,14 +298,28 @@ button {
 * Responsive
 */
 
-@media (max-width: 767px) {
-  .footer-area.pt-65 {
+@media (max-width: 767px) {ooter-widget
+    .footer-area.pt-65 {
     padding-top: 35px !important;
   }
-  .footer-area .pt-60 {
+    .footer-area .pt-60 {
     padding-top: 40px !important;
   }
+    .footer-widget.mb-40 {
+        margin-bottom: 30px !important;
+    }  
+    .footer-widget {
+        margin-bottom: 30px !important;
+        text-align: center !important;
+    }
+    .footer-title.mb-30 {
+        margin-bottom: 15px !important;
+    }
 }
+
+  
+
+
 </style>
 
 <script>
