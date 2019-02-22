@@ -298,7 +298,7 @@ button {
 * Responsive
 */
 
-@media (max-width: 767px) {ooter-widget
+@media (max-width: 767px) {
     .footer-area.pt-65 {
     padding-top: 35px !important;
   }
