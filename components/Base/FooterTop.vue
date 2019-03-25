@@ -9,19 +9,29 @@
             </div>
             <div class="footer-about">
               <p>
-                Somos a melhor loja Geek do Brasil, 
+                Somos a melhor loja Geek do Brasil,
                 oferecendo diversos produtos de alta qualidade com o menor preço.
               </p>
             </div>
             <nav class="social-icon mr-40">
               <ul>
                 <li>
-                  <a class="facebook" href="https://www.facebook.com/Geek4Geeks" target="_blank" title="Facebook">
+                  <a
+                    class="facebook"
+                    href="https://www.facebook.com/Geek4Geeks"
+                    target="_blank"
+                    title="Facebook"
+                  >
                     <i class="ion-social-facebook"></i>
                   </a>
                 </li>
-               <li>
-                  <a class="instagram" href="https://www.instagram.com/geek4geekoficial" target="_blank" title="Instagram">
+                <li>
+                  <a
+                    class="instagram"
+                    href="https://www.instagram.com/geek4geekoficial"
+                    target="_blank"
+                    title="Instagram"
+                  >
                     <i class="ion-social-instagram-outline"></i>
                   </a>
                 </li>
@@ -95,7 +105,6 @@
                       required
                     >
                     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    
                     <div class="clear-2">
                       <input
                         type="submit"
@@ -252,7 +261,6 @@ button,
 input:not([type="range"]),
 label,
 select,
-summary,
 textarea {
   touch-action: manipulation;
 }
@@ -272,19 +280,46 @@ button {
 }
 
 .footer-content ul li:hover a {
-    color: #fff;
-    padding-left: 5px;
+  color: #fff;
+  padding-left: 5px;
 }
 .subscribe-form-2 {
-    margin: 16px 0 0;
+  margin: 16px 0 0;
 }
 .clear-2 {
-    margin: 39px 0 0;
+  margin: 39px 0 0;
 }
 
 .clear-2 input:hover {
   background: #282829;
 }
+
+/*
+* Responsive
+*/
+
+@media (max-width: 767px) {
+    .footer-area.pt-65 {
+    padding-top: 35px !important;
+  }
+    .footer-area .pt-60 {
+    padding-top: 40px !important;
+  }
+    .footer-widget.mb-40 {
+        margin-bottom: 30px !important;
+    }  
+    .footer-widget {
+        margin-bottom: 30px !important;
+        text-align: center !important;
+    }
+    .footer-title.mb-30 {
+        margin-bottom: 15px !important;
+    }
+}
+
+  
+
+
 </style>
 
 <script>
