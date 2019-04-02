@@ -1,7 +1,7 @@
 {
-  "name": "geeklandia",
-  "version": "1.0.0",
-  "description": "Nuxt.js project",
+  "name": "geek4geek",
+  "version": "0.1.0",
+  "description": "Front-end project of Geek4Geek TM",
   "author": "rafaelgss <rafael.nunu@hotmail.com>",
   "private": true,
   "scripts": {

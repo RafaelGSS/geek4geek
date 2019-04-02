@@ -7,11 +7,15 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'deion', name: 'deion', content: 'Nuxt.js project' }
+      { hid: 'deion', name: 'deion', content: 'Geek4Geek o melhor ecommerce geek do Brasil!' }
     ],
     script  : [
       {
         src: "https://code.jquery.com/jquery-3.3.1.min.js",
+        type: "text/javascript"
+      },
+      {
+        src: 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js',
         type: "text/javascript"
       },
       {
@@ -21,8 +25,7 @@ module.exports = {
       {
         src: "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js",
         type: "text/javascript"
-      },
-      { src: 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js'},
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/favicon.png' },
