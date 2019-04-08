@@ -4,25 +4,13 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-md-3">
-            <div class="banner-img banner-hover mb-30">
-              <a :href="img1.href">
-                <img :src="img1.src" :alt="img1.alt">
-              </a>
-            </div>
+            <image-transition :href="img1.href" :src="img1.src" :alt="img1.alt" />
           </div>
           <div class="col-lg-6 col-md-6">
-            <div class="banner-img banner-hover mb-30">
-              <a :href="img2.href">
-                <img :src="img2.src" :alt="img2.alt">
-              </a>
-            </div>
+            <image-transition :href="img2.href" :src="img2.src" :alt="img2.alt" />
           </div>
           <div class="col-lg-3 col-md-3">
-            <div class="banner-img banner-hover mb-30">
-              <a :href="img3.href">
-                <img :src="img3.src" :alt="img3.alt">
-              </a>
-            </div>
+            <image-transition :href="img3.href" :src="img3.src" :alt="img3.alt" />
           </div>
         </div>
       </div>
@@ -30,41 +18,13 @@
   </section>  
 </template>
 
-<style scoped>
-.banner-img img {
-    width: 100%;
-}
-.banner-negative-mrg-2 {
-    margin-top: -1px;
-}
-.banner-hover {
-    position: relative;
-}
-.banner-hover::before,
-.banner-hover::after {
-    bottom: 0;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: all 0.5s ease 0s;
-    z-index: 1;
-}
-.banner-hover:hover::after {
-    background-color: rgba(255, 255, 255, 0.3);
-    bottom: 50%;
-    top: 50%;
-}
-.banner-hover:hover::before {
-    background-color: rgba(255, 255, 255, 0.3);
-    left: 50%;
-    right: 50%;
-}
-</style>
-
 <script>
+import ImageTransition from "@/components/banner/images/ImageTransition";
+
 export default {
+  components: {
+    ImageTransition
+  },
   props: {
     img1: {
       type: Object,
