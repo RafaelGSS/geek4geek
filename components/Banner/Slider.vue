@@ -35,8 +35,8 @@ export default {
 }
 
 </style>
-<style>
 
+<style>
 .owl-theme .owl-dots .active span{
     background: #000 !important;
 }

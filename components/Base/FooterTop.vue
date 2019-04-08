@@ -84,39 +84,8 @@
             <div class="footer-title mb-30">
               <h4>Junte-se a nós agora</h4>
             </div>
-            <div class="footer-newsletter">
-              <p>Redeba atualizações por-Email sobre nossa última loja e ofertas especiais.</p>
-              <div id="mc_embed_signup" class="subscribe-form-2">
-                <form
-                  action="#"
-                  method="post"
-                  id="mc-embedded-subscribe-form"
-                  name="mc-embedded-subscribe-form"
-                  class="validate"
-                  target="_blank"
-                  novalidate
-                >
-                  <div id="mc_embed_signup_scroll" class="mc-form">
-                    <input
-                      type="email"
-                      name="EMAIL"
-                      class="email"
-                      placeholder="Seu endereço de email..."
-                      required
-                    >
-                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div class="clear-2">
-                      <input
-                        type="submit"
-                        value="SE INSCREVER"
-                        name="subscribe"
-                        id="mc-embedded-subscribe"
-                        class="button"
-                      >
-                    </div>
-                  </div>
-                </form>
-              </div>
+            <div>
+              <form-newsletter />
             </div>
           </div>
         </section>
@@ -124,6 +93,15 @@
     </div>
   </div>
 </template>
+<script>
+import FormNewsletter from "@/components/widgets/FormNewsletter";
+
+export default {
+  components: {
+    FormNewsletter
+  }
+};
+</script>
 
 <style scoped>
 a {
@@ -199,99 +177,10 @@ li {
   display: list-item;
   text-align: -webkit-match-parent;
 }
-.footer-newsletter > p {
-  color: #ddd;
-}
-.subscribe-form-2 {
-  margin: 16px 0 0;
-}
-form {
-  display: block;
-  margin-top: 0em;
-}
-
-.subscribe-form-2 form input {
-  background: transparent none repeat scroll 0 0;
-  border-image: none;
-  border-style: none none solid;
-  border-width: medium medium 1px;
-  box-shadow: none;
-  font-size: 13px;
-  height: 45px;
-  padding-left: 0;
-  width: 100%;
-}
-input {
-  transition: all 0.5s ease-out 0s;
-  outline: medium none;
-  overflow: visible;
-  padding: 1px 0px;
-  -webkit-rtl-ordering: logical;
-  cursor: text;
-  margin: 0;
-  font-family: inherit;
-  line-height: inherit;
-  color: #fff;
-}
-
-.footer-widget-red-2 .subscribe-form-2 form .clear-2 input {
-  background-color: #fff;
-  font-weight: bold;
-  border: 1px solid;
-  color: #282829;
-}
-.subscribe-form-2 form input {
-  background: transparent none repeat scroll 0 0;
-}
-.subscribe-form-2 form .clear-2 input {
-  border: medium none;
-  border-radius: 3px;
-  cursor: pointer;
-  font-weight: 500;
-  height: inherit;
-  line-height: 1;
-  padding: 17px 46px;
-  text-transform: uppercase;
-  width: inherit;
-}
-[role="button"],
-a,
-area,
-button,
-input:not([type="range"]),
-label,
-select,
-textarea {
-  touch-action: manipulation;
-}
-input,
-textarea,
-select,
-button {
-  text-rendering: auto;
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-  display: inline-block;
-  text-align: start;
-  font: 400 13.3333px Arial;
-}
 
 .footer-content ul li:hover a {
   color: #fff;
   padding-left: 5px;
-}
-.subscribe-form-2 {
-  margin: 16px 0 0;
-}
-.clear-2 {
-  margin: 39px 0 0;
-}
-
-.clear-2 input:hover {
-  background: #282829;
 }
 
 /*
@@ -316,14 +205,4 @@ button {
         margin-bottom: 15px !important;
     }
 }
-
-  
-
-
 </style>
-
-<script>
-export default {};
-</script>
-
-
