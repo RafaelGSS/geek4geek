@@ -85,6 +85,14 @@ export default {
           { href: "#", title: "Contate-nos" }
         ]
       }
+    ],
+    itemsMegamenu: [
+      {
+        title: "Loja",
+        items: [
+          { columnTitle: "", items: []}
+        ]
+      }
     ]
   })
 };

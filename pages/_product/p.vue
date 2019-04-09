@@ -12,8 +12,8 @@ import Page from "~/components/Page";
 
 import ProductDetails from "~/components/ProductDetails/ProductDetails";
 
-import BannerArea from "~/components/Banner/BannerArea";
-import FullBanner from "~/components/Banner/FullBanner";
+import BannerArea from "~/components/banner/BannerArea";
+import FullBanner from "~/components/banner/FullBanner";
 
 import DescriptionReview from "~/components/ProductDetails/DescriptionReview";
 

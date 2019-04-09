@@ -12,10 +12,10 @@
 <script>
 import Page from "~/components/Page";
 
-import Slider from "~/components/Banner/Slider";
-import BannerArea from "~/components/Banner/BannerArea";
-import FullBanner from "~/components/Banner/FullBanner";
-import ServiceArea from "~/components/Banner/ServiceArea";
+import Slider from "~/components/banner/Slider";
+import BannerArea from "~/components/banner/BannerArea";
+import FullBanner from "~/components/banner/FullBanner";
+import ServiceArea from "~/components/banner/ServiceArea";
 
 import ProductArea from "~/components/ShopArea/ProductArea";
 import BestSellingArea from "~/components/ShopArea/BestSellingArea";

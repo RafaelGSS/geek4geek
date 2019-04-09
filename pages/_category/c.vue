@@ -8,7 +8,7 @@
 <script>
 import Page from "~/components/Page";
 
-import FullBanner from '~/components/Banner/FullBanner';
+import FullBanner from '~/components/banner/FullBanner';
 import ShopPageArea from "~/components/ShopArea/ShopPageArea";
 
 import products from '~/api/categoryProducts';
