@@ -3,8 +3,8 @@
     <nav>
       <ul>
         <li class="mega-menu-position">
-          <!-- <navbar-item-megamenu /> -->
-          <a href="#">
+          <navbar-item-megamenu />
+          <!-- <a href="#">
             LOJA
             <i class="ion-chevron-down"></i>
           </a>
@@ -59,7 +59,7 @@
                 </li>
               </ul>
             </li>
-          </ul>
+          </ul> -->
         </li>
         <li v-for="(itemsDrop, index) in itemsDropdown" :key="`itemsdrop-${index}`">
           <navbar-item-dropdown :title="itemsDrop.title" :items="itemsDrop.items"/>
