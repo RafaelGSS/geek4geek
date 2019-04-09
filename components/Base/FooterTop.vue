@@ -13,30 +13,7 @@
                 oferecendo diversos produtos de alta qualidade com o menor preço.
               </p>
             </div>
-            <nav class="social-icon mr-40">
-              <ul>
-                <li>
-                  <a
-                    class="facebook"
-                    href="https://www.facebook.com/Geek4Geeks"
-                    target="_blank"
-                    title="Facebook"
-                  >
-                    <i class="ion-social-facebook"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="instagram"
-                    href="https://www.instagram.com/geek4geekoficial"
-                    target="_blank"
-                    title="Instagram"
-                  >
-                    <i class="ion-social-instagram-outline"></i>
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            <social-icons />
           </div>
         </section>
         <section class="col-lg-2 col-md-6">
@@ -95,10 +72,12 @@
 </template>
 <script>
 import FormNewsletter from "@/components/widgets/FormNewsletter";
+import SocialIcons from "@/components/widgets/SocialIcons";
 
 export default {
   components: {
-    FormNewsletter
+    FormNewsletter,
+    SocialIcons
   }
 };
 </script>
@@ -130,43 +109,6 @@ a:hover {
 }
 .footer-about > p {
   margin: 0px;
-}
-.social-icon {
-  margin-top: 22px;
-}
-.social-icon ul li {
-  display: inline-block;
-  list-style: outside none none;
-  margin: 0 8px 10px 0;
-}
-.social-icon li a {
-  font-size: 18px;
-  width: 38px;
-  height: 38px;
-  border-radius: 50px;
-  line-height: 36px;
-  color: #fff;
-  display: inline-block;
-  text-align: center;
-}
-.social-icon li a.facebook {
-  background-color: #3c5b9b;
-  border: 2px solid #3c5b9b;
-}
-.social-icon li a.facebook:hover {
-  background-color: #fff;
-  border: 2px solid #fff;
-  color: #3c5b9b;
-}
-
-.social-icon li a.instagram {
-  background-color: #d82b7e;
-  border: 2px solid #d82b7e;
-}
-.social-icon li a.instagram:hover {
-  background-color: #fff;
-  border: 2px solid #fff;
-  color: #d82b7e;
 }
 
 .footer-content ul li {
