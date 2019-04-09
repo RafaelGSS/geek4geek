@@ -3,6 +3,7 @@
     <nav>
       <ul>
         <li class="mega-menu-position">
+          <!-- <navbar-item-megamenu /> -->
           <a href="#">
             LOJA
             <i class="ion-chevron-down"></i>
@@ -61,7 +62,7 @@
           </ul>
         </li>
         <li v-for="(itemsDrop, index) in itemsDropdown" :key="`itemsdrop-${index}`">
-          <navbar-item-dropdown :title="itemsDrop.title" :items="itemsDrop.items" />
+          <navbar-item-dropdown :title="itemsDrop.title" :items="itemsDrop.items"/>
         </li>
       </ul>
     </nav>
@@ -70,10 +71,12 @@
 
 <script>
 import NavbarItemDropdown from "@/components/navigation/NavbarItemDropdown";
+import NavbarItemMegamenu from "@/components/navigation/NavbarItemMegamenu";
 
 export default {
   components: {
-    NavbarItemDropdown
+    NavbarItemDropdown,
+    NavbarItemMegamenu
   },
   data: () => ({
     itemsDropdown: [
@@ -89,9 +92,7 @@ export default {
     itemsMegamenu: [
       {
         title: "Loja",
-        items: [
-          { columnTitle: "", items: []}
-        ]
+        items: [{ columnTitle: "", items: [] }]
       }
     ]
   })
