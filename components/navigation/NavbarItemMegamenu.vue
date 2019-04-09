@@ -1,55 +1,17 @@
 <template>
   <div class="megamenu">
     <a href="#">
-      LOJA
+      {{ title }}
       <i class="ion-chevron-down"></i>
     </a>
     <ul class="mega-menu">
       <li>
         <ul>
-          <li>
+          <li v-for="(item, index) in items" :key="`itemsdrop-megamenu-${index}`">
             <ul>
-              <li class="mega-menu-title">Grupo Demonstração 01</li>
-              <li>
-                <a href="index.html">Home - electronics</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <ul>
-              <li class="mega-menu-title">Grupo Demonstração 02</li>
-              <li>
-                <a href="index-game.html">Home - game</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <ul>
-              <li class="mega-menu-title">Grupo Demonstração 03</li>
-              <li>
-                <a href="index-watch.html">Home - watch</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <ul>
-              <li class="mega-menu-title">Grupo Demonstração 04</li>
-              <li>
-                <a href="index-organic.html">
-                  Home - Organic
-                  <span class="red">New</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <ul>
-              <li class="mega-menu-title">Grupo Demonstração 05</li>
-              <li>
-                <a href="index-shoe.html">
-                  Home - Shoe
-                  <span class="red">New</span>
-                </a>
+              <li class="mega-menu-title">{{ item.title }}</li>
+              <li v-for="(it, index) in item.items" :key="`itemslist-megamenu-${index}`">
+                <a :href="it.href">{{ it.title }}</a>
               </li>
             </ul>
           </li>
@@ -60,7 +22,12 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    title: String,
+    items: Array // [{title: "", items: [{ href: "", title: "" }] }]
+  }
+};
 </script>
 
 <style scoped>
@@ -90,7 +57,7 @@ ul li {
   display: block;
 }
 
-ul li a {
+ul.mega-menu li a {
   color: #555;
   font-weight: 400;
   line-height: 28px;
@@ -99,7 +66,7 @@ ul li a {
   text-align: left;
 }
 
-ul li a:hover {
+ul.mega-menu li a:hover {
   color: #3cb371;
   padding-left: 10px;
 }
@@ -148,7 +115,7 @@ ul.mega-menu > li > ul > li ul li a span.red {
   background-color: #df2121;
 }
 
-.megamenu a {
+.megamenu > a {
   color: #fff;
   display: inline-block;
   font-weight: 500;
@@ -164,6 +131,18 @@ ul.mega-menu > li > ul > li ul li a span.red {
 ul li a:hover {
   color: #3cb371;
 }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-menu nav > ul > li > ul.mega-menu > li {
+    width: 930px !important;
+  }
+  .main-menu nav > ul > li > ul.mega-menu > li > ul > li {
+    width: 17.5% !important;
+  }
+  ul.mega-menu > li > ul > li ul li a span {
+    font-size: 12px !important;
+    padding: 2px 3px 3px !important;
+    right: -34px !important;
+  }
+}
 </style>
-
-
