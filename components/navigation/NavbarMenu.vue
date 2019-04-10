@@ -2,8 +2,8 @@
   <div class="main-menu main-none">
     <nav>
       <ul>
-        <li class="mega-menu-position" v-for="(itemMega, index) in itemsMegamenu" :key="`itemsMega-${index}`">
-          <navbar-item-megamenu :title="itemMega.title" :items="itemMega.items" />
+        <li v-for="(itemsMega, idx) in itemsMegamenu" :key="`itemsmega-${idx}`" class="mega-menu-position">
+          <navbar-item-megamenu :title="itemsMega.title" :items="itemsMega.items" />
         </li>
         <li v-for="(itemsDrop, index) in itemsDropdown" :key="`itemsdrop-${index}`">
           <navbar-item-dropdown :title="itemsDrop.title" :items="itemsDrop.items"/>
@@ -36,9 +36,38 @@ export default {
     itemsMegamenu: [
       {
         title: "Loja",
-        items: [{ title: "Grupo de Demonstração 01", items: [
-          { href: "#", title: "Item 1 do Grupo 1" }
-        ] }]
+        items: [
+          {
+            title: "Grupo Demonstração 01",
+            items: [
+              { href: "#", title: "Home - Game", new: true }
+            ]
+          },
+          {
+            title: "Grupo Demonstração 02",
+            items: [
+              { href: "#", title: "Home - Game", new: false }
+            ]
+          },
+          {
+            title: "Grupo Demonstração 03",
+            items: [
+              { href: "#", title: "Home - Game", new: false }
+            ]
+          },
+          {
+            title: "Grupo Demonstração 04",
+            items: [
+              { href: "#", title: "Home - Game", new: false }
+            ]
+          },
+          {
+            title: "Grupo Demonstração 05",
+            items: [
+              { href: "#", title: "Home - Game", new: true }
+            ]
+          }
+        ]
       }
     ]
   })
@@ -50,86 +79,8 @@ a {
   color: #fff;
 }
 
-.main-menu nav > ul > li > ul.mega-menu {
-  background-color: rgba(255, 255, 255, 0.97);
-  border-top: 1px solid #dcdcdc;
-  display: block;
-  left: 0;
-  padding: 33px 0px 62px 0;
-  position: absolute;
-  text-align: left;
-  top: 100%;
-  transform: rotateX(90deg);
-  transform-origin: center top 0;
-  transition: all 0.5s ease 0s;
-  visibility: hidden;
-  width: 100%;
-  z-index: 999;
-}
-.main-menu nav > ul > li:hover > ul.mega-menu {
-  transform: rotateX(0deg);
-  visibility: visible;
-}
-.main-menu ul li ul li {
-  margin-right: 0;
-  display: block;
-}
-.main-menu ul li ul li a {
-  color: #555;
-  font-weight: 400;
-  line-height: 28px;
-  text-transform: capitalize;
-  display: block;
-  text-align: left;
-}
-.main-menu ul li ul li a:hover {
-  color: #3cb371;
-  padding-left: 10px;
-}
-
 .main-menu ul li.mega-menu-position {
   position: static;
-}
-
-.main-menu nav > ul > li > ul.mega-menu > li {
-  width: 1170px;
-  margin: 0 auto;
-}
-.main-menu ul li ul > li.mega-menu-title,
-.category-menu ul li ul > li.category-mega-menu-title {
-  color: #242424;
-  font-size: 14px;
-  font-weight: 500;
-  margin: 0 0 17px;
-}
-.main-menu nav > ul > li > ul.mega-menu > li > ul > li {
-  border-right: 1px solid #ebebeb;
-  display: inline-block;
-  float: left;
-  margin-right: 16px;
-  width: 16%;
-}
-.main-menu nav > ul > li > ul.mega-menu > li > ul > li:last-child {
-  border-right: none;
-}
-.main-menu nav > ul > li > ul.mega-menu > li > ul > li ul li a {
-  display: inline-block;
-  position: relative;
-}
-
-.main-menu nav > ul > li > ul.mega-menu > li > ul > li ul li a span {
-  border-radius: 3px;
-  color: #fff;
-  font-size: 13px;
-  line-height: 1;
-  padding: 2px 5px 3px;
-  position: absolute;
-  right: -40px;
-  top: 7px;
-}
-
-.main-menu nav > ul > li > ul.mega-menu > li > ul > li ul li a span.red {
-  background-color: #df2121;
 }
 
 .main-menu ul li {
@@ -158,9 +109,7 @@ a {
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .main-menu ul li {
-        margin-right: 17px !important;
-    }
+    margin-right: 17px !important;
+  }
 }
 </style>
-
-

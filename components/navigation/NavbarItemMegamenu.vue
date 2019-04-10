@@ -7,11 +7,11 @@
     <ul class="mega-menu">
       <li>
         <ul>
-          <li v-for="(item, index) in items" :key="`itemsdrop-megamenu-${index}`">
+          <li v-for="(item, index) in items" :key="`megamenu-${index}`">
             <ul>
               <li class="mega-menu-title">{{ item.title }}</li>
-              <li v-for="(it, index) in item.items" :key="`itemslist-megamenu-${index}`">
-                <a :href="it.href">{{ it.title }}</a>
+              <li v-for="(it, idx) in item.items" :key="`megamenu-list-${idx}-${index}`">
+                <a :href="it.href">{{ it.title }} <span class="red" v-if="it.new">Novo</span> </a>
               </li>
             </ul>
           </li>
@@ -21,11 +21,12 @@
   </div>
 </template>
 
+
 <script>
 export default {
   props: {
     title: String,
-    items: Array // [{title: "", items: [{ href: "", title: "" }] }]
+    items: Array // [{title: "", items: [{ href: "", title: "", new: true }] }]
   }
 };
 </script>
@@ -55,6 +56,8 @@ export default {
 ul li {
   margin-right: 0;
   display: block;
+  list-style: outside none none;
+  position: relative;
 }
 
 ul.mega-menu li a {
@@ -75,7 +78,7 @@ ul.mega-menu > li {
   width: 1170px;
   margin: 0 auto;
 }
-/**/
+
 .mega-menu-title {
   color: #242424;
   font-size: 14px;
@@ -107,8 +110,8 @@ ul.mega-menu > li > ul > li ul li a span {
   line-height: 1;
   padding: 2px 5px 3px;
   position: absolute;
-  right: -40px;
-  top: 7px;
+  right: -45px;
+  top: 5px;
 }
 
 ul.mega-menu > li > ul > li ul li a span.red {
@@ -133,10 +136,10 @@ ul li a:hover {
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  .main-menu nav > ul > li > ul.mega-menu > li {
+  ul.mega-menu > li {
     width: 930px !important;
   }
-  .main-menu nav > ul > li > ul.mega-menu > li > ul > li {
+  ul.mega-menu > li > ul > li {
     width: 17.5% !important;
   }
   ul.mega-menu > li > ul > li ul li a span {

@@ -77,6 +77,10 @@
     #exampleCompare .close {
         right: 194px !important;
     }
+    .content-wrapper-2 .main-menu nav > ul > li > ul.mega-menu > li,
+    .content-wrapper-4 .main-menu nav > ul > li > ul.mega-menu > li {
+        width: 1140px !important;
+    }
     .newsletter-area.newsletter-img-2.ml-80.mr-80.mt-65 {
         margin: 65px 15px 0 !important;
     }
@@ -112,6 +116,12 @@
     }
     .header-middle-color-15 .header-search form input {
         width: 230px !important;
+    }
+    .shoe-menu.main-menu ul li {
+        margin-right: 15px !important;
+    }
+    .shoe-menu.main-menu ul li:last-child {
+        margin-right: 0px !important;
     }
     .shoe-header .middle-same {
         margin-left: 20px !important;
@@ -158,6 +168,12 @@
     }
     .main-menu ul li {
         margin-right: 17px !important;
+    }
+    .main-menu nav > ul > li > ul.mega-menu > li {
+  width: 930px !important;
+}
+    .main-menu nav > ul > li > ul.mega-menu > li > ul > li {
+        width: 17.5% !important;
     }
     .custom-col-5 {
         flex: 0 0 25% !important;
@@ -216,6 +232,12 @@
     }
     .main-menu ul li a {
         font-size: 14px !important;
+    }
+    .main-menu.main-border nav > ul > li {
+        padding-left: 10px !important;
+    }
+    .main-menu.main-border nav > ul > li > a {
+        padding-right: 6px !important;
     }
     .headphone-slider-active.nav-style.owl-carousel .owl-nav div {
         top: -38px !important;
@@ -605,6 +627,16 @@
         margin-bottom: 50px !important;
     }
 
+
+
+
+
+
+
+
+
+
+
     .deals-slider-active.nav-style.owl-carousel .owl-nav div,
     .deals-slider-active-2.nav-style.owl-carousel .owl-nav div,
     .latest-products-active.nav-style.owl-carousel .owl-nav div {
@@ -617,7 +649,23 @@
         float: inherit !important;
         margin-top: 35px !important;
     }
-   
+    .main-menu.main-none.shoe-menu {
+        display: flex !important;
+        justify-content: flex-end !important;
+    }
+    .main-menu.shoe-menu ul li:last-child {
+        margin-right: 0px !important;
+    }
+    .main-menu.shoe-menu nav > ul > li > ul.mega-menu {
+        top: 41% !important;
+    }
+    .main-menu.shoe-menu nav > ul > li > ul.submenu {
+        left: -94px !important;
+    }
+    .main-menu.shoe-menu nav > ul > li:last-child > ul.submenu {
+        left: auto !important;
+        right: 0 !important;
+    }
     .main-menu nav > ul > li > ul.mega-menu > li > ul > li ul li a span,
     .sidebar-menu nav > ul > li > ul.mega-menu > li > ul > li ul li a span {
         font-size: 12px !important;

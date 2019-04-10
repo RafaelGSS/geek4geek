@@ -90,14 +90,13 @@ a{
 .category-menu ul li:hover > a {
   color: #3cb371;
 }
-
 .menu-categories:hover h3 a {
   color: #3cb371;
 }
-
 .header-bottom {
   position: relative;
 }
+
 .menu-coffee-color .row div[class^="col-"]{
   position: static;
 }
