@@ -13,9 +13,6 @@
           <div class="col-lg-9 col-md-12 col-12">
             <div class="header-contact-search-wrapper f-right">
               <div class="header-contact middle-same">
-                <!-- <div class="header-contact-icon">
-                  <img src="/img/icon-img/whatsapp.png" width="40" height="40" title="Whatsapp" alt="Whatsapp">
-                </div>-->
                 <div class="header-contact-icon">
                   <whatsapp-icon/>
                 </div>
