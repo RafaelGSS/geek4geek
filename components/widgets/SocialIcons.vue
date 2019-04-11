@@ -7,6 +7,9 @@
       <li v-if="social.indexOf('instagram') !== -1">
         <instagram-icon/>
       </li>
+      <li v-if="social.indexOf('whatsapp') !== -1">
+        <whatsapp-icon/>
+      </li>
     </ul>
   </nav>
 </template>
@@ -14,16 +17,18 @@
 <script>
 import FacebookIcon from "@/components/widgets/social/FacebookIcon";
 import InstagramIcon from "@/components/widgets/social/InstagramIcon";
+import WhatsappIcon from "@/components/widgets/social/WhatsappIcon";
 
 export default {
   components: {
     FacebookIcon,
-    InstagramIcon
+    InstagramIcon,
+    WhatsappIcon
   },
   props: {
     social: {
       type: Array,
-      default: () => ["instagram", "facebook"]
+      default: () => ["instagram", "facebook", "whatsapp"]
     }
   }
 };

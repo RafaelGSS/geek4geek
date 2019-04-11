@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import CardService from "@/components/widgets/CardService";
+import CardService from "@/components/widgets/cards/CardService";
 
 export default {
   components: {

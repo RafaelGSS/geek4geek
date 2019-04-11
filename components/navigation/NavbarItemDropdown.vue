@@ -30,6 +30,12 @@ export default {
   text-transform: uppercase;
 }
 
+.item-nv a i {
+  color: #3cb371;
+  font-size: 12px;
+  margin-left: 6px;
+}
+
 ul li a {
   color: #555;
   font-weight: 400;

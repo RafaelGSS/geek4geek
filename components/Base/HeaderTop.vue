@@ -1,14 +1,14 @@
 <template>
-  <div class="header-top header-top-color-2 header-top-red pt-10 pb-13">
+  <div class="header-top pt-10 pb-13">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-md-6 col-12">
           <div class="header-top-left">
             <ul>
               <li style="list-style: none;">
-                <a href="#" title="Geek4Geek">
-                  <img src="/img/logo/icon-geek4geek-white.png" width="27" alt="Logo do Geek4Geek">
-                </a>
+                <nuxt-link to="/" title="Geek4Geek">
+                  <logo-owl-white width="27" height="27"/>
+                </nuxt-link>
               </li>
             </ul>
           </div>
@@ -17,10 +17,10 @@
           <nav class="header-top-right">
             <ul>
               <li>
-                <a href="wishlist.html">Lista de desejos </a>
+                <a href="wishlist.html">Lista de desejos</a>
               </li>
               <li>
-                <a href="checkout.html"> Fale Conosco</a>
+                <a href="checkout.html">Fale Conosco</a>
               </li>
             </ul>
           </nav>
@@ -30,13 +30,24 @@
   </div>
 </template>
 
+<script>
+import LogoOwlWhite from "@/components/banner/logos/LogoOwlWhite";
+
+export default {
+  components: {
+    LogoOwlWhite
+  }
+};
+</script>
+
+
 <style scoped>
 .header-top {
   background: #282829;
   border-bottom: 10px;
 }
 
-a{
+a {
   color: #ddd;
 }
 a:hover {
@@ -44,17 +55,17 @@ a:hover {
 }
 
 .header-top-left {
-    display: flex;
+  display: flex;
 }
 
 .header-top-right {
-    float: right;
+  float: right;
 }
 .header-top-right ul li {
-    display: inline-block;
-    float: left;
-    list-style: outside none none;
-    margin-left: 30px;
+  display: inline-block;
+  float: left;
+  list-style: outside none none;
+  margin-left: 30px;
 }
 </style>
 
