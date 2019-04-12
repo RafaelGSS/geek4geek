@@ -32,10 +32,6 @@ module.exports = {
       {
         rel: "stylesheet",
         href: "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      },
-      {
-        rel: "stylesheet",
-        href: "https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css"
       }
     ],
   },

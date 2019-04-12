@@ -23,7 +23,7 @@
                 <form-search-website/>
               </div>
               <!-- Shopping Cart -->
-              <shopping-cart/>
+              <shopping-cart class="middle-same"/>
             </div>
           </div>
         </div>
@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import ShoppingCart from "@/components/base/ShoppingCart.vue";
+import ShoppingCart from "@/components/cart/ShoppingCart.vue";
 
 import FormSearchWebsite from "@/components/widgets/search/FormSearchWebsite";
 import CardContactWhatsapp from "@/components/widgets/cards/CardContactWhatsapp";
