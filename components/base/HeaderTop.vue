@@ -7,23 +7,18 @@
             <ul>
               <li style="list-style: none;">
                 <nuxt-link to="/" title="Geek4Geek">
-                  <logo-owl-white :width=27 :height=27 />
+                  <logo-owl-white :width="27" :height="27"></logo-owl-white>
                 </nuxt-link>
               </li>
             </ul>
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-12">
-          <nav class="header-top-right">
-            <ul>
-              <li>
-                <a href="wishlist.html">Lista de desejos</a>
-              </li>
-              <li>
-                <a href="checkout.html">Fale Conosco</a>
-              </li>
-            </ul>
-          </nav>
+          <navbar-basic class="header-top-right" :items="items">
+            <template v-slot:item="{ item }">
+              <a :href="item.href">{{ item.title }}</a>
+            </template>
+          </navbar-basic>
         </div>
       </div>
     </div>
@@ -32,11 +27,29 @@
 
 <script>
 import LogoOwlWhite from "@/components/banner/logos/LogoOwlWhite";
+import NavbarBasic from "@/components/navigation/NavbarBasic";
 
 export default {
   components: {
-    LogoOwlWhite
-  }
+    LogoOwlWhite,
+    NavbarBasic
+  },
+  data: () => ({
+    items: [
+      {
+        href: "#",
+        title: "SAC"
+      },
+      {
+        href: "#",
+        title: "Login"
+      },
+      {
+        href: "#",
+        title: "Cadastre-se"
+      }
+    ]
+  })
 };
 </script>
 
@@ -60,12 +73,6 @@ a:hover {
 
 .header-top-right {
   float: right;
-}
-.header-top-right ul li {
-  display: inline-block;
-  float: left;
-  list-style: outside none none;
-  margin-left: 30px;
 }
 </style>
 

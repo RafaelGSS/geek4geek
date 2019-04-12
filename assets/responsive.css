@@ -793,9 +793,6 @@
     .header-contact-search-wrapper.f-right {
         float: left !important;
     }
-    .header-top-right ul li {
-        margin-left: 15px !important;
-    }
     .product-tab-list::before,
     .product-tab-list::after {
         width: 80px !important;
@@ -3345,9 +3342,6 @@
     }
     .product-slider-style-2.owl-carousel .owl-item img {
         width: 100% !important;
-    }
-    .header-top-right ul li {
-        margin: 0 5px !important;
     }
     .custom-col-5 {
         flex: 0 0 50% !important;
