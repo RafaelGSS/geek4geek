@@ -1,4 +1,5 @@
 <template>
+    <!-- Component image link with effect css of transition -->
   <div class="banner-img banner-hover mb-30">
     <a :href="href">
       <img :src="src" :alt="alt">

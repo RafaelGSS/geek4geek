@@ -7,7 +7,7 @@
           <div class="col-lg-3 col-md-12">
             <div class="logo logo-mrg">
               <nuxt-link to="/" title="Geek4Geek">
-                <logo-name-white height="60" width="250"/>
+                <logo-name-white height=60 width=250 />
               </nuxt-link>
             </div>
           </div>

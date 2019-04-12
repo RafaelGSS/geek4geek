@@ -7,7 +7,7 @@
             <ul>
               <li style="list-style: none;">
                 <nuxt-link to="/" title="Geek4Geek">
-                  <logo-owl-white width="27" height="27"/>
+                  <logo-owl-white width=27 height=27 />
                 </nuxt-link>
               </li>
             </ul>
