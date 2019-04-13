@@ -28,7 +28,7 @@ module.exports = {
       }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+      { rel: 'shortcut icon', href: '/favicon.png' },
       {
         rel: "stylesheet",
         href: "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"

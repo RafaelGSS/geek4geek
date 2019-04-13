@@ -10,12 +10,12 @@
 <script>
 import Page from "~/components/Page";
 
-import ProductDetails from "~/components/ProductDetails/ProductDetails";
+import ProductDetails from "~/components/product-details/ProductDetails";
 
 import BannerArea from "~/components/banner/BannerArea";
 import FullBanner from "~/components/banner/FullBanner";
 
-import DescriptionReview from "~/components/ProductDetails/DescriptionReview";
+import DescriptionReview from "~/components/product-details/DescriptionReview";
 
 
 /**
@@ -46,15 +46,10 @@ export default {
       setTimeout(() => {
         resolve({
           product: product,
+          reviews: productReview
         });
       }, 1500);
     });
-  },
-  mounted(){
-    setTimeout(() => {
-      this.reviews = productReview
-      console.log('entrou', this.reviews)
-    }, 10000)
   }
 };
 </script>
