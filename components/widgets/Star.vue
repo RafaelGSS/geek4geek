@@ -1,5 +1,8 @@
 <template>
-  <i :class="{'ion-star': true, 'star-selected': selected, 'has-button': hasButton }"></i>
+  <i
+    @click="onClicked"
+    :class="{'ion-star': true, 'star-selected': checked, 'has-button': hasButton }"
+  ></i>
 </template>
 
 <script>
@@ -12,6 +15,20 @@ export default {
     hasButton: {
       type: Boolean,
       default: true
+    }
+  },
+  data: () => ({
+    checked: false
+  }),
+  mounted() {
+    this.checked = this.selected;
+  },
+  methods: {
+    onClicked() {
+      if (this.hasButton) {
+        this.checked = !this.checked;
+        this.$emit("click", this.checked);
+      }
     }
   }
 };

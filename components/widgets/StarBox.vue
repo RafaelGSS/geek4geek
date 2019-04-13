@@ -2,7 +2,7 @@
   <div class="star-box">
     <h2>Nota:</h2>
     <div class="ratting-star">
-      <star v-for="star in maxStar" :key="`str-${star}`"/>
+      <star v-for="star in maxStar" @click="onChecked" :key="`str-${star}`"/>
     </div>
   </div>
 </template>
@@ -28,7 +28,12 @@ export default {
         countStarSelected: 0
     }),
     mounted() {
-        this.countStarSelected = init
+        this.countStarSelected = this.init
+    },
+    methods: {
+      onChecked(actual) {
+        console.log('actual val', actual)
+      }
     }
 }
 </script>
