@@ -42,8 +42,8 @@
 
 <script>
 import Page from "~/components/Page.vue";
-import E404 from "~/components/Error/E404";
-import E500 from "~/components/Error/E500";
+import E404 from "~/components/error/E404";
+import E500 from "~/components/error/E500";
 
 export default {
   props: ["error"],
