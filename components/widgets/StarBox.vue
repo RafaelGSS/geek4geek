@@ -1,6 +1,6 @@
 <template>
   <div class="star-box">
-    <h2>Nota:</h2>
+    <h2>Nota: ({{ this.starsChecked }})</h2>
     <div class="ratting-star">
       <star
         v-for="star in this.stars"
@@ -33,16 +33,22 @@ export default {
     }
   },
   data: () => ({
-    stars: []
+    stars: [],
+    starsChecked: 0
   }),
   mounted() {
+    // Initialize array of stars data
     for (let star of Array(this.maxStar).keys()) {
       this.stars.push({ id: star, selected: false });
     }
+    // Initialize with defaults
+    this.onChecked([null, this.init]) 
   },
   methods: {
     onChecked([value, id]) {
       this.cleanup();
+      this.starsChecked = id + 1 // To show without 0 index.
+
       for (let star of Array(Number(id + 1)).keys()) {
         this.stars[star].selected = true;
       }

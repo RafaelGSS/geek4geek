@@ -5,7 +5,7 @@
     </slot>
     <div class="ratting-form">
       <form action="#">
-        <star-box v-model="voted" :maxStar=5></star-box>
+        <star-box v-model="voted" :init=4 :maxStar=5></star-box>
         <div class="row">
           <div class="col-md-12">
             <div class="rating-form-style form-submit">
