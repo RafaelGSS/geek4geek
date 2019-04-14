@@ -2,7 +2,15 @@
   <div class="star-box">
     <h2>Nota:</h2>
     <div class="ratting-star">
-      <star v-for="star in maxStar" @click="onChecked" :key="`str-${star}`"/>
+      <star
+        v-for="star in this.stars"
+        :id="star.id"
+        :selected="star.selected"
+        :has-button=false
+        :btnClass=true
+        @click="onChecked"
+        :key="`str-${star.id}`"
+      />
     </div>
   </div>
 </template>
@@ -11,31 +19,41 @@
 import Star from "@/components/widgets/Star";
 
 export default {
-    components: {
-        Star
+  components: {
+    Star
+  },
+  props: {
+    maxStar: {
+      type: Number,
+      default: 5
     },
-    props: {
-        maxStar: {
-            type: Number,
-            default: 5
-        },
-        init: {
-            type: Number,
-            default: 0
-        }
+    init: {
+      type: Number,
+      default: 0
+    }
+  },
+  data: () => ({
+    stars: []
+  }),
+  mounted() {
+    for (let star of Array(this.maxStar).keys()) {
+      this.stars.push({ id: star, selected: false });
+    }
+  },
+  methods: {
+    onChecked([value, id]) {
+      this.cleanup();
+      for (let star of Array(Number(id + 1)).keys()) {
+        this.stars[star].selected = true;
+      }
     },
-    data: () => ({
-        countStarSelected: 0
-    }),
-    mounted() {
-        this.countStarSelected = this.init
-    },
-    methods: {
-      onChecked(actual) {
-        console.log('actual val', actual)
+    cleanup() {
+      for (let star of Array(this.maxStar).keys()) {
+        this.stars[star].selected = false;
       }
     }
-}
+  }
+};
 </script>
 
 <style scoped>
@@ -49,5 +67,4 @@ export default {
 .star-box {
   margin-bottom: 40px;
 }
-
 </style>
