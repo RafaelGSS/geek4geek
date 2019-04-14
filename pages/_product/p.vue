@@ -1,7 +1,7 @@
 <template>
   <Page>
     <ProductDetails :pProduct="product"/>
-    <DescriptionReview :reviews="reviews" :full_description="product.full_description"/>
+    <ProductContent :reviews="reviews" :full_description="product.full_description"/>
     <BannerArea />
     <FullBanner />
   </Page>
@@ -15,7 +15,7 @@ import ProductDetails from "~/components/product-details/ProductDetails";
 import BannerArea from "~/components/banner/BannerArea";
 import FullBanner from "~/components/banner/FullBanner";
 
-import DescriptionReview from "~/components/product-details/DescriptionReview";
+import ProductContent from "~/components/product-details/ProductContent";
 
 
 /**
@@ -29,7 +29,7 @@ export default {
     components: {
         Page,
         ProductDetails,
-        DescriptionReview,
+        ProductContent,
         BannerArea,
         FullBanner
   },
