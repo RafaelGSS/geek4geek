@@ -6,7 +6,7 @@
         v-for="star in this.stars"
         :id="star.id"
         :selected="star.selected"
-        :has-button=false
+        :hasButton=false
         :btnClass=true
         @click="onChecked"
         :key="`str-${star.id}`"
