@@ -356,32 +356,10 @@
 <script>
 export default {
   props: ["pProduct"],
-  head() {
-    return {
-      script: [
-        {
-          src:
-            "https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"
-        }
-      ]
-    };
-  },
   data() {
     return {
       quantity: "1"
     };
-  },
-  mounted() {
-    $(".zoompro").elevateZoom({
-      gallery: "gallery",
-      responsive: true,
-      galleryActiveClass: "active",
-      zoomWindowWidth: 300,
-      zoomWindowHeight: 100,
-      scrollZoom: false,
-      zoomType: "inner",
-      cursor: "crosshair"
-    });
   },
   methods: {
     addCart() {
