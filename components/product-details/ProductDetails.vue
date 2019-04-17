@@ -23,7 +23,7 @@
             <div class="in-stock">
               <p>
                 Estoque:
-                <span v-if="product.stock > 0">Disponível em estoque</span>
+                <stock :stock="product.stock" />
               </p>
             </div>
             <product-description>
@@ -32,10 +32,10 @@
             <div class="quality-add-to-cart">
               <div class="quality">
                 <label>Quantidade:</label>
-                <input class="cart-plus-minus-box" type="number" name="quantity" v-model="quantity">
+                <input class="cart-plus-minus-box" type="number" name="quantity" v-model="this.quantity">
               </div>
               <div class="product-action">
-                <a class="action-cart" title="Add To Cart" href="#" @click="addCart">Add to Cart</a>
+                <button-add-cart :id=product.id :quantity="this.quantity" :value=product.price :display_name="product.display_name" />
                 <a class="same-action" title="Wishlist" href="#">
                   <i class="fa fa-heart-o"></i>
                 </a>
@@ -75,7 +75,9 @@
 
 <script>
 import ZoomPro from "@/components/banner/images/ZoomPro";
-import ProductDescription from "@/components/product-details/ProductDetails";
+import ProductDescription from "@/components/product-details/ProductDescription";
+import Stock from "@/components/product-details/placeholders/Stock";
+import ButtonAddCart from "@/components/cart/ButtonAddCart";
 import Star from "@/components/widgets/Star";
 
 export default {
@@ -85,27 +87,15 @@ export default {
   components: {
     ZoomPro,
     Star,
-    ProductDescription
+    Stock,
+    ProductDescription,
+    ButtonAddCart
   },
   data: () => ({
     quantity: "1"
   }),
   methods: {
-    addCart() {
-      var obj = {
-        id: product.id,
-        quantity: this.quantity,
-        display_name: product.display_name,
-        value: product.price
-      };
-      this.$notify({
-        group: "general",
-        type: "success",
-        title: "Item adicionado",
-        text: "O Item foi adicionado com sucesso do seu carrinho de compras!"
-      });
-      this.$store.commit("cart/add", obj);
-    }
+   
   }
 };
 </script>
@@ -143,10 +133,6 @@ export default {
 .rating-review {
   display: flex;
   margin: 20px 0 27px;
-}
-.in-stock > p span {
-  color: #e54d4d;
-  font-weight: bold;
 }
 .product-details-content > p {
   color: #242424;
@@ -195,9 +181,7 @@ export default {
 .quality-add-to-cart .product-action {
   justify-content: left;
 }
-.quality-add-to-cart .product-action > a.action-cart {
-  padding: 11px 40px 10px;
-}
+
 .quality-add-to-cart .product-action > a.same-action {
   width: 40px;
   height: 40px;
@@ -274,16 +258,7 @@ export default {
   text-align: center;
   width: 35px;
 }
-.product-action > a.action-cart {
-  background-color: #eef0f1;
-  border-radius: 3px;
-  color: #242424;
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 500;
-  padding: 9px 20px 8px;
-  text-transform: uppercase;
-}
+
 
 .product-action > a.action-cart:hover,
 .product-action > a.same-action:hover {

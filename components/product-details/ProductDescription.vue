@@ -1,13 +1,13 @@
 <template>
-  <div class="product-description-wrapper">{{ text }}</div>
+  <div class="product-description-wrapper">
+    <slot>
+      <p>Example of description</p>
+    </slot>
+  </div>
 </template>
 
 <script>
-export default {
-    props: {
-        text: String
-    }
-};
+export default {};
 </script>
 
 <style scoped>

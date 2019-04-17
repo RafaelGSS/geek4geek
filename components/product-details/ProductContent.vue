@@ -3,12 +3,14 @@
     <div class="container">
       <tab-pane>
         <template #title>
-          <tab-pane-title :active=true :id="'tab-description'">Descrição</tab-pane-title>
+          <tab-pane-title :active="true" :id="'tab-description'">Descrição</tab-pane-title>
           <tab-pane-title :id="'tab-review'">Reviews</tab-pane-title>
         </template>
         <template #content>
-          <tab-pane-content :active=true :id="'tab-description'">
-            <product-description :text="full_description"/>
+          <tab-pane-content :active="true" :id="'tab-description'">
+            <product-description>
+              <p>{{ full_description }}</p>
+            </product-description>
           </tab-pane-content>
           <tab-pane-content :id="'tab-review'">
             <product-review :reviews="reviews"/>
