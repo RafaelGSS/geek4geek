@@ -1,6 +1,6 @@
 <template>
   <Page>
-    <ProductDetails :pProduct="product"/>
+    <ProductDetails :product="product"/>
     <ProductContent :reviews="reviews" :full_description="product.full_description"/>
     <BannerArea />
     <FullBanner />

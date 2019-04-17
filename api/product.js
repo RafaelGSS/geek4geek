@@ -1,11 +1,12 @@
 var product = {
   "id": 190,
-  "name": "Produto Gee4Geek",
+  "display_name": "Produto Gee4Geek",
   "unique_name": "product-geek4geek",
   "display_description": "Descricao dos protudos em modo de display",
   "full_description": "Descricao total dos produtos",
   "promo": true,
   "stock": 10,
+  "ratting_review": 5,
   "promotion": {
     "percentage": 10,
     "old_price": 100
