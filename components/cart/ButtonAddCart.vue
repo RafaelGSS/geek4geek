@@ -54,6 +54,10 @@ a.action-cart:hover {
   background-color: #3cb371;
   color: #fff;
 }
+
+a i {
+  text-align: center;
+}
 </style>
 
 

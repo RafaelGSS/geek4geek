@@ -32,13 +32,11 @@
             <div class="quality-add-to-cart">
               <div class="quality">
                 <label>Quantidade:</label>
-                <input class="cart-plus-minus-box" type="number" name="quantity" v-model="this.quantity">
+                <input class="cart-plus-minus-box" type="number" v-model="this.quantity">
               </div>
               <div class="product-action">
                 <button-add-cart :id=product.id :quantity="this.quantity" :value=product.price :display_name="product.display_name" />
-                <a class="same-action" title="Wishlist" href="#">
-                  <i class="fa fa-heart-o"></i>
-                </a>
+                <button-add-wishlist :id="product.id"/>
               </div>
             </div>
             <div class="pro-dec-categories">
@@ -57,15 +55,7 @@
                 </li>
               </ul>
             </div>
-            <div class="pro-dec-social">
-              <ul>
-                <li>
-                  <a class="share" href="#">
-                    <i class="ion-social-facebook"></i> Share
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <share-social-icons />
           </div>
         </div>
       </div>
@@ -77,7 +67,11 @@
 import ZoomPro from "@/components/banner/images/ZoomPro";
 import ProductDescription from "@/components/product-details/ProductDescription";
 import Stock from "@/components/product-details/placeholders/Stock";
+
 import ButtonAddCart from "@/components/cart/ButtonAddCart";
+import ButtonAddWishlist from "@/components/cart/ButtonAddWishlist";
+import ShareSocialIcons from "@/components/widgets/ShareSocialIcons";
+
 import Star from "@/components/widgets/Star";
 
 export default {
@@ -89,7 +83,9 @@ export default {
     Star,
     Stock,
     ProductDescription,
-    ButtonAddCart
+    ButtonAddCart,
+    ButtonAddWishlist,
+    ShareSocialIcons
   },
   data: () => ({
     quantity: "1"
@@ -106,41 +102,32 @@ export default {
   position: relative;
 }
 
-.product-details-img {
-  position: relative;
-}
-
 .product-details-content > h4 {
   font-size: 18px;
   font-weight: 500;
   margin: 0;
 }
-.rating-review {
-  display: flex;
-}
-.pro-dec-rating i {
-  color: #b2b2b2;
-  font-size: 17px;
-}
-.pro-dec-rating i.theme-star {
-  color: #3cb371;
-}
+
 .product-details-content > span {
   color: #242424;
   font-size: 24px;
   font-weight: 500;
 }
-.rating-review {
-  display: flex;
-  margin: 20px 0 27px;
-}
+
 .product-details-content > p {
   color: #242424;
   margin: 0;
 }
-.in-stock > p {
-  margin: 0;
+
+.product-details-img {
+  position: relative;
 }
+
+.rating-review {
+  display: flex;
+  margin: 20px 0 27px;
+}
+
 .in-stock {
   margin: 27px 0 3px;
 }
@@ -181,14 +168,7 @@ export default {
 .quality-add-to-cart .product-action {
   justify-content: left;
 }
-
-.quality-add-to-cart .product-action > a.same-action {
-  width: 40px;
-  height: 40px;
-}
-.quality-add-to-cart .product-action > a.same-action i {
-  line-height: 41px;
-}
+/*List*/
 .pro-dec-categories li {
   display: inline-block;
   list-style: outside none none;
@@ -208,61 +188,5 @@ export default {
 }
 .pro-dec-categories:last-child {
   margin: 0 0 0px;
-}
-.pro-dec-social li {
-  display: inline-block;
-  list-style: outside none none;
-  margin: 0 6px 0 0;
-}
-.pro-dec-social li a {
-  border-radius: 5px;
-  color: #fff;
-  display: inline-block;
-  line-height: 1;
-  padding: 8px 12px;
-}
-
-.pro-dec-social li a.share {
-  background-color: #435f9f;
-  border: 1px solid transparent;
-}
-.pro-dec-social li a.share:hover {
-  background-color: #242424;
-  border: 1px solid #242424;
-  color: #fff;
-}
-
-.pro-dec-social {
-  margin: 27px 0 0;
-}
-
-.product-action {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 -10px;
-}
-.product-action > a {
-  margin: 0 3px;
-}
-.product-action > a i {
-  text-align: center;
-}
-.product-action > a.same-action {
-  background-color: #eef0f1;
-  border-radius: 3px;
-  color: #242424;
-  font-size: 16px;
-  height: 35px;
-  line-height: 35px;
-  text-align: center;
-  width: 35px;
-}
-
-
-.product-action > a.action-cart:hover,
-.product-action > a.same-action:hover {
-  background-color: #3cb371;
-  color: #fff;
 }
 </style>
