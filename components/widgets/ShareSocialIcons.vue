@@ -11,6 +11,7 @@
 </template>
 
 <script>
+// TODO - Create generations based on array (like social icons, and receive props)
 export default {};
 </script>
 

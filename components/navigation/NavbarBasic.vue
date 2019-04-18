@@ -1,6 +1,7 @@
 <template>
   <nav>
     <ul>
+      <slot name="first"></slot>
       <li v-for="(item, index) in items" :key="`navbar-basic-${index}`">
         <slot name="item" :item="item">{{ item }}</slot>
       </li>

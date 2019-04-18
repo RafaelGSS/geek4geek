@@ -12,8 +12,8 @@ var product = {
     "old_price": 100
   },
   "price": 90,
-  "tags": [],
-  "categories": ["Canecas"],
+  "tags": ["Tag1"],
+  "categories": [ { name: "Canecas"}],
   "images": [
     {
       "id": 1,

@@ -23,7 +23,7 @@
             <div class="in-stock">
               <p>
                 Estoque:
-                <stock :stock="product.stock" />
+                <stock :stock="product.stock"/>
               </p>
             </div>
             <product-description>
@@ -35,17 +35,23 @@
                 <input class="cart-plus-minus-box" type="number" v-model="this.quantity">
               </div>
               <div class="product-action">
-                <button-add-cart :id=product.id :quantity="this.quantity" :value=product.price :display_name="product.display_name" />
+                <button-add-cart
+                  :id="product.id"
+                  :quantity="this.quantity"
+                  :value="product.price"
+                  :display_name="product.display_name"
+                />
                 <button-add-wishlist :id="product.id"/>
               </div>
             </div>
             <div class="pro-dec-categories">
-              <ul>
+              <!-- CRIAR SIMPLE LIST -->
+              <!-- <ul>
                 <li class="categories-title">Categorias:</li>
                 <li v-for="(category, index) in product.categories" :key="`det-cat-${index}`">
                   <a href="#">{{ category.name }}</a>
                 </li>
-              </ul>
+              </ul> -->
             </div>
             <div class="pro-dec-categories">
               <ul>
@@ -55,7 +61,7 @@
                 </li>
               </ul>
             </div>
-            <share-social-icons />
+            <share-social-icons/>
           </div>
         </div>
       </div>
@@ -90,9 +96,7 @@ export default {
   data: () => ({
     quantity: "1"
   }),
-  methods: {
-   
-  }
+  methods: {}
 };
 </script>
 
@@ -101,33 +105,27 @@ export default {
 .product-details-content {
   position: relative;
 }
-
 .product-details-content > h4 {
   font-size: 18px;
   font-weight: 500;
   margin: 0;
 }
-
 .product-details-content > span {
   color: #242424;
   font-size: 24px;
   font-weight: 500;
 }
-
 .product-details-content > p {
   color: #242424;
   margin: 0;
 }
-
 .product-details-img {
   position: relative;
 }
-
 .rating-review {
   display: flex;
   margin: 20px 0 27px;
 }
-
 .in-stock {
   margin: 27px 0 3px;
 }
@@ -140,7 +138,6 @@ export default {
   text-align: center;
   width: 40px;
 }
-
 .quality input::-moz-placeholder {
   color: #242424;
   opacity: 1;
@@ -168,13 +165,13 @@ export default {
 .quality-add-to-cart .product-action {
   justify-content: left;
 }
-/*List*/
+
 .pro-dec-categories li {
   display: inline-block;
   list-style: outside none none;
   color: #242424;
 }
-.pro-dec-categories li.categories-title {
+.pro-dec-categories li.title {
   margin: 0 3px 0 0;
 }
 .pro-dec-categories li a {
