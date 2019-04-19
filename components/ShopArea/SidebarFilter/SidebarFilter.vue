@@ -1,72 +1,82 @@
 <template>
   <div class="shop-sidebar-wrapper mrg-top-md mrg-top-sm">
-    <div class="refinar">
-      <a href="javascript:void(0);" class="filter-b" @click="showUnSidebar">
-        <i class="fa fa-bars"></i> Refinar
-      </a>
-    </div>
-    <div class="items-sidebar" id="items-sidebar">
-      <div class="shop-widget shop-sidebar-border pt-35">
-        <h4 class="shop-sidebar-title">Categorias Semelhantes</h4>
-        <div class="sidebar-list-style mt-20">
-          <ul>
-            <li>
-              <a href="#">List1</a>
-            </li>
-            <li>
-              <a href="#">List2</a>
-            </li>
-            <li>
-              <a href="#">List3</a>
-            </li>
-          </ul>
+    <menu-dropdown-fixed>
+      <template slot="title">Refinar</template>
+      <template>
+        <div class="shop-widget shop-sidebar-border pt-35">
+          <h4 class="shop-sidebar-title">Categorias Semelhantes</h4>
+          <div class="sidebar-list-style mt-20">
+            <ul>
+              <li>
+                <a href="#">List1</a>
+              </li>
+              <li>
+                <a href="#">List2</a>
+              </li>
+              <li>
+                <a href="#">List3</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="shop-widget shop-sidebar-border pt-35">
-        <h4 class="shop-sidebar-title">Material</h4>
-        <div class="sidebar-list-style mt-20">
-          <ul>
-            <li>
-              <input type="checkbox" @click="addToFilter('Material', 'PVC')">PVC
-            </li>
-            <li>
-              <input type="checkbox" @click="addToFilter('Material', 'RESINA')">RESINA
-            </li>
-            <li>
-              <input type="checkbox" @click="addToFilter('Material', 'MERDA')">MERDA
-            </li>
-          </ul>
+        <div class="shop-widget shop-sidebar-border pt-35">
+          <h4 class="shop-sidebar-title">Material</h4>
+          <div class="sidebar-list-style mt-20">
+            <ul>
+              <li>
+                <input type="checkbox" @click="addToFilter('Material', 'PVC')">PVC
+              </li>
+              <li>
+                <input type="checkbox" @click="addToFilter('Material', 'RESINA')">RESINA
+              </li>
+              <li>
+                <input type="checkbox" @click="addToFilter('Material', 'MERDA')">MERDA
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="shop-widget mt-40 shop-sidebar-border pt-35">
-        <h4 class="shop-sidebar-title">Tags</h4>
-        <div class="shop-tags mt-25">
-          <ul>
-            <li>
-              <a id="Tag_Tag1" @click="addToFilter('Tag', 'Tag1'); setActive($event);">Tag1</a>
-            </li>
-            <li>
-              <a id="Tag_Tag2" @click="addToFilter('Tag', 'Tag2'); setActive($event);">Tag2</a>
-            </li>
-            <li>
-              <a id="Tag_Tag3" @click="addToFilter('Tag', 'Tag3'); setActive($event);">Tag3</a>
-            </li>
-          </ul>
+        <div class="shop-widget mt-40 shop-sidebar-border pt-35">
+          <h4 class="shop-sidebar-title">Tags</h4>
+          <div class="shop-tags mt-25">
+            <ul>
+              <li>
+                <a id="Tag_Tag1" @click="addToFilter('Tag', 'Tag1'); setActive($event);">Tag1</a>
+              </li>
+              <li>
+                <a id="Tag_Tag2" @click="addToFilter('Tag', 'Tag2'); setActive($event);">Tag2</a>
+              </li>
+              <li>
+                <a id="Tag_Tag3" @click="addToFilter('Tag', 'Tag3'); setActive($event);">Tag3</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </div>
+      </template>
+    </menu-dropdown-fixed>
   </div>
 </template>
 
-<style scoped>
-@media (max-width: 1024px) {
-  .items-sidebar {
-    display: none;
+<script>
+import busFilter from "@/assets/js/eventBus_filter.js";
+import MenuDropdownFixed from "@/components/widgets/menu/MenuDropdownFixed";
+
+export default {
+  components: {
+    MenuDropdownFixed
+  },
+  methods: {
+    addToFilter(pType, pValue) {
+      busFilter.$emit("ADD_TO_FILTER", { type: pType, value: pValue });
+    },
+    setActive(event) {
+      var id = event.currentTarget.id;
+      document.getElementById(id).classList.toggle("active");
+    }
   }
-}
-.filter-b {
-  font-size: 1.2em;
-}
+};
+</script>
+
+<style scoped>
 .shop-sidebar-wrapper {
   border: 1px solid #efefef;
   padding: 10px;
@@ -133,29 +143,3 @@ h4.shop-sidebar-title {
   color: #fff !important;
 }
 </style>
-
-<script>
-
-import busFilter from '@/assets/js/eventBus_filter.js'
-
-export default {
-  methods: {
-    showUnSidebar() {
-      if ($("#items-sidebar").css("display") == "none") {
-        $("#items-sidebar").show(500);
-      } else {
-        $("#items-sidebar").hide(500);
-      }
-    },
-    addToFilter(pType, pValue) {
-      busFilter.$emit('ADD_TO_FILTER', { type: pType, value: pValue })
-    },
-    setActive(event){
-      var id = event.currentTarget.id;
-      document.getElementById(id).classList.toggle("active");
-    } 
-  } 
-};
-</script>
-
-
