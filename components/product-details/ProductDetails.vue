@@ -91,8 +91,7 @@ export default {
   },
   data: () => ({
     quantity: "1"
-  }),
-  methods: {}
+  })
 };
 </script>
 

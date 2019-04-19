@@ -1,19 +1,17 @@
 <template>
   <div class="rattings-wrapper">
-    <div v-if="reviews.length > 0">
-      <div class="sin-rattings" v-for="review in reviews" :key="review.id">
-        <div class="star-author-all">
-          <div class="ratting-star f-left">
-            <star :hasButton="false" v-for="i in review.review_star" :key="i" />
-            <span>({{ review.review_star }})</span>
-          </div>
-          <div class="ratting-author f-right">
-            <h3>{{ review.author }}</h3>
-            <span>{{ review.created_at }}</span>
-          </div>
+    <div class="sin-rattings" v-for="review in reviews" :key="review.id">
+      <div class="star-author-all">
+        <div class="ratting-star f-left">
+          <star :hasButton="false" v-for="i in review.review_star" :key="i"/>
+          <span>({{ review.review_star }})</span>
         </div>
-        <p>{{ review.review }}</p>
+        <div class="ratting-author f-right">
+          <h3>{{ review.author }}</h3>
+          <span>{{ review.created_at }}</span>
+        </div>
       </div>
+      <p>{{ review.review }}</p>
     </div>
   </div>
 </template>
@@ -74,5 +72,3 @@ export default {
   margin-left: 15px;
 }
 </style>
-
-

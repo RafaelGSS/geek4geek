@@ -669,9 +669,7 @@
         padding: 2px 3px 3px !important;
         right: -34px !important;
     }
-    .pro-dec-social li a {
-        padding: 8px 7px !important;
-    }
+   
     .product-details-content > h4 {
         font-size: 17px !important;
     }
@@ -1505,9 +1503,7 @@
     .product-details-content.pro-details-mrg-none {
         margin-top: 0 !important;
     }
-    .pro-dec-social li a {
-        padding: 8px 7px !important;
-    }
+   
     .quality-add-to-cart .product-action > a.action-cart {
         padding: 11px 32px 10px !important;
     }
@@ -2643,9 +2639,6 @@
         display: block !important;
         float: inherit !important;
         margin: 0 0 15px !important;
-    }
-    .pro-dec-social li {
-        margin: 0 6px 10px 0 !important;
     }
     .description-review-area.pt-25.pb-70 {
         padding-top: 0 !important;

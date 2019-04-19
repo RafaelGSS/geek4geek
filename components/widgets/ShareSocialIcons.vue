@@ -42,6 +42,24 @@ export default {};
 .pro-dec-social {
   margin: 27px 0 0;
 }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .pro-dec-social li a {
+    padding: 8px 7px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .pro-dec-social li a {
+    padding: 8px 7px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .pro-dec-social li {
+    margin: 0 6px 10px 0 !important;
+  }
+}
 </style>
 
 
