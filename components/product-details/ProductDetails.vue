@@ -44,23 +44,18 @@
                 <button-add-wishlist :id="product.id"/>
               </div>
             </div>
-            <div class="pro-dec-categories">
-              <!-- CRIAR SIMPLE LIST -->
-              <!-- <ul>
-                <li class="categories-title">Categorias:</li>
-                <li v-for="(category, index) in product.categories" :key="`det-cat-${index}`">
-                  <a href="#">{{ category.name }}</a>
-                </li>
-              </ul> -->
-            </div>
-            <div class="pro-dec-categories">
-              <ul>
-                <li class="categories-title">Tags:</li>
-                <li v-for="tag in product.tags" :key="tag.id">
-                  <a href="#">{{ tag.name }}</a>
-                </li>
-              </ul>
-            </div>
+            <simple-list :items="product.categories">
+              <template slot="title">Categorias:</template>
+              <template v-slot:item="{ item }">
+                <a href="#">{{ item.name }}</a>
+              </template>
+            </simple-list>
+            <simple-list :items="product.tags">
+              <template slot="title">Tags:</template>
+              <template v-slot:item="{ item }">
+                <a href="#">{{ item.name }}</a>
+              </template>
+            </simple-list>
             <share-social-icons/>
           </div>
         </div>
@@ -73,7 +68,7 @@
 import ZoomPro from "@/components/banner/images/ZoomPro";
 import ProductDescription from "@/components/product-details/ProductDescription";
 import Stock from "@/components/product-details/placeholders/Stock";
-
+import SimpleList from "@/components/widgets/list/SimpleList";
 import ButtonAddCart from "@/components/cart/ButtonAddCart";
 import ButtonAddWishlist from "@/components/cart/ButtonAddWishlist";
 import ShareSocialIcons from "@/components/widgets/ShareSocialIcons";
@@ -91,7 +86,8 @@ export default {
     ProductDescription,
     ButtonAddCart,
     ButtonAddWishlist,
-    ShareSocialIcons
+    ShareSocialIcons,
+    SimpleList
   },
   data: () => ({
     quantity: "1"
@@ -164,26 +160,5 @@ export default {
 }
 .quality-add-to-cart .product-action {
   justify-content: left;
-}
-
-.pro-dec-categories li {
-  display: inline-block;
-  list-style: outside none none;
-  color: #242424;
-}
-.pro-dec-categories li.title {
-  margin: 0 3px 0 0;
-}
-.pro-dec-categories li a {
-  color: #242424;
-}
-.pro-dec-categories li a:hover {
-  color: #3cb371;
-}
-.pro-dec-categories {
-  margin: 0 0 12px;
-}
-.pro-dec-categories:last-child {
-  margin: 0 0 0px;
 }
 </style>
