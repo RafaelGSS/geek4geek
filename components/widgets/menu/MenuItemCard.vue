@@ -1,9 +1,9 @@
 <template>
-  <div class="shop-widget shop-sidebar-border pt-35">
+  <div class="shop-widget shop-sidebar-border pt-15 pb-15">
     <h4 class="shop-sidebar-title">
       <slot name="title"></slot>
     </h4>
-    <div :class="{'vertical': isVert, 'horizontal': isHoriz, 'mt-20': true}">
+    <div :class="{'vertical': isVert, 'horizontal': isHoriz, 'mt-25': true}">
       <ul>
         <li
           v-for="(item, index) in items"

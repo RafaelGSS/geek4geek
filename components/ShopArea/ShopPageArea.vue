@@ -17,7 +17,7 @@
             </div>
             <SortBy />
           </div>
-          <ProductList :products=products :itemsPerRow=4 />
+          <ProductList :products=products :itemsPerRow=4></ProductList>
         </div>
       </div>
     </div>
@@ -51,8 +51,8 @@
 
 <script>
 import ProductList from "~/components/ShopArea/ProductList";
-import SidebarFilter from "~/components/ShopArea/SidebarFilter/SidebarFilter";
-import SortBy from "~/components/ShopArea/SidebarFilter/SortBy";
+import SidebarFilter from "~/components/ShopArea/sidebar/SidebarFilter";
+import SortBy from "~/components/ShopArea/sidebar/SortBy";
 
 export default {
     props: {

@@ -27,9 +27,6 @@
 </template>
 
 <script>
-// TODO - Terminal filtro:
-// Passar mt-20 como parametro para MenuItemCard
-// Verificar se vale a pena busFilter aqui
 import busFilter from "@/assets/js/eventBus_filter.js";
 import MenuDropdownFixed from "@/components/widgets/menu/MenuDropdownFixed";
 import MenuItemCard from "@/components/widgets/menu/MenuItemCard";
