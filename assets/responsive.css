@@ -2,12 +2,6 @@
 
 @media (min-width: 1200px) and (max-width: 1500px) {
     
-    .book-offer > h2 {
-        font-size: 40px !important;
-    }
-    .book-offer > p {
-        width: 75% !important;
-    }
     .deals-content.text-center {
         margin: 85px 0 0 27px !important;
     }
@@ -248,17 +242,8 @@
     .single-slider.pt-150 {
         padding-top: 100px !important;
     }
-    .book-offer > h2 {
-        font-size: 34px !important;
-    }
-    .book-offer.pl-50 {
-        padding-left: 0 !important;
-    }
     .connect-area.bg-img {
         background-position: 66% center !important;
-    }
-    .book-offer > p {
-        width: 97% !important;
     }
     .nav-style-3.owl-carousel > .owl-nav div {
         top: -63px !important;
@@ -880,18 +865,8 @@
     .single-slider.pt-150 {
         padding-top: 80px !important;
     }
-    .book-offer > h2 {
-        font-size: 34px !important;
-    }
-    .book-offer.pl-50 {
-        padding-left: 0 !important;
-        text-align: left !important;
-    }
     .connect-area.bg-img {
         background-position: 66% center !important;
-    }
-    .book-offer > p {
-        width: 100% !important;
     }
     .slider-content-5 {
         margin-left: 0 !important;
@@ -1904,21 +1879,6 @@
     }
     .slider-btn.mt-75 {
         margin-top: 30px !important;
-    }
-    .book-offer.pl-50 {
-        padding-left: 0 !important;
-    }
-    .book-offer > h2 {
-        font-size: 30px !important;
-    }
-    .book-offer > p {
-        margin: 15px auto 10px !important;
-        width: 100% !important;
-        color: #000 !important;
-    }
-    .book-offer > h4 {
-        font-size: 30px !important;
-        margin: 0 0 30px !important;
     }
     .connect-area.pt-145.pb-110 {
         padding-bottom: 70px !important;
