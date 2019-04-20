@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row flex-row">
         <div class="col-lg-3">
-          <SidebarFilter />
+          <sidebar-filter />
         </div>
         <div class="col-lg-9">
           <div class="banner-area pb-30">
@@ -15,7 +15,7 @@
             <div class="shop-topbar-left">
               <p>Showing 1 - 20 of 30 results</p>
             </div>
-            <SortBy />
+            <sort-by />
           </div>
           <ProductList :products=products :itemsPerRow=4></ProductList>
         </div>
