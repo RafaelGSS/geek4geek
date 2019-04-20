@@ -480,12 +480,6 @@
     .newsletter-watch .newsletter-wrapper.pl-55.pr-55 {
         padding: 0 !important;
     }
-    .product-shorting.shorting-style select {
-        width: 80px !important;
-    }
-    .shorting-style select {
-        width: 105px !important;
-    }
     .grid-list-options {
         margin-right: 15px !important;
     }
@@ -1170,12 +1164,6 @@
     .watch-mean-menu {
         border-top: 1px solid #2d2d2d !important;
         padding: 20px 15px !important;
-    }
-    .product-shorting.shorting-style select {
-        width: 80px !important;
-    }
-    .shorting-style select {
-        width: 105px !important;
     }
     .grid-list-options {
         margin-right: 15px !important;
@@ -2453,19 +2441,7 @@
         display: block !important;
         padding: 15px 15px 18px !important;
     }
-    .shorting-style select {
-        -moz-appearance: none !important;
-        -webkit-appearance: none !important;
-        width: 120px !important;
-    }
-    .shorting-style {
-        margin-left: 0 !important;
-        margin-top: 10px !important;
-        margin-right: 15px !important;
-    }
-    .shorting-style:last-child {
-        margin-right: 0px !important;
-    }
+   
     .pagination-total-pages {
         display: block !important;
     }
@@ -2484,9 +2460,7 @@
         margin-right: 0 !important;
         width: 100% !important;
     }
-    .product-shorting.shorting-style select {
-        width: 120px !important;
-    }
+   
     .grid-list-options {
         display: block !important;
         float: inherit !important;

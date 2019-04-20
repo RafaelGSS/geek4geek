@@ -39,13 +39,7 @@ export default {
     cursor: pointer;
     margin: 0 11px 0 0;
 }
-.product-shorting.shorting-style select {
-    width: 110px;
-}
 .shorting-style select {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    background: #fff url("/img/icon-img/shop.png") no-repeat scroll right 10px center;
     border: 1px solid #ebebeb;
     border-radius: 3px;
     box-shadow: none;
@@ -56,4 +50,31 @@ export default {
     padding-left: 10px;
     width: 210px;
 }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .shorting-style select {
+        width: 160px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .shorting-style select {
+        width: 160px !important;
+    }
+}
+
+@media (max-width: 767px) {
+     .shorting-style select {
+        width: 160px !important;
+    }
+    .shorting-style {
+        margin-left: 0 !important;
+        margin-top: 10px !important;
+        margin-right: 15px !important;
+    }
+    .shorting-style:last-child {
+        margin-right: 0px !important;
+    }
+}
+
 </style>
