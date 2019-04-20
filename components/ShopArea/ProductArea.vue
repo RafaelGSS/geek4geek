@@ -37,80 +37,19 @@ import TabPaneTitleButton from "@/components/widgets/TabPaneTitleButton";
 import TabPaneContent from "@/components/widgets/TabPaneContent";
 
 export default {
+  props: {
+    products_new: Array, 
+    products_hot: Array
+  },
   components: {
     ProductList,
     TabPane,
     TabPaneTitleButton,
     TabPaneContent
   },
-  props: ["products_new", "products_hot"],
   data: () => ({
     idNews: "home1",
     idHots: "home2"
-  }),
-  methods: {
-    addCart(obj) {
-      this.$notify({
-        group: "general",
-        type: "success",
-        title: "Item adicionado",
-        text: "O Item foi adicionado com sucesso do seu carrinho de compras!"
-      });
-      this.$store.commit("cart/add", obj);
-    },
-    showNews() {
-      document.getElementById(this.idNews).classList.add("active");
-      document.getElementById(this.idHots).classList.remove("active");
-    },
-    showHots() {
-      document.getElementById(this.idHots).classList.add("active");
-      document.getElementById(this.idNews).classList.remove("active");
-    }
-  }
+  })
 };
 </script>
-
-<style scoped>
-.product-tab-list {
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-
-.product-tab-list {
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-.product-tab-list::before,
-.product-tab-list::after {
-  background-color: #eee;
-  content: "";
-  height: 1px;
-  position: absolute;
-  top: 25px;
-  transition: all 0.4s ease 0s;
-  width: 300px;
-}
-.product-tab-list::before {
-  left: 0px;
-}
-.product-tab-list::after {
-  right: 0px;
-}
-.product-tab-list > a {
-  margin: 0 5px;
-}
-.product-tab-list > a h4 {
-  border: 2px solid #eee;
-  display: inline-block;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 13px 32px 12px;
-  transition: all 0.3s ease 0s;
-}
-.product-tab-list > a.active h4 {
-  border: 2px solid #3cb371;
-  color: #3cb371;
-}
-</style>
