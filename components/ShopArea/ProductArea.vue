@@ -1,31 +1,74 @@
 <template>
   <div class="product-area pt-35 pb-30">
     <div class="container">
-      <div class="product-tab-list mb-30 nav" role="tablist">
-        <a href="#novas-chegadas" data-toggle="tab" class="btn-tab active" @click="showNews">
-          <h4>Novas Chegadas</h4>
-        </a>
-        <a href="#destaques" data-toggle="tab" class="btn-tab" @click="showHots">
-          <h4>Destaques</h4>
-        </a>
-      </div>
-      <div class="tab-content jump">
-        <ProductList
-          :products="products_new"
-          :idContainer="idNews"
-          :isActive="true"
-          :itemsPerRow="5"
-        />
-        <ProductList
-          :products="products_hot"
-          :idContainer="idHots"
-          :isActive="false"
-          :itemsPerRow="5"
-        />
-      </div>
+      <tab-pane>
+        <template #title>
+          <tab-pane-title-button :active="true" :id="'tab-news'">Novas Chegadas</tab-pane-title-button>
+          <tab-pane-title-button :id="'tab-hots'">Destaques</tab-pane-title-button>
+        </template>
+        <template #content>
+          <tab-pane-content :active="true" :id="'tab-news'">
+            <ProductList
+              :products="products_new"
+              :idContainer="idNews"
+              :isActive="true"
+              :itemsPerRow="5"
+            />
+          </tab-pane-content>
+          <tab-pane-content :id="'tab-hots'">
+            <ProductList
+              :products="products_hot"
+              :idContainer="idHots"
+              :isActive="true"
+              :itemsPerRow="5"
+            />
+          </tab-pane-content>
+        </template>
+      </tab-pane>
     </div>
   </div>
 </template>
+
+<script>
+import ProductList from "~/components/ShopArea/ProductList.vue";
+
+import TabPane from "@/components/widgets/TabPane";
+import TabPaneTitleButton from "@/components/widgets/TabPaneTitleButton";
+import TabPaneContent from "@/components/widgets/TabPaneContent";
+
+export default {
+  components: {
+    ProductList,
+    TabPane,
+    TabPaneTitleButton,
+    TabPaneContent
+  },
+  props: ["products_new", "products_hot"],
+  data: () => ({
+    idNews: "home1",
+    idHots: "home2"
+  }),
+  methods: {
+    addCart(obj) {
+      this.$notify({
+        group: "general",
+        type: "success",
+        title: "Item adicionado",
+        text: "O Item foi adicionado com sucesso do seu carrinho de compras!"
+      });
+      this.$store.commit("cart/add", obj);
+    },
+    showNews() {
+      document.getElementById(this.idNews).classList.add("active");
+      document.getElementById(this.idHots).classList.remove("active");
+    },
+    showHots() {
+      document.getElementById(this.idHots).classList.add("active");
+      document.getElementById(this.idNews).classList.remove("active");
+    }
+  }
+};
+</script>
 
 <style scoped>
 .product-tab-list {
@@ -71,47 +114,3 @@
   color: #3cb371;
 }
 </style>
-
-<script>
-import ProductList from "~/components/ShopArea/ProductList.vue";
-
-export default {
-  components: {
-    ProductList
-  },
-  props: ["products_new", "products_hot"],
-  mounted() {
-      $(function() {
-        var $h3s = $(".btn-tab").click(function() {
-          $h3s.removeClass("active");
-          $(this).addClass("active");
-        });
-      });
-  },
-  data: () => ({
-    idNews: "home1",
-    idHots: "home2"
-  }),
-  methods: {
-    addCart(obj) {
-      this.$notify({
-        group: "general",
-        type: "success",
-        title: "Item adicionado",
-        text: "O Item foi adicionado com sucesso do seu carrinho de compras!"
-      });
-      this.$store.commit("cart/add", obj);
-    },
-    showNews() {
-      document.getElementById(this.idNews).classList.add("active");
-      document.getElementById(this.idHots).classList.remove("active");
-    },
-    showHots() {
-      document.getElementById(this.idHots).classList.add("active");
-      document.getElementById(this.idNews).classList.remove("active");
-    }
-  }
-};
-</script>
-
-

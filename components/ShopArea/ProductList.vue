@@ -70,6 +70,112 @@
   </div>
 </template>
 
+<script>
+import busFilter from "@/assets/js/eventBus_filter.js";
+import { mapGetters, mapActions } from 'vuex';
+
+export default {
+  props: {
+    products: Array /* Type: interfaces/product.ts */,
+    itemsPerRow: {
+      type: Number,
+      default: 4
+    },
+    idContainer: {
+      type: String,
+      default: "home1"
+    },
+    isActive: {
+      type: Boolean,
+      default: true
+    }
+  },
+  data: () => ({
+    isAct: true,
+    filtersAppied: [] /* Type: interfaces/filterProducts.ts */,
+    sortName: "default",
+    isLoading: false
+  }),
+  methods: {
+    ...mapActions({
+      add: 'cart/addToCart'
+    }),
+    addCart(obj) {
+      this.$notify({
+        group: "general",
+        type: "success",
+        title: "Item adicionado",
+        text: "O Item foi adicionado com sucesso do seu carrinho de compras!"
+      });
+      this.add(obj);
+    },
+    addFilter(filter) {
+      var exist = this.filtersAppied.findIndex(
+        item => JSON.stringify(item.type) == JSON.stringify(filter.type)
+      );
+
+      if (exist == -1) {
+        this.filtersAppied.push({ type: filter.type, data: [filter.value] });
+        return;
+      }
+
+      var existData = this.filtersAppied[exist].data.findIndex(
+        item => item == filter.value
+      );
+
+      if (existData == -1) {
+        this.filtersAppied[exist].data.push(filter.value);
+      } else {
+        this.filtersAppied[exist].data.splice(existData, 1);
+        // Remove obj if is empty
+        if (this.filtersAppied[exist].data.length == 0) {
+          this.filtersAppied.splice(exist, 1);
+        }
+      }
+    },
+    sortBy(by) {
+      this.sortName = by;
+    },
+    setLoading() {
+      this.isLoading = !this.isLoading;
+    }
+  },
+  created() {
+    this.isAct = this.isActive;
+
+    busFilter.$on("ADD_TO_FILTER", this.addFilter);
+    busFilter.$on("SORT_BY", this.sortBy);
+  },
+  computed: {
+    filteredProducts: function() {
+      return this.products
+        .filter(product => {
+          return this.filtersAppied.every(filterAppied => {
+            switch (filterAppied.type) {
+              case "Tag":
+                return product.tags.arrayContains(filterAppied.data);
+              case "Material":
+                return filterAppied.data.includes(product.material);
+              default:
+                return true;
+            }
+          });
+        })
+        .sort((a, b) => {
+          switch (this.sortName) {
+            case "PRICE_DESC":
+              return b.price - a.price;
+            case "PRICE_ASC":
+              return a.price - b.price;
+            default:
+              return 0;
+          }
+        });
+    }
+  }
+};
+</script>
+
 <style scoped>
 /* Items per row */
 .custom-col-5 {
@@ -262,111 +368,3 @@
   transition: all 0.3s ease 0s;
 }
 </style>
-
-<script>
-import busFilter from "@/assets/js/eventBus_filter.js";
-import { mapGetters, mapActions } from 'vuex';
-
-export default {
-  props: {
-    products: Array /* Type: interfaces/product.ts */,
-    itemsPerRow: {
-      type: Number,
-      default: 4
-    },
-    idContainer: {
-      type: String,
-      default: "home1"
-    },
-    isActive: {
-      type: Boolean,
-      default: true
-    }
-  },
-  data: () => ({
-    isAct: true,
-    filtersAppied: [] /* Type: interfaces/filterProducts.ts */,
-    sortName: "default",
-    isLoading: false
-  }),
-  methods: {
-    ...mapActions({
-      add: 'cart/addToCart'
-    }),
-    addCart(obj) {
-      this.$notify({
-        group: "general",
-        type: "success",
-        title: "Item adicionado",
-        text: "O Item foi adicionado com sucesso do seu carrinho de compras!"
-      });
-      this.add(obj);
-    },
-    addFilter(filter) {
-      var exist = this.filtersAppied.findIndex(
-        item => JSON.stringify(item.type) == JSON.stringify(filter.type)
-      );
-
-      if (exist == -1) {
-        this.filtersAppied.push({ type: filter.type, data: [filter.value] });
-        return;
-      }
-
-      var existData = this.filtersAppied[exist].data.findIndex(
-        item => item == filter.value
-      );
-
-      if (existData == -1) {
-        this.filtersAppied[exist].data.push(filter.value);
-      } else {
-        this.filtersAppied[exist].data.splice(existData, 1);
-        // Remove obj if is empty
-        if (this.filtersAppied[exist].data.length == 0) {
-          this.filtersAppied.splice(exist, 1);
-        }
-      }
-    },
-    sortBy(by) {
-      this.sortName = by;
-    },
-    setLoading() {
-      this.isLoading = !this.isLoading;
-    }
-  },
-  created() {
-    this.isAct = this.isActive;
-
-    busFilter.$on("ADD_TO_FILTER", this.addFilter);
-    busFilter.$on("SORT_BY", this.sortBy);
-  },
-  computed: {
-    filteredProducts: function() {
-      return this.products
-        .filter(product => {
-          return this.filtersAppied.every(filterAppied => {
-            switch (filterAppied.type) {
-              case "Tag":
-                return product.tags.arrayContains(filterAppied.data);
-              case "Material":
-                return filterAppied.data.includes(product.material);
-              default:
-                return true;
-            }
-          });
-        })
-        .sort((a, b) => {
-          switch (this.sortName) {
-            case "PRICE_DESC":
-              return b.price - a.price;
-            case "PRICE_ASC":
-              return a.price - b.price;
-            default:
-              return 0;
-          }
-        });
-    }
-  }
-};
-</script>
-
-
