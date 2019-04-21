@@ -132,10 +132,6 @@ export default {
   justify-content: center;
   margin: 0 -10px;
 }
-.star-pattern {
-  margin: 0 3px;
-  text-align: center;
-}
 .product-rating {
   position: relative;
 }

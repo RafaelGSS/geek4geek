@@ -41,7 +41,7 @@
                   :value="product.price"
                   :display_name="product.display_name"
                 />
-                <button-add-wishlist :id="product.id"/>
+                <button-add-wishlist style="padding: 8px 8px 8px;" :id="product.id"/>
               </div>
             </div>
             <simple-list :items="product.categories">

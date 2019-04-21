@@ -21,7 +21,7 @@ export default {
 a.same-action {
   width: 40px;
   height: 40px;
-  padding: 8px 8px 8px;
+  /* padding: 8px 8px 8px; */
   background-color: #eef0f1;
   border-radius: 3px;
   color: #242424;
