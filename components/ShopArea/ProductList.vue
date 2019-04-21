@@ -30,38 +30,6 @@ export default {
     filtersAppied: [],
     sortName: "default"
   }),
-  methods: {
-    addFilter(filter) {
-      var exist = this.filtersAppied.findIndex(
-        item => JSON.stringify(item.type) == JSON.stringify(filter.type)
-      );
-
-      if (exist == -1) {
-        this.filtersAppied.push({ type: filter.type, data: [filter.value] });
-        return;
-      }
-
-      var existData = this.filtersAppied[exist].data.findIndex(
-        item => item == filter.value
-      );
-
-      if (existData == -1) {
-        this.filtersAppied[exist].data.push(filter.value);
-      } else {
-        this.filtersAppied[exist].data.splice(existData, 1);
-        // Remove obj if is empty
-        if (this.filtersAppied[exist].data.length == 0) {
-          this.filtersAppied.splice(exist, 1);
-        }
-      }
-    },
-    sortBy(by) {
-      this.sortName = by;
-    },
-    setLoading() {
-      this.isLoading = !this.isLoading;
-    }
-  },
   computed: {
     filteredProducts: function() {
       return this.products

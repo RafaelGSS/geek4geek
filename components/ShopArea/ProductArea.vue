@@ -1,7 +1,7 @@
 <template>
   <div class="product-area pt-35 pb-30">
     <div class="container">
-      <tab-pane>
+      <tab-pane :withCentralBorder=true :withBorder="this.bordered">
         <template #title>
           <tab-pane-title-button :active="true" :id="'tab-news'">Novas Chegadas</tab-pane-title-button>
           <tab-pane-title-button :id="'tab-hots'">Destaques</tab-pane-title-button>
@@ -44,8 +44,7 @@ export default {
     TabPaneContent
   },
   data: () => ({
-    idNews: "home1",
-    idHots: "home2"
+    bordered: false
   })
 };
 </script>
