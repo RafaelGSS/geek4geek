@@ -8,18 +8,14 @@
         </template>
         <template #content>
           <tab-pane-content :active="true" :id="'tab-news'">
-            <ProductList
+            <product-list
               :products="products_new"
-              :idContainer="idNews"
-              :isActive="true"
               :itemsPerRow="5"
             />
           </tab-pane-content>
           <tab-pane-content :id="'tab-hots'">
-            <ProductList
+            <product-list
               :products="products_hot"
-              :idContainer="idHots"
-              :isActive="true"
               :itemsPerRow="5"
             />
           </tab-pane-content>
