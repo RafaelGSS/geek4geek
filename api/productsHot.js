@@ -7,8 +7,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],
@@ -32,8 +32,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],
@@ -57,8 +57,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],
@@ -82,8 +82,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],
@@ -107,8 +107,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],
@@ -132,8 +132,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],
@@ -157,8 +157,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],
@@ -182,8 +182,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],
@@ -207,8 +207,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],
@@ -232,8 +232,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],
@@ -257,8 +257,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],

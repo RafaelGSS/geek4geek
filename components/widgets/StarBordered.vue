@@ -1,7 +1,7 @@
 <template>
   <i
     @click="onClicked"
-    :class="{'ion-android-star-outline': true, 'theme-star': this.checked, 'has-button': hasButton }"
+    :class="{'ion-android-star-outline': true, 'selected': this.checked, 'has-button': hasButton }"
   ></i>
 </template>
 

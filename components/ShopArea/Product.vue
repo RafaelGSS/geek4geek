@@ -1,14 +1,13 @@
 <template>
+ <!-- REMOVER LINHA ACIMA DE TABPANE PRODUCT AREA -->
   <div class="prod">
-    <div class="product-img">
-      <div class="product-img-slider">
-        <a :href="product.href">
-          <img :src="product.images[0].display_image" :alt="product.images[0].alt">
-        </a>
-      </div>
-      <!-- BADGE DISCOUNT -->
-      <span v-if="product.promo">-{{ product.promotion.percentage }}%</span>
-    </div>
+    <image-product
+      :href="product.href"
+      :src="product.images[0].display_image"
+      :alt="product.images[0].alt"
+      :discount="product.promotion.percentage"
+      class="product-img"
+    />
     <div class="list-col">
       <div class="gridview">
         <div class="product-content text-center">
@@ -16,14 +15,7 @@
           <h4>
             <a href="#">{{ product.name }}</a>
           </h4>
-          <!-- Placeholder/Price -->
-          <div class="product-price-wrapper">
-            <span>R$ {{ product.price }}</span>
-            <span
-              class="product-price-old"
-              v-if="product.promo"
-            >R$ {{ product.promotion.old_price }}</span>
-          </div>
+          <price :price="product.price" :oldPrice="product.promotion.old_price"></price>
         </div>
         <div class="product-action-wrapper-2 text-center">
           <div class="product-rating">
@@ -31,11 +23,11 @@
             <star-bordered :hasButton="false"></star-bordered>
             <star-bordered :hasButton="false"></star-bordered>
             <star-bordered :hasButton="false"></star-bordered>
-            <star-bordered :selected="true" :hasButton="false"></star-bordered>
+            <star-bordered :selected="false" :hasButton="false"></star-bordered>
           </div>
           <p>{{ product.display_description }}</p>
           <div class="product-action">
-            <button-add-wishlist :id="product.id"></button-add-wishlist>
+            <button-add-wishlist :id="product.id"/>
             <button-add-cart
               :id="product.id"
               :value="product.price"
@@ -50,14 +42,23 @@
 
 <script>
 import StarBordered from "@/components/widgets/StarBordered";
+
 import ButtonAddCart from "@/components/cart/ButtonAddCart";
 import ButtonAddWishlist from "@/components/cart/ButtonAddWishlist";
+
+import BadgeDiscount from "@/components/ShopArea/BadgeDiscount";
+
+import Price from "@/components/product-details/placeholders/Price";
+import ImageProduct from "@/components/banner/images/ImageProduct";
 
 export default {
   components: {
     StarBordered,
     ButtonAddCart,
-    ButtonAddWishlist
+    ButtonAddWishlist,
+    BadgeDiscount,
+    Price,
+    ImageProduct
   },
   props: {
     product: Object
@@ -66,6 +67,11 @@ export default {
 </script>
 
 <style scoped>
+.product-img {
+  padding: 10px 10px 0;
+  position: relative;
+}
+
 .product-action-wrapper-2 > p {
   color: #242424;
   font-size: 12px;
@@ -95,29 +101,11 @@ export default {
   opacity: 1;
 }
 
-.product-img {
-  padding: 10px 10px 0;
-  position: relative;
-}
-.product-img img {
-  width: 100%;
-}
 .product-content {
   padding: 3px 18px 0;
 }
 .product-content {
   padding: 3px 28px 0;
-}
-.product-img > span {
-  background-color: #3cb371;
-  border-radius: 3px;
-  color: #fff;
-  left: 15px;
-  line-height: 1;
-  padding: 6px 14px 5px;
-  position: absolute;
-  top: 15px;
-  z-index: 99;
 }
 .product-content > span {
   color: #555;
@@ -131,13 +119,7 @@ export default {
 .product-content > h4 a:hover {
   color: #3cb371;
 }
-.product-price-wrapper > span {
-  color: #242424;
-  margin: 0 2px;
-}
-.product-price-wrapper > span.product-price-old {
-  text-decoration: line-through;
-}
+
 .product-action-wrapper > p {
   color: #242424;
   font-size: 12px;
@@ -172,9 +154,5 @@ export default {
 }
 .product-rating::after {
   right: 0;
-}
-.product-price-wrapper {
-  display: block;
-  transition: all 0.3s ease 0s;
 }
 </style>
