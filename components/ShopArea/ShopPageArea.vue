@@ -17,7 +17,7 @@
             </div>
             <sort-by />
           </div>
-          <ProductList :products=products :itemsPerRow=4></ProductList>
+          <product-list :products=products :itemsPerRow=4></product-list>
         </div>
       </div>
     </div>
