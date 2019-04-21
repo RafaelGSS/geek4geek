@@ -1,12 +1,12 @@
 <template>
-    <div class="banner-area">
-      <img :src="img.src" :alt="img.alt">
-    </div>
+  <div class="banner-area">
+    <img :src="img.src" :alt="img.alt">
+  </div>
 </template>
 
 <style scoped>
 .banner-area > img {
-    width: 100%;
+  width: 100%;
 }
 </style>
 
@@ -15,9 +15,7 @@ export default {
     props: {
         img: {
             type: Object,
-            default: function() {
-                 return {src:"/img/banner/banner-80.jpg", alt: "banner"}
-            }
+            default: () => ({ src: "/img/banner/banner-80.jpg", alt: "banner"})
         }
     }
 }

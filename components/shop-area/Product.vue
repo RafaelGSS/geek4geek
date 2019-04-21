@@ -46,7 +46,7 @@ import StarBordered from "@/components/widgets/StarBordered";
 import ButtonAddCart from "@/components/cart/ButtonAddCart";
 import ButtonAddWishlist from "@/components/cart/ButtonAddWishlist";
 
-import BadgeDiscount from "@/components/ShopArea/BadgeDiscount";
+import BadgeDiscount from "@/components/shop-area/BadgeDiscount";
 
 import Price from "@/components/product-details/placeholders/Price";
 import ImageProduct from "@/components/banner/images/ImageProduct";

@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import BadgeDiscount from "@/components/ShopArea/BadgeDiscount";
+import BadgeDiscount from "@/components/shop-area/BadgeDiscount";
 
 export default {
   props: {
