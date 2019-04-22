@@ -5,145 +5,146 @@
         <div class="section-title-wrapper section-bg-white">
           <h4 class="section-title">Produtos mais vendidos</h4>
         </div>
-        <div class="product-tab-list-2 nav section-bg-white">
-          <a class="active" href="#cups" data-toggle="tab">
-            <h4>Canecas</h4>
-          </a>
-          <a href="#tshirts" data-toggle="tab">
-            <h4>Camisetas</h4>
-          </a>
-        </div>
-      </div>
-      <div class="tab-content jump">
-        <div class="tab-pane active" id="cups">
-          <div class="best-selling-active-2 nav-style nav-style-red">
-            <div class="best-selling-bundle-2">
-              <div class="row">
-                <div class="col-xl-8 col-lg-12 col-md-12">
-                  <div
-                    class="best-selling-pro-wrapper mb-20 best-selling-big-img devita-product-red"
-                  >
-                    <div class="product-img best-selling-img">
-                      <a href="#">
-                        <img :alt="cups[0].images[0].alt" :src="cups[0].images[0].display_image">
-                      </a>
-                      <span v-if="cups[0].promo">-{{ cups[0].promotion.percentage }}%</span>
-                    </div>
-                    <div class="product-content best-pro-content best-selling-style-2">
-                      <span
-                        v-for="(category, index) in cups[0].categories"
-                        :key="`category-cup-${index}`"
-                      >{{ category }}</span>
-                      <h4>
-                        <a href="#">{{ cups[0].name }}</a>
-                      </h4>
-                      <div class="product-price-wrapper">
-                        <span>R$ {{ cups[0].price }}</span>
-                        <span
-                          class="product-price-old"
-                          v-if="cups[0].promo"
-                        >{{ cups[0].promotion.old_price }}</span>
-                      </div>
-                      <div class="product-list">{{ cups[0].display_description }}</div>
-                      <div class="best-pro-action-2">
-                        <a
-                          class="action-cart"
-                          title="Add cart"
-                          href="#"
-                          @click="addCart({id: cups[0].id,
+        <tab-pane>
+          <template #title>
+            <tab-pane-title :active="true" :id="'tab-cnc'">Canecas</tab-pane-title>
+            <tab-pane-title :id="'tab-cms'">Camisetas</tab-pane-title>
+          </template>
+          <template #content>
+            <tab-pane-content :active="true" :id="'tab-cnc'">
+              <div class="tab-pane active" id="cups">
+                <div class="best-selling-active-2">
+                  <div class="best-selling-bundle-2">
+                    <div class="row">
+                      <div class="col-xl-8 col-lg-12 col-md-12">
+                        <div class="best-selling-pro-wrapper mb-20 best-selling-big-img">
+                          <div class="product-img best-selling-img">
+                            <a href="#">
+                              <img
+                                :alt="cups[0].images[0].alt"
+                                :src="cups[0].images[0].display_image"
+                              >
+                            </a>
+                            <span v-if="cups[0].promo">-{{ cups[0].promotion.percentage }}%</span>
+                          </div>
+                          <div class="product-content best-pro-content best-selling-style-2">
+                            <span
+                              v-for="(category, index) in cups[0].categories"
+                              :key="`category-cup-${index}`"
+                            >{{ category }}</span>
+                            <h4>
+                              <a href="#">{{ cups[0].name }}</a>
+                            </h4>
+                            <div class="product-price-wrapper">
+                              <span>R$ {{ cups[0].price }}</span>
+                              <span
+                                class="product-price-old"
+                                v-if="cups[0].promo"
+                              >{{ cups[0].promotion.old_price }}</span>
+                            </div>
+                            <div class="product-list">{{ cups[0].display_description }}</div>
+                            <div class="best-pro-action-2">
+                              <a
+                                class="action-cart"
+                                title="Add cart"
+                                href="#"
+                                @click="addCart({id: cups[0].id,
                               display_name: cups[0].name,
                               quantity: 1,
                               value: cups[0].price})"
-                        >Add cart</a>
-                        <a class="same-action" title="Wishlist" href="#">
-                          <i class="fa fa-heart-o"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-12 col-md-12">
-                  <div class="row">
-                    <div class="col-xl-12 col-lg-4 col-md-6">
-                      <div class="best-selling-pro-wrapper mb-20 devita-product-red">
-                        <div class="product-img">
-                          <a href="#">
-                            <img
-                              :alt="cups[1].images[0].alt"
-                              :src="cups[1].images[0].low_display_image"
-                            >
-                          </a>
-                          <span v-if="cups[1].promo">-{{ cups[1].promotion.percentage }}%</span>
-                        </div>
-                        <div class="product-content best-pro-content">
-                          <span
-                            v-for="(category, index) in cups[1].categories"
-                            :key="`category-cups1-${index}`"
-                          >{{ category }}</span>
-                          <h4>
-                            <a href="#">{{ cups[1].name }}</a>
-                          </h4>
-                          <div class="product-price-wrapper">
-                            <span>R$ {{ cups[1].price }}</span>
-                            <span
-                              class="product-price-old"
-                              v-if="cups[1].promo"
-                            >R$ {{ cups[1].promotion.old_price }}</span>
+                              >Add cart</a>
+                              <a class="same-action" title="Wishlist" href="#">
+                                <i class="fa fa-heart-o"></i>
+                              </a>
+                            </div>
                           </div>
-                          <div class="product-action best-pro-action">
-                            <a class="same-action" title="Wishlist" href="#">
-                              <i class="fa fa-heart-o"></i>
-                            </a>
-                            <a
-                              class="action-cart"
-                              title="Add cart"
-                              href="#"
-                              @click="addCart({id: cups[1].id,
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-12 col-md-12">
+                        <div class="row">
+                          <div class="col-xl-12 col-lg-4 col-md-6">
+                            <div class="best-selling-pro-wrapper mb-20">
+                              <div class="product-img">
+                                <a href="#">
+                                  <img
+                                    :alt="cups[1].images[0].alt"
+                                    :src="cups[1].images[0].low_display_image"
+                                  >
+                                </a>
+                                <span v-if="cups[1].promo">-{{ cups[1].promotion.percentage }}%</span>
+                              </div>
+                              <div class="product-content best-pro-content">
+                                <span
+                                  v-for="(category, index) in cups[1].categories"
+                                  :key="`category-cups1-${index}`"
+                                >{{ category }}</span>
+                                <h4>
+                                  <a href="#">{{ cups[1].name }}</a>
+                                </h4>
+                                <div class="product-price-wrapper">
+                                  <span>R$ {{ cups[1].price }}</span>
+                                  <span
+                                    class="product-price-old"
+                                    v-if="cups[1].promo"
+                                  >R$ {{ cups[1].promotion.old_price }}</span>
+                                </div>
+                                <div class="product-action best-pro-action">
+                                  <a class="same-action" title="Wishlist" href="#">
+                                    <i class="fa fa-heart-o"></i>
+                                  </a>
+                                  <a
+                                    class="action-cart"
+                                    title="Add cart"
+                                    href="#"
+                                    @click="addCart({id: cups[1].id,
                               display_name: cups[1].name,
                               quantity: 1,
                               value: cups[1].price})"
-                            >Add cart</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="best-selling-pro-wrapper mb-20 devita-product-red">
-                        <div class="product-img">
-                          <a href="#">
-                            <img
-                              :alt="cups[2].images[0].alt"
-                              :src="cups[2].images[0].low_display_image"
-                            >
-                          </a>
-                          <span v-if="cups[2].promo">-{{ cups[2].promotion.percentage }}%</span>
-                        </div>
-                        <div class="product-content best-pro-content">
-                          <span
-                            v-for="(category, index) in cups[2].categories"
-                            :key="`category-cup2-${index}`"
-                          >{{ category }}</span>
-                          <h4>
-                            <a href="#">{{ cups[2].name }}</a>
-                          </h4>
-                          <div class="product-price-wrapper">
-                            <span>R$ {{ cups[2].price }}</span>
-                            <span
-                              class="product-price-old"
-                              v-if="cups[2].promo"
-                            >R$ {{ cups[2].promotion.old_price }}</span>
-                          </div>
-                          <div class="product-action best-pro-action">
-                            <a class="same-action" title="Wishlist" href="#">
-                              <i class="fa fa-heart-o"></i>
-                            </a>
-                            <a
-                              class="action-cart"
-                              title="Add cart"
-                              href="#"
-                              @click="addCart({id: cups[2].id,
+                                  >Add cart</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="best-selling-pro-wrapper mb-20">
+                              <div class="product-img">
+                                <a href="#">
+                                  <img
+                                    :alt="cups[2].images[0].alt"
+                                    :src="cups[2].images[0].low_display_image"
+                                  >
+                                </a>
+                                <span v-if="cups[2].promo">-{{ cups[2].promotion.percentage }}%</span>
+                              </div>
+                              <div class="product-content best-pro-content">
+                                <span
+                                  v-for="(category, index) in cups[2].categories"
+                                  :key="`category-cup2-${index}`"
+                                >{{ category }}</span>
+                                <h4>
+                                  <a href="#">{{ cups[2].name }}</a>
+                                </h4>
+                                <div class="product-price-wrapper">
+                                  <span>R$ {{ cups[2].price }}</span>
+                                  <span
+                                    class="product-price-old"
+                                    v-if="cups[2].promo"
+                                  >R$ {{ cups[2].promotion.old_price }}</span>
+                                </div>
+                                <div class="product-action best-pro-action">
+                                  <a class="same-action" title="Wishlist" href="#">
+                                    <i class="fa fa-heart-o"></i>
+                                  </a>
+                                  <a
+                                    class="action-cart"
+                                    title="Add cart"
+                                    href="#"
+                                    @click="addCart({id: cups[2].id,
                               display_name: cups[2].name,
                               quantity: 1,
                               value: cups[2].price})"
-                            >Add cart</a>
+                                  >Add cart</a>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -151,164 +152,60 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="tab-pane" id="tshirts">
-          <div class="best-selling-active-2 nav-style nav-style-red">
-            <div class="best-selling-bundle-2">
-              <div class="row">
-                <div class="col-xl-8 col-lg-12 col-md-12">
-                  <div
-                    class="best-selling-pro-wrapper mb-20 best-selling-big-img devita-product-red"
-                  >
-                    <div class="product-img best-selling-img">
-                      <a href="#">
-                        <img
-                          :alt="tshirts[0].images[0].alt"
-                          :src="tshirts[0].images[0].display_image"
-                        >
-                      </a>
-                      <span v-if="tshirts[0].promo">-{{ tshirts[0].promotion.percentage }}%</span>
-                    </div>
-                    <div class="product-content best-pro-content best-selling-style-2">
-                      <span
-                        v-for="(category, index) in tshirts[0].categories"
-                        :key="`category-cup-${index}`"
-                      >{{ category }}</span>
-                      <h4>
-                        <a href="#">{{ tshirts[0].name }}</a>
-                      </h4>
-                      <div class="product-price-wrapper">
-                        <span>R$ {{ tshirts[0].price }}</span>
-                        <span
-                          class="product-price-old"
-                          v-if="tshirts[0].promo"
-                        >{{ tshirts[0].promotion.old_price }}</span>
-                      </div>
-                      <div class="product-list">{{ tshirts[0].display_description }}</div>
-                      <div class="best-pro-action-2">
-                        <a
-                          class="action-cart"
-                          title="Add cart"
-                          href="#"
-                          @click="addCart({id: tshirts[0].id,
-                              display_name: tshirts[0].name,
-                              quantity: 1,
-                              value: tshirts[0].price})"
-                        >Add cart</a>
-                        <a class="same-action" title="Wishlist" href="#">
-                          <i class="fa fa-heart-o"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-12 col-md-12">
+            </tab-pane-content>
+            <tab-pane-content :id="'tab-cms'">
+              <div class="best-selling-active-2">
+                <div class="best-selling-bundle-2">
                   <div class="row">
-                    <div class="col-xl-12 col-lg-4 col-md-6">
-                      <div class="best-selling-pro-wrapper mb-20 devita-product-red">
-                        <div class="product-img">
-                          <a href="#">
-                            <img
-                              :alt="tshirts[1].images[0].alt"
-                              :src="tshirts[1].images[0].low_display_image"
-                            >
-                          </a>
-                          <span v-if="tshirts[1].promo">-{{ tshirts[1].promotion.percentage }}%</span>
-                        </div>
-                        <div class="product-content best-pro-content">
-                          <span
-                            v-for="(category, index) in tshirts[1].categories"
-                            :key="`category-cup1-${index}`"
-                          >{{ category }}</span>
-                          <h4>
-                            <a href="#">{{ tshirts[1].name }}</a>
-                          </h4>
-                          <div class="product-price-wrapper">
-                            <span>R$ {{ tshirts[1].price }}</span>
-                            <span
-                              class="product-price-old"
-                              v-if="tshirts[1].promo"
-                            >R$ {{ tshirts[1].promotion.old_price }}</span>
-                          </div>
-                          <div class="product-action best-pro-action">
-                            <a class="same-action" title="Wishlist" href="#">
-                              <i class="fa fa-heart-o"></i>
-                            </a>
-                            <a
-                              class="action-cart"
-                              title="Add cart"
-                              href="#"
-                              @click="addCart({id: tshirts[1].id,
-                              display_name: tshirts[1].name,
-                              quantity: 1,
-                              value: tshirts[1].price})"
-                            >Add cart</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="best-selling-pro-wrapper mb-20 devita-product-red">
-                        <div class="product-img">
-                          <a href="#">
-                            <img
-                              :alt="tshirts[2].images[0].alt"
-                              :src="tshirts[2].images[0].low_display_image"
-                            >
-                          </a>
-                          <span v-if="tshirts[2].promo">-{{ tshirts[2].promotion.percentage }}%</span>
-                        </div>
-                        <div class="product-content best-pro-content">
-                          <span
-                            v-for="(category, index) in tshirts[2].categories"
-                            :key="`category-cup2-${index}`"
-                          >{{ category }}</span>
-                          <h4>
-                            <a href="#">{{ tshirts[2].name }}</a>
-                          </h4>
-                          <div class="product-price-wrapper">
-                            <span>R$ {{ tshirts[2].price }}</span>
-                            <span
-                              class="product-price-old"
-                              v-if="tshirts[2].promo"
-                            >R$ {{ tshirts[2].promotion.old_price }}</span>
-                          </div>
-                          <div class="product-action best-pro-action">
-                            <a class="same-action" title="Wishlist" href="#">
-                              <i class="fa fa-heart-o"></i>
-                            </a>
-                            <a
-                              class="action-cart"
-                              title="Add cart"
-                              href="#"
-                              @click="addCart({id: tshirts[2].id,
-                              display_name: tshirts[2].name,
-                              quantity: 1,
-                              value: tshirts[2].price})"
-                            >Add cart</a>
-                          </div>
+                    <div class="col-xl-8 col-lg-12 col-md-12">
+                      <product
+                        class="best-selling-pro-wrapper mb-20"
+                        :onHover="false"
+                        :product="tshirts[0]"
+                      />
+                    </div>
+                    <div class="col-xl-4 col-lg-12 col-md-12">
+                      <div class="row">
+                        <div class="col-xl-12 col-lg-4 col-md-6">
+                          <product
+                            class="best-selling-pro-wrapper mb-20"
+                            :hasRatting="false"
+                            :onHover="false"
+                            :product="tshirts[1]"
+                          />
+                          <product
+                            class="best-selling-pro-wrapper mb-20"
+                            :hasRatting="false"
+                            :onHover="false"
+                            :product="tshirts[2]"
+                          />
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
+            </tab-pane-content>
+          </template>
+        </tab-pane>
       </div>
     </div>
   </div>
 </template>
+
 <script>
-import { mapActions } from "vuex";
 import TabPane from "@/components/widgets/TabPane";
 import TabPaneTitle from "@/components/widgets/TabPaneTitle";
+import TabPaneContent from "@/components/widgets/TabPaneContent";
+
+import Product from "@/components/shop-area/Product";
 
 export default {
   components: {
     TabPane,
-    TabPaneTitle
+    TabPaneTitle,
+    TabPaneContent,
+    Product
   },
   props: {
     tshirts: {
@@ -318,19 +215,8 @@ export default {
       type: Array
     }
   },
-  methods: {
-    ...mapActions({
-      add: "cart/addToCart"
-    }),
-    addCart(obj) {
-      this.$notify({
-        group: "general",
-        type: "success",
-        title: "Item adicionado",
-        text: "O Item foi adicionado com sucesso do seu carrinho de compras!"
-      });
-      this.add(obj);
-    }
+  mounted() {
+    console.log(this.tshirts);
   }
 };
 </script>
@@ -434,17 +320,7 @@ export default {
   overflow: hidden;
   position: relative;
 }
-.section-border::before {
-  background-color: #eeeeee;
-  content: "";
-  height: 1px;
-  left: 0;
-  position: absolute;
-  top: 10px;
-  transition: all 0.4s ease 0s;
-  width: 100%;
-  z-index: 1;
-}
+
 .section-title-wrapper {
   display: inline-block;
   float: left;

@@ -1,11 +1,10 @@
 <template>
- <!-- REMOVER LINHA ACIMA DE TABPANE PRODUCT AREA -->
-  <div class="prod">
+  <div :class="this.classHover">
     <image-product
       :href="product.href"
       :src="product.images[0].display_image"
       :alt="product.images[0].alt"
-      :discount="product.promotion.percentage"
+      :discount="this.discount"
       class="product-img"
     />
     <div class="list-col">
@@ -17,16 +16,18 @@
           </h4>
           <price :price="product.price" :oldPrice="product.promotion.old_price"></price>
         </div>
-        <div class="product-action-wrapper-2 text-center">
-          <div class="product-rating">
+        <div class="product-action-wrapper text-center">
+          <div class="product-rating" v-if="hasRatting">
             <star-bordered :hasButton="true"></star-bordered>
             <star-bordered :hasButton="false"></star-bordered>
             <star-bordered :hasButton="false"></star-bordered>
             <star-bordered :hasButton="false"></star-bordered>
             <star-bordered :selected="false" :hasButton="false"></star-bordered>
           </div>
-          <p>{{ product.display_description }}</p>
-          <div class="product-action">
+          <slot name="description">
+            <p>{{ product.display_description }}</p>
+          </slot>
+          <div class="product-action" v-if="hasAction">
             <button-add-wishlist :id="product.id"/>
             <button-add-cart
               :id="product.id"
@@ -61,7 +62,27 @@ export default {
     ImageProduct
   },
   props: {
-    product: Object
+    product: Object,
+    onHover: {
+      type: Boolean,
+      default: true
+    },
+    hasRatting: {
+      type: Boolean,
+      default: true
+    },
+    hasAction: {
+      type: Boolean,
+      default: true
+    }
+  },
+  computed: {
+    discount() {
+      return this.product.promotion.percentage || null;
+    },
+    classHover() {
+      return this.onHover ? "prod" : "expanded";
+    }
   }
 };
 </script>
@@ -72,7 +93,7 @@ export default {
   position: relative;
 }
 
-.product-action-wrapper-2 > p {
+.product-action-wrapper > p {
   color: #242424;
   font-size: 12px;
   line-height: 18px;
@@ -87,20 +108,20 @@ export default {
   text-align: center;
   transition: all 0.3s ease-out 0s;
 }
-.prod:hover .list-col .gridview {
-  margin-bottom: -166px;
-}
-.product-action-wrapper-2 {
+.product-action-wrapper {
   margin: -181px -15px -15px;
   opacity: 0;
   padding: 26px 23px 0;
   transition: all 0.3s ease-out 0s;
 }
-.prod:hover .product-action-wrapper-2 {
+.prod:hover .list-col .gridview {
+  margin-bottom: -166px;
+}
+.prod:hover .product-action-wrapper,
+.expanded .product-action-wrapper {
   margin: -15px;
   opacity: 1;
 }
-
 .product-content {
   padding: 3px 18px 0;
 }
