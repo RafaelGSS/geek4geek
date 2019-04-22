@@ -9,33 +9,37 @@
     />
     <div class="list-col">
       <div class="gridview">
-        <div class="product-content text-center">
-          <span v-for="category in product.categories" :key="category">{{ category }}</span>
-          <h4>
-            <a href="#">{{ product.name }}</a>
-          </h4>
-          <price :price="product.price" :oldPrice="product.promotion.old_price"></price>
-        </div>
-        <div class="product-action-wrapper text-center">
-          <div class="product-rating" v-if="hasRatting">
-            <star-bordered :hasButton="true"></star-bordered>
-            <star-bordered :hasButton="false"></star-bordered>
-            <star-bordered :hasButton="false"></star-bordered>
-            <star-bordered :hasButton="false"></star-bordered>
-            <star-bordered :selected="false" :hasButton="false"></star-bordered>
+        <slot name="content" :product=product>
+          <div class="product-content text-center">
+            <span v-for="category in product.categories" :key="category">{{ category }}</span>
+            <h4>
+              <a href="#">{{ product.name }}</a>
+            </h4>
+            <price :price="product.price" :oldPrice="product.promotion.old_price"></price>
           </div>
-          <slot name="description">
-            <p>{{ product.display_description }}</p>
-          </slot>
-          <div class="product-action" v-if="hasAction">
-            <button-add-wishlist :id="product.id"/>
-            <button-add-cart
-              :id="product.id"
-              :value="product.price"
-              :display_name="product.display_name"
-            >+ Carrinho</button-add-cart>
+        </slot>
+        <slot name="action">
+          <div class="product-action-wrapper text-center">
+            <div class="product-rating" v-if="hasRatting">
+              <star-bordered :hasButton="true"></star-bordered>
+              <star-bordered :hasButton="false"></star-bordered>
+              <star-bordered :hasButton="false"></star-bordered>
+              <star-bordered :hasButton="false"></star-bordered>
+              <star-bordered :selected="false" :hasButton="false"></star-bordered>
+            </div>
+            <slot name="description">
+              <p>{{ product.display_description }}</p>
+            </slot>
+            <div class="product-action" v-if="hasAction">
+              <button-add-wishlist :id="product.id"/>
+              <button-add-cart
+                :id="product.id"
+                :value="product.price"
+                :display_name="product.display_name"
+              >+ Carrinho</button-add-cart>
+            </div>
           </div>
-        </div>
+        </slot>
       </div>
     </div>
   </div>
@@ -74,6 +78,11 @@ export default {
     hasAction: {
       type: Boolean,
       default: true
+    },
+    orientation: {
+      type: String,
+      default: "vertical",
+      validator: val => ["vertical", "horizontal"].includes(val)
     }
   },
   computed: {
@@ -81,13 +90,21 @@ export default {
       return this.product.promotion.percentage || null;
     },
     classHover() {
-      return this.onHover ? "prod" : "expanded";
+      let clsHover =  this.onHover ? "prod" : "expanded";
+      return `${clsHover} ${this.orientation}`
     }
   }
 };
 </script>
 
 <style scoped>
+.horizontal {
+  display: flex;
+}
+.vertical {
+  display: block;
+}
+
 .product-img {
   padding: 10px 10px 0;
   position: relative;
