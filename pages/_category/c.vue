@@ -8,8 +8,8 @@
 <script>
 import Page from "~/components/Page";
 
-import FullBanner from '~/components/Banner/FullBanner';
-import ShopPageArea from "~/components/ShopArea/ShopPageArea";
+import FullBanner from '~/components/banner/FullBanner';
+import ShopPageArea from "~/components/shop-area/ShopPageArea";
 
 import products from '~/api/categoryProducts';
 import tags from '~/api/categoryTags';

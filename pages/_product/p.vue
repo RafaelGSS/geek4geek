@@ -1,7 +1,7 @@
 <template>
   <Page>
-    <ProductDetails :pProduct="product"/>
-    <DescriptionReview :reviews="reviews" :full_description="product.full_description"/>
+    <ProductDetails :product="product"/>
+    <ProductContent :reviews="reviews" :full_description="product.full_description"/>
     <BannerArea />
     <FullBanner />
   </Page>
@@ -10,12 +10,12 @@
 <script>
 import Page from "~/components/Page";
 
-import ProductDetails from "~/components/ProductDetails/ProductDetails";
+import ProductDetails from "~/components/product-details/ProductDetails";
 
-import BannerArea from "~/components/Banner/BannerArea";
-import FullBanner from "~/components/Banner/FullBanner";
+import BannerArea from "~/components/banner/BannerArea";
+import FullBanner from "~/components/banner/FullBanner";
 
-import DescriptionReview from "~/components/ProductDetails/DescriptionReview";
+import ProductContent from "~/components/product-details/ProductContent";
 
 
 /**
@@ -29,7 +29,7 @@ export default {
     components: {
         Page,
         ProductDetails,
-        DescriptionReview,
+        ProductContent,
         BannerArea,
         FullBanner
   },
@@ -46,15 +46,10 @@ export default {
       setTimeout(() => {
         resolve({
           product: product,
+          reviews: productReview
         });
       }, 1500);
     });
-  },
-  mounted(){
-    setTimeout(() => {
-      this.reviews = productReview
-      console.log('entrou', this.reviews)
-    }, 10000)
   }
 };
 </script>

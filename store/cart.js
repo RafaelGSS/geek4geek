@@ -50,7 +50,7 @@ export const getters = {
         return state.itemsCart
     },
     sum: state => {
-        let sum = 
+        let sum = 0
         state.itemsCart.forEach(item => {	
             sum += item.value
         });

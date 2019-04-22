@@ -16,7 +16,7 @@ var productsNew = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
@@ -41,7 +41,7 @@ var productsNew = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
@@ -66,7 +66,7 @@ var productsNew = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
@@ -91,7 +91,7 @@ var productsNew = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
@@ -116,7 +116,7 @@ var productsNew = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
@@ -141,7 +141,7 @@ var productsNew = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
@@ -166,7 +166,7 @@ var productsNew = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
@@ -191,7 +191,7 @@ var productsNew = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
@@ -216,7 +216,7 @@ var productsNew = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
@@ -241,7 +241,7 @@ var productsNew = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
@@ -266,7 +266,7 @@ var productsNew = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""

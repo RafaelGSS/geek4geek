@@ -30,6 +30,10 @@ var bestSellingShirts = [
         "display_description": "Descricao dos protudos em modo de display",
         "full_description": "Descricao total dos produtos",
         "promo": false,
+        "promotion": {
+            "percentage": 10,
+            "old_price": 100
+        },
         "stock": 10,
         "price": 90,
         "tags": [],

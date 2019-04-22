@@ -10,27 +10,27 @@
 </template>
 
 <script>
-import Page from "~/components/Page";
+import Page from "@/components/Page";
 
-import Slider from "~/components/Banner/Slider";
-import BannerArea from "~/components/Banner/BannerArea";
-import FullBanner from "~/components/Banner/FullBanner";
-import ServiceArea from "~/components/Banner/ServiceArea";
+import Slider from "@/components/banner/Slider";
+import BannerArea from "@/components/banner/BannerArea";
+import FullBanner from "@/components/banner/FullBanner";
+import ServiceArea from "@/components/banner/ServiceArea";
 
-import ProductArea from "~/components/ShopArea/ProductArea";
-import BestSellingArea from "~/components/ShopArea/BestSellingArea";
+import ProductArea from "@/components/shop-area/ProductArea";
+import BestSellingArea from "@/components/shop-area/BestSellingArea";
 
 /**
  * Simulating API
  */
 
-import productsNew from "~/api/productsNew";
-import productsHot from "~/api/productsHot";
-import _categories from "~/api/categories";
-import images from "~/api/imagesSlider";
+import productsNew from "@/api/productsNew";
+import productsHot from "@/api/productsHot";
+import _categories from "@/api/categories";
+import images from "@/api/imagesSlider";
 
-import bestSellingShirts from "~/api/bestSellingShirts";
-import bestSellingCups from "~/api/bestSellingCups";
+import bestSellingShirts from "@/api/bestSellingShirts";
+import bestSellingCups from "@/api/bestSellingCups";
 
 export default {
   head: {

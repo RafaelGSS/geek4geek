@@ -7,8 +7,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],
@@ -16,7 +16,7 @@ var productsHot = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
@@ -32,8 +32,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],
@@ -41,7 +41,7 @@ var productsHot = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
@@ -57,8 +57,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],
@@ -66,7 +66,7 @@ var productsHot = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
@@ -82,8 +82,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],
@@ -91,7 +91,7 @@ var productsHot = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
@@ -107,8 +107,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],
@@ -116,7 +116,7 @@ var productsHot = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
@@ -132,8 +132,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],
@@ -141,7 +141,7 @@ var productsHot = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
@@ -157,8 +157,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],
@@ -166,7 +166,7 @@ var productsHot = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
@@ -182,8 +182,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],
@@ -191,7 +191,7 @@ var productsHot = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
@@ -207,8 +207,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],
@@ -216,7 +216,7 @@ var productsHot = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
@@ -232,8 +232,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],
@@ -241,7 +241,7 @@ var productsHot = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""
@@ -257,8 +257,8 @@ var productsHot = [
     "promo": false,
     "stock": 10,
     "promotion": {
-      "percentage": 10,
-      "old_price": 100
+      "percentage": null,
+      "old_price": null
     },
     "price": 90,
     "tags": [],
@@ -266,7 +266,7 @@ var productsHot = [
     "images": [
       {
         "id": 1,
-        "display_image": "/img/product-details/product-detalis-l1.jpg",
+        "display_image": "/img/product/pro-toy-1.jpg",
         "low_display_image": "/img/product-details/product-detalis-l1.jpg",
         "big_display_image": "/img/product-details/product-detalis-l1.jpg",
         "alt": ""

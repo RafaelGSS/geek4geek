@@ -2,12 +2,6 @@
 
 @media (min-width: 1200px) and (max-width: 1500px) {
     
-    .book-offer > h2 {
-        font-size: 40px !important;
-    }
-    .book-offer > p {
-        width: 75% !important;
-    }
     .deals-content.text-center {
         margin: 85px 0 0 27px !important;
     }
@@ -248,17 +242,8 @@
     .single-slider.pt-150 {
         padding-top: 100px !important;
     }
-    .book-offer > h2 {
-        font-size: 34px !important;
-    }
-    .book-offer.pl-50 {
-        padding-left: 0 !important;
-    }
     .connect-area.bg-img {
         background-position: 66% center !important;
-    }
-    .book-offer > p {
-        width: 97% !important;
     }
     .nav-style-3.owl-carousel > .owl-nav div {
         top: -63px !important;
@@ -495,20 +480,11 @@
     .newsletter-watch .newsletter-wrapper.pl-55.pr-55 {
         padding: 0 !important;
     }
-    .product-shorting.shorting-style select {
-        width: 80px !important;
-    }
-    .shorting-style select {
-        width: 105px !important;
-    }
     .grid-list-options {
         margin-right: 15px !important;
     }
     .notification-content.ml-285 {
         margin: 0 !important;
-    }
-    .shop-tags a {
-        padding: 7px 6px !important;
     }
     .shop-topbar-wrapper {
         padding: 15px !important;
@@ -538,9 +514,6 @@
     .headphone-slider-active-2 .product-action > a.action-cart {
         padding: 9px 8px 8px !important;
     }    
-    .product-slider-style .product-action > a.action-cart {
-        padding: 9px 8px 8px !important;
-    }
     .devita-product-2.devita-product-yellowgreen .product-action-wrapper-2 {
         padding: 26px 7px 0 !important;
     }    
@@ -672,9 +645,7 @@
         padding: 2px 3px 3px !important;
         right: -34px !important;
     }
-    .pro-dec-social li a {
-        padding: 8px 7px !important;
-    }
+   
     .product-details-content > h4 {
         font-size: 17px !important;
     }
@@ -793,9 +764,6 @@
     .header-contact-search-wrapper.f-right {
         float: left !important;
     }
-    .header-top-right ul li {
-        margin-left: 15px !important;
-    }
     .product-tab-list::before,
     .product-tab-list::after {
         width: 80px !important;
@@ -888,18 +856,8 @@
     .single-slider.pt-150 {
         padding-top: 80px !important;
     }
-    .book-offer > h2 {
-        font-size: 34px !important;
-    }
-    .book-offer.pl-50 {
-        padding-left: 0 !important;
-        text-align: left !important;
-    }
     .connect-area.bg-img {
         background-position: 66% center !important;
-    }
-    .book-offer > p {
-        width: 100% !important;
     }
     .slider-content-5 {
         margin-left: 0 !important;
@@ -1207,12 +1165,6 @@
         border-top: 1px solid #2d2d2d !important;
         padding: 20px 15px !important;
     }
-    .product-shorting.shorting-style select {
-        width: 80px !important;
-    }
-    .shorting-style select {
-        width: 105px !important;
-    }
     .grid-list-options {
         margin-right: 15px !important;
     }
@@ -1511,9 +1463,7 @@
     .product-details-content.pro-details-mrg-none {
         margin-top: 0 !important;
     }
-    .pro-dec-social li a {
-        padding: 8px 7px !important;
-    }
+   
     .quality-add-to-cart .product-action > a.action-cart {
         padding: 11px 32px 10px !important;
     }
@@ -1914,21 +1864,6 @@
     }
     .slider-btn.mt-75 {
         margin-top: 30px !important;
-    }
-    .book-offer.pl-50 {
-        padding-left: 0 !important;
-    }
-    .book-offer > h2 {
-        font-size: 30px !important;
-    }
-    .book-offer > p {
-        margin: 15px auto 10px !important;
-        width: 100% !important;
-        color: #000 !important;
-    }
-    .book-offer > h4 {
-        font-size: 30px !important;
-        margin: 0 0 30px !important;
     }
     .connect-area.pt-145.pb-110 {
         padding-bottom: 70px !important;
@@ -2506,19 +2441,7 @@
         display: block !important;
         padding: 15px 15px 18px !important;
     }
-    .shorting-style select {
-        -moz-appearance: none !important;
-        -webkit-appearance: none !important;
-        width: 120px !important;
-    }
-    .shorting-style {
-        margin-left: 0 !important;
-        margin-top: 10px !important;
-        margin-right: 15px !important;
-    }
-    .shorting-style:last-child {
-        margin-right: 0px !important;
-    }
+   
     .pagination-total-pages {
         display: block !important;
     }
@@ -2537,9 +2460,7 @@
         margin-right: 0 !important;
         width: 100% !important;
     }
-    .product-shorting.shorting-style select {
-        width: 120px !important;
-    }
+   
     .grid-list-options {
         display: block !important;
         float: inherit !important;
@@ -2572,9 +2493,6 @@
     }
     .single-comment-wrapper.mt-50.ml-125 {
         margin-left: 0 !important;
-    }
-    .shop-tags a {
-        padding: 7px !important;
     }
     .grand-totall {
         margin-top: 30px !important;
@@ -2650,16 +2568,8 @@
         float: inherit !important;
         margin: 0 0 15px !important;
     }
-    .pro-dec-social li {
-        margin: 0 6px 10px 0 !important;
-    }
     .description-review-area.pt-25.pb-70 {
         padding-top: 0 !important;
-    }
-    .description-review-topbar a {
-        font-size: 17px !important;
-        margin: 0 8px !important;
-        padding-bottom: 10px !important;
     }
     .ratting-author.f-right {
         float: left !important;
@@ -3099,7 +3009,7 @@
         margin-bottom: 55px !important;
     }
     .best-selling-small-2 .top-bar {
-        margin-bottom: 30px !important !important;
+        margin-bottom: 30px !important;
     }
     .best-selling-area-toy .best-selling-bundle-2 {
         padding: 0 5px !important;
@@ -3345,9 +3255,6 @@
     }
     .product-slider-style-2.owl-carousel .owl-item img {
         width: 100% !important;
-    }
-    .header-top-right ul li {
-        margin: 0 5px !important;
     }
     .custom-col-5 {
         flex: 0 0 50% !important;
