@@ -106,19 +106,16 @@ export default {
 .horizontal {
   display: block;
 }
-
 .product-img {
   padding: 10px 10px 0;
   position: relative;
 }
-
 .product-action-wrapper > p {
   color: #242424;
   font-size: 12px;
   line-height: 18px;
   margin: 9px 0 17px;
 }
-
 .list-col .gridview {
   display: block;
   margin: 0;
@@ -153,7 +150,6 @@ export default {
 .product-content > h4 a:hover {
   color: #3cb371;
 }
-
 .product-action-wrapper > p {
   color: #242424;
   font-size: 12px;

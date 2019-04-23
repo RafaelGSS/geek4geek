@@ -17,7 +17,7 @@
                     <div class="row">
                       <div class="col-md-6">
                         <product
-                          class="best-selling-pro-wrapper-2 mb-20"
+                          class="best-selling-pro-wrapper mb-20"
                           :onHover="false"
                           :product="tshirts[0]"
                           :hasRatting="false"
@@ -26,7 +26,7 @@
                       </div>
                       <div class="col-md-6">
                         <product
-                          class="best-selling-pro-wrapper-2 mb-20"
+                          class="best-selling-pro-wrapper mb-20"
                           :hasRatting="false"
                           :onHover="false"
                           :product="tshirts[1]"
@@ -96,10 +96,10 @@ export default {
   padding-right: 30px;
   display: inline-block;
 }
-.best-selling-pro-wrapper-2 {
+.best-selling-pro-wrapper {
   transition: all 0.3s ease 0s;
 }
-.best-selling-pro-wrapper-2:hover {
+.best-selling-pro-wrapper:hover {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 .best-selling-bundle {
