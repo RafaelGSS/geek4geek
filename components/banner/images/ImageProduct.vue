@@ -1,4 +1,5 @@
 <template>
+  <!-- Component image with badge-discount if needs -->
   <div>
     <div class="product-img-slider">
       <a :href="href">
@@ -33,7 +34,6 @@ export default {
 </script>
 
 <style scoped>
-
 img {
   width: 100%;
 }
