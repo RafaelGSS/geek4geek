@@ -13,33 +13,25 @@
             <tab-pane-content :active="true" :id="'tab-cms'">
               <div class="best-selling-active-2">
                 <div class="best-selling-bundle-2">
-                  <div class="row">
-                    <div class="col-xl-8 col-lg-12 col-md-12">
-                      <product
-                        class="best-selling-pro-wrapper mb-20"
-                        :onHover="false"
-                        :product="tshirts[0]"
-                        orientation="horizontal"
-                      />
-                    </div>
-                    <div class="col-xl-4 col-lg-12 col-md-12">
-                      <div class="row">
-                        <div class="col-xl-12 col-lg-4 col-md-6">
-                          <product
-                            class="best-selling-pro-wrapper mb-20"
-                            :hasRatting="false"
-                            :onHover="false"
-                            :product="tshirts[1]"
-                            orientation="horizontal"
-                          />
-                          <product
-                            class="best-selling-pro-wrapper mb-20"
-                            :hasRatting="false"
-                            :onHover="false"
-                            :product="tshirts[2]"
-                            orientation="horizontal"
-                          />
-                        </div>
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <product
+                          class="best-selling-pro-wrapper-2 mb-20"
+                          :onHover="false"
+                          :product="tshirts[0]"
+                          :hasRatting="false"
+                          orientation="horizontal"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <product
+                          class="best-selling-pro-wrapper-2 mb-20"
+                          :hasRatting="false"
+                          :onHover="false"
+                          :product="tshirts[1]"
+                          orientation="horizontal"
+                        />
                       </div>
                     </div>
                   </div>
@@ -104,10 +96,10 @@ export default {
   padding-right: 30px;
   display: inline-block;
 }
-.best-selling-pro-wrapper {
+.best-selling-pro-wrapper-2 {
   transition: all 0.3s ease 0s;
 }
-.best-selling-pro-wrapper:hover {
+.best-selling-pro-wrapper-2:hover {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 .best-selling-bundle {

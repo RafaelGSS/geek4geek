@@ -9,7 +9,7 @@
     />
     <div class="list-col">
       <div class="gridview">
-        <slot name="content" :product=product>
+        <slot name="content" :product="product">
           <div class="product-content text-center">
             <span v-for="category in product.categories" :key="category">{{ category }}</span>
             <h4>
@@ -90,18 +90,20 @@ export default {
       return this.product.promotion.percentage || null;
     },
     classHover() {
-      let clsHover =  this.onHover ? "prod" : "expanded";
-      return `${clsHover} ${this.orientation}`
+      let clsHover = this.onHover ? "prod" : "expanded";
+      return `${clsHover} ${this.orientation}`;
     }
   }
 };
 </script>
 
 <style scoped>
-.horizontal {
-  display: flex;
+.vertical .list-col .gridview .product-content {
+  padding: 3px 18px 0;
 }
-.vertical {
+
+.vertical,
+.horizontal {
   display: block;
 }
 
@@ -138,12 +140,6 @@ export default {
 .expanded .product-action-wrapper {
   margin: -15px;
   opacity: 1;
-}
-.product-content {
-  padding: 3px 18px 0;
-}
-.product-content {
-  padding: 3px 28px 0;
 }
 .product-content > span {
   color: #555;
@@ -188,5 +184,17 @@ export default {
 }
 .product-rating::after {
   right: 0;
+}
+
+@media (min-width: 996px) {
+  .horizontal {
+    display: flex;
+  }
+  .horizontal .product-img {
+    width: 60% !important;
+  }
+  .horizontal .list-col {
+    width: 40% !important;
+  }
 }
 </style>
