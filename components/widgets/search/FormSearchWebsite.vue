@@ -1,6 +1,6 @@
 <template>
   <form class="header-search-form" :action="action">
-    <input type="text" :placeholder="placeholder">
+    <input v-model= "searchText" type="text" name="-header-search-form" :placeholder="placeholder">
     <button>
       <i class="ion-ios-search-strong" :title="title" :alt="alt"></i>
     </button>
