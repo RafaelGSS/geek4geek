@@ -1,6 +1,6 @@
 <template>
   <form class="header-search-form" :action="action">
-    <input v-model= "searchText" type="text" name="-header-search-form" :placeholder="placeholder">
+    <input v-bind:name="name" type="text" :placeholder="placeholder">
     <button>
       <i class="ion-ios-search-strong" :title="title" :alt="alt"></i>
     </button>
@@ -25,7 +25,11 @@ export default {
     action: {
       type: String,
       default: "#"
-    }
+    },
+    name: {
+     type:String,
+     default: "header-search-form"
+     }
   }
 };
 </script>
