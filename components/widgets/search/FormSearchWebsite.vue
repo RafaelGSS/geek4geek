@@ -1,6 +1,6 @@
 <template>
   <form class="header-search-form" :action="action">
-    <input v-bind:name="name" type="text" :placeholder="placeholder">
+    <input :name="name" type="text" :placeholder="placeholder">
     <button>
       <i class="ion-ios-search-strong" :title="title" :alt="alt"></i>
     </button>
@@ -12,24 +12,24 @@ export default {
   props: {
     title: {
       type: String,
-      default: 'Procurar'
+      default: "Procurar"
     },
     alt: {
       type: String,
-      default: 'Procure na loja'
+      default: "Procure na loja"
     },
     placeholder: {
       type: String,
-      default: 'Procure toda loja aqui ...'
+      default: "Procure toda loja aqui ..."
     },
     action: {
       type: String,
       default: "#"
     },
     name: {
-     type:String,
-     default: "header-search-form"
-     }
+      type: String,
+      default: "header-search-form"
+    }
   }
 };
 </script>
@@ -87,7 +87,6 @@ form button:hover {
   background-color: #fff;
   color: #3cb371;
 }
-
 </style>
 
 
