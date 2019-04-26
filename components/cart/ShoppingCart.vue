@@ -1,54 +1,24 @@
 <template>
   <div class="header-cart">
-    <button class="icon-cart">
-      <i class="pe-7s-shopbag cart-bag"></i>
-      <span class="count-amount" id="count-amount">{{ sumCart | toReal }}</span>
-      <i class="ion-chevron-down cart-down"></i>
-      <span class="count-style">{{ itemsCart.length }}</span>
-    </button>
-    <div class="shopping-cart-content">
-      <ul>
-        <li class="single-shopping-cart" v-for="(item, idx) in itemsCart" :key="idx">
-          <div class="shopping-cart-img">
-            <a href="#">
-              <img alt src="/img/cart/cart-1.jpg">
-            </a>
-          </div>
-          <div class="shopping-cart-title">
-            <h4>
-              <a href="#">{{ item.display_name }}</a>
-            </h4>
-            <h6>
-              Quantidade:
-              <span>{{ item.quantity }}</span>
-            </h6>
-            <span>Preço: R$ {{ item.value }}</span>
-          </div>
-          <div class="shopping-cart-delete">
-            <a href="#" @click="removeItem(idx)">
-              <i class="ion-android-close"></i>
-            </a>
-          </div>
-        </li>
-      </ul>
-      <div class="shopping-cart-total">
-        <h4>
-          Total :
-          <span class="shop-total" id="shop-total">{{ sumCart | toReal }}</span>
-        </h4>
-      </div>
-      <div class="shopping-cart-btn">
-        <a class="btn-style btn-hover" href="#">VER CARRINHO</a>
-        <a class="btn-style btn-hover" href="#" v-if="itemsCart.length > 0">FINALIZAR COMPRA</a>
-      </div>
-    </div>
+    <button-bag-cart>
+      <template #content>
+        <content-bag-cart items/>
+      </template>
+    </button-bag-cart>
   </div>
 </template>
 
 <script>
 import { mapGetters, mapActions } from "vuex";
 
+import ButtonShowCart from "@/components/cart/ButtonShowCart";
+import ButtonBagCart from "@/components/cart/ButtonBagCart";
+
 export default {
+  components: {
+    ButtonShowCart,
+    ButtonBagCart
+  },
   mounted() {
     /* Cart */
     $(".icon-cart").on("click", function() {
