@@ -4,11 +4,8 @@
       <content-bag-cart/>
     </template>
     <template #addons>
-      <a
-        class="btn-style btn-hover"
-        style="margin-top: 20px; margin-bottom: 15px;"
-        href="#"
-      >VER CARRINHO</a>
+      <button-default class="mb-5 mt-20">VER CARRINHO</button-default>
+      <button-default class="mb-15">FINALIZAR COMPRA</button-default>
     </template>
   </button-bag-cart>
 </template>
@@ -16,11 +13,13 @@
 <script>
 import ContentBagCart from "@/components/cart/ContentBagCart";
 import ButtonBagCart from "@/components/cart/ButtonBagCart";
+import ButtonDefault from "@/components/widgets/ButtonDefault";
 
 export default {
   components: {
     ButtonBagCart,
-    ContentBagCart
+    ContentBagCart,
+    ButtonDefault
   }
 };
 </script>
