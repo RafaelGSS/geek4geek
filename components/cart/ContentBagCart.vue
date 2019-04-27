@@ -14,28 +14,30 @@
           Quantidade:
           <span>{{ item.quantity }}</span>
         </h6>
-        <span>Preço: R$ {{ item.value }}</span>
+        <span>Preço: {{ item.value | toReal }}</span>
       </div>
-      <div class="shopping-cart-delete">
-        <a href="#" @click="removeItem(idx)">
-          <i class="ion-android-close"></i>
-        </a>
-      </div>
+      <button-remove-item-cart :itemId="idx"/>
     </li>
   </ul>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
+import cashFormatter from "@/mixins/cashFormatter";
+
+import ButtonRemoveItemCart from "@/components/cart/ButtonRemoveItemCart";
+
 export default {
-  data: () => ({
-    itemsCart: [
-      {
-        display_name: "Produto G4G",
-        quantity: 1,
-        value: 10.20
-      }
-    ]
-  })
+  mixins: [cashFormatter],
+  components: {
+    ButtonRemoveItemCart
+  },
+  computed: {
+    ...mapGetters({
+      itemsCart: "cart/items"
+    })
+  }
 };
 </script>
 
@@ -72,26 +74,5 @@ ul li {
 .shopping-cart-title > span {
   color: #555;
   font-size: 14px;
-}
-.shopping-cart-delete {
-  display: flex;
-  flex-grow: 100;
-  justify-content: flex-end;
-}
-.shopping-cart-delete > a {
-  border: 2px solid #999;
-  border-radius: 50px;
-  color: #666;
-  display: inline-block;
-  font-size: 12px;
-  height: 20px;
-  line-height: 15px;
-  margin-top: 2px;
-  text-align: center;
-  width: 20px;
-}
-.shopping-cart-delete > a:hover {
-  border: 2px solid #3cb371;
-  color: #3cb371;
 }
 </style>

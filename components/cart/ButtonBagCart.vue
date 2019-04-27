@@ -2,8 +2,7 @@
   <div>
     <button class="icon-cart">
       <i class="pe-7s-shopbag cart-bag"></i>
-      <span class="count-amount" id="count-amount">R$ 10,20</span>
-      <!-- <span class="count-amount" id="count-amount">{{ sumCart }}</span> -->
+      <span class="count-amount" id="count-amount">{{ sumCart | toReal }}</span>
       <i class="ion-chevron-down cart-down"></i>
       <span class="count-style">1</span>
       <!-- <span class="count-style">{{ itemsCart.length }}</span> -->
@@ -12,8 +11,10 @@
       <slot name="content"></slot>
       <slot name="total">
         <div class="shopping-cart-total">
-          <h4> Total : <span class="shop-total">R$ 10,20</span></h4>
-          <!-- <span class="shop-total">{{ sumCart }}</span> -->
+          <h4>
+            Total :
+            <span class="shop-total">{{ sumCart | toReal }}</span>
+          </h4>
         </div>
       </slot>
       <slot name="addons"></slot>
@@ -22,7 +23,16 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+import cashFormatter from "@/mixins/cashFormatter";
+
 export default {
+  mixins: [cashFormatter],
+  computed: {
+    ...mapGetters({
+      sumCart: "cart/sum"
+    })
+  },
   mounted() {
     $(".icon-cart").on("click", function() {
       $(this)
