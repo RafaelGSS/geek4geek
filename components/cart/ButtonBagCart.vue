@@ -12,11 +12,8 @@
       <slot name="content"></slot>
       <slot name="total">
         <div class="shopping-cart-total">
-          <h4>
-            Total :
-            <!-- <span class="shop-total">{{ sumCart }}</span> -->
-            <span class="shop-total">R$ 10,20</span>
-          </h4>
+          <h4> Total : <span class="shop-total">R$ 10,20</span></h4>
+          <!-- <span class="shop-total">{{ sumCart }}</span> -->
         </div>
       </slot>
       <slot name="addons"></slot>
@@ -25,22 +22,24 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    $(".icon-cart").on("click", function() {
+      $(this)
+        .parent()
+        .find(".shopping-cart-content")
+        .slideToggle("medium");
+    });
+  }
+};
 </script>
 
 <style scoped>
-button:hover .icon-cart i.cart-bag,
-button:hover .icon-cart span.count-amount {
+button.icon-cart:hover i.cart-bag,
+button.icon-cart:hover span.count-amount {
   color: #3cb371;
 }
 
-/* button.icon-cart i.cart-bag {
-  border-right: 1px solid #ddd;
-  color: #ddd;
-} */
-/* button.icon-cart span.count-amount {
-  color: #ddd;
-} */
 button.icon-cart {
   background-color: transparent;
   border: 2px solid #3cb371;
@@ -49,7 +48,7 @@ button.icon-cart {
   position: relative;
 }
 button.icon-cart i.cart-down {
-  color: #76b4fa;
+  color: #ddd;
   font-size: 12px;
   margin-left: 5px;
   position: relative;

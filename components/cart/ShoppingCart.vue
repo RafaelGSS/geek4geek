@@ -4,7 +4,7 @@
       <content-bag-cart items/>
     </template>
     <template #addons>
-      <button-show-cart />
+      <button-show-cart style="margin-top: 20px;"/>
     </template>
   </button-bag-cart>
 </template>
@@ -21,15 +21,6 @@ export default {
     ButtonShowCart,
     ButtonBagCart,
     ContentBagCart
-  },
-  mounted() {
-    // /* Cart */
-    // $(".icon-cart").on("click", function() {
-    //   $(this)
-    //     .parent()
-    //     .find(".shopping-cart-content")
-    //     .slideToggle("medium");
-    // });
   },
   computed: {
     ...mapGetters({
