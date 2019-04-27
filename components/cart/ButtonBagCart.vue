@@ -1,11 +1,10 @@
 <template>
   <div>
-    <button class="icon-cart">
+    <button class="icon-cart" @click="toggle">
       <i class="pe-7s-shopbag cart-bag"></i>
       <span class="count-amount" id="count-amount">{{ sumCart | toReal }}</span>
       <i class="ion-chevron-down cart-down"></i>
-      <span class="count-style">1</span>
-      <!-- <span class="count-style">{{ itemsCart.length }}</span> -->
+      <span class="count-style">{{ itemsCart.length }}</span>
     </button>
     <div class="shopping-cart-content">
       <slot name="content"></slot>
@@ -30,21 +29,24 @@ export default {
   mixins: [cashFormatter],
   computed: {
     ...mapGetters({
-      sumCart: "cart/sum"
+      sumCart: "cart/sum",
+      itemsCart: "cart/items"
     })
   },
-  mounted() {
-    $(".icon-cart").on("click", function() {
-      $(this)
-        .parent()
-        .find(".shopping-cart-content")
-        .slideToggle("medium");
-    });
+  methods: {
+    toggle() {
+      let el = document.querySelector('.shopping-cart-content')
+      el.classList.toggle("show-medium")
+    }
   }
 };
 </script>
 
 <style scoped>
+.show-medium {
+  display: block !important;
+}
+
 button.icon-cart:hover i.cart-bag,
 button.icon-cart:hover span.count-amount {
   color: #3cb371;
