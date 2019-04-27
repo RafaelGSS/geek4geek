@@ -16,7 +16,9 @@
         </h6>
         <span>Preço: {{ item.value | toReal }}</span>
       </div>
-      <button-remove-item-cart :itemId="idx"/>
+      <div class="shopping-cart-delete">
+        <button-remove-item-cart :itemId="idx"/>
+      </div>
     </li>
   </ul>
 </template>
@@ -74,5 +76,11 @@ ul li {
 .shopping-cart-title > span {
   color: #555;
   font-size: 14px;
+}
+
+.shopping-cart-delete {
+  display: flex;
+  flex-grow: 100;
+  justify-content: flex-end;
 }
 </style>

@@ -1,9 +1,7 @@
 <template>
-  <div class="shopping-cart-delete">
-    <a href="#" title="Remover item" @click="removeItem">
-      <i class="ion-android-close"></i>
-    </a>
-  </div>
+  <a href="#" title="Remover item" @click="removeItem">
+    <i class="ion-android-close"></i>
+  </a>
 </template>
 
 <script>
@@ -31,12 +29,7 @@ export default {
 </script>
 
 <style scoped>
-.shopping-cart-delete {
-  display: flex;
-  flex-grow: 100;
-  justify-content: flex-end;
-}
-.shopping-cart-delete > a {
+a {
   border: 2px solid #999;
   border-radius: 50px;
   color: #666;
@@ -48,7 +41,7 @@ export default {
   text-align: center;
   width: 20px;
 }
-.shopping-cart-delete > a:hover {
+a:hover {
   border: 2px solid #3cb371;
   color: #3cb371;
 }
