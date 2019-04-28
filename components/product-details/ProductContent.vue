@@ -38,9 +38,7 @@ export default {
     TabPaneContent
   },
   props: {
-    full_description: {
-      type: String
-    },
+    full_description: String,
     reviews: {
       type: Array,
       default: () => []

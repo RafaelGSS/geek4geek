@@ -33,7 +33,7 @@ export default {
       },
       {
         title: "Entrega Grátis",
-        subtitle: "Frete grátis nos pedidos para SJC",
+        subtitle: "Frete grátis para SJC",
         icon: "/img/icon-img/service-1.png",
         alt: "Icone frete grátis"
       }
