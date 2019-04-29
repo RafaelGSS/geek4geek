@@ -4,7 +4,7 @@
     <BannerArea/>
     <ProductArea :products_new="products_new" :products_hot="products_hot"/>
     <ServiceArea/>
-    <BestSellingArea :cups="sellingCups" :tshirts="sellingShirts" />
+    <BestSellingArea :cups="sellingCups" :tshirts="sellingShirts"/>
     <FullBanner/>
   </Page>
 </template>
@@ -25,12 +25,17 @@ import BestSellingArea from "@/components/shop-area/BestSellingArea";
  */
 
 import productsNew from "@/api/productsNew";
-import productsHot from "@/api/productsHot";
+// import productsHot from "@/api/productsHot";
 import _categories from "@/api/categories";
 import images from "@/api/imagesSlider";
 
 import bestSellingShirts from "@/api/bestSellingShirts";
 import bestSellingCups from "@/api/bestSellingCups";
+
+/**
+ * GraphQL Queries
+ */
+import productsHot from "@/apollo/queries/productHot";
 
 export default {
   head: {
@@ -45,19 +50,30 @@ export default {
     ServiceArea,
     BestSellingArea
   },
-  asyncData() {
+  asyncData({ app }) {
+    // let client = app.apolloProvider.defaultClient
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve({
           categories: _categories,
           products_new: productsNew,
-          products_hot: productsHot,
+          // products_hot: productsHot,
           images_slider: images,
           sellingShirts: bestSellingShirts,
           sellingCups: bestSellingCups
         });
       }, 1500);
     });
+  },
+  apollo: {
+    products_hot: {
+      prefetch: true,
+      query: productsHot,
+      update: data => {
+        console.log(data)
+        return data.products.records.map(product => ({ ...product, promotion: { percentage: '10'}}) );
+      }
+    }
   },
 };
 </script>
