@@ -68,7 +68,6 @@ export default {
     }
   },
   mounted() {
-    console.log(this.tshirts);
   }
 };
 </script>

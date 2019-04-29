@@ -1,9 +1,9 @@
 <template>
   <div :class="this.classHover">
     <image-product
-      :href="product.href"
-      :src="product.images[0].display_image"
-      :alt="product.images[0].alt"
+      :href="product.unique_name"
+      :src="this.imageDisplay"
+      :alt="this.imageAlt"
       :discount="this.discount"
       class="product-img"
     />
@@ -11,11 +11,11 @@
       <div class="gridview">
         <slot name="content" :product="product">
           <div class="product-content text-center">
-            <span v-for="category in product.categories" :key="category">{{ category }}</span>
+            <span v-for="category in product.categories" :key="`category-${category.name}`">{{ category.category_name }}</span>
             <h4>
               <a href="#">{{ product.name }}</a>
             </h4>
-            <price :price="product.price" :oldPrice="product.promotion.old_price"></price>
+            <price :price="product.price" :discount="this.discount"></price>
           </div>
         </slot>
         <slot name="action">
@@ -30,12 +30,12 @@
             <slot name="description">
               <p>{{ product.display_description }}</p>
             </slot>
-            <div class="product-action" v-if="hasAction">
+            <div class="product-action">
               <button-add-wishlist :id="product.id"/>
               <button-add-cart
                 :id="product.id"
                 :value="product.price"
-                :display_name="product.display_name"
+                :display_name="product.name"
               >+ Carrinho</button-add-cart>
             </div>
           </div>
@@ -51,8 +51,6 @@ import StarBordered from "@/components/widgets/StarBordered";
 import ButtonAddCart from "@/components/cart/ButtonAddCart";
 import ButtonAddWishlist from "@/components/cart/ButtonAddWishlist";
 
-import BadgeDiscount from "@/components/shop-area/BadgeDiscount";
-
 import Price from "@/components/product-details/placeholders/Price";
 import ImageProduct from "@/components/banner/images/ImageProduct";
 
@@ -61,7 +59,6 @@ export default {
     StarBordered,
     ButtonAddCart,
     ButtonAddWishlist,
-    BadgeDiscount,
     Price,
     ImageProduct
   },
@@ -75,10 +72,6 @@ export default {
       type: Boolean,
       default: true
     },
-    hasAction: {
-      type: Boolean,
-      default: true
-    },
     orientation: {
       type: String,
       default: "vertical",
@@ -87,11 +80,21 @@ export default {
   },
   computed: {
     discount() {
-      return this.product.promotion.percentage || null;
+        return (this.product.promo != null)  ? this.product.promo.promotion_percentage : null
     },
     classHover() {
       let clsHover = this.onHover ? "prod" : "expanded";
       return `${clsHover} ${this.orientation}`;
+    },
+    imageDisplay() {
+      const defaultDisplay = "/img/product/default.jpg"
+      if (this.product.images.length == 0) {
+        return defaultDisplay
+      }
+      return this.product.images[0].display_image || defaultDisplay
+    },
+    imageAlt() {
+      return this.product.alt || "Imagem produto Geek4Geek"
     }
   }
 };

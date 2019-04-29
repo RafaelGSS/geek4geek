@@ -5,37 +5,16 @@ query productHot {
             name
             unique_name
             display_description
-            attributes {
-                attribute_name
-            }
-            seller {
-                    seller_name
-            }
-            brand {
-                brand_name
-            }
+            price
             images {
-                id
+                display_image
+                alt
             }
             categories {
                 category_name	
             }
-            promotions {
-                promotion_percentage
-                is_active
-            }
             promo {
                 promotion_percentage
-            }
-            reviews {
-                review
-            }
-            tags {
-                tag_name
-            }
-            variations {
-                variation_name
-                variation_value
             }
         }
     }

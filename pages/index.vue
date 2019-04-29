@@ -70,8 +70,7 @@ export default {
       prefetch: true,
       query: productsHot,
       update: data => {
-        console.log(data)
-        return data.products.records.map(product => ({ ...product, promotion: { percentage: '10'}}) );
+        return data.products.records;
       }
     }
   },
