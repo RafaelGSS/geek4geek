@@ -11,7 +11,10 @@
       <div class="gridview">
         <slot name="content" :product="product">
           <div class="product-content text-center">
-            <span v-for="category in product.categories" :key="`category-${category.name}`">{{ category.category_name }}</span>
+            <span
+              v-for="category in product.categories"
+              :key="`category-${category.category_name}`"
+            >{{ category.category_name }}</span>
             <h4>
               <a href="#">{{ product.name }}</a>
             </h4>
@@ -80,21 +83,23 @@ export default {
   },
   computed: {
     discount() {
-        return (this.product.promo != null)  ? this.product.promo.promotion_percentage : null
+      return this.product.promo != null
+        ? this.product.promo.promotion_percentage
+        : null;
     },
     classHover() {
       let clsHover = this.onHover ? "prod" : "expanded";
       return `${clsHover} ${this.orientation}`;
     },
     imageDisplay() {
-      const defaultDisplay = "/img/product/default.jpg"
+      const defaultDisplay = "/img/product/default.jpg";
       if (this.product.images.length == 0) {
-        return defaultDisplay
+        return defaultDisplay;
       }
-      return this.product.images[0].display_image || defaultDisplay
+      return this.product.images[0].display_image || defaultDisplay;
     },
     imageAlt() {
-      return this.product.alt || "Imagem produto Geek4Geek"
+      return this.product.alt || "Imagem produto Geek4Geek";
     }
   }
 };
