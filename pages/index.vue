@@ -24,8 +24,6 @@ import BestSellingArea from "@/components/shop-area/BestSellingArea";
  * Simulating API
  */
 
-import productsNew from "@/api/productsNew";
-// import productsHot from "@/api/productsHot";
 import _categories from "@/api/categories";
 import images from "@/api/imagesSlider";
 
@@ -35,7 +33,8 @@ import bestSellingCups from "@/api/bestSellingCups";
 /**
  * GraphQL Queries
  */
-import productsHot from "@/apollo/queries/productHot";
+import productsHot from "@/apollo/queries/product/productHot";
+import productsNew from "@/apollo/queries/product/productNew";
 
 export default {
   head: {
@@ -56,8 +55,6 @@ export default {
       setTimeout(() => {
         resolve({
           categories: _categories,
-          products_new: productsNew,
-          // products_hot: productsHot,
           images_slider: images,
           sellingShirts: bestSellingShirts,
           sellingCups: bestSellingCups
@@ -69,9 +66,12 @@ export default {
     products_hot: {
       prefetch: true,
       query: productsHot,
-      update: data => {
-        return data.products.records;
-      }
+      update: data => data.products.records
+    },
+    products_new: {
+      prefetch: true,
+      query: productsNew,
+      update: data => data.products.records
     }
   },
 };
