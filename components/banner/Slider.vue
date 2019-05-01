@@ -19,7 +19,7 @@ export default {
         { src: "/img/slider/slider-51.jpg", alt: "slider", href: "#1" },
         { src: "/img/slider/slider-51.jpg", alt: "slider", href: "#2" }
       ], type: Object,
-       validator: val => Object.keys(val).includes('src') && Object.keys(val).includes('alt') && Object.keys(val).includes('href')
+           validator: val => ['src', 'href', 'alt'].every(k => k in val)
     }
   }
 };
