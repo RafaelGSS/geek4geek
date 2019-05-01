@@ -26,9 +26,6 @@ import BestSellingArea from "@/components/shop-area/BestSellingArea";
 
 import images from "@/api/imagesSlider";
 
-// import bestSellingShirts from "@/api/bestSellingShirts";
-// import bestSellingCups from "@/api/bestSellingCups";
-
 /**
  * GraphQL Queries
  */
