@@ -26,7 +26,9 @@ export default {
   props: {
     reviews: {
       type: Array, // [{ id: 1, review_star: 5, author: "", created_at: "2018-09-20", review: "Message" }]
-      default: () => []
+      default: () => [],
+       validator: val => Object.keys(val).includes('review.id') && Object.keys(val).includes('review_star') && Object.keys(val).includes('review.author') && Object.keys(val).includes('created_at')
+       && Object.keys(val).includes('reviews')
     }
   }
 };
