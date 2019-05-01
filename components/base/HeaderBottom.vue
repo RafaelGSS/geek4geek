@@ -15,7 +15,7 @@
                   <nav class="cate-menu-nav">
                     <ul>
                       <li v-for="category in categories" :key="category.id">
-                        <a href="#">{{ category.name | toUpper }}</a>
+                        <a href="#">{{ category.category_name | toUpper }}</a>
                       </li>
                     </ul>
                   </nav>
@@ -166,5 +166,3 @@ export default {
   }
 };
 </script>
-
-

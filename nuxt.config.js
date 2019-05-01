@@ -53,7 +53,7 @@ module.exports = {
    * Apollo Configuration
    */
   apollo: {
-    tokenName: 'yourApolloTokenName', // optional, default: apollo-token
+    // tokenName: 'yourApolloTokenName', // optional, default: apollo-token
     // tokenExpires: 10, // optional, default: 7 (days)
     includeNodeModules: true, // optional, default: false (this includes graphql-tag for node_modules folder)
     // authenticationType: 'Basic', // optional, default: 'Bearer'
@@ -65,7 +65,7 @@ module.exports = {
     clientConfigs: {
       default: {
         // required  
-        httpEndpoint: 'http://192.168.0.106:3000/',
+        httpEndpoint: 'http://localhost:3000/',
         // optional
         // See https://www.apollographql.com/docs/link/links/http.html#options
         httpLinkOptions: {

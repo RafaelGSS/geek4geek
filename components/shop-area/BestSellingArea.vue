@@ -7,10 +7,11 @@
         </div>
         <tab-pane>
           <template #title>
-            <tab-pane-title :active="true" :id="'tab-cms'">Camisetas</tab-pane-title>
+            <tab-pane-title :active="true" id="tab-cms">Camisetas</tab-pane-title>
+            <tab-pane-title id="tab-cups">Copos</tab-pane-title>
           </template>
           <template #content>
-            <tab-pane-content :active="true" :id="'tab-cms'">
+            <tab-pane-content :active="true" id="tab-cms">
               <div class="best-selling-active-2">
                 <div class="best-selling-bundle-2">
                   <div class="col-md-12">
@@ -30,6 +31,34 @@
                           :hasRatting="false"
                           :onHover="false"
                           :product="tshirts[1]"
+                          orientation="horizontal"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </tab-pane-content>
+            <tab-pane-content id="tab-cups">
+              <div class="best-selling-active-2">
+                <div class="best-selling-bundle-2">
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <product
+                          class="best-selling-pro-wrapper mb-20"
+                          :onHover="false"
+                          :product="cups[0]"
+                          :hasRatting="false"
+                          orientation="horizontal"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <product
+                          class="best-selling-pro-wrapper mb-20"
+                          :hasRatting="false"
+                          :onHover="false"
+                          :product="cups[1]"
                           orientation="horizontal"
                         />
                       </div>
@@ -66,8 +95,6 @@ export default {
     cups: {
       type: Array
     }
-  },
-  mounted() {
   }
 };
 </script>

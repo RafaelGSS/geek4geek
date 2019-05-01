@@ -5,7 +5,7 @@
   "author": "rafaelgss <rafael.nunu@hotmail.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "cross-env NUXT_HOST=0.0.0.0 NUXT_PORT=4000 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -35,15 +35,10 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
+    "cross-env": "^5.2.0",
     "eslint": "^4.19.1",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^2.1.1",
     "eslint-plugin-vue": "^4.0.0"
-  },
-  "config": {
-    "nuxt": {
-      "host": "127.0.0.1",
-      "port": "4000"
-    }
   }
 }

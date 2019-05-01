@@ -15,19 +15,12 @@
   </div>
 </template>
 
-<style scoped>
-footer {
-  background: #282829;
-}
-</style>
-
-
 <script>
-import HeaderTop from "~/components/base/HeaderTop";
-import HeaderMiddle from "~/components/base/HeaderMiddle";
-import HeaderBottom from "~/components/base/HeaderBottom";
-import FooterTop from "~/components/base/FooterTop";
-import FooterBottom from "~/components/base/FooterBottom";
+import HeaderTop from "@/components/base/HeaderTop";
+import HeaderMiddle from "@/components/base/HeaderMiddle";
+import HeaderBottom from "@/components/base/HeaderBottom";
+import FooterTop from "@/components/base/FooterTop";
+import FooterBottom from "@/components/base/FooterBottom";
 
 export default {
   components: {
@@ -45,3 +38,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+footer {
+  background: #282829;
+}
+</style>
