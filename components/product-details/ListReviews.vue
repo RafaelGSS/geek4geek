@@ -27,7 +27,7 @@ export default {
     reviews: {
       type: Array, // [{ id: 1, review_star: 5, author: "", created_at: "2018-09-20", review: "Message" }]
       default: () => [],
-      validator: val => ['src', 'href', 'alt'].every(k => k in val)
+      validator: val => ['id', 'review_star', 'author', 'review', 'created_at'].every(k => k in val)
     }
   }
 };
