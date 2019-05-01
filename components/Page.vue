@@ -22,6 +22,11 @@ import HeaderBottom from "@/components/base/HeaderBottom";
 import FooterTop from "@/components/base/FooterTop";
 import FooterBottom from "@/components/base/FooterBottom";
 
+/**
+ * GraphQL Queries
+ */
+import Categories from "@/apollo/queries/categories/Category";
+
 export default {
   components: {
     HeaderTop,
@@ -30,10 +35,11 @@ export default {
     FooterTop,
     FooterBottom
   },
-  props: {
+  apollo: {
     categories: {
-      type: Array,
-      default: () => []
+      prefetch: true,
+      query: Categories,
+      update: data => data.categories.records
     }
   }
 };

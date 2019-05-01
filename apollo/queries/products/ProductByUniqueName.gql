@@ -1,0 +1,9 @@
+query ProductByUniqueName {
+  product(query: {
+    unique_name: $uniqueName
+  }) {
+    id
+    name
+    unique_name
+  }
+}

@@ -1,46 +1,50 @@
 <template>
-  <Page>
-    <ProductDetails :product="product"/>
-    <ProductContent :reviews="reviews" :full_description="product.full_description"/>
-    <BannerArea />
-    <FullBanner />
-  </Page>
+  <page>
+    <product-details :product="product"/>
+    <product-content :reviews="reviews" :full_description="product.full_description"/>
+    <banner-area/>
+    <full-banner/>
+  </page>
 </template>
 
 <script>
-import Page from "~/components/Page";
+import Page from "@/components/Page";
 
-import ProductDetails from "~/components/product-details/ProductDetails";
+import ProductDetails from "@/components/product-details/ProductDetails";
 
-import BannerArea from "~/components/banner/BannerArea";
-import FullBanner from "~/components/banner/FullBanner";
+import BannerArea from "@/components/banner/BannerArea";
+import FullBanner from "@/components/banner/FullBanner";
 
-import ProductContent from "~/components/product-details/ProductContent";
-
+import ProductContent from "@/components/product-details/ProductContent";
 
 /**
- * Simulating API
+ * GraphQL Queries
  */
 
-import product from "~/api/product";
-import productReview from "~/api/productReviews";
+import product from "@/api/product";
+import productReview from "@/api/productReviews";
+
+import ProductByUniqueName from "@/apollo/queries/products/ProductByUniqueName";
 
 export default {
-    components: {
-        Page,
-        ProductDetails,
-        ProductContent,
-        BannerArea,
-        FullBanner
+  components: {
+    Page,
+    ProductDetails,
+    ProductContent,
+    BannerArea,
+    FullBanner
   },
   head() {
     return {
-      title: "Produto " + this.$route.params.product,
+      title: "Produto " + this.uniqueName
     };
   },
-  data: () => ({
-    reviews: []
-  }),
+  data: function() {
+    return {
+      reviews: [],
+      uniqueName: this.$route.params.product
+    };
+  },
   asyncData() {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -50,6 +54,14 @@ export default {
         });
       }, 1500);
     });
+  },
+  apollo: {
+    product: {
+      query: ProductByUniqueName,
+      variables() {
+        return { uniqueName: this.uniqueName };
+      }
+    }
   }
 };
 </script>
