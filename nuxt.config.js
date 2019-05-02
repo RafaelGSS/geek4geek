@@ -65,7 +65,7 @@ module.exports = {
     clientConfigs: {
       default: {
         // required  
-        httpEndpoint: 'http://localhost:3000/',
+        httpEndpoint: 'http://192.168.0.106:3000/',
         // optional
         // See https://www.apollographql.com/docs/link/links/http.html#options
         httpLinkOptions: {

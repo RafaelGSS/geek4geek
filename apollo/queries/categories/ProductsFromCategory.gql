@@ -1,0 +1,23 @@
+query ProductsFromCategory {
+    category(query: {
+        category_name: "filmes"
+    }) {
+        products {
+            id
+            name
+            unique_name
+            display_description
+            price
+            images {
+                display_image
+                alt
+            }
+            categories {
+                category_name	
+            }
+            promo {
+                promotion_percentage
+            }
+        }
+    }
+}

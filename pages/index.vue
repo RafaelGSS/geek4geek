@@ -1,6 +1,6 @@
 <template>
   <page>
-    <slider :imgs="images_slider"/>
+    <slider :imgs="imgSlider"/>
     <banner-area/>
     <product-area :products_new="products_new" :products_hot="products_hot"/>
     <service-area/>
@@ -29,11 +29,16 @@ import ProductsNew from "@/apollo/queries/products/ProductsNew";
 import BestSellingShirts from "@/apollo/queries/products/BestSellingShirts";
 import BestSellingCups from "@/apollo/queries/products/BestSellingCups";
 
-
 export default {
   head: {
     title: "Homepage dos Geeks!"
   },
+  data: () => ({
+    imgSlider: [
+      { src: "/img/slider/slider-51.jpg", alt: "slider", href: "#1" },
+      { src: "/img/slider/slider-51.jpg", alt: "slider", href: "#2" }
+    ]
+  }),
   components: {
     Page,
     Slider,
