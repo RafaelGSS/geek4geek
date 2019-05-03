@@ -17,13 +17,9 @@ export default {
   props: {
     img: {
       type: Object,
-      default: () => ({ src: "/img/banner/banner-80.jpg", alt: "banner" })
+      default: () => ({ src: "/img/banner/banner-80.jpg", alt: "banner" }),
+        validator: val => Object.keys(val).includes('src') && Object.keys(val).includes('alt')
     },
-    items: Array,
-    orientation: {
-      type: String,
-      validator: val => ["src", "alt"].includes(val)
-    }
   },
   computed: {
     isSrc() {
