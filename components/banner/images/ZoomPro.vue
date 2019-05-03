@@ -16,7 +16,7 @@
         :data-image="image.display_image"
         :data-zoom-image="image.big_display_image"
       >
-        <img :src="image.low_display_image" :alt="image.alt">
+        <img :src="image.low_display_image" width="90" height="90" :alt="image.alt">
       </a>
     </div>
   </div>

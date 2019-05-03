@@ -15,7 +15,9 @@
                   <nav class="cate-menu-nav">
                     <ul>
                       <li v-for="category in categories" :key="category.id">
-                        <a href="#">{{ category.category_name | toUpper }}</a>
+                        <nuxt-link
+                          :to="`/${category.category_name}/c`"
+                        >{{ category.category_name | toUpper }}</nuxt-link>
                       </li>
                     </ul>
                   </nav>
@@ -23,17 +25,17 @@
               </div>
             </div>
             <div class="col-lg-9">
-              <navbar-menu />
+              <navbar-menu/>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>  
+  </section>
 </template>
 
 <style scoped>
-a{
+a {
   color: #fff;
 }
 .header-bottom {
@@ -97,13 +99,13 @@ a{
   position: relative;
 }
 
-.menu-coffee-color .row div[class^="col-"]{
+.menu-coffee-color .row div[class^="col-"] {
   position: static;
 }
 </style>
 
 <script>
-import NavbarMenu from "@/components/navigation/NavbarMenu"
+import NavbarMenu from "@/components/navigation/NavbarMenu";
 
 export default {
   components: {
@@ -158,10 +160,10 @@ export default {
     }
   },
   filters: {
-    toUpper: (value) => {
-      if(!value) return ''
-      value = value.toString()
-      return value.toUpperCase()
+    toUpper: value => {
+      if (!value) return "";
+      value = value.toString();
+      return value.toUpperCase();
     }
   }
 };

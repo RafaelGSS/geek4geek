@@ -1,7 +1,7 @@
 <template>
   <div :class="this.classHover">
     <image-product
-      :href="product.unique_name"
+      :href="`${product.unique_name}/p`"
       :src="this.imageDisplay"
       :alt="this.imageAlt"
       :discount="this.discount"

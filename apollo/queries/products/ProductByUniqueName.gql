@@ -1,9 +1,30 @@
-query ProductByUniqueName {
+query ProductByUniqueName($uniqueName: String!) {
   product(query: {
     unique_name: $uniqueName
   }) {
     id
     name
-    unique_name
+    full_description
+    display_description
+    price
+    stock
+    reviews {
+      id
+      review
+      review_star
+      created_at
+    }
+    images {
+      display_image
+      low_display_image
+      big_display_image
+      alt
+    }
+    tags {
+      tag_name
+    }
+    categories {
+      category_name
+    }
   }
 }

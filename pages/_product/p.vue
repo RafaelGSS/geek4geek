@@ -1,7 +1,7 @@
 <template>
   <page>
     <product-details :product="product"/>
-    <product-content :reviews="reviews" :full_description="product.full_description"/>
+    <product-content :reviews="product.reviews" :full_description="product.full_description"/>
     <banner-area/>
     <full-banner/>
   </page>
@@ -21,9 +21,6 @@ import ProductContent from "@/components/product-details/ProductContent";
  * GraphQL Queries
  */
 
-import product from "@/api/product";
-import productReview from "@/api/productReviews";
-
 import ProductByUniqueName from "@/apollo/queries/products/ProductByUniqueName";
 
 export default {
@@ -41,19 +38,8 @@ export default {
   },
   data: function() {
     return {
-      reviews: [],
       uniqueName: this.$route.params.product
     };
-  },
-  asyncData() {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve({
-          product: product,
-          reviews: productReview
-        });
-      }, 1500);
-    });
   },
   apollo: {
     product: {

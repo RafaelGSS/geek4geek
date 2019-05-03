@@ -1,6 +1,6 @@
-query ProductsFromCategory {
+query ProductsFromCategory($categoryName: String!) {
     category(query: {
-        category_name: "filmes"
+        category_name: $categoryName
     }) {
         products {
             id
