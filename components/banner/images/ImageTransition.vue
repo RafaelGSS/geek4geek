@@ -49,4 +49,3 @@ export default {
     right: 50%;
 }
 </style>
-

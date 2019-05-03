@@ -28,15 +28,15 @@ export default {
   props: {
     img1: {
       type: Object,
-      default: function(){ return {href:"#3", src: '/img/banner/banner-76.jpg', alt: 'banner76'}}
+      default: () => ({href:"#3", src: '/img/banner/banner-76.jpg', alt: 'banner76'})
     },
     img2: {
       type: Object,
-      default: function(){ return {href:"#3", src: '/img/banner/banner-77.jpg', alt: 'banner77'}}
+      default: () => ({href:"#3", src: '/img/banner/banner-77.jpg', alt: 'banner77'})
     },
     img3: {
       type: Object,
-      default: function(){ return {href:"#3", src: '/img/banner/banner-78.jpg', alt: 'banner78'}}
+      default: () => ({href:"#3", src: '/img/banner/banner-78.jpg', alt: 'banner78'})
     }
   }
 };
