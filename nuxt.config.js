@@ -40,6 +40,7 @@ module.exports = {
     { src: 'plugins/vue-notifications.js', ssr: false },
     { src: 'plugins/vue-loading-spinner.js', ssr: false },
     { src: 'plugins/vue-content-placeholders.js', ssr: false },
+    { src: 'plugins/vue-element-loading.js', ssr: false },
   ],
   /**
    * Add modules extern

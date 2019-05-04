@@ -32,16 +32,6 @@ export default {
       type: Array // [{ id: "", display_image: "", big_display_image: "", low_display_image: "", alt: ""}]
     }
   },
-  head() {
-    return {
-      script: [
-        {
-          src: "https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js",
-          ssr: true
-        }
-      ]
-    };
-  },
   mounted() {
     $(".zoompro").elevateZoom({
       gallery: "gallery",

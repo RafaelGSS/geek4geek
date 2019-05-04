@@ -27,6 +27,7 @@
     "v-owl-carousel": "^1.0.8",
     "vue": "^2.6.6",
     "vue-content-placeholders": "^0.2.1",
+    "vue-element-loading": "^1.1.1",
     "vue-notification": "^1.3.14",
     "vue-server-renderer": "^2.6.6",
     "vue-simple-spinner": "^1.2.8",

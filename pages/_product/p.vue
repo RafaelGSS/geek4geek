@@ -1,11 +1,13 @@
 <template>
   <page>
-    <div v-if="$apollo.loading == 0">
+    <no-ssr>
+      <vue-element-loading :active="!this.loaded" is-full-screen>
+        <img src="https://i.pinimg.com/originals/9f/b1/25/9fb125f1fedc8cc62ab5b20699ebd87d.gif">
+      </vue-element-loading>
+    </no-ssr>
+    <div v-if="this.loaded">
       <product-details :product="product"/>
       <product-content :reviews="product.reviews" :full_description="product.full_description"/>
-    </div>
-    <div v-else>
-      <vue-simple-spinner size="large" message="Carregando dados..."></vue-simple-spinner>
     </div>
     <full-banner/>
     <banner-area/>
@@ -13,22 +15,23 @@
 </template>
 
 <script>
-import Page from "@/components/Page";
+import isLoading from "@/mixins/isLoading";
 
-import ProductDetails from "@/components/product-details/ProductDetails";
+import Page from "@/components/Page";
 
 import BannerArea from "@/components/banner/BannerArea";
 import FullBanner from "@/components/banner/FullBanner";
 
 import ProductContent from "@/components/product-details/ProductContent";
+import ProductDetails from "@/components/product-details/ProductDetails";
 
 /**
  * GraphQL Queries
  */
-
 import ProductByUniqueName from "@/apollo/queries/products/ProductByUniqueName";
 
 export default {
+  mixins: [isLoading],
   components: {
     Page,
     ProductDetails,
@@ -38,7 +41,14 @@ export default {
   },
   head() {
     return {
-      title: "Produto " + this.uniqueName
+      title: "Produto " + this.uniqueName,
+      script: [
+        {
+          src:
+            "https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js",
+          ssr: true
+        }
+      ]
     };
   },
   data: function() {

@@ -1,20 +1,24 @@
 <template>
   <page>
-    <div v-if="$apollo.loading">
-      <vue-simple-spinner size="large" message="Carregando dados..."></vue-simple-spinner>
-    </div>
-    <div v-else>
+    <no-ssr>
+      <vue-element-loading :active="!this.loaded" is-full-screen>
+        <img src="https://i.pinimg.com/originals/9f/b1/25/9fb125f1fedc8cc62ab5b20699ebd87d.gif">
+      </vue-element-loading>
+    </no-ssr>
+    <div v-if="this.loaded">
       <slider :imgs="imgSlider"/>
       <banner-area/>
       <product-area :products_new="products_new" :products_hot="products_hot"/>
       <service-area/>
       <best-selling-area :cups="sellingCups" :tshirts="sellingShirts"/>
-      <full-banner/>
     </div>
+    <full-banner/>
   </page>
 </template>
 
 <script>
+import isLoading from "@/mixins/isLoading";
+
 import Page from "@/components/Page";
 
 import Slider from "@/components/banner/Slider";
@@ -35,6 +39,7 @@ import BestSellingShirts from "@/apollo/queries/products/BestSellingShirts";
 import BestSellingCups from "@/apollo/queries/products/BestSellingCups";
 
 export default {
+  mixins: [isLoading],
   head: {
     title: "Homepage dos Geeks!"
   },
