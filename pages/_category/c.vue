@@ -3,25 +3,18 @@
     <full-banner/>
     <div class="shop-page-area pt-30 pb-65">
       <div class="container">
-        <div class="row flex-row" v-if="$apollo.loading == 0">
-          <div class="col-lg-3">
-            <sidebar-filter/>
-          </div>
-          <div class="col-lg-9">
-            <a href="#" class="display-desktop">
-              <full-banner src="/img/banner/banner-49.jpg" alt/>
-            </a>
-            <div class="shop-topbar-wrapper">
-              <div class="shop-topbar-left">
-                <p>Showing 1 - 20 of 30 results</p>
-              </div>
-              <sort-by/>
-            </div>
-            <product-list :products="products" :itemsPerRow="4"/>
-          </div>
+        <div class="col-lg-3">
+          <sidebar-filter/>
         </div>
-        <div v-else>
-          <vue-simple-spinner size="large" message="Carregando dados..."></vue-simple-spinner>
+        <div class="col-lg-9">
+          <full-banner src="/img/banner/banner-49.jpg" alt/>
+          <div class="shop-topbar-wrapper">
+            <div class="shop-topbar-left">
+              <p>Showing 1 - 20 of 30 results</p>
+            </div>
+            <sort-by/>
+          </div>
+          <product-list :products="products" :itemsPerRow="4"/>
         </div>
       </div>
     </div>
