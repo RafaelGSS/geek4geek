@@ -22,7 +22,11 @@ $ npm run generate
 
 ``` bash
 # create docker image gee4geek
-$ docker build -t geek4geek . 
+# dev
+$ docker build -t geek4geek docker/dev 
+
+#or 
+$ docker build -t geek4geek docker/prod
 
 # run project on container
 $ docker run -p 4000:5000 geek4geek

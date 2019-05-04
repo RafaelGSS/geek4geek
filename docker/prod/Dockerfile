@@ -11,6 +11,9 @@ RUN apk update && apk upgrade
 COPY . /usr/src/nuxt-app
 RUN npm install
 
+# build
+RUN npm build
+
 # expose 5000 on container
 EXPOSE 5000
 
@@ -21,4 +24,4 @@ ENV NUXT_HOST=0.0.0.0
 ENV NUXT_PORT=5000
 
 # start the app
-CMD [ "npm", "run", "build" ]
+CMD [ "npm", "run", "start" ]
