@@ -12,7 +12,7 @@ COPY . /usr/src/nuxt-app
 RUN npm install
 
 # build
-RUN npm build
+RUN npm run build
 
 # expose 5000 on container
 EXPOSE 5000

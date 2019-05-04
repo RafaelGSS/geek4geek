@@ -23,13 +23,19 @@ $ npm run generate
 ``` bash
 # create docker image gee4geek
 # dev
-$ docker build -t geek4geek docker/dev 
+$ docker build -t geek4geek -f docker/dev/Dockerfile . 
 
-#or 
-$ docker build -t geek4geek docker/prod
+# prod
+$ docker build -t geek4geek-dev -f docker/prod/Dockerfile .
 
 # run project on container
-$ docker run -p 4000:5000 geek4geek
+# dev
+$ docker run -p 4000:5000 -v $(pwd):/usr/src/nuxt-app -t geek4geek-dev
+
+# prod
+$ docker run -p 4000:5000 -t geek4geek
+
+
 ```
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
