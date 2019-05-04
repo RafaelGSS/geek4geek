@@ -25,7 +25,7 @@ $ npm run generate
 $ docker build -t geek4geek . 
 
 # run project on container
-$ docker run geek4geek
+$ docker run -p 4000:5000 geek4geek
 ```
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
