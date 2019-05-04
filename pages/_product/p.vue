@@ -9,8 +9,8 @@
       <product-details :product="product"/>
       <product-content :reviews="product.reviews" :full_description="product.full_description"/>
     </div>
-    <full-banner/>
-    <banner-area/>
+    <full-banner src="/img/banner/banner-80.jpg" alt="Banner Index" />
+    <banner-area />
   </page>
 </template>
 

@@ -6,17 +6,13 @@
       </vue-element-loading>
     </no-ssr>
     <div v-if="this.loaded">
-      <slider :imgs="imgSlider"/>
-      <banner-area
-        :img1="this.bannerArea.img1"
-        :img2="this.bannerArea.img2"
-        :img3="this.bannerArea.img3"
-      />
+      <slider/>
+      <banner-area/>
       <product-area :products_new="products_new" :products_hot="products_hot"/>
-      <service-area />
+      <service-area/>
       <best-selling-area :cups="sellingCups" :tshirts="sellingShirts"/>
     </div>
-    <full-banner src="/img/banner/banner-80.jpg" alt="Banner Index" />
+    <full-banner src="/img/banner/banner-80.jpg" alt="Banner Index"/>
   </page>
 </template>
 
@@ -47,18 +43,6 @@ export default {
   head: {
     title: "Homepage dos Geeks!"
   },
-  data: () => ({
-    imgSlider: [
-      { src: "/img/slider/slider-51.jpg", alt: "slider", href: "#1" },
-      { src: "/img/slider/slider-51.jpg", alt: "slider", href: "#2" }
-    ],
-    bannerArea: {
-      img1: { href: "#3", src: "/img/banner/banner-76.jpg", alt: "banner76" },
-      img2: { href: "#3", src: "/img/banner/banner-77.jpg", alt: "banner77" },
-      img3: { href: "#3", src: "/img/banner/banner-78.jpg", alt: "banner78" }
-    },
-    fullBanner: ''
-  }),
   components: {
     Page,
     Slider,

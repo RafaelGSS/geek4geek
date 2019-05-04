@@ -1,8 +1,9 @@
 <template>
   <page>
-    <full-banner/>
+    <full-banner src="/img/banner/banner-80.jpg" alt="Banner Categories"/>
     <div class="shop-page-area pt-30 pb-65">
-      <div class="container">
+
+      <div class="container" v-if="this.loaded">
         <div class="col-lg-3">
           <sidebar-filter/>
         </div>
@@ -10,7 +11,7 @@
           <full-banner src="/img/banner/banner-49.jpg" alt/>
           <div class="shop-topbar-wrapper">
             <div class="shop-topbar-left">
-              <p>Showing 1 - 20 of 30 results</p>
+              <p>Showing 1 - 20 of {{ this.totalProducts }} results</p>
             </div>
             <sort-by/>
           </div>
@@ -22,6 +23,8 @@
 </template>
 
 <script>
+import isLoading from "@/mixins/isLoading";
+
 import Page from "@/components/Page";
 
 import FullBanner from "@/components/banner/FullBanner";
@@ -31,12 +34,15 @@ import ProductList from "@/components/shop-area/ProductList";
 import SidebarFilter from "@/components/shop-area/sidebar/SidebarFilter";
 import SortBy from "@/components/shop-area/sidebar/SortBy";
 
+import { get } from "lodash";
+
 /**
  * GraphQL Queries
  */
 import ProductsFromCategory from "@/apollo/queries/categories/ProductsFromCategory";
 
 export default {
+  mixins: [isLoading],
   components: {
     Page,
     ProductList,
@@ -46,7 +52,8 @@ export default {
   },
   data: function() {
     return {
-      category: this.$route.params.category
+      category: this.$route.params.category,
+      totalProducts: 0
     };
   },
   head() {
@@ -58,7 +65,7 @@ export default {
     products: {
       prefetch: true,
       query: ProductsFromCategory,
-      update: data => (data.category ? data.category.products : []),
+      update: data => get(data, 'category.products.records', []), 
       variables() {
         return { categoryName: this.category };
       }
