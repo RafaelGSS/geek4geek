@@ -2,7 +2,7 @@
   <page>
     <no-ssr>
       <vue-element-loading :active="!this.loaded" is-full-screen>
-        <img src="https://i.pinimg.com/originals/9f/b1/25/9fb125f1fedc8cc62ab5b20699ebd87d.gif">
+        <img src="/gif/pikachu-loading.gif">
       </vue-element-loading>
     </no-ssr>
     <div v-if="this.loaded">
@@ -41,14 +41,7 @@ export default {
   },
   head() {
     return {
-      title: "Produto " + this.uniqueName,
-      script: [
-        {
-          src:
-            "https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js",
-          ssr: true
-        }
-      ]
+      title: "Produto " + this.uniqueName
     };
   },
   data: function() {

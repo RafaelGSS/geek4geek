@@ -19,6 +19,10 @@ module.exports = {
         type: "text/javascript"
       },
       {
+        src: "https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js",
+        type: "text/javascript"
+      },
+      {
         src: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js",
         type: "text/javascript"
       },
@@ -66,7 +70,7 @@ module.exports = {
     clientConfigs: {
       default: {
         // required  
-        httpEndpoint: 'http://192.168.0.106:3000/',
+        httpEndpoint: 'http://localhost:3000/',
         // optional
         // See https://www.apollographql.com/docs/link/links/http.html#options
         httpLinkOptions: {
@@ -84,9 +88,9 @@ module.exports = {
         websocketsOnly: false // Optional
       },
       // test: {
-        // httpEndpoint: 'http://localhost:5000',
-        // wsEndpoint: 'ws://localhost:5000',
-        // tokenName: 'apollo-token'
+      // httpEndpoint: 'http://localhost:5000',
+      // wsEndpoint: 'ws://localhost:5000',
+      // tokenName: 'apollo-token'
       // },
       // alternative: user path to config which returns exact same config options
       // test2: '~/plugins/my-alternative-apollo-config.js'
