@@ -28,6 +28,7 @@ export default {
       type: Array, // [{ id: 1, review_star: 5, author: "", created_at: "2018-09-20", review: "Message" }]
       default: () => [],
       validator: val => {
+      let val = [0]
         if (val.lenght > 0) {
           return ["id", "review_star", "author", "review", "created_at"].every(
             k => k in val
