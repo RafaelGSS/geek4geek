@@ -18,6 +18,15 @@ $ npm start
 # generate static project
 $ npm run generate
 ```
+## Build Setup on Docker
+
+``` bash
+# create docker image gee4geek
+$ docker build -t geek4geek . 
+
+# run project on container
+$ docker run geek4geek
+```
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
 
