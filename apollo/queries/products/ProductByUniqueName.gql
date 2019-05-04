@@ -15,6 +15,7 @@ query ProductByUniqueName($uniqueName: String!) {
       created_at
     }
     images {
+      id
       display_image
       low_display_image
       big_display_image

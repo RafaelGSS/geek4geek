@@ -1,11 +1,16 @@
 <template>
   <page>
-    <slider :imgs="imgSlider"/>
-    <banner-area/>
-    <product-area :products_new="products_new" :products_hot="products_hot"/>
-    <service-area/>
-    <best-selling-area :cups="sellingCups" :tshirts="sellingShirts"/>
-    <full-banner/>
+    <div v-if="$apollo.loading">
+      <vue-simple-spinner size="large" message="Carregando dados..."></vue-simple-spinner>
+    </div>
+    <div v-else>
+      <slider :imgs="imgSlider"/>
+      <banner-area/>
+      <product-area :products_new="products_new" :products_hot="products_hot"/>
+      <service-area/>
+      <best-selling-area :cups="sellingCups" :tshirts="sellingShirts"/>
+      <full-banner/>
+    </div>
   </page>
 </template>
 

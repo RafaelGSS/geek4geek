@@ -3,7 +3,7 @@
     <full-banner/>
     <div class="shop-page-area pt-30 pb-65">
       <div class="container">
-        <div class="row flex-row">
+        <div class="row flex-row" v-if="$apollo.loading == 0">
           <div class="col-lg-3">
             <sidebar-filter/>
           </div>
@@ -19,6 +19,9 @@
             </div>
             <product-list :products="products" :itemsPerRow="4"/>
           </div>
+        </div>
+        <div v-else>
+          <vue-simple-spinner size="large" message="Carregando dados..."></vue-simple-spinner>
         </div>
       </div>
     </div>

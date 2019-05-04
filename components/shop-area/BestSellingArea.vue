@@ -90,10 +90,12 @@ export default {
   },
   props: {
     tshirts: {
-      type: Array
+      type: Array,
+      required: true
     },
     cups: {
-      type: Array
+      type: Array,
+      required: true
     }
   }
 };

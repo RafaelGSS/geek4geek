@@ -36,8 +36,8 @@ export default {
     return {
       script: [
         {
-          src:
-            "https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"
+          src: "https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js",
+          ssr: true
         }
       ]
     };

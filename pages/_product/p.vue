@@ -1,9 +1,14 @@
 <template>
   <page>
-    <product-details :product="product"/>
-    <product-content :reviews="product.reviews" :full_description="product.full_description"/>
-    <banner-area/>
+    <div v-if="$apollo.loading == 0">
+      <product-details :product="product"/>
+      <product-content :reviews="product.reviews" :full_description="product.full_description"/>
+    </div>
+    <div v-else>
+      <vue-simple-spinner size="large" message="Carregando dados..."></vue-simple-spinner>
+    </div>
     <full-banner/>
+    <banner-area/>
   </page>
 </template>
 
