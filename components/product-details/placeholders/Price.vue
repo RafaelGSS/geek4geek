@@ -1,19 +1,27 @@
 <template>
-    <div class="product-price-wrapper">
-        <span>R$ {{ this.price }}</span>
-        <span v-show="oldPrice != null" class="product-price-old">R$ {{ this.oldPrice }}</span>
-    </div>
+  <div class="product-price-wrapper">
+    <span>{{ price | toReal }}</span>
+    <span v-show="discount != null" class="product-price-old">{{ this.oldPrice | toReal }}</span>
+  </div>
 </template>
 
 <script>
+import cashFormatter from "@/mixins/cashFormatter";
+
 export default {
-    props: {
-        price: Number,
-        oldPrice: {
-            default: null
-        }
+  mixins: [cashFormatter],
+  props: {
+    price: Number,
+    discount: {
+      default: null
     }
-}
+  },
+  computed: {
+    oldPrice() {
+      return this.price + this.price * (this.discount / 100)
+    }
+  }
+};
 </script>
 
 <style scoped>

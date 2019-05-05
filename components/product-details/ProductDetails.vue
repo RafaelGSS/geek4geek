@@ -9,7 +9,7 @@
         </div>
         <div class="col-lg-6 col-md-12">
           <div class="product-details-content">
-            <h4>{{ product.display_name }}</h4>
+            <h4>{{ product.name }}</h4>
             <div class="rating-review">
               <div class="pro-dec-rating">
                 <star :hasButton="false"></star>
@@ -47,13 +47,13 @@
             <simple-list :items="product.categories">
               <template slot="title">Categorias:</template>
               <template v-slot:item="{ item }">
-                <a href="#">{{ item.name }}</a>
+                <a href="#">{{ item.category_name }}</a>
               </template>
             </simple-list>
             <simple-list :items="product.tags">
               <template slot="title">Tags:</template>
               <template v-slot:item="{ item }">
-                <a href="#">{{ item.name }}</a>
+                <a href="#">{{ item.tag_name }}</a>
               </template>
             </simple-list>
             <share-social-icons/>
@@ -77,7 +77,7 @@ import Star from "@/components/widgets/Star";
 
 export default {
   props: {
-    product: Object
+    product: Object // { id: 1, images: [], tags: [], categories: [], name: "", price: "": stock: 1, display_description: ""}
   },
   components: {
     ZoomPro,

@@ -7,7 +7,9 @@
 <script>
 export default {
   props: {
-    id: Number
+    id: {
+      required: true
+    }
   },
   methods: {
     addWishlist() {

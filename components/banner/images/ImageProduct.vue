@@ -2,9 +2,9 @@
   <!-- Component image with badge-discount if needs -->
   <div>
     <div class="product-img-slider">
-      <a :href="href">
+      <nuxt-link :to="href">
         <img :src="src" :alt="alt">
-      </a>
+      </nuxt-link>
     </div>
     <div v-if="discount != null" class="discount">
       <badge-discount :discount="discount"></badge-discount>

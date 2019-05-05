@@ -1,0 +1,8 @@
+query categories {
+  categories(orderBy: [category_name_ASC]) {
+    records {
+      id
+      category_name
+    }
+  }
+}

@@ -1,12 +1,12 @@
 <template>
-  <span>-{{ this.discount }}%</span>
+  <span>-{{ discount }}%</span>
 </template>
 
 <script>
 export default {
-    props: {
-        discount: Number
-    }
+  props: {
+    discount: Number
+  }
 };
 </script>
 

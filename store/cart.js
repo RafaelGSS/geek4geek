@@ -10,17 +10,17 @@ export const mutations = {
         state.initialized = true
     },
     add(state, obj) {
-        const itens = [...state.itemsCart]
-        itens.push(obj)
-        state.itemsCart = [...itens]
+        const items = [...state.itemsCart]
+        items.push(obj)
+        state.itemsCart = [...items]
 
         nuxtStorage.localStorage.setData('iki-cart', JSON.stringify(state.itemsCart), 60)
     },
     remove(state, idx) {
-        const itens = [...state.itemsCart]
-        itens.splice(idx, 1)
+        const items = [...state.itemsCart]
+        items.splice(idx, 1)
 
-        state.itemsCart = [...itens]
+        state.itemsCart = [...items]
 
         nuxtStorage.localStorage.setData('iki-cart', JSON.stringify(state.itemsCart), 60)
     },
@@ -53,8 +53,8 @@ export const getters = {
         let sum = 0
         state.itemsCart.forEach(item => {	
             sum += item.value
-        });
-        return sum
+        })
+        return parseFloat(sum)
     },
     initialized: state => {
         return state.initialized

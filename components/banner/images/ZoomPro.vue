@@ -16,7 +16,7 @@
         :data-image="image.display_image"
         :data-zoom-image="image.big_display_image"
       >
-        <img :src="image.low_display_image" :alt="image.alt">
+        <img :src="image.low_display_image" width="90" height="90" :alt="image.alt">
       </a>
     </div>
   </div>
@@ -31,16 +31,6 @@ export default {
     gallery: {
       type: Array // [{ id: "", display_image: "", big_display_image: "", low_display_image: "", alt: ""}]
     }
-  },
-  head() {
-    return {
-      script: [
-        {
-          src:
-            "https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"
-        }
-      ]
-    };
   },
   mounted() {
     $(".zoompro").elevateZoom({

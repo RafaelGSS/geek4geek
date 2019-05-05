@@ -1,5 +1,5 @@
 <template>
-  <a href="#add-cart" title="Add To Cart" class="action-cart" @click="addCart">
+  <a href="#add-cart" title="Adicionar ao carrinho" class="action-cart" @click="addCart">
     <slot>Add to Cart</slot>
   </a>
 </template>
@@ -7,7 +7,9 @@
 <script>
 export default {
   props: {
-    id: Number,
+    id: {
+      required: true
+    },
     quantity: {
       default: 1
     },

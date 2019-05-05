@@ -9,13 +9,17 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'deion', name: 'deion', content: 'Geek4Geek o melhor ecommerce geek do Brasil!' }
     ],
-    script  : [
+    script: [
       {
         src: "https://code.jquery.com/jquery-3.3.1.min.js",
         type: "text/javascript"
       },
       {
         src: 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js',
+        type: "text/javascript"
+      },
+      {
+        src: "https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js",
         type: "text/javascript"
       },
       {
@@ -35,23 +39,69 @@ module.exports = {
       }
     ],
   },
-  plugins:[
-    {src: 'plugins/vue-carousel.js', ssr: false},
-    {src: 'plugins/vue-notifications.js', ssr: false},
-    {src: 'plugins/vue-loading-spinner.js', ssr: false},
-    {src: 'plugins/vue-content-placeholders.js', ssr: false},
+  plugins: [
+    { src: 'plugins/vue-carousel.js', ssr: false },
+    { src: 'plugins/vue-notifications.js', ssr: false },
+    { src: 'plugins/vue-loading-spinner.js', ssr: false },
+    { src: 'plugins/vue-content-placeholders.js', ssr: false },
+    { src: 'plugins/vue-element-loading.js', ssr: false },
   ],
   /**
    * Add modules extern
    */
   modules: [
-    'nuxt-client-init-module'
+    'nuxt-client-init-module',
+    '@nuxtjs/apollo'
   ],
+
+  /**
+   * Apollo Configuration
+   */
+  apollo: {
+    // tokenName: 'yourApolloTokenName', // optional, default: apollo-token
+    // tokenExpires: 10, // optional, default: 7 (days)
+    includeNodeModules: true, // optional, default: false (this includes graphql-tag for node_modules folder)
+    // authenticationType: 'Basic', // optional, default: 'Bearer'
+    // optional
+    errorHandler(error) {
+      console.log('%cError', 'background: red; color: white; padding: 2px 4px; border-radius: 3px; font-weight: bold;', error.message)
+    },
+    // required
+    clientConfigs: {
+      default: {
+        // required  
+        httpEndpoint: 'http://localhost:3000/',
+        // optional
+        // See https://www.apollographql.com/docs/link/links/http.html#options
+        httpLinkOptions: {
+          credentials: 'same-origin'
+        },
+        // You can use `wss` for secure connection (recommended in production)
+        // Use `null` to disable subscriptions
+        // wsEndpoint: 'ws://localhost:3000', // optional
+        // LocalStorage token
+        tokenName: 'apollo-token', // optional
+        // Enable Automatic Query persisting with Apollo Engine
+        persisting: false, // Optional
+        // Use websockets for everything (no HTTP)
+        // You need to pass a `wsEndpoint` for this to work
+        websocketsOnly: false // Optional
+      },
+      // test: {
+      // httpEndpoint: 'http://localhost:5000',
+      // wsEndpoint: 'ws://localhost:5000',
+      // tokenName: 'apollo-token'
+      // },
+      // alternative: user path to config which returns exact same config options
+      // test2: '~/plugins/my-alternative-apollo-config.js'
+    }
+  },
+
   /**
    * Global CSS
    */
   css: ['~assets/main.css', '~assets/responsive.css', '~assets/icons.css'],
-  
+
   /*
   ** Customize the progress bar color
   */
@@ -65,7 +115,7 @@ module.exports = {
       return { x: 0, y: 0 }
     }
   },
-  
+
   /*
   ** Build configuration
   */
@@ -73,7 +123,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    extend (config, { isDev, isClient }) {
+    extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',

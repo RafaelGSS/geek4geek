@@ -1,0 +1,21 @@
+query productNew {
+    products {
+        records {
+            id
+            name
+            unique_name
+            display_description
+            price
+            images {
+                display_image
+                alt
+            }
+            categories {
+                category_name	
+            }
+            promo {
+                promotion_percentage
+            }
+        }
+    }
+}

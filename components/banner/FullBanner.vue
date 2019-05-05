@@ -1,6 +1,6 @@
 <template>
   <div class="banner-area">
-    <img :src="img.src" :alt="img.alt">
+    <img :src="src" :alt="alt">
   </div>
 </template>
 
@@ -13,10 +13,13 @@
 <script>
 export default {
   props: {
-    img: {
-      type: Object,
-      default: () => ({ src: "/img/banner/banner-80.jpg", alt: "banner" }),
-      validator: val => Object.keys(val).includes('src') && Object.keys(val).includes('alt')
+    src: {
+      type: String,
+      default: "/img/banner/banner-80.jpg"
+    },
+    alt: {
+      type: String,
+      default: "Banner completo"
     }
   }
 };
