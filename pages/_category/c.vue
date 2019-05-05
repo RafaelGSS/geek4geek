@@ -1,21 +1,29 @@
 <template>
   <page>
     <full-banner src="/img/banner/banner-80.jpg" alt="Banner Categories"/>
+    <no-ssr>
+      <vue-element-loading :active="!this.loaded" is-full-screen>
+        <img src="/gif/pikachu-loading.gif">
+      </vue-element-loading>
+    </no-ssr>
     <div class="shop-page-area pt-30 pb-65">
-
       <div class="container" v-if="this.loaded">
-        <div class="col-lg-3">
-          <sidebar-filter/>
-        </div>
-        <div class="col-lg-9">
-          <full-banner src="/img/banner/banner-49.jpg" alt/>
-          <div class="shop-topbar-wrapper">
-            <div class="shop-topbar-left">
-              <p>Showing 1 - 20 of {{ this.totalProducts }} results</p>
-            </div>
-            <sort-by/>
+        <div class="row flex-row">
+          <div class="col-lg-3">
+            <sidebar-filter/>
           </div>
-          <product-list :products="products" :itemsPerRow="4"/>
+          <div class="col-lg-9">
+            <a href="#" class="display-desktop">
+              <full-banner src="/img/banner/banner-49.jpg" alt/>
+            </a>
+            <div class="shop-topbar-wrapper">
+              <div class="shop-topbar-left">
+                <p>Showing 1 - 20 of {{ this.totalProducts }} results</p>
+              </div>
+              <sort-by/>
+            </div>
+            <product-list :products="products" :itemsPerRow="4"/>
+          </div>
         </div>
       </div>
     </div>
@@ -65,7 +73,7 @@ export default {
     products: {
       prefetch: true,
       query: ProductsFromCategory,
-      update: data => get(data, 'category.products.records', []), 
+      update: data => get(data, "category.products", []),
       variables() {
         return { categoryName: this.category };
       }
