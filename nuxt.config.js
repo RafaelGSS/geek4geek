@@ -15,10 +15,6 @@ module.exports = {
         type: "text/javascript"
       },
       {
-        src: 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js',
-        type: "text/javascript"
-      },
-      {
         src: "https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js",
         type: "text/javascript"
       },

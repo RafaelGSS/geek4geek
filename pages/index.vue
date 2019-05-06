@@ -6,7 +6,7 @@
       </vue-element-loading>
     </no-ssr>
     <div v-if="this.loaded">
-      <slider/>
+      <slider />
       <banner-area/>
       <product-area :products_new="products_new" :products_hot="products_hot"/>
       <service-area/>
