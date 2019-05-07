@@ -7,9 +7,12 @@ WORKDIR /usr/src/nuxt-app
 # update and install dependency
 RUN apk update && apk upgrade
 
+# copy package.json
+COPY ./package.json /usr/src/nuxt-app
+RUN npm install
+
 # copy the app, not .dockerignore
 COPY . /usr/src/nuxt-app
-RUN npm install
 
 # expose 5000 on container
 EXPOSE 5000
