@@ -23,10 +23,10 @@ $ npm run generate
 ``` bash
 # create docker image gee4geek
 # dev
-$ docker build -t geek4geek-dev -f docker/prod/Dockerfile .
+$ docker build -t geek4geek-dev -f docker/dev/Dockerfile .
 
 # prod
-$ docker build -t geek4geek -f docker/dev/Dockerfile . 
+$ docker build -t geek4geek -f docker/prod/Dockerfile . 
 
 # run project on container
 # dev
