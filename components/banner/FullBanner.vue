@@ -4,12 +4,6 @@
   </div>
 </template>
 
-<style scoped>
-.banner-area > img {
-  width: 100%;
-}
-</style>
-
 <script>
 export default {
   props: {
@@ -24,3 +18,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.banner-area > img {
+  width: 100%;
+}
+</style>
