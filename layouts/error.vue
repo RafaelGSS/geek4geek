@@ -21,10 +21,10 @@
 </template>
 
 <script>
-import Page from "~/components/Page.vue";
-import E404 from "~/components/error/E404";
-import E500 from "~/components/error/E500";
-import E403 from "~/components/error/E403";
+import Page from "@/components/Page.vue";
+import E404 from "@/components/error/E404";
+import E500 from "@/components/error/E500";
+import E403 from "@/components/error/E403";
 
 export default {
   props: ["error"],

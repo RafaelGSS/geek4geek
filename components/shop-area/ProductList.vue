@@ -3,7 +3,7 @@
     <div class="custom-row">
       <div
         :class="['custom-col-' + itemsPerRow, 'mb-30']"
-        v-for="prod in filteredProducts"
+        v-for="prod in products"
         :key="`prod-${prod.id}`"
       >
         <product class="geek4-product-2 mrg-inherit" :product="prod"/>
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Product from "@/components/shop-area/Product"
+import Product from "@/components/shop-area/Product";
 
 export default {
   components: {
@@ -29,34 +29,7 @@ export default {
   data: () => ({
     filtersAppied: [],
     sortName: "default"
-  }),
-  computed: {
-    filteredProducts: function() {
-      return this.products
-        .filter(product => {
-          return this.filtersAppied.every(filterAppied => {
-            switch (filterAppied.type) {
-              case "Tag":
-                return product.tags.arrayContains(filterAppied.data);
-              case "Material":
-                return filterAppied.data.includes(product.material);
-              default:
-                return true;
-            }
-          });
-        })
-        .sort((a, b) => {
-          switch (this.sortName) {
-            case "PRICE_DESC":
-              return b.price - a.price;
-            case "PRICE_ASC":
-              return a.price - b.price;
-            default:
-              return 0;
-          }
-        });
-    }
-  }
+  })
 };
 </script>
 
