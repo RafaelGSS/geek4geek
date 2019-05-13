@@ -4,7 +4,7 @@
       <div class="pt-60 pb-65 border-top-2">
         <div class="row">
           <div class="col-12">
-            <div class="footer-middle text-center red-color footer-black-color">
+            <div class="footer-middle text-center">
               <nav class="footer-tag">
                 <ul>
                   <li>
@@ -54,12 +54,7 @@
 </template>
 
 <style>
-.pt-60 {
-  padding-top: 60px;
-}
-.pb-65 {
-  padding-bottom: 65px;
-}
+
 .footer-middle {
   padding: 0 12px;
 }
@@ -70,9 +65,7 @@
 .footer-tag ul li a:hover {
   color: #fff;
 }
-.footer-black-color .footer-tag ul li a:hover {
-  color: #fff;
-}
+
 .footer-tag ul li {
   display: inline-block;
   margin: 0 10px 5px;
