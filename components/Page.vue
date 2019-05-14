@@ -1,16 +1,16 @@
 <template>
   <div>
     <header>
-      <HeaderTop/>
-      <HeaderMiddle/>
-      <HeaderBottom :categories="categories"/>
+      <header-top/>
+      <header-middle/>
+      <header-bottom :categories="categories"/>
     </header>
     <div>
       <slot></slot>
     </div>
     <footer>
-      <FooterTop/>
-      <FooterBottom/>
+      <footer-top/>
+      <footer-bottom/>
     </footer>
   </div>
 </template>

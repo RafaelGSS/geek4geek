@@ -27,7 +27,6 @@
 </template>
 
 <script>
-import busFilter from "@/assets/js/eventBus_filter.js";
 import MenuDropdownFixed from "@/components/widgets/menu/MenuDropdownFixed";
 import MenuItemCard from "@/components/widgets/menu/MenuItemCard";
 
@@ -43,7 +42,6 @@ export default {
   }),
   methods: {
     addToFilter(pType, pValue) {
-      busFilter.$emit("ADD_TO_FILTER", { type: pType, value: pValue });
     },
     setActive(event) {
       const { id }= event.currentTarget;

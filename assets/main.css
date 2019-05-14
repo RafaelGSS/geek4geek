@@ -1459,10 +1459,6 @@ textarea:focus {
     z-index: 0;
 }
 
-.bg-img {
-    background-position: center center;
-    background-size: cover;
-}
 :focus {
     outline: -webkit-focus-ring-color auto 0px;
 }

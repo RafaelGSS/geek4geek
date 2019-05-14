@@ -9,8 +9,8 @@
       <product-details :product="product"/>
       <product-content :reviews="product.reviews" :full_description="product.full_description"/>
     </div>
-    <full-banner src="/img/banner/banner-80.jpg" alt="Banner Index" />
-    <banner-area />
+    <full-banner src="/img/banner/banner-80.jpg" alt="Banner Index"/>
+    <banner-transition-area/>
   </page>
 </template>
 
@@ -19,7 +19,7 @@ import isLoading from "@/mixins/isLoading";
 
 import Page from "@/components/Page";
 
-import BannerArea from "@/components/banner/BannerArea";
+import BannerTransitionArea from "@/components/banner/BannerTransitionArea";
 import FullBanner from "@/components/banner/FullBanner";
 
 import ProductContent from "@/components/product-details/ProductContent";
@@ -36,7 +36,7 @@ export default {
     Page,
     ProductDetails,
     ProductContent,
-    BannerArea,
+    BannerTransitionArea,
     FullBanner
   },
   head() {

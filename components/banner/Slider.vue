@@ -3,7 +3,7 @@
     <no-ssr>
       <carousel :items="1" :loop="1" :center="1" :autoplay="1" :autoplayHoverPause="1" :nav="0">
         <a :href="img.href" class="slider-active bg-img" v-for="img in imgs" :key="img.href">
-          <img :src="img.src" :alt="img.alt" class="single-slider bg-img slider-height-22">
+          <img :src="img.src" :alt="img.alt" class="single-slider bg-img slider-height">
         </a>
       </carousel>
     </no-ssr>
@@ -25,7 +25,12 @@ export default {
 </script>
 
 <style scoped>
-.slider-height-22 {
+.bg-img {
+  background-position: center center;
+  background-size: cover;
+}
+
+.slider-height {
   min-height: 388px;
   max-height: 400px;
 }

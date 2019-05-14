@@ -1,9 +1,9 @@
 <template>
     <!-- Component image link with effect css of transition -->
   <div class="banner-img banner-hover mb-30">
-    <a :href="href">
+    <nuxt-link :to="href">
       <img :src="src" :alt="alt">
-    </a>
+    </nuxt-link>
   </div>
 </template>
 

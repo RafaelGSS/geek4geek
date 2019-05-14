@@ -26,7 +26,8 @@
 export default {
   props: {
     principalImg: {
-      type: Object // { id: "", display_image: "", big_display_image: "", low_display_image: "", alt: ""}
+      type: Object, // { id: "", display_image: "", big_display_image: "", low_display_image: "", alt: ""}
+      validator: (val) => ['id', 'display_image', 'big_display_image', 'low_display_image', 'alt'].every(k => k in val)
     },
     gallery: {
       type: Array // [{ id: "", display_image: "", big_display_image: "", low_display_image: "", alt: ""}]
@@ -51,11 +52,9 @@ export default {
 .zoompro-border {
   border: 1px solid #ebebeb;
 }
-
 .zoompro {
   width: 100%;
 }
-
 .product-dec-slider {
   text-align: center;
 }
@@ -70,7 +69,6 @@ export default {
 .product-dec-slider a.active img {
   border: 2px solid #ebebeb;
 }
-
 .zoompro-span {
   position: relative;
 }

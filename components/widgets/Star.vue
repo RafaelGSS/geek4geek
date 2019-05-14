@@ -39,7 +39,7 @@ export default {
   },
   watch: {
     selected: function(newVal, oldVal) {
-      this.checked = newVal
+      this.checked = newVal;
     }
   }
 };

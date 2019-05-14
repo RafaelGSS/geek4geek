@@ -6,8 +6,8 @@
       </vue-element-loading>
     </no-ssr>
     <div v-if="this.loaded">
-      <slider />
-      <banner-area/>
+      <slider/>
+      <banner-transition-area/>
       <product-area :products_new="products_new" :products_hot="products_hot"/>
       <service-area/>
       <best-selling-area :cups="sellingCups" :tshirts="sellingShirts"/>
@@ -22,7 +22,7 @@ import isLoading from "@/mixins/isLoading";
 import Page from "@/components/Page";
 
 import Slider from "@/components/banner/Slider";
-import BannerArea from "@/components/banner/BannerArea";
+import BannerTransitionArea from "@/components/banner/BannerTransitionArea";
 import FullBanner from "@/components/banner/FullBanner";
 import ServiceArea from "@/components/banner/ServiceArea";
 
@@ -46,7 +46,7 @@ export default {
   components: {
     Page,
     Slider,
-    BannerArea,
+    BannerTransitionArea,
     ProductArea,
     FullBanner,
     ServiceArea,

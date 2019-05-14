@@ -2,8 +2,17 @@
   <div class="services-area pt-20 pb-35">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 col-md-4" v-for="(service, index) in services" :key="`service-card-${index}`">
-          <card-service :title="service.title" :subtitle="service.subtitle" :iconImage="service.icon" :altImage="service.alt" />
+        <div
+          class="col-lg-4 col-md-4"
+          v-for="(service, index) in services"
+          :key="`service-card-${index}`"
+        >
+          <card-service
+            :title="service.title"
+            :subtitle="service.subtitle"
+            :icon-image="service.icon"
+            :alt-image="service.alt"
+          />
         </div>
       </div>
     </div>
@@ -38,7 +47,7 @@ export default {
         alt: "Icone frete grátis"
       }
     ]
-  }) 
+  })
 };
 </script>
 

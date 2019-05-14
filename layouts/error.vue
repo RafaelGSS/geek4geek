@@ -27,7 +27,9 @@ import E500 from "@/components/error/E500";
 import E403 from "@/components/error/E403";
 
 export default {
-  props: ["error"],
+  props: {
+    error: Object
+  },
   head: {
     title: "Página não encontrada"
   },

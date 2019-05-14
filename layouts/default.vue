@@ -1,22 +1,18 @@
 <template>
   <div>
     <no-ssr>
-      <notifications group="general" />
+      <notifications group="general"/>
     </no-ssr>
     <nuxt/>
   </div>
 </template>
 
-<style>
-
-</style>
-
 <script>
-import '@/assets/js/common.js'
+import "@/assets/js/common.js";
 
-export default {
-  
-}
+export default {};
 </script>
 
 
+<style>
+</style>

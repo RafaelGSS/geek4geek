@@ -8,7 +8,7 @@
               <nav class="footer-tag">
                 <ul>
                   <li>
-                    <a href="#" >Compras online</a>
+                    <a href="#">Compras online</a>
                   </li>
                   <li>
                     <a href="#">Promoções</a>
@@ -53,8 +53,12 @@
   </section>
 </template>
 
-<style>
+<script>
+export default {};
+</script>
 
+
+<style scoped>
 .footer-middle {
   padding: 0 12px;
 }
