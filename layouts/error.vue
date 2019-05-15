@@ -12,7 +12,7 @@
           <E500/>
         </div>
         <div class="go-home">
-          <button class="btn btn-success">Quero ir para Homepage</button>
+          <nuxt-link to="/" class="btn btn-success">Quero ir para Homepage</nuxt-link>
         </div>
       </div>
     </div>
@@ -37,6 +37,9 @@ export default {
     Page,
     E404,
     E500
+  },
+  mounted() {
+    console.log(this.error)
   }
 };
 </script>
@@ -46,7 +49,7 @@ export default {
   text-align: center;
 }
 
-.go-home button {
+.go-home a {
   font-size: 25px;
   padding: 10px;
   width: 500px;

@@ -12,13 +12,14 @@
         <menu-item-card :orientation="'vertical'" :items="this.cardMaterial">
           <template slot="title">Material</template>
           <template v-slot:item="{ item }">
-            <input type="checkbox" @click="addToFilter('Material', item)">{{ item }}
+            <input type="checkbox" @click="addToFilter('Material', item)">
+            {{ item }}
           </template>
         </menu-item-card>
         <menu-item-card :orientation="'horizontal'" :items="this.cardTags">
           <template slot="title">Tags</template>
           <template v-slot:item="{ item }">
-              <a :id="`Tag_${item}`" @click="addToFilter('Tag', item); setActive($event);">{{ item }}</a>
+            <a :id="`Tag_${item}`" @click="addToFilter('Tag', item); setActive($event);">{{ item }}</a>
           </template>
         </menu-item-card>
       </template>
@@ -42,9 +43,10 @@ export default {
   }),
   methods: {
     addToFilter(pType, pValue) {
+      this.$router.push({ query: { test: "1" } });
     },
     setActive(event) {
-      const { id }= event.currentTarget;
+      const { id } = event.currentTarget;
       document.getElementById(id).classList.toggle("active");
     }
   }
