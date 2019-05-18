@@ -51,6 +51,15 @@ import ProductsFromCategory from "@/apollo/queries/categories/ProductsFromCatego
 
 export default {
   mixins: [isLoading],
+  watchQuery: true,
+  asyncData() {
+    
+  },
+  head() {
+    return {
+      title: `Categoria ${this.category}`
+    };
+  },
   components: {
     Page,
     ProductList,
@@ -64,10 +73,10 @@ export default {
       totalProducts: 0
     };
   },
-  head() {
-    return {
-      title: `Categoria ${this.category}`
-    };
+  computed: {
+    params() {
+      return this.$route.query;
+    }
   },
   apollo: {
     products: {

@@ -25,6 +25,7 @@
     "nuxt-client-init-module": "^0.1.4",
     "nuxt-storage": "^1.0.9",
     "popper.js": "^1.14.6",
+    "query-string": "^6.5.0",
     "v-owl-carousel": "^1.0.8",
     "vue": "^2.6.6",
     "vue-content-placeholders": "^0.2.1",

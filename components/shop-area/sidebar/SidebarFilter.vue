@@ -12,14 +12,19 @@
         <menu-item-card :orientation="'vertical'" :items="this.cardMaterial">
           <template slot="title">Material</template>
           <template v-slot:item="{ item }">
-            <input type="checkbox" @click="addToFilter('Material', item)">
+            <input
+              type="checkbox"
+              :value="item"
+              v-model="filters.material"
+              @change="setQueryString"
+            >
             {{ item }}
           </template>
         </menu-item-card>
         <menu-item-card :orientation="'horizontal'" :items="this.cardTags">
           <template slot="title">Tags</template>
           <template v-slot:item="{ item }">
-            <a :id="`Tag_${item}`" @click="addToFilter('Tag', item); setActive($event);">{{ item }}</a>
+            <a :id="`tag_${item}`" @click="onClickTag(item, $event)">{{ item }}</a>
           </template>
         </menu-item-card>
       </template>
@@ -31,19 +36,43 @@
 import MenuDropdownFixed from "@/components/widgets/menu/MenuDropdownFixed";
 import MenuItemCard from "@/components/widgets/menu/MenuItemCard";
 
+import urlParams from "@/mixins/urlParams";
+
 export default {
+  mixins: [urlParams],
   components: {
     MenuDropdownFixed,
     MenuItemCard
   },
   data: () => ({
-    cardCategories: ["List1", "List2", "List3"],
-    cardMaterial: ["PVC", "MERDA", "RESINA"],
-    cardTags: ["Tag1", "Tag2", "Tag3"]
+    cardCategories: ["Categoria 1", "Categoria 2", "Categoria 3"],
+    cardMaterial: ["PVC", "ALGODÃO", "RESINA"],
+    cardTags: ["Tag1", "Tag2", "Tag3"],
+    filters: {
+      tags: [],
+      material: []
+    }
   }),
   methods: {
-    addToFilter(pType, pValue) {
-      this.$router.push({ query: { test: "1" } });
+    setQueryString() {
+      // Add filter to URL and reload it
+      this.addQueryStringObject(this.filters);
+    },
+    onClickTag(item, event) {
+      this.toggleTag(item);
+      this.setActive(event);
+      this.setQueryString();
+    },
+    toggleTag(value) {
+      const tags = [...this.filters.tags];
+      const idx = tags.indexOf(value);
+
+      if (idx !== -1) {
+        tags.splice(idx, 1);
+      } else {
+        tags.push(value);
+      }
+      this.filters.tags = [...tags];
     },
     setActive(event) {
       const { id } = event.currentTarget;
