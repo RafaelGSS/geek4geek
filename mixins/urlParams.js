@@ -1,8 +1,5 @@
 const queryString = require('query-string');
-// FALTA FAZER REQUEST BASEADO NA QUERY
-// FALTA FAZER REQUEST APÓS ROUTER.PUSH
-// FALTA ADICIONAR LOADING APOS REQUEST ROUTER.PUSH
-// FALTA DEIXAR BOTOES SELECIONADOS BASEADO NA QUERY VIA GET
+
 export default {
   methods: {
     addQueryStringObject(filter) {
