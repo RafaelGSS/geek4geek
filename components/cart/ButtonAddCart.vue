@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
   props: {
     id: {
@@ -17,6 +19,9 @@ export default {
     value: Number
   },
   methods: {
+    ...mapActions({
+      add: "cart/add"
+    }),
     addCart() {
       this.$notify({
         group: "general",
@@ -24,11 +29,11 @@ export default {
         title: `Item ${this.display_name} adicionado`,
         text: "O Item foi adicionado com sucesso do seu carrinho de compras!"
       });
-      this.$store.commit("cart/add", {
+      this.add({
         id: this.id,
         quantity: this.quantity,
         display_name: this.display_name,
-        value: this.value,
+        value: this.value
       });
     }
   }
