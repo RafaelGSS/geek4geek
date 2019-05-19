@@ -43,7 +43,6 @@ import SidebarFilter from "@/components/shop-area/sidebar/SidebarFilter";
 import SortBy from "@/components/shop-area/sidebar/SortBy";
 
 import { get } from "lodash";
-
 /**
  * GraphQL Queries
  */
@@ -52,9 +51,6 @@ import ProductsFromCategory from "@/apollo/queries/categories/ProductsFromCatego
 export default {
   mixins: [isLoading],
   watchQuery: true,
-  asyncData() {
-    
-  },
   head() {
     return {
       title: `Categoria ${this.category}`
@@ -73,15 +69,11 @@ export default {
       totalProducts: 0
     };
   },
-  computed: {
-    params() {
-      return this.$route.query;
-    }
-  },
   apollo: {
     products: {
       prefetch: true,
       query: ProductsFromCategory,
+      // fetchPolicy: 'network-only',
       update: data => get(data, "category.products", []),
       variables() {
         return { categoryName: this.category };

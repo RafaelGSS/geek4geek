@@ -24,7 +24,10 @@
         <menu-item-card :orientation="'horizontal'" :items="this.cardTags">
           <template slot="title">Tags</template>
           <template v-slot:item="{ item }">
-            <a :id="`tag_${item}`" @click="onClickTag(item, $event)">{{ item }}</a>
+            <a
+              :id="`tag_${item.tag_name}`"
+              @click="onClickTag(item.tag_name, $event)"
+            >{{ item.tag_name }}</a>
           </template>
         </menu-item-card>
       </template>
@@ -47,7 +50,11 @@ export default {
   data: () => ({
     cardCategories: ["Categoria 1", "Categoria 2", "Categoria 3"],
     cardMaterial: ["PVC", "ALGODÃO", "RESINA"],
-    cardTags: ["Tag1", "Tag2", "Tag3"],
+    cardTags: [
+      { tag_name: "Tag1" },
+      { tag_name: "Tag2" },
+      { tag_name: "Tag3" }
+    ],
     filters: {
       tags: [],
       material: []
