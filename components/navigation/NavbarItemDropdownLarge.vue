@@ -7,7 +7,7 @@
       </a>
     </h3>
     <div class="category-menu category-menu-1" id="hidecat">
-      <nav class="cate-menu-nav">
+      <nav :class="{'cate-menu-nav': true, 'bordered': border }">
         <ul>
           <li v-for="item in items" :key="`dropdown-large-${item.id}`">
             <slot name="item" :item="item">{{ item }}</slot>
@@ -21,7 +21,11 @@
 <script>
 export default {
   props: {
-    items: Array
+    items: Array,
+    border: {
+      type: Boolean,
+      default: false
+    }
   },
   mounted() {
     $("#showcat").on("click", function(e) {
@@ -33,6 +37,11 @@ export default {
 </script>
 
 <style scoped>
+.bordered {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
 .menu-categories {
   padding: 19px 10px 18px;
   position: relative;

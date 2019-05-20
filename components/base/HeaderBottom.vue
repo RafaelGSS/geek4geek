@@ -2,10 +2,10 @@
   <section>
     <div class="header-bottom header-btm-coffee-res">
       <div class="container">
-        <div class="menu-coffee-color toy-menu">
+        <div class="menu-coffee-color">
           <div class="row">
             <div class="col-lg-3">
-              <navbar-item-dropdown-large :items="categories">
+              <navbar-item-dropdown-large style="height: 100%" :items="categories" border>
                 TODAS CATEGORIAS
                 <template v-slot:item="{ item }">
                   <nuxt-link :to="`/${item.category_name}/c`">{{ item.category_name | toUpper }}</nuxt-link>
