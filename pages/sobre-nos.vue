@@ -87,17 +87,6 @@
                 <a href="#">
                   <img src="assets/img/team/team-1.jpg" alt>
                 </a>
-                <div class="team-action">
-                  <a class="action-plus facebook" href="#">
-                    <i class="ion-social-facebook"></i>
-                  </a>
-                  <a class="action-heart twitter" title="Wishlist" href="#">
-                    <i class="ion-social-twitter"></i>
-                  </a>
-                  <a class="action-cart instagram" href="#">
-                    <i class="ion-social-instagram"></i>
-                  </a>
-                </div>
               </div>
               <div class="team-content text-center">
                 <h4>Mr.Mike Banding</h4>
@@ -111,17 +100,6 @@
                 <a href="#">
                   <img src="assets/img/team/team-3.jpg" alt>
                 </a>
-                <div class="team-action">
-                  <a class="action-plus facebook" href="#">
-                    <i class="ion-social-facebook"></i>
-                  </a>
-                  <a class="action-heart twitter" title="Wishlist" href="#">
-                    <i class="ion-social-twitter"></i>
-                  </a>
-                  <a class="action-cart instagram" href="#">
-                    <i class="ion-social-instagram"></i>
-                  </a>
-                </div>
               </div>
               <div class="team-content text-center">
                 <h4>Mr.Peter Pan</h4>
@@ -135,17 +113,6 @@
                 <a href="#">
                   <img src="assets/img/team/team-2.jpg" alt>
                 </a>
-                <div class="team-action">
-                  <a class="action-plus facebook" href="#">
-                    <i class="ion-social-facebook"></i>
-                  </a>
-                  <a class="action-heart twitter" title="Wishlist" href="#">
-                    <i class="ion-social-twitter"></i>
-                  </a>
-                  <a class="action-cart instagram" href="#">
-                    <i class="ion-social-instagram"></i>
-                  </a>
-                </div>
               </div>
               <div class="team-content text-center">
                 <h4>Ms.Sophia</h4>
@@ -159,17 +126,6 @@
                 <a href="#">
                   <img src="assets/img/team/team-4.jpg" alt>
                 </a>
-                <div class="team-action">
-                  <a class="action-plus facebook" href="#">
-                    <i class="ion-social-facebook"></i>
-                  </a>
-                  <a class="action-heart twitter" title="Wishlist" href="#">
-                    <i class="ion-social-twitter"></i>
-                  </a>
-                  <a class="action-cart instagram" href="#">
-                    <i class="ion-social-instagram"></i>
-                  </a>
-                </div>
               </div>
               <div class="team-content text-center">
                 <h4>Mr.John Lee</h4>
@@ -207,11 +163,11 @@
         </div>
         <div class="row">
           <div class="col-lg-12 col-md-12 d-flex align-items-center">
-            <div class="testimonial-active about-testi-active owl-carousel">
+            <div class="testimonial-active about-testi-active">
               <div class="single-testimonial about-testi text-center">
                 <div class="quote-icon">
                   <i class="fa fa-quote-left"></i>
-                </div>
+                </div>owl-carousel
                 <p>“ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehendrit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ”</p>
                 <div class="testimonial-rating">
                   <i class="ion-android-star-outline theme-star-coffee"></i>
@@ -222,40 +178,6 @@
                 </div>
                 <h4>
                   Samia Robiul
-                  <span>/ Web Designer</span>
-                </h4>
-              </div>
-              <div class="single-testimonial about-testi text-center">
-                <div class="quote-icon">
-                  <i class="fa fa-quote-left"></i>
-                </div>
-                <p>“ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehendrit in voluptate velit esse cillum fugiat nulla pariatur. ”</p>
-                <div class="testimonial-rating">
-                  <i class="ion-android-star-outline theme-star-coffee"></i>
-                  <i class="ion-android-star-outline theme-star-coffee"></i>
-                  <i class="ion-android-star-outline theme-star-coffee"></i>
-                  <i class="ion-android-star-outline theme-star-coffee"></i>
-                  <i class="ion-android-star-outline"></i>
-                </div>
-                <h4>
-                  Tayeb Rayed
-                  <span>/ Web Designer</span>
-                </h4>
-              </div>
-              <div class="single-testimonial about-testi text-center">
-                <div class="quote-icon">
-                  <i class="fa fa-quote-left"></i>
-                </div>
-                <p>“ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehendrit in voluptate velit esse cillum dolore eu fugiat. ”</p>
-                <div class="testimonial-rating">
-                  <i class="ion-android-star-outline theme-star-coffee"></i>
-                  <i class="ion-android-star-outline theme-star-coffee"></i>
-                  <i class="ion-android-star-outline theme-star-coffee"></i>
-                  <i class="ion-android-star-outline theme-star-coffee"></i>
-                  <i class="ion-android-star-outline"></i>
-                </div>
-                <h4>
-                  Hamim Ahamed
                   <span>/ Web Designer</span>
                 </h4>
               </div>
