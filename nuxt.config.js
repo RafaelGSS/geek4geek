@@ -47,8 +47,18 @@ module.exports = {
    */
   modules: [
     'nuxt-client-init-module',
-    '@nuxtjs/apollo'
+    '@nuxtjs/apollo',
+    '@nuxtjs/style-resources'
   ],
+
+  /**
+   * Nuxt Style Resources
+   */
+  styleResources: {
+    scss: [
+      '~assets/scss/_variables.scss'
+    ]
+  },
 
   /**
    * Apollo Configuration

@@ -27,7 +27,7 @@ export default {
       {
         title: "Página",
         items: [
-          { href: "#", title: "Sobre nós" },
+          { href: "/sobre-nos", title: "Sobre nós" },
           { href: "#", title: "Login / Registro" },
           { href: "#", title: "Contate-nos" }
         ]

@@ -6,7 +6,7 @@
     </a>
     <ul class="submenu">
       <li v-for="(item, index) in items" :key="`dropdown-item-${index}`">
-        <a :href="item.href">{{ item.title }}</a>
+        <nuxt-link :to="item.href">{{ item.title }}</nuxt-link>
       </li>
     </ul>
   </div>

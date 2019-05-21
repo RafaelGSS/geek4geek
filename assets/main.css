@@ -1557,24 +1557,6 @@ textarea:focus {
     background: #5a93d2 none repeat scroll 0 0;
 }
 /* button */
-.btn-style {
-    background-color: transparent;
-    border: 2px solid #eeeeee;
-    color: #242424;
-    display: block;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 14px 20px 12px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: all 0.3s ease 0s;
-}
-.btn-style:hover {
-    background-color: #3cb371;
-    border: 2px solid #3cb371;
-    color: #fff;
-}
-
 .btn-success {
     background: #3cb371;
     border-color: #3cb371;

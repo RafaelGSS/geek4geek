@@ -11,14 +11,14 @@
               >Devita Shop is a premium HTML template designed and develoved from the ground up with the sole purpose of helping you create an astonishing, the beautiful and user friendly website that will boost your product’s sales.</p>
               <p>The theme design package provides a complete Magento theme set for your online store according to your desired theme. This includes all Magento themes that are required for your online store's successful implementation.</p>
               <div class="overview-btn mt-45">
-                <a class="btn-style-2" href="shop.html">Shop now!</a>
+                <button-default>Compre já!</button-default>
               </div>
             </div>
           </div>
           <div class="col-lg-6 col-md-5">
             <div class="overview-img text-center">
               <a href="#">
-                <img src="assets/img/banner/about-us.jpg" alt>
+                <full-banner src="/img/banner/about-us.jpg" alt="Sobre nós banner" />
               </a>
             </div>
           </div>
@@ -269,10 +269,15 @@
 
 <script>
 import Page from "@/components/Page";
+import FullBanner from "@/components/banner/FullBanner";
+
+import ButtonDefault from "@/components/widgets/button/ButtonDefault";
 
 export default {
   components: {
-    Page
+    Page,
+    FullBanner,
+    ButtonDefault
   }
 };
 </script>

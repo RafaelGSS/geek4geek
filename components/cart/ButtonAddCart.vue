@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     ...mapActions({
-      add: "cart/add"
+      add: "cart/addToCart"
     }),
     addCart() {
       this.$notify({

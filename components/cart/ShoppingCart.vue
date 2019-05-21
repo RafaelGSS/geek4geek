@@ -13,7 +13,7 @@
 <script>
 import ContentBagCart from "@/components/cart/ContentBagCart";
 import ButtonBagCart from "@/components/cart/ButtonBagCart";
-import ButtonDefault from "@/components/widgets/ButtonDefault";
+import ButtonDefault from "@/components/widgets/button/ButtonDefault";
 
 export default {
   components: {
