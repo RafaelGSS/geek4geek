@@ -66,8 +66,8 @@
 
 <script>
 import ZoomPro from "@/components/banner/images/ZoomPro";
-import ProductDescription from "@/components/product-details/ProductDescription";
-import Stock from "@/components/product-details/placeholders/Stock";
+import ProductDescription from "@/components/pages/product-details/ProductDescription";
+import Stock from "@/components/pages/product-details/placeholders/Stock";
 import SimpleList from "@/components/widgets/list/SimpleList";
 import ButtonAddCart from "@/components/cart/ButtonAddCart";
 import ButtonAddWishlist from "@/components/cart/ButtonAddWishlist";

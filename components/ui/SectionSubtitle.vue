@@ -17,5 +17,3 @@ h3.subtitle {
   margin-top: 24px;
 }
 </style>
-
-

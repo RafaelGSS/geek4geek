@@ -26,8 +26,8 @@ import TabPane from "@/components/widgets/TabPane";
 import TabPaneTitle from "@/components/widgets/TabPaneTitle";
 import TabPaneContent from "@/components/widgets/TabPaneContent";
 
-import ProductReview from "@/components/product-details/ProductReview";
-import ProductDescription from "@/components/product-details/ProductDescription";
+import ProductReview from "@/components/pages/product-details/ProductReview";
+import ProductDescription from "@/components/pages/product-details/ProductDescription";
 
 export default {
   components: {

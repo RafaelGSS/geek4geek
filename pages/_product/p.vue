@@ -22,8 +22,8 @@ import Page from "@/components/Page";
 import BannerTransitionArea from "@/components/banner/BannerTransitionArea";
 import FullBanner from "@/components/banner/FullBanner";
 
-import ProductContent from "@/components/product-details/ProductContent";
-import ProductDetails from "@/components/product-details/ProductDetails";
+import ProductContent from "@/components/pages/product-details/ProductContent";
+import ProductDetails from "@/components/pages/product-details/ProductDetails";
 
 /**
  * GraphQL Queries

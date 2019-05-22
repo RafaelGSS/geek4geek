@@ -54,7 +54,7 @@ import StarBordered from "@/components/widgets/StarBordered";
 import ButtonAddCart from "@/components/cart/ButtonAddCart";
 import ButtonAddWishlist from "@/components/cart/ButtonAddWishlist";
 
-import Price from "@/components/product-details/placeholders/Price";
+import Price from "@/components/pages/product-details/placeholders/Price";
 import ImageProduct from "@/components/banner/images/ImageProduct";
 
 export default {

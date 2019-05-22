@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import ListReviews from "@/components/product-details/ListReviews";
+import ListReviews from "@/components/pages/product-details/ListReviews";
 import FormReview from "@/components/widgets/FormReview";
 
 export default {
