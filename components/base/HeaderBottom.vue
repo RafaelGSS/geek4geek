@@ -13,7 +13,7 @@
               </navbar-item-dropdown-large>
             </div>
             <div class="col-lg-9">
-              <navbar-menu/>
+              <navbar-menu :itemsMegamenu="this.itemsMegamenu" :itemsDropdown="this.itemsDropdown"/>
             </div>
           </div>
         </div>
@@ -34,6 +34,51 @@ export default {
   props: {
     categories: Array
   },
+  data: () => ({
+    itemsDropdown: [
+      {
+        title: "Página",
+        items: [
+          { href: "#", title: "Login / Registro" },
+        ]
+      },
+      {
+        title: "Sobre nós",
+        items: [
+          { href: "/sobre-nos", title: "Sobre nós" },
+          { href: "/politica-privacidade", title: "Nossa Política"},
+          { href: "#", title: "Contate-nos" }
+        ]
+      }
+    ],
+    itemsMegamenu: [
+      {
+        title: "Loja",
+        items: [
+          {
+            title: "Grupo Demonstração 01",
+            items: [{ href: "#", title: "Home - Game", new: true }]
+          },
+          {
+            title: "Grupo Demonstração 02",
+            items: [{ href: "#", title: "Home - Game", new: false }]
+          },
+          {
+            title: "Grupo Demonstração 03",
+            items: [{ href: "#", title: "Home - Game", new: false }]
+          },
+          {
+            title: "Grupo Demonstração 04",
+            items: [{ href: "#", title: "Home - Game", new: false }]
+          },
+          {
+            title: "Grupo Demonstração 05",
+            items: [{ href: "#", title: "Home - Game", new: true }]
+          }
+        ]
+      }
+    ]
+  }),
   filters: {
     toUpper: value => {
       if (!value) return "";

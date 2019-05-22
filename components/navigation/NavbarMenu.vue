@@ -22,55 +22,10 @@ export default {
     NavbarItemDropdown,
     NavbarItemMegamenu
   },
-  data: () => ({
-    itemsDropdown: [
-      {
-        title: "Página",
-        items: [
-          { href: "/sobre-nos", title: "Sobre nós" },
-          { href: "#", title: "Login / Registro" },
-          { href: "#", title: "Contate-nos" }
-        ]
-      }
-    ],
-    itemsMegamenu: [
-      {
-        title: "Loja",
-        items: [
-          {
-            title: "Grupo Demonstração 01",
-            items: [
-              { href: "#", title: "Home - Game", new: true }
-            ]
-          },
-          {
-            title: "Grupo Demonstração 02",
-            items: [
-              { href: "#", title: "Home - Game", new: false }
-            ]
-          },
-          {
-            title: "Grupo Demonstração 03",
-            items: [
-              { href: "#", title: "Home - Game", new: false }
-            ]
-          },
-          {
-            title: "Grupo Demonstração 04",
-            items: [
-              { href: "#", title: "Home - Game", new: false }
-            ]
-          },
-          {
-            title: "Grupo Demonstração 05",
-            items: [
-              { href: "#", title: "Home - Game", new: true }
-            ]
-          }
-        ]
-      }
-    ]
-  })
+  props: {
+    itemsMegamenu: Array,
+    itemsDropdown: Array
+  }
 };
 </script>
 

@@ -1,11 +1,11 @@
 <template>
-  <h4 class="section-title-about">
+  <h2 class="section-title-about">
       <slot>Section</slot>
-  </h4>
+  </h2>
 </template>
 
 <style lang="scss" scoped>
-h4.section-title-about {
+h2.section-title-about {
   display: inline-block;
   font-size: 28px;
   font-weight: 500;
@@ -13,7 +13,7 @@ h4.section-title-about {
   padding-bottom: 15px;
   position: relative;
 }
-h4.section-title-about::before {
+h2.section-title-about::before {
   background-color: #444444;
   bottom: 0;
   content: "";
