@@ -164,8 +164,8 @@
         margin-right: 17px !important;
     }
     .main-menu nav > ul > li > ul.mega-menu > li {
-  width: 930px !important;
-}
+        width: 930px !important;
+    }
     .main-menu nav > ul > li > ul.mega-menu > li > ul > li {
         width: 17.5% !important;
     }
@@ -500,9 +500,6 @@
     }
     .product-dec-slider .product-dec-icon.product-dec-next {
         right: 0 !important;
-    }
-    .overview-content-2 > h2 {
-        font-size: 30px !important;
     }
     .sidebar-menu nav > ul > li > ul.submenu {
         max-height: 250px !important;
@@ -1218,9 +1215,6 @@
         margin: 0 auto !important;
         right: 0 !important;
     }
-    .overview-content-2 > h2 {
-        font-size: 25px !important;
-    } 
     .single-testimonial.about-testi > p {
         width: 90% !important;
     }    
@@ -2618,12 +2612,6 @@
         max-width: 100% !important;
         min-width: 100% !important;
     }
-    .overview-content-2 {
-        margin-bottom: 50px !important;
-    }
-    .overview-content-2 > h2 {
-        font-size: 20px !important;
-    }    
     .pb-70 {
         padding-bottom: 50px !important;
     }    
