@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import MemberAbout from "@/components/about-us/MemberAbout";
+import MemberAbout from "@/components/pages/about-us/MemberAbout";
 import SectionTitle from "@/components/ui/SectionTitle";
 
 export default {

@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import ProjectAbout from "@/components/about-us/ProjectAbout";
+import ProjectAbout from "@/components/pages/about-us/ProjectAbout";
 
 export default {
   components: {

@@ -38,11 +38,11 @@
 <script>
 import Page from "@/components/Page";
 
-import IntroAbout from "@/components/about-us/IntroAbout";
+import IntroAbout from "@/components/pages/about-us/IntroAbout";
 
-import ProjectAreaAbout from "@/components/about-us/ProjectAreaAbout";
-import MemberAreaAbout from "@/components/about-us/MemberAreaAbout";
-import TestimonialAreaAbout from "@/components/about-us/TestimonialAreaAbout";
+import ProjectAreaAbout from "@/components/pages/about-us/ProjectAreaAbout";
+import MemberAreaAbout from "@/components/pages/about-us/MemberAreaAbout";
+import TestimonialAreaAbout from "@/components/pages/about-us/TestimonialAreaAbout";
 
 import ImageTransition from "@/components/banner/images/ImageTransition";
 
