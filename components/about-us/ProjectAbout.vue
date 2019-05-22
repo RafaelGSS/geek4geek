@@ -26,18 +26,15 @@ export default {
   line-height: 1;
   display: inline-block;
 }
-.count-icon span {
-  animation: 850ms ease-in-out 0s normal none 1 running tada;
-}
 .count-title h2 {
-  color: #0363cd;
+  color: $geekGreenDefault;
   font-size: 40px;
   font-weight: bold;
   letter-spacing: 0.2px;
   margin: 15px 0 5px;
 }
 .count-title > span {
-  color: #454545;
+  color: $geekBlackSecondaryDefault;
   font-size: 20px;
   text-transform: capitalize;
 }

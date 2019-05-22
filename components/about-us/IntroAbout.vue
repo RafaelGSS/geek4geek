@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col-lg-6 col-md-7 d-flex align-items-center">
-      <div class="overview-content-2">
+      <div class="overview-content">
         <h2>Bem vindo ao Geek4Geek!</h2>
         <p
           class="paragraph-blog"
@@ -35,7 +35,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.overview-content-2 > h2 {
+.overview-content > h2 {
   font-size: 35px;
   font-weight: 500;
   margin-bottom: 24px;
@@ -43,8 +43,8 @@ export default {
   position: relative;
   text-transform: uppercase;
 }
-.overview-content-2 > h2::before {
-  background-color: #dddddd;
+.overview-content > h2::before {
+  background-color: $geekBlackSecondaryDefault;
   bottom: 0;
   content: "";
   height: 2px;
@@ -53,27 +53,27 @@ export default {
   transition: all 0.4s ease 0s;
   width: 80px;
 }
-.overview-content-2 > p.paragraph-blog {
+.overview-content > p.paragraph-blog {
   font-size: 15px;
   font-weight: 500;
   margin-bottom: 21px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  .overview-content-2 > h2 {
+  .overview-content > h2 {
     font-size: 30px !important;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .overview-content-2 > h2 {
+  .overview-content > h2 {
     font-size: 25px !important;
   }
 }
 @media (max-width: 767px) {
-  .overview-content-2 {
+  .overview-content {
     margin-bottom: 50px !important;
   }
-  .overview-content-2 > h2 {
+  .overview-content > h2 {
     font-size: 20px !important;
   }
 }
