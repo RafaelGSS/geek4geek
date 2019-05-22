@@ -17,27 +17,27 @@ export default {
     projects: [
       {
         id: 1,
-        name: "cups of coffee",
+        name: "Vendas realizadas",
         count: 690,
-        icon: "ion-ios-wineglass-outline"
+        icon: "ion-cash"
       },
       {
         id: 2,
-        name: "cups of coffee",
-        count: 690,
-        icon: "ion-ios-wineglass-outline"
+        name: "Suporte realizados",
+        count: 15,
+        icon: "ion-happy-outline"
       },
       {
         id: 3,
-        name: "cups of coffee",
-        count: 690,
-        icon: "ion-ios-wineglass-outline"
+        name: "Itens aguardando você",
+        count: 35,
+        icon: "ion-pricetags"
       },
       {
         id: 4,
-        name: "cups of coffee",
-        count: 690,
-        icon: "ion-ios-wineglass-outline"
+        name: "Geeks alcançados",
+        count: 1042,
+        icon: "ion-android-contacts"
       }
     ]
   })
