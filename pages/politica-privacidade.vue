@@ -88,6 +88,11 @@ export default {
     Page,
     SectionTitle,
     SectionSubtitle
+  },
+  head() {
+    return {
+      title: "Politica e Privacidade"
+    };
   }
 };
 </script>

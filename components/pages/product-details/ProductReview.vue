@@ -7,7 +7,7 @@
 
 <script>
 import ListReviews from "@/components/pages/product-details/ListReviews";
-import FormReview from "@/components/widgets/FormReview";
+import FormReview from "@/components/widgets/form/FormReview";
 
 export default {
   components: {

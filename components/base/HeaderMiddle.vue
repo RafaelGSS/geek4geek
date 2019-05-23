@@ -35,7 +35,7 @@
 <script>
 import ShoppingCart from "@/components/cart/ShoppingCart.vue";
 
-import FormSearchWebsite from "@/components/widgets/search/FormSearchWebsite";
+import FormSearchWebsite from "@/components/widgets/form/FormSearchWebsite";
 import CardContactWhatsapp from "@/components/widgets/cards/CardContactWhatsapp";
 
 import LogoNameWhite from "@/components/banner/logos/LogoNameWhite";

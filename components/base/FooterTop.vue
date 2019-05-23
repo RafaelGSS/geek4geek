@@ -13,7 +13,7 @@
                 oferecendo diversos produtos de alta qualidade com o menor preço.
               </p>
             </div>
-            <social-icons />
+            <social-icons/>
           </div>
         </section>
         <section class="col-lg-2 col-md-6">
@@ -62,7 +62,7 @@
               <h4>Junte-se a nós agora</h4>
             </div>
             <div>
-              <form-newsletter />
+              <form-newsletter/>
             </div>
           </div>
         </section>
@@ -71,7 +71,8 @@
   </div>
 </template>
 <script>
-import FormNewsletter from "@/components/widgets/FormNewsletter";
+import FormNewsletter from "@/components/widgets/form/FormNewsletter";
+
 import SocialIcons from "@/components/widgets/SocialIcons";
 
 export default {
@@ -130,21 +131,21 @@ li {
 */
 
 @media (max-width: 767px) {
-    .footer-area.pt-65 {
+  .footer-area.pt-65 {
     padding-top: 35px !important;
   }
-    .footer-area .pt-60 {
+  .footer-area .pt-60 {
     padding-top: 40px !important;
   }
-    .footer-widget.mb-40 {
-        margin-bottom: 30px !important;
-    }  
-    .footer-widget {
-        margin-bottom: 30px !important;
-        text-align: center !important;
-    }
-    .footer-title.mb-30 {
-        margin-bottom: 15px !important;
-    }
+  .footer-widget.mb-40 {
+    margin-bottom: 30px !important;
+  }
+  .footer-widget {
+    margin-bottom: 30px !important;
+    text-align: center !important;
+  }
+  .footer-title.mb-30 {
+    margin-bottom: 15px !important;
+  }
 }
 </style>
