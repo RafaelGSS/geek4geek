@@ -26,8 +26,8 @@ import BannerTransitionArea from "@/components/banner/BannerTransitionArea";
 import FullBanner from "@/components/banner/FullBanner";
 import ServiceArea from "@/components/banner/ServiceArea";
 
-import ProductArea from "@/components/shop-area/ProductArea";
-import BestSellingArea from "@/components/shop-area/BestSellingArea";
+import ProductArea from "@/components/pages/product/ProductArea";
+import BestSellingArea from "@/components/pages/shop-area/BestSellingArea";
 
 /**
  * GraphQL Queries

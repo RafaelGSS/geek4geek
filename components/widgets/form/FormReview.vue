@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import StarBox from "@/components/widgets/StarBox";
+import StarBox from "@/components/ui/StarBox";
 
 export default {
   components: {

@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import WhatsappIcon from "@/components/widgets/social/WhatsappIcon";
+import WhatsappIcon from "@/components/ui/social/WhatsappIcon";
 
 export default {
   props: {

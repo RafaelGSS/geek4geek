@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Star from "@/components/widgets/Star";
+import Star from "@/components/ui/Star";
 
 export default {
   components: {

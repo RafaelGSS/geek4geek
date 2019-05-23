@@ -66,14 +66,17 @@
 
 <script>
 import ZoomPro from "@/components/banner/images/ZoomPro";
+
 import ProductDescription from "@/components/pages/product-details/ProductDescription";
 import Stock from "@/components/pages/product-details/placeholders/Stock";
-import SimpleList from "@/components/widgets/list/SimpleList";
+
 import ButtonAddCart from "@/components/cart/ButtonAddCart";
 import ButtonAddWishlist from "@/components/cart/ButtonAddWishlist";
-import ShareSocialIcons from "@/components/widgets/ShareSocialIcons";
 
-import Star from "@/components/widgets/Star";
+import ShareSocialIcons from "@/components/ui/social/ShareSocialIcons";
+import Star from "@/components/ui/Star";
+
+import SimpleList from "@/components/widgets/list/SimpleList";
 
 export default {
   props: {

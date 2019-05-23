@@ -23,9 +23,10 @@
 </template>
 
 <script>
-import ProductList from "@/components/shop-area/ProductList";
-import SidebarFilter from "@/components/shop-area/sidebar/SidebarFilter";
-import SortBy from "@/components/shop-area/sidebar/SortBy";
+import ProductList from "@/components/pages/product/ProductList";
+
+import SidebarFilter from "@/components/pages/shop-area/sidebar/SidebarFilter";
+import SortBy from "@/components/pages/shop-area/sidebar/SortBy";
 
 import FullBanner from "@/components/banner/FullBanner";
 

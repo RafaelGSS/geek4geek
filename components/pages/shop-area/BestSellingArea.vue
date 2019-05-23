@@ -79,7 +79,7 @@ import TabPane from "@/components/widgets/TabPane";
 import TabPaneTitle from "@/components/widgets/TabPaneTitle";
 import TabPaneContent from "@/components/widgets/TabPaneContent";
 
-import Product from "@/components/shop-area/Product";
+import Product from "@/components/pages/product/Product";
 
 export default {
   components: {

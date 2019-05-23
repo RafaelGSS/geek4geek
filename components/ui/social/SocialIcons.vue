@@ -15,9 +15,9 @@
 </template>
 
 <script>
-import FacebookIcon from "@/components/widgets/social/FacebookIcon";
-import InstagramIcon from "@/components/widgets/social/InstagramIcon";
-import WhatsappIcon from "@/components/widgets/social/WhatsappIcon";
+import FacebookIcon from "@/components/ui/social/FacebookIcon";
+import InstagramIcon from "@/components/ui/social/InstagramIcon";
+import WhatsappIcon from "@/components/ui/social/WhatsappIcon";
 
 export default {
   components: {

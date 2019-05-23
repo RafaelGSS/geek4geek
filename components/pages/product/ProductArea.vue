@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import ProductList from "@/components/shop-area/ProductList.vue";
+import ProductList from "@/components/pages/product/ProductList.vue";
 
 import TabPane from "@/components/widgets/TabPane";
 import TabPaneTitleButton from "@/components/widgets/TabPaneTitleButton";

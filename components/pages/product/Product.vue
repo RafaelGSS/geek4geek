@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import StarBordered from "@/components/widgets/StarBordered";
+import StarBordered from "@/components/ui/StarBordered";
 
 import ButtonAddCart from "@/components/cart/ButtonAddCart";
 import ButtonAddWishlist from "@/components/cart/ButtonAddWishlist";

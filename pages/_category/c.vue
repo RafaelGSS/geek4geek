@@ -36,11 +36,12 @@ import isLoading from "@/mixins/isLoading";
 import Page from "@/components/Page";
 
 import FullBanner from "@/components/banner/FullBanner";
-import ShopPageArea from "@/components/shop-area/ShopPageArea";
 
-import ProductList from "@/components/shop-area/ProductList";
-import SidebarFilter from "@/components/shop-area/sidebar/SidebarFilter";
-import SortBy from "@/components/shop-area/sidebar/SortBy";
+import ProductList from "@/components/pages/product/ProductList";
+
+import SidebarFilter from "@/components/pages/shop-area/sidebar/SidebarFilter";
+import SortBy from "@/components/pages/shop-area/sidebar/SortBy";
+import ShopPageArea from "@/components/pages/shop-area/ShopPageArea";
 
 import { get } from "lodash";
 /**

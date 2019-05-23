@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import BadgeDiscount from "@/components/shop-area/BadgeDiscount";
+import BadgeDiscount from "@/components/widgets/BadgeDiscount";
 
 export default {
   props: {

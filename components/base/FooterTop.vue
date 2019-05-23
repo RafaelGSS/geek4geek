@@ -73,7 +73,7 @@
 <script>
 import FormNewsletter from "@/components/widgets/form/FormNewsletter";
 
-import SocialIcons from "@/components/widgets/SocialIcons";
+import SocialIcons from "@/components/ui/social/SocialIcons";
 
 export default {
   components: {

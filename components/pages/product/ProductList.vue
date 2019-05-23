@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Product from "@/components/shop-area/Product";
+import Product from "@/components/pages/product/Product";
 
 export default {
   components: {
