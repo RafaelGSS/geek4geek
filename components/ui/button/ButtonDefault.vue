@@ -1,5 +1,5 @@
 <template>
-  <a :class="`btn-style-${color}`" :href="href" @click="this.$emit('click')">
+  <a :class="`btn-style-${color}`" :href="href" @click="$emit('click')">
     <slot>Button</slot>
   </a>
 </template>

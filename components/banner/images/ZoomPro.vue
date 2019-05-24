@@ -6,6 +6,8 @@
         :src="principalImg.display_image"
         :data-zoom-image="principalImg.big_display_image"
         :alt="principalImg.alt"
+        :width="width"
+        :height="height"
       >
       <slot></slot>
     </div>
@@ -28,6 +30,14 @@ export default {
     principalImg: {
       type: Object, // { id: "", display_image: "", big_display_image: "", low_display_image: "", alt: ""}
       validator: (val) => ['id', 'display_image', 'big_display_image', 'low_display_image', 'alt'].every(k => k in val)
+    },
+    width: {
+      type: Number,
+      default: 570
+    },
+    height: {
+      type: Number,
+      default: 570
     },
     gallery: {
       type: Array // [{ id: "", display_image: "", big_display_image: "", low_display_image: "", alt: ""}]
