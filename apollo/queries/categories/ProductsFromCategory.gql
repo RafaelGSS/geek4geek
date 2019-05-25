@@ -19,6 +19,17 @@ query ProductsFromCategory($categoryName: String!) {
             promo {
                 promotion_percentage
             }
+            tags {
+                tag_name
+            }
+            variations{
+                variation_name
+                variation_value
+            }
+            attributes{
+                attribute_name
+                attribute_value
+            }
         }
     }
 }

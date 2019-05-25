@@ -21,13 +21,13 @@
             {{ item }}
           </template>
         </menu-item-card>
-        <menu-item-card :orientation="'horizontal'" :items="this.cardTags">
+        <menu-item-card :orientation="'horizontal'" :items="options.tags">
           <template slot="title">Tags</template>
           <template v-slot:item="{ item }">
             <a
-              :id="`tag_${item.tag_name}`"
-              @click="onClickTag(item.tag_name, $event)"
-            >{{ item.tag_name }}</a>
+              :id="`tag_${item}`"
+              @click="onClickTag(item, $event)"
+            >{{ item }}</a>
           </template>
         </menu-item-card>
       </template>
@@ -43,6 +43,9 @@ import urlParams from "@/mixins/urlParams";
 
 export default {
   mixins: [urlParams],
+  props: {
+    options: Object // { tags: [], material: []}
+  },
   components: {
     MenuDropdownFixed,
     MenuItemCard
@@ -50,11 +53,6 @@ export default {
   data: () => ({
     cardCategories: ["Categoria 1", "Categoria 2", "Categoria 3"],
     cardMaterial: ["PVC", "ALGODÃO", "RESINA"],
-    cardTags: [
-      { tag_name: "Tag1" },
-      { tag_name: "Tag2" },
-      { tag_name: "Tag3" }
-    ],
     filters: {
       tags: [],
       material: []
@@ -71,6 +69,7 @@ export default {
       this.setQueryString();
     },
     toggleTag(value) {
+      console.log('tag', value)
       const tags = [...this.filters.tags];
       const idx = tags.indexOf(value);
 
@@ -85,7 +84,7 @@ export default {
       const { id } = event.currentTarget;
       document.getElementById(id).classList.toggle("active");
     }
-  }
+  },
 };
 </script>
 

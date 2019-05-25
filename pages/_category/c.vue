@@ -10,7 +10,7 @@
       <div class="container" v-if="this.loaded">
         <div class="row flex-row">
           <div class="col-lg-3">
-            <sidebar-filter/>
+            <sidebar-filter :options="sidebarOptions"/>
           </div>
           <div class="col-lg-9">
             <a href="#" class="display-desktop">
@@ -69,6 +69,22 @@ export default {
       category: this.$route.params.category,
       totalProducts: 0
     };
+  },
+  computed: {
+    sidebarOptions() {
+      return {
+        tags: Array.from(this.tags)
+      }
+    },
+    tags() {
+      const tags = new Set();
+      this.products.forEach(val => {
+        val.tags.forEach(tag => {
+          tags.add(tag.tag_name);
+        });
+      });
+      return tags;
+    }
   },
   apollo: {
     products: {
