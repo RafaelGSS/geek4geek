@@ -69,7 +69,6 @@ export default {
       this.setQueryString();
     },
     toggleTag(value) {
-      console.log('tag', value)
       const tags = [...this.filters.tags];
       const idx = tags.indexOf(value);
 
