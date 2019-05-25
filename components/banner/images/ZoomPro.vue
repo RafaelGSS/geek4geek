@@ -44,16 +44,16 @@ export default {
     }
   },
   mounted() {
-    $(".zoompro").elevateZoom({
-      gallery: "gallery",
-      responsive: true,
-      galleryActiveClass: "active",
-      zoomWindowWidth: 300,
-      zoomWindowHeight: 100,
-      scrollZoom: false,
-      zoomType: "inner",
-      cursor: "crosshair"
-    });
+    // $(".zoompro").elevateZoom({
+    //   gallery: "gallery",
+    //   responsive: true,
+    //   galleryActiveClass: "active",
+    //   zoomWindowWidth: 300,
+    //   zoomWindowHeight: 100,
+    //   scrollZoom: false,
+    //   zoomType: "inner",
+    //   cursor: "crosshair"
+    // });
   }
 };
 </script>
