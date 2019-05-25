@@ -8,6 +8,7 @@ query ProductsFromCategory($categoryName: String!) {
             unique_name
             display_description
             price
+            stock
             images {
                 display_image
                 alt

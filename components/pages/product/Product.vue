@@ -12,9 +12,10 @@
         <slot name="content" :product="product">
           <div class="product-content text-center">
             <span
+              style="margin-left: 2px;"
               v-for="category in product.categories"
               :key="`category-${category.category_name}`"
-            >{{ category.category_name }}</span>
+            >{{ category.category_name }},</span>
             <h4>
               <a href="#">{{ product.name }}</a>
             </h4>
@@ -39,7 +40,9 @@
                 :id="product.id"
                 :value="product.price"
                 :display_name="product.name"
+                v-if="product.stock > 0"
               >+ Carrinho</button-add-cart>
+              <button-unavailable v-else/>
             </div>
           </div>
         </slot>
@@ -50,6 +53,7 @@
 
 <script>
 import StarBordered from "@/components/ui/StarBordered";
+import ButtonUnavailable from "@/components/ui/button/ButtonUnavailable";
 
 import ButtonAddCart from "@/components/cart/ButtonAddCart";
 import ButtonAddWishlist from "@/components/cart/ButtonAddWishlist";
@@ -62,6 +66,7 @@ export default {
     StarBordered,
     ButtonAddCart,
     ButtonAddWishlist,
+    ButtonUnavailable,
     Price,
     ImageProduct
   },

@@ -2,9 +2,9 @@
   <div class="simple-list">
     <ul>
       <li class="categories-title">
-          <slot name="title"></slot>
+        <slot name="title"></slot>
       </li>
-      <li v-for="(item, index) in items" :key="`det-cat-${index}`">
+      <li class="item" v-for="(item, index) in items" :key="`det-cat-${index}`">
         <slot name="item" :item="item">{{ item }}</slot>
       </li>
     </ul>
@@ -13,31 +13,34 @@
 
 <script>
 export default {
-    props: {
-        items: Array
-    }
-}
+  props: {
+    items: Array
+  }
+};
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .simple-list li {
   display: inline-block;
   list-style: outside none none;
-  color: #242424;
+  color: $geekFontDefault;
 }
 .simple-list li.title {
   margin: 0 3px 0 0;
 }
 .simple-list li a {
-  color: #242424;
+  color: $geekFontDefault;
 }
 .simple-list li a:hover {
-  color: #3cb371;
+  color: $geekGreenDefault;
 }
 .simple-list {
   margin: 0 0 12px;
 }
-.simple-list:last-child {
+.simple-list .item {
+  margin-left: 3px;
+}
+.simple-list .simple-list:last-child {
   margin: 0 0 0px;
 }
 </style>

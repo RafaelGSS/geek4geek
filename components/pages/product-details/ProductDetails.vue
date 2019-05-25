@@ -39,21 +39,23 @@
                   :id="product.id"
                   :quantity="this.quantity"
                   :value="product.price"
-                  :display_name="product.display_name"
+                  :display_name="product.name"
+                  v-if="product.stock > 0"
                 />
+                <button-unavailable v-else/>
                 <button-add-wishlist style="padding: 8px 8px 8px;" :id="product.id"/>
               </div>
             </div>
             <simple-list :items="product.categories">
               <template slot="title">Categorias:</template>
               <template v-slot:item="{ item }">
-                <a href="#">{{ item.category_name }}</a>
+                <nuxt-link :to="`/${item.category_name}/c`">{{ item.category_name | capitalize }},</nuxt-link>
               </template>
             </simple-list>
             <simple-list :items="product.tags">
               <template slot="title">Tags:</template>
               <template v-slot:item="{ item }">
-                <a href="#">{{ item.tag_name }}</a>
+                <a href="#">{{ item.tag_name | capitalize }},</a>
               </template>
             </simple-list>
             <share-social-icons/>
@@ -75,6 +77,7 @@ import ButtonAddWishlist from "@/components/cart/ButtonAddWishlist";
 
 import ShareSocialIcons from "@/components/ui/social/ShareSocialIcons";
 import Star from "@/components/ui/Star";
+import ButtonUnavailable from "@/components/ui/button/ButtonUnavailable";
 
 import SimpleList from "@/components/widgets/list/SimpleList";
 
@@ -88,13 +91,20 @@ export default {
     Stock,
     ProductDescription,
     ButtonAddCart,
+    ButtonUnavailable,
     ButtonAddWishlist,
     ShareSocialIcons,
     SimpleList
   },
   data: () => ({
     quantity: "1"
-  })
+  }),
+  filters: {
+    capitalize: value => {
+      if (typeof value !== 'string') return "";
+      return value.charAt(0).toUpperCase() + value.slice(1)
+    }
+  }
 };
 </script>
 
