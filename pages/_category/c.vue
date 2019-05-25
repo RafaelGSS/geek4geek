@@ -74,7 +74,7 @@ export default {
     sidebarOptions() {
       return {
         tags: Array.from(this.tags)
-      }
+      };
     },
     tags() {
       const tags = new Set();
