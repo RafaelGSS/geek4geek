@@ -16,8 +16,8 @@ export default {
     imgs: {
       type: Array,
       default: () => [
-        { src: "/img/slider/slider-51.jpg", alt: "slider", href: "#1" },
-        { src: "/img/slider/slider-51.jpg", alt: "slider", href: "#2" }
+        { src: "/img/banner/banner-geek.jpg", alt: "Banner Geek 1", href: "#1" },
+        { src: "/img/banner/banner-black.png", alt: "Banner Geek 2", href: "#2" }
       ]
     }
   }

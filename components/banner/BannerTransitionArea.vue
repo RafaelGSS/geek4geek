@@ -30,7 +30,7 @@ export default {
       type: Object,
       default: () => ({
         href: "#3",
-        src: "/img/banner/banner-76.jpg",
+        src: "/img/banner/duff.png",
         alt: "banner76"
       }),
       validator: val => ["href", "src", "alt"].every(k => k in val)
@@ -39,7 +39,7 @@ export default {
       type: Object,
       default: () => ({
         href: "#3",
-        src: "/img/banner/banner-77.jpg",
+        src: "/img/banner/banner-canecas.jpg",
         alt: "banner77"
       }),
       validator: val => ["href", "src", "alt"].every(k => k in val)
@@ -48,7 +48,7 @@ export default {
       type: Object,
       default: () => ({
         href: "#3",
-        src: "/img/banner/banner-78.jpg",
+        src: "/img/banner/geek-binary.png",
         alt: "banner78"
       }),
       validator: val => ["href", "src", "alt"].every(k => k in val)
