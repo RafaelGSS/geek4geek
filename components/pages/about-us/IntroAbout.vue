@@ -5,8 +5,8 @@
         <h2>Bem vindo ao Geek4Geek!</h2>
         <p
           class="paragraph-blog"
-        >Devita Shop is a premium HTML template designed and develoved from the ground up with the sole purpose of helping you create an astonishing, the beautiful and user friendly website that will boost your product’s sales.</p>
-        <p>The theme design package provides a complete Magento theme set for your online store according to your desired theme. This includes all Magento themes that are required for your online store's successful implementation.</p>
+        >O Geek4Geek é um projeto open-source que foi criado pensando em ajudar os desenvolvedores a criar de forma rápida e prática um e-commerce com Vue.</p>
+        <p>Usando SSR temos o total controle das metatags e assim tendo o melhor resultado para um e-commerce de alto nível.</p>
         <div class="overview-btn mt-45">
           <button-default style="width: 40%;">Fale conosco!</button-default>
         </div>
