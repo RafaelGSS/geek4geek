@@ -23,7 +23,7 @@
     "lodash": "^4.17.19",
     "node-fetch": "^2.6.1",
     "node-sass": "^4.13.1",
-    "nuxt": "^2.3.4",
+    "nuxt": "^2.15.8",
     "nuxt-client-init-module": "^0.1.4",
     "nuxt-storage": "^1.0.9",
     "popper.js": "^1.14.6",
